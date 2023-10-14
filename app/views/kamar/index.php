@@ -5,7 +5,7 @@
             $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
             echo "<h3>Hallo, Selamat Datang $username </h3><br>";
             ?>
-            <h5>Daftar Penghuni</h5>
+            <h5>Daftar Kamar</h5>
             <div class="row">
                 <div class="col-lg-6">
                     <?php Flasher::flash(); ?>
@@ -29,18 +29,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($data['Fahma'] as $fhm) : ?>
+                    <?php foreach ($data['kamar'] as $kmr) : ?>
                         <tr>
-                            <td><?php echo $fhm['nama_penghuni']; ?></td>
-                            <td><?php echo $fhm['alamat']; ?></td>
-                            <td><?php echo $fhm['jenis_kelamin']; ?></td>
-                            <td><?php echo $fhm['agama']; ?></td>
-                            <td><img src="http://localhost/phpmvc/public/public/image/<?php echo $fhm['foto']; ?>" alt="Foto Penghuni"></td>
+                            <td><?php echo $kmr['nama_penghuni']; ?></td>
+                            <td><?php echo $kmr['alamat']; ?></td>
+                            <td><?php echo $kmr['jenis_kelamin']; ?></td>
+                            <td><?php echo $kmr['agama']; ?></td>
+                            <td><img src="http://localhost/phpmvc/public/public/image/<?php echo $kmr['foto']; ?>" alt="Foto Penghuni"></td>
                             <td>
-                                <form method="POST" action="http://localhost/phpmvc/public/penghuni/deletePenghuni/<?php echo $fhm['id_Penghuni']; ?>">
+                                <form method="POST" action="http://localhost/phpmvc/public/penghuni/deletePenghuni/<?php echo $kmr['id_Penghuni']; ?>">
                                     <button type="submit" onclick="return confirm('apakah ingin dihapus')" class="btn btn-danger">Hapus</button>
                                 </form>
-                                <a href="http://localhost/php-mvc/public/fahma/edit/<?php echo $fhm['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
+                                <a href="http://localhost/php-mvc/public/kamar/editKamar/<?php echo $kmr['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -58,7 +58,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="http://localhost/PHP-MVC/public/Fahma/addFahma" method="post" enctype="multipart/form-data">
+                    <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nama_penghuni">Nama Penghuni</label>
                             <input type="text" class="form-control" id="nama_penghuni" name="nama_penghuni" placeholder="Masukkan Nama">
