@@ -56,11 +56,12 @@ class Hakim extends Controller
     }
 
     public function getId($id_Penghuni)
-    {
-        $data['judul'] = "Edit Penghuni";
-        $data['penghuni'] = $this->model('Hakim_model')->getPenghuniById($id_Penghuni);
-        $this->view('templates/header', $data);
-        $this->view('Hakim/edit', $data);
-        $this->view('templates/footer');
-    }
+        {
+            $data['judul'] = "Edit Penghuni";
+            $data['penghuni'] = $this->model('Hakim_model')->getPenghuniById($id_Penghuni);
+            $this->view('templates/header', $data);
+            $this->view('Hakim/edit', $data);
+            $this->view('templates/footer');
+        }
 }
+?>

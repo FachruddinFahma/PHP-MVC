@@ -53,7 +53,7 @@ class Fahma extends Controller{
         public function getIdPenghuni($id_Penghuni)
         {
             $data['judul'] = "Edit Penghuni";
-            $data['penghuni'] = $this->model('Farhan_model')->getPenghuniById($id_Penghuni);
+            $data['penghuni'] = $this->model('Fahma_model')->getPenghuniById($id_Penghuni);
             $this->view('templates/header', $data);
             $this->view('fahma/edit', $data);
             $this->view('templates/footer');

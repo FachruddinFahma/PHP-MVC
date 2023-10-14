@@ -55,7 +55,7 @@
         public function getIdPenghuni($id_Penghuni)
         {
             $data['judul'] = "Edit Penghuni";
-            $data['penghuni'] = $this->model('Penghuni_model')->getPenghuniById($id_Penghuni);
+            $data['penghuni'] = $this->model('Farhan_model')->getPenghuniById($id_Penghuni);
             $this->view('templates/header', $data);
             $this->view('farhan/edit', $data);
             $this->view('templates/footer');
