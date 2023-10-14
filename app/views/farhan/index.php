@@ -29,18 +29,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($data['penghuni'] as $png) : ?>
+                    <?php foreach ($data['farhan'] as $frhn) : ?>
                         <tr>
-                            <td><?php echo $png['nama_penghuni']; ?></td>
-                            <td><?php echo $png['alamat']; ?></td>
-                            <td><?php echo $png['jenis_kelamin']; ?></td>
-                            <td><?php echo $png['agama']; ?></td>
-                            <td><img src="http://localhost/phpmvc/public/public/image/<?php echo $png['foto']; ?>" alt="Foto Penghuni"></td>
+                            <td><?php echo $frhn['nama_penghuni']; ?></td>
+                            <td><?php echo $frhn['alamat']; ?></td>
+                            <td><?php echo $frhn['jenis_kelamin']; ?></td>
+                            <td><?php echo $frhn['agama']; ?></td>
+                            <td><img src="http://localhost/phpmvc/public/public/image/<?php echo $frhn['foto']; ?>" alt="Foto Penghuni"></td>
                             <td>
-                                <form method="POST" action="http://localhost/phpmvc/public/penghuni/deletePenghuni/<?php echo $png['id_Penghuni']; ?>">
+                                <form method="POST" action="http://localhost/phpmvc/public/penghuni/deletePenghuni/<?php echo $frhn['id_Penghuni']; ?>">
                                     <button type="submit" onclick="return confirm('apakah ingin dihapus')" class="btn btn-danger">Hapus</button>
                                 </form>
-                                <a href="http://localhost/phpmvc/public/penghuni/editPenghuni/<?php echo $png['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
+                                <a href="http://localhost/phpmvc/public/penghuni/editPenghuni/<?php echo $frhn['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

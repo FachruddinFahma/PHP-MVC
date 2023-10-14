@@ -29,7 +29,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($data['Debby'] as $png) : ?>
+                    <?php foreach ($data['debby'] as $png) : ?>
                         <tr>
                             <td><?php echo $png['nama_penghuni']; ?></td>
                             <td><?php echo $png['alamat']; ?></td>
