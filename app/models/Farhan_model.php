@@ -26,5 +26,12 @@
             $this->db->execute();
             return $this->db->rowCount();
         }
+
+        public function getPenghuniById($id_Penghuni)
+        {
+            $this->db->query('SELECT * FROM tb_penghuni WHERE id_Penghuni = :id');
+            $this->db->bind('id', $id_Penghuni);
+            return $this->db->single();
+        }
     }
 ?>

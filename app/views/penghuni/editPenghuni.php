@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    <form method="POST" action="http://localhost/PHP-MVC/public/farhan/updatePenghuni/<?= $data['penghuni']['id_Penghuni'] ?>">
+    <form method="POST" action="http://localhost/PHP-MVC/public/penghuni/updatePenghuni/<?= $data['penghuni']['id_Penghuni'] ?>">
         <div class="form-group">
             <label for="exampleInputEmail1">Nama Penghuni</label>
             <input type="text" class="form-control" value="<?= $data['penghuni']['nama_penghuni'] ?>" id="nama_penghuni" name="nama_penghuni" placeholder="Masukkan Nama">
