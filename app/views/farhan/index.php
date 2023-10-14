@@ -40,7 +40,7 @@
                                 <form method="POST" action="http://localhost/phpmvc/public/penghuni/deletePenghuni/<?php echo $frhn['id_Penghuni']; ?>">
                                     <button type="submit" onclick="return confirm('apakah ingin dihapus')" class="btn btn-danger">Hapus</button>
                                 </form>
-                                <a href="http://localhost/phpmvc/public/penghuni/editPenghuni/<?php echo $frhn['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
+                                <a href="http://localhost/PHP-MVC/public/farhan/getIdPenghuni/<?php echo $frhn['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
