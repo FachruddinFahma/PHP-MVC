@@ -40,7 +40,7 @@
                                 <form method="POST" action="http://localhost/phpmvc/public/penghuni/deletePenghuni/<?php echo $png['id_Penghuni']; ?>">
                                     <button type="submit" onclick="return confirm('apakah ingin dihapus')" class="btn btn-danger">Hapus</button>
                                 </form>
-                                <a href="http://localhost/phpmvc/public/penghuni/editPenghuni/<?php echo $png['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
+                                <a href="http://localhost/PHP-MVC/public/debby/editDebby/<?php echo $png['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -58,7 +58,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="http://localhost/phpmvc/public/penghuni/addPenghuni" method="post" enctype="multipart/form-data">
+                    <form action="http://localhost/PHP-MVC/public/debby/addDebby" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nama_penghuni">Nama Penghuni</label>
                             <input type="text" class="form-control" id="nama_penghuni" name="nama_penghuni" placeholder="Masukkan Nama">
