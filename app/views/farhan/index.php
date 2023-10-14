@@ -58,7 +58,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="http://localhost/phpmvc/public/penghuni/addPenghuni" method="post" enctype="multipart/form-data">
+                    <form action="http://localhost/PHP-MVC/public/farhan/addFarhan" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nama_penghuni">Nama Penghuni</label>
                             <input type="text" class="form-control" id="nama_penghuni" name="nama_penghuni" placeholder="Masukkan Nama">
