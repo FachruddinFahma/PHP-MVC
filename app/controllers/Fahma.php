@@ -50,13 +50,13 @@ class Fahma extends Controller{
             return $namaFileBaru;
         }
 
-        public function getidPenghuni($id_Penghuni)
+        public function getIdPenghuni($id_Penghuni)
         {
             $data['judul'] = "Edit Penghuni";
-            $data['Fahma'] = $this->model('Fahma_model')->getPenghuniById($id_Penghuni);
+            $data['penghuni'] = $this->model('Farhan_model')->getPenghuniById($id_Penghuni);
             $this->view('templates/header', $data);
-            $this->view('Fahma/edit', $data);
+            $this->view('fahma/edit', $data);
             $this->view('templates/footer');
         }
     }
-        ?>
+?>
