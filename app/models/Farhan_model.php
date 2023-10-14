@@ -1,5 +1,5 @@
 <?php
-    class debby_model {
+    class Farhan_model {
         private $db;
 
         public function __construct()
@@ -8,7 +8,7 @@
         }
 
 
-        public function getAllPenghuni() 
+        public function getAllFarhan() 
         {
             $this->db->query('SELECT * FROM tb_penghuni ');
             return $this->db->resultSet();
