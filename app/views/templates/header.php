@@ -1,26 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="http://localhost/phpmvc/public/css/style.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- <link href="http://localhost/phpmvc/public/css/login.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/style.css">
+    <!-- ICON -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- REMIX ICON -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- LINK ANIMATE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- LINK ANIMATE SAAT SCROLL -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Halaman <?php echo $data['judul']; ?></title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
-
 <body>
+    <main class="container">
+        <aside id="sidebar">
+            <img id="icon-jkost" src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+            <ul class="nav-sidebar">
+                <li>
+                    <span></span>
+                    <img src="http://localhost/PHP-MVC/public/image/dashboard.png" alt="dashboard">
+                    <p>Dashboard</p>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <span></span>
+                            <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
+                            <a href="index.html">Data Kamar</a>
+                            <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
+                        </summary>
+                        <ul class="detail-ul">
+                            <li><a href="#">Kamar Tersedia</a></li>
+                            <li><a href="#">Kamar Terisi</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <span></span>
+                    <img src="http://localhost/PHP-MVC/public/image/penghuni.png" alt="data penghuni">
+                    <p>Data Penghuni</p>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <span></span>
+                            <img src="http://localhost/PHP-MVC/public/image/pemesanan.png" alt="pemesanan">
+                            <a href="">Pemesanan</a>
+                            <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
+                        </summary>
+                        <ul class="detail-ul">
+                            <li><a href="#">Pesanan Baru</a></li>
+                            <li><a href="#">Pesanan Disetujui</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <span></span>
+                    <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
+                    <p>Laporan</p>
+                    <div class="count-notif">
+                        <p>3</p>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <img src="http://localhost/PHP-MVC/public/image/profil.png" alt="profil">
+                    <p>Profil</p>
+                </li>
+                <li id="link-keluar">
+                    <span></span>
+                    <img src="http://localhost/PHP-MVC/public/image/sign-out.png" alt="profil">
+                    <p>Keluar</p>
+                </li>
+            </ul>
+        </aside>
+        <section id="home">
+            <h1>ini adalah halaman dashboard</h1>
+        </section>
+    </main>
+
+    <!-- AWAL SIDEBAR -->
+    <main class="container">
+        <aside id="sidebar">
+            <!-- Isi sidebar -->
+        </aside>
+        <header id="header">
+                <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
+            </div>
+            <div id="dashboard-title">
+                <h2>Dashboard</h2>
+            </div>
+            <div id="center-content">
+                <div id="foto-profile">
+                    <img src="http://localhost/PHP-MVC/public/image/img1.jpg" alt="User Photo">
+                </div>
+                <p id="user-name">User</p>
+            </div>
+        </header>
+    </main>
+    
