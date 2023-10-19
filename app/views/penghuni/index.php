@@ -106,5 +106,5 @@
     </div> -->
 
 <section id="home">
-    <h1>ini adalah halaman halaman penghuni</h1>
+    <h1>ini adalah halaman penghuni</h1>
 </section>

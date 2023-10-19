@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/style.css">
     <!-- ICON -->
@@ -12,14 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <title>Halaman<?php echo $data['judul'] ?></title>
+    <title>Halaman <?php echo $data['judul'] ?></title>
 </head>
 
 <body>
     <header id="header">
         <div id="dashboard-title">
             <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
-            <h2>Dashboard</h2>
+            <h2><?php echo $data['judul']?></h2>
         </div>
         <div id="center-content">
             <div id="foto-profile">
