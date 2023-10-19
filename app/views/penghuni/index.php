@@ -29,8 +29,8 @@
                     </tr>
                 </thead>
                 <tbody> -->
-                    <!-- <?php foreach ($data['penghuni'] as $png) : ?> -->
-                        <!-- <tr>
+<!-- <?php foreach ($data['penghuni'] as $png) : ?> -->
+<!-- <tr>
                             <td><?php echo $png['nama_penghuni']; ?></td>
                             <td><?php echo $png['alamat']; ?></td>
                             <td><?php echo $png['jenis_kelamin']; ?></td>
@@ -43,12 +43,12 @@
                                 <a href="http://localhost/phpmvc/public/penghuni/editPenghuni/<?php echo $png['id_Penghuni']; ?>" class="btn btn-success">Edit</a>
                             </td>
                         </tr> -->
-                    <!-- <?php endforeach; ?>  -->
-                <!-- </tbody>
+<!-- <?php endforeach; ?>  -->
+<!-- </tbody>
         </div>
     </div> -->
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="formodal" tabindex="-1" role="dialog" aria-labelledby="formodal" aria-hidden="true">
+<!-- Modal -->
+<!-- <div class="modal fade" id="formodal" tabindex="-1" role="dialog" aria-labelledby="formodal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -63,11 +63,11 @@
                             <label for="nama_penghuni">Nama Penghuni</label>
                             <input type="text" class="form-control" id="nama_penghuni" name="nama_penghuni" placeholder="Masukkan Nama">
                         </div> -->
-                        <!-- <div class="form-group">
+<!-- <div class="form-group">
                             <label for="nama">Tanggal Lahir</label>
                             <input type="date" class="form-control" id="tanggallhr" name="txtTglLahir">
                         </div> -->
-                        <!-- <div class="form-group">
+<!-- <div class="form-group">
                             <label for="alamat">Alamat</label>
                             <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat">
                         </div>
@@ -104,4 +104,7 @@
             </div>
         </div>
     </div> -->
-    
+
+<section id="home">
+    <h1>ini adalah halaman halaman penghuni</h1>
+</section>

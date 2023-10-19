@@ -60,16 +60,30 @@ main > #sidebar > .nav-sidebar {
     cursor: pointer;
 }
 
+.nav-sidebar li.li-detail {
+    padding-left: 0px;
+    margin-left: 5px;
+    
+}
+
+.nav-sidebar li a{
+  text-decoration: none;
+  display: flex;
+  gap: 35px;
+  color: var(--navy);
+}
+
 .nav-sidebar li .count-notif {
     padding: 1px 15px;
     border-radius: 50px;
     background-color: var(--middleblue);
     color: white;
-    margin-left: auto;
-    margin-right: 20px;
+    display: flex;
 }
 .nav-sidebar li .count-notif p{
     font-size: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
@@ -100,6 +114,7 @@ main > #sidebar > .nav-sidebar {
     align-items: center;
     gap: 35px;
 }
+
 .nav-sidebar li summary a{
     font-size: 18px;
     font-weight: 500;
@@ -131,6 +146,7 @@ main > #sidebar > .nav-sidebar {
 
 .nav-sidebar img {
     width: 20px;
+    height: 20px;
 }
 
 .nav-sidebar p {
