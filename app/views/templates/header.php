@@ -96,7 +96,7 @@
                     </a>
                 </li>
                 <li id="link-keluar">
-                    <a href="youtube.com">
+                    <a href="http://localhost/PHP-MVC/public/login">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/sign-out.png" alt="profil">
                         <p>Keluar</p>

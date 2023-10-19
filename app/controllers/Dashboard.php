@@ -6,7 +6,7 @@ class Dashboard extends Controller
         $data['judul'] = 'Dashboard';
         //$data['dashboard'] = $this->model('Dashboard_model')->getAllPenghuni();
         $this->view('templates/header', $data);
-        $this->view('dashboard/index', $data);
+        $this->view('pemilik_kost/dashboard/index', $data);
         $this->view('templates/footer');
     }
 }

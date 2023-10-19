@@ -6,7 +6,7 @@ class Penghuni extends Controller
         $data['judul'] = 'Penghuni';
         $data['penghuni'] = $this->model('Penghuni_model')->getAllPenghuni();
         $this->view('templates/header', $data);
-        $this->view('penghuni/index', $data);
+        $this->view('pemilik_kost/penghuni/index', $data);
         $this->view('templates/footer');
     }
 

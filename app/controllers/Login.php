@@ -4,7 +4,7 @@
         public function index()
         {
             $data['judul'] = 'Login';
-            $this->view('login/login', $data);
+            $this->view('pemilik_kost/login/login', $data);
             $this->view('templates/footer');
         }
 
