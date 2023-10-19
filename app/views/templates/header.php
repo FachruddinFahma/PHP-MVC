@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=h1, initial-scale=1.0">
@@ -13,7 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
+    <header id="header">
+        <div id="dashboard-title">
+            <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
+            <h2>Dashboard</h2>
+        </div>
+        <div id="center-content">
+            <div id="foto-profile">
+                <img src="http://localhost/PHP-MVC/public/image/img1.jpg" alt="User Photo">
+            </div>
+            <p id="user-name">Farhan</p>
+        </div>
+    </header>
     <main class="container">
         <aside id="sidebar">
             <img id="icon-jkost" src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
@@ -80,24 +94,3 @@
             <h1>ini adalah halaman dashboard</h1>
         </section>
     </main>
-
-    <!-- AWAL SIDEBAR -->
-    <main class="container">
-        <aside id="sidebar">
-            <!-- Isi sidebar -->
-        </aside>
-        <header id="header">
-                <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
-            </div>
-            <div id="dashboard-title">
-                <h2>Dashboard</h2>
-            </div>
-            <div id="center-content">
-                <div id="foto-profile">
-                    <img src="http://localhost/PHP-MVC/public/image/img1.jpg" alt="User Photo">
-                </div>
-                <p id="user-name">User</p>
-            </div>
-        </header>
-    </main>
-    
