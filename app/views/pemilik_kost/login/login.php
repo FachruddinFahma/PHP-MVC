@@ -27,25 +27,7 @@
 </head>
 <body>
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <!-- <div class="social-container">
-                    <a href="#" class="social"><i></i></a>
-                </div> -->
-                <span>Isi data dengan lengkap</span>
-                <input type="text" placeholder="Masukkan nama lengkap">
-                <input type="email" placeholder="Masukkan email">
-                <input type="password" placeholder="Masukkan password">
-                <input type="text" placeholder="Masukkan nama lengkap">
-                <input type="email" placeholder="Masukkan email">
-                <input type="password" placeholder="Masukkan password">
-                <input type="email" placeholder="Masukkan email">
-                <input type="password" placeholder="Masukkan password">
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <!-- <div class="form-container lupa-password-container">
+        <div class="form-container lupa-password-container">
             <form action="#">
                 <h1>Lupa Password</h1>
                 <span>Silahkan ganti password anda dengan mengisi di bawah ini</span>
@@ -54,14 +36,29 @@
                 <input type="password" placeholder="Konfirmasi password baru anda">
                 <button>Ubah</button>
             </form>
-        </div> -->
+        </div>
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <span>Isi data dengan lengkap</span>
+                <input type="text" placeholder="Masukkan nama lengkap">
+                <input type="email" placeholder="Masukkan email">
+                <input type="password" placeholder="Masukkan password">
+                <input type="text" placeholder="Masukkan nama lengkap">
+                <input type="email" placeholder="Masukkan email">
+                <input type="password" placeholder="Masukkan password">
+                <input type="email" placeholder="Masukkan email">
+                <input type="file" placeholder="Masukkan password">
+                <button>Sign Up</button>
+            </form>
+        </div>
         <div class="form-container sign-in-container">
             <form action="#">
                 <h1>Sign In</h1>
                 <span>Masukkan Email dan Password anda</span>
                 <input type="email" placeholder="Masukkan email anda">
                 <input type="password" placeholder="Masukkan password anda">
-                <p>Lupa Password?<a href="#" id="lupaPassword"> Silahkan ganti disini</a></p>
+                <p>Lupa Password?<a href="#" id="lupaPassword">Silahkan ganti disini</a></p>
                 <button>Sign In</button>
             </form>
         </div>
@@ -86,7 +83,7 @@
     <script>
         const signUpButton = document.getElementById("signUp");
         const signInButton = document.getElementById("signIn");
-        const lupaPasswordButton = document.getElementById("lupaPassword");
+        const lupaPassword = document.getElementById("lupaPassword");
         const container = document.getElementById("container");
 
         signUpButton.addEventListener('click', () => {
@@ -97,10 +94,11 @@
             container.classList.remove("right-panel-active");
         });
 
-        // lupaPasswordButton.addEventListener('click', (e) => {
-        //     e.preventDefault(); // Hindari tindakan default dari tautan
-        //     container.classList.add("right-panel-active"); // Ganti tampilan saat tombol lupaPassword diklik
-        // });
+        lupaPassword.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Di sini, Anda harus mengganti tampilan ke panel Lupa Password
+            container.classList.add("right-panel-active1");
+        });
     </script>
 </body>
 </html>

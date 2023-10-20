@@ -177,7 +177,11 @@ p{
 	animation: slide 0.6s;
 }
 
-.container.right-panel-active .lupa-password-container{
+.container.right-panel-active1 .sign-in-container{
+	transform: translateX(100%);
+}
+
+.container.right-panel-active1 .lupa-password-container{
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
@@ -203,10 +207,26 @@ p{
 	transform: translateX(50%);
 }
 
+.container.right-panel-active1 .overlay-container{
+	transform: translateX(-100%);
+}
+
+.container.right-panel-active1 .overlay{
+	transform: translateX(50%);
+}
+
 .container.right-panel-active .overlay-left{
 	transform: translateX(0);
 }
 
+.container.right-panel-active1 .overlay-left{
+	transform: translateX(0);
+}
+
 .container.right-panel-active .overlay-right{
+	transform: translateX(20%);
+}
+
+.container.right-panel-active1 .overlay-right1{
 	transform: translateX(20%);
 }
