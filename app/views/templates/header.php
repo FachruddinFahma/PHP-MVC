@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/style.css">
     <!-- ICON -->
@@ -19,7 +18,7 @@
     <header id="header">
         <div id="dashboard-title">
             <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
-            <h2><?php echo $data['judul']?></h2>
+            <h2><?php echo $data['judul'] ?></h2>
         </div>
         <div id="center-content">
             <div id="foto-profile">
@@ -39,21 +38,12 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="li-detail">
-                    <a href="youtube.com">
-                        <details>
-                            <summary>
-                                <span></span>
-                                <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
-                                <a href="index.html">Data Kamar</a>
-                                <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
-                            </summary>
-                            <ul class="detail-ul">
-                                <li><a href="#">Kamar Tersedia</a></li>
-                                <li><a href="#">Kamar Terisi</a></li>
-                            </ul>
+                <li>
+                    <a href="index.html">
+                        <span></span>
+                        <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
+                        <p>Data Kamar</p>
                     </a>
-                    </details>
                 </li>
                 <li>
                     <a href="http://localhost/PHP-MVC/public/penghuni">
