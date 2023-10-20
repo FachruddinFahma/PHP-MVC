@@ -45,26 +45,36 @@
                 <button>Sign Up</button>
             </form>
         </div>
+        <!-- <div class="form-container lupa-password-container">
+            <form action="#">
+                <h1>Lupa Password</h1>
+                <span>Silahkan ganti password anda dengan mengisi di bawah ini</span>
+                <input type="email" placeholder="Isi Email">
+                <input type="password" placeholder="Masukkan password baru anda">
+                <input type="password" placeholder="Konfirmasi password baru anda">
+                <button>Ubah</button>
+            </form>
+        </div> -->
         <div class="form-container sign-in-container">
             <form action="#">
                 <h1>Sign In</h1>
-                    <!-- <div class="social-container">
-                        <a href="#" class="social"><i></i></a>
-                    </div> -->
                 <span>Masukkan Email dan Password anda</span>
-                <input type="email" placeholder="Isi Email">
-                <input type="password" placeholder="Isi Password">
+                <input type="email" placeholder="Masukkan email anda">
+                <input type="password" placeholder="Masukkan password anda">
+                <p>Lupa Password?<a href="#" id="lupaPassword"> Silahkan ganti disini</a></p>
                 <button>Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
+                    <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="" id="logo">
                     <h1>Welcome To J-KOST</h1>
                     <p>Kost Jember Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p>
                     <button class="press" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
+                    <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="" id="logo">
                     <h1>Welcome To J-KOST</h1>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p>
                     <button class="press" id="signUp">Sign Up</button>
@@ -74,17 +84,23 @@
     </div>
     
     <script>
-        const signUpbutton = document.getElementById("signUp");
-        const signInbutton = document.getElementById("signIn");
+        const signUpButton = document.getElementById("signUp");
+        const signInButton = document.getElementById("signIn");
+        const lupaPasswordButton = document.getElementById("lupaPassword");
         const container = document.getElementById("container");
 
-        signUpbutton.addEventListener('click', ()=>{
+        signUpButton.addEventListener('click', () => {
             container.classList.add("right-panel-active");
         });
 
-        signInbutton.addEventListener('click', () => {
+        signInButton.addEventListener('click', () => {
             container.classList.remove("right-panel-active");
         });
+
+        // lupaPasswordButton.addEventListener('click', (e) => {
+        //     e.preventDefault(); // Hindari tindakan default dari tautan
+        //     container.classList.add("right-panel-active"); // Ganti tampilan saat tombol lupaPassword diklik
+        // });
     </script>
 </body>
 </html>
