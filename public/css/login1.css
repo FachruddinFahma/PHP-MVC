@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    /* background-image: url('http://localhost/PHP-MVC/public/image/login bg.png'); */
+    background-color: #134BA4;
+	background: linear-gradient(to right, #2f3a81, #4f6fd5);
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 768px;
+    max-width: 100%;
+    height: 580px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 14px 28px rgba(0, 0, 0,.25), 0px 10px 10px rgba(0, 0, 0,.22);
+}
+
+.form-container{
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.sign-in-container{
+    right: 0;
+	width: 50%;
+}
+
+form{
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+}
+
+img{
+	margin: 0;
+	height: 15%;
+}
+
+h1{
+	font-weight: bold;
+	margin: 0;
+	font-size: 25px;
+}
+
+span{
+	font-size: 12px;
+}
+
+label{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 60%;
+    left: 10px; 
+    transform: translateY(-50%);
+    color: #134BA4;
+    margin-left: 5px;
+}
+
+.input-icon input {
+    border-radius: 5px;
+    padding-right: 20px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 2px solid #bdbcbc;
+    padding: 12px 50px;
+    margin: 5px;
+    width: 100%;
+}
+
+button{
+    margin-top: 10px;
+	border-radius: 5px;
+    background-color: #134BA4;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 10px;
+    width: 100%;
+}
+
+p{
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.overlay-container{
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+}
+
+.overlay{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://localhost/PHP-MVC/public/image/kamar.jpg');
+    background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 0 0;
+	color: #ffffff;
+	left: -100%;
+	height: 100vh;
+	width: 200%;
+	transform: translateX(0);
+}
+
+.overlay-panel{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 78%;
+	width: 50%;
+	transform: translateX(0);
+}
+
+.press {
+    background-color: transparent;
+    border: 2px solid #ffffff; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+
+.press:hover {
+    background-color: #3d48c6; 
+}
+
+.signup-link {
+    width: 100%;
+    padding: 10px 20px; 
+    background-color: transparent; 
+    border: 2px solid #ffffff;
+    color: #ffffff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    text-align: center; 
+    transition: background-color 0.3s; 
+}
+
+.signup-link:hover {
+    background-color: #ffffff; /* Warna latar belakang saat dihover */
+    color: black;
+}

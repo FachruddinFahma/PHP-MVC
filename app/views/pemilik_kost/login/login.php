@@ -39,7 +39,7 @@
         </div>
         <div class="form-container sign-up-container">
             <form action="#">
-                <h1>Create Account</h1>
+                <h1>Create Account Pemilik</h1>
                 <span>Isi data dengan lengkap</span>
                 <input type="text" placeholder="Masukkan nama lengkap">
                 <input type="email" placeholder="Masukkan email">
@@ -49,9 +49,24 @@
                 <input type="password" placeholder="Masukkan password">
                 <input type="email" placeholder="Masukkan email">
                 <input type="file" placeholder="Masukkan password">
-                <button>Sign Up</button>
+                <button>Daftar</button>
             </form>
         </div>
+        <!-- <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account Penyewa</h1>
+                <span>Isi data dengan lengkap</span>
+                <input type="text" placeholder="Masukkan nama lengkap">
+                <input type="email" placeholder="Masukkan email">
+                <input type="password" placeholder="Masukkan password">
+                <input type="text" placeholder="Masukkan nama lengkap">
+                <input type="email" placeholder="Masukkan email">
+                <input type="password" placeholder="Masukkan password">
+                <input type="email" placeholder="Masukkan email">
+                <input type="file" placeholder="Masukkan password">
+                <button>Daftar</button>
+            </form>
+        </div> -->
         <div class="form-container sign-in-container">
             <form action="#">
                 <h1>Sign In</h1>
@@ -59,7 +74,7 @@
                 <input type="email" placeholder="Masukkan email anda">
                 <input type="password" placeholder="Masukkan password anda">
                 <p>Lupa Password?<a href="#" id="lupaPassword">Silahkan ganti disini</a></p>
-                <button>Sign In</button>
+                <button>Login</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -74,7 +89,8 @@
                     <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="" id="logo">
                     <h1>Welcome To J-KOST</h1>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p>
-                    <button class="press" id="signUp">Sign Up</button>
+                    <button class="press" id="signUp">Sign Up Pemilik</button><br>
+                    <!-- <button class="press" id="signUp">Sign Up Penyewa</button> -->
                 </div>
             </div>
         </div>
