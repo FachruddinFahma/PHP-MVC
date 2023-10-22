@@ -1,10 +1,10 @@
 <?php
-    class Register_pemilik extends Controller {
+    class Register_penyewa extends Controller {
 
         public function index()
         {
-            $data['judul'] = 'Pemilik Kost';
-            $this->view('pemilik_kost/register/register_pemilik', $data);
+            $data['judul'] = 'Penyewa Kost';
+            $this->view('pemilik_kost/register/register_penyewa', $data);
             $this->view('templates/footer');
         }
 

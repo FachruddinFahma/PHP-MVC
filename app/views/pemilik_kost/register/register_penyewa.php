@@ -31,7 +31,7 @@
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
-                <h1>Register Pemilik Kost</h1>
+                <h1>Register Penyewa Kost</h1>
                 <span>Isi data dengan lengkap</span>
                 <div class="form-group">
                     <div class="form-group">

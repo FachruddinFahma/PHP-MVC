@@ -46,9 +46,15 @@ form{
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
+	padding: 0 35px;
 	height: 100%;
+    width: 70%;
 }
+
+.form-group {
+    margin: 6px 0;
+}
+
 
 img{
 	margin: 0;
@@ -65,6 +71,35 @@ span{
 	font-size: 12px;
 }
 
+label{
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 63%;
+    left: 15px; 
+    transform: translateY(-50%);
+    color: #134BA4;
+    margin-left: 5px;
+}
+
+.input-icon input {
+    border-radius: 5px;
+    padding-left: 20px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 2px solid #bdbcbc;
+    padding: 12px 50px;
+    margin: 5px;
+    width: 100%;
+}
+
 input{
 	background-color: #eee;
 	border: none;
@@ -76,9 +111,8 @@ input{
 }
 
 button{
-    margin-top: 10px;
 	border-radius: 5px;
-    background-color: #134BA4;
+    background-color: #2459af;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -86,6 +120,11 @@ button{
     text-transform: uppercase;
     margin: 10px;
     width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0D3486; 
 }
 
 p{

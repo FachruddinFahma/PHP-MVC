@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/login1.css">
     <!-- LINK REMIX ICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Halaman <?php echo $data['judul'] ?></title>
 </head>
 
 <body>
     <div class="container">
         <div class="form-container sign-in-container">
             <form action="#">
-                <h1>Sign In</h1>
+                <h1>Login</h1>
                 <span>Masukkan Email dan Password anda</span><br>
                 <div class="input-icon">
                     <i class="ri-mail-fill"></i>
@@ -28,7 +28,7 @@
                     <input type="password" placeholder="Masukkan password anda">
                 </div>
                 <button>Login</button>
-                <p>Lupa Password?<a href="#" id="lupaPassword"> Silahkan ganti disini</a></p>
+                <p>Lupa Password?<a href="http://localhost/PHP-MVC/public/lupa_password" id="lupaPassword"> Silahkan ganti disini</a></p>
             </form>
         </div>
         <div class="overlay-container">
@@ -38,7 +38,7 @@
                     <h1>Welcome To J-KOST</h1><br><br>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p><br><br>
                     <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Daftar Pemilik Kost</a><br>
-                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Daftar Penyewa Kost</a>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_penyewa">Daftar Penyewa Kost</a>
                 </div>
             </div>
         </div>

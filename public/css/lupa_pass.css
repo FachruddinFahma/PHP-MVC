@@ -36,7 +36,7 @@ body{
 }
 
 .sign-in-container{
-    right: 0;
+    left: 0;
 	width: 50%;
 }
 
@@ -46,9 +46,15 @@ form{
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
+	padding: 0 35px;
 	height: 100%;
+    width: 90%;
 }
+
+.form-group {
+    margin: 6px 0;
+}
+
 
 img{
 	margin: 0;
@@ -67,7 +73,7 @@ span{
 
 label{
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 6px;
 }
 
 .input-icon {
@@ -76,8 +82,8 @@ label{
 
 .input-icon i {
     position: absolute;
-    top: 60%;
-    left: 10px; 
+    top: 63%;
+    left: 15px; 
     transform: translateY(-50%);
     color: #134BA4;
     margin-left: 5px;
@@ -85,13 +91,23 @@ label{
 
 .input-icon input {
     border-radius: 5px;
-    padding-right: 20px;
+    padding-left: 20px;
     text-align: left;
     background-color: #ffffff;
     border: 2px solid #bdbcbc;
     padding: 12px 50px;
     margin: 5px;
     width: 100%;
+}
+
+input{
+	background-color: #eee;
+	border: none;
+	text-decoration: none;
+	margin: 8px 0;
+	padding: 12px 15px;
+	width: 100%;
+	border-radius: 5px;
 }
 
 button{
@@ -124,6 +140,7 @@ a{
 .overlay-container{
 	position: absolute;
 	top: 0;
+	left: 50%;
 	width: 50%;
 	height: 100%;
 	overflow: hidden;
