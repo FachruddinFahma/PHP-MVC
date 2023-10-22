@@ -17,12 +17,38 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/register.css">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>hallo</h1>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account Pemilik</h1>
+                <span>Isi data dengan lengkap</span>
+                <input type="text" placeholder="Masukkan nama lengkap">
+                <input type="email" placeholder="Masukkan email">
+                <input type="password" placeholder="Masukkan password">
+                <input type="text" placeholder="konfirmasi password">
+                <button>Daftar</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel">
+                    <img src="http://localhost/PHP-MVC/public/image/project logo j-kost white.png" alt="" id="logo"><br>
+                    <h1>Welcome To J-KOST</h1><br><br>
+                    <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p><br><br>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/login1">Sign Up Pemilik</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

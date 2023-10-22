@@ -1,13 +1,12 @@
 <?php
-class Register extends Controller {
+    class Register_pemilik extends Controller {
 
-    public function index()
-    {
-        $data['judul'] = 'Register';
-        $this->view('templates/header', $data);
-        $this->view('pemilik_kost/register/register_pemilik', $data);
-        $this->view('templates/footer');
-    }
+        public function index()
+        {
+            $data['judul'] = 'Register';
+            $this->view('pemilik_kost/register/register_pemilik', $data);
+            $this->view('templates/footer');
+        }
 
     // public function prosesRegister()
     // {

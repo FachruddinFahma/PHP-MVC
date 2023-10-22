@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK CSS -->
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/login1.css">
+    <!-- LINK REMIX ICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -35,7 +37,7 @@
                     <img src="http://localhost/PHP-MVC/public/image/project logo j-kost white.png" alt="" id="logo"><br>
                     <h1>Welcome To J-KOST</h1><br><br>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p><br><br>
-                    <a class="signup-link" href="http://localhost/phpmvc/public/register_pemilik">Sign Up Pemilik</a>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Sign Up Pemilik</a>
                 </div>
             </div>
         </div>
