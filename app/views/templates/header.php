@@ -82,13 +82,6 @@
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a href="youtube.com">
-                        <span></span>
-                        <img src="http://localhost/PHP-MVC/public/image/profil.png" alt="profil">
-                        <p>Profil</p>
-                    </a>
-                </li>
                 <li id="link-keluar">
                     <a href="http://localhost/PHP-MVC/public/login">
                         <span></span>
