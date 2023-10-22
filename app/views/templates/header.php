@@ -46,6 +46,13 @@
                     <a href="index.html">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
+                        <p>Data Kost</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span></span>
+                        <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
                         <p>Data Kamar</p>
                     </a>
                 </li>
