@@ -77,7 +77,7 @@ label{
 .input-icon i {
     position: absolute;
     top: 60%;
-    left: 10px; 
+    right: 10px; 
     transform: translateY(-50%);
     color: #134BA4;
     margin-left: 5px;

@@ -44,7 +44,7 @@
                     <img src="http://localhost/PHP-MVC/public/image/project logo j-kost white.png" alt="" id="logo"><br>
                     <h1>Welcome To J-KOST</h1><br><br>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p><br><br>
-                    <a class="signup-link" href="http://localhost/PHP-MVC/public/login1">Sign Up Pemilik</a>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/login1">Login</a>
                 </div>
             </div>
         </div>

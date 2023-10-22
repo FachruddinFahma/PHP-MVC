@@ -18,14 +18,14 @@
                 <h1>Sign In</h1>
                 <span>Masukkan Email dan Password anda</span><br>
                 <div class="input-icon">
-                    <i class="ri-user-fill"></i>
+                    <i class="ri-mail-fill"></i>
                     <label for="">Email</label>
                     <input type="email" placeholder="Masukkan email anda">
                 </div><br>
                 <div class="input-icon">
                     <i class="ri-key-2-fill"></i>
                     <label for="">Password</label>
-                    <input type="email" placeholder="Masukkan email anda">
+                    <input type="password" placeholder="Masukkan password anda">
                 </div>
                 <button>Login</button>
                 <p>Lupa Password?<a href="#" id="lupaPassword"> Silahkan ganti disini</a></p>
@@ -37,7 +37,8 @@
                     <img src="http://localhost/PHP-MVC/public/image/project logo j-kost white.png" alt="" id="logo"><br>
                     <h1>Welcome To J-KOST</h1><br><br>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p><br><br>
-                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Sign Up Pemilik</a>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Daftar Pemilik Kost</a><br>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Daftar Penyewa Kost</a>
                 </div>
             </div>
         </div>
