@@ -22,7 +22,7 @@ main {
 
 main #sidebar {
     height: 100vh;
-    width: 350px;
+    width: 320px;
     justify-content: center;
     box-sizing: border-box;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
@@ -63,7 +63,6 @@ main > #sidebar > .nav-sidebar {
 .nav-sidebar li.li-detail {
     padding-left: 0px;
     margin-left: 5px;
-    
 }
 
 .nav-sidebar li a{
@@ -183,10 +182,10 @@ main > #sidebar > .nav-sidebar {
     padding: 10px 30px;
     color: var(--navy);
     position: fixed; 
-    width: calc(100% - 350px); 
+    width: calc(100% - 320px); 
     z-index: 1; 
     top: 0; 
-    left: 350px;
+    left: 320px;
 }
 
 #header-content {
