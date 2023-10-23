@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/login1.css">
     <!-- LINK REMIX ICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- ICON JKOST -->
+    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white.png">
+
     <title>Halaman <?php echo $data['judul'] ?></title>
 </head>
 
