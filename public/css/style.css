@@ -29,6 +29,8 @@ main #sidebar {
     padding-top: 30px;
     position: fixed;
     left: 0;
+    z-index: 999;
+    background-color: white; 
 }   
 
 main > #sidebar > #icon-jkost {
@@ -164,13 +166,12 @@ main > #sidebar > .nav-sidebar {
     font-weight: 800;
 }
 
-#home {
+.content{
+    border: 1px solid black ;
     height: 100vh;
     flex: 1;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-left: 300px;
+    margin-left: 320px;
+    margin-top: 60px;
 }
 
 
@@ -184,7 +185,7 @@ main > #sidebar > .nav-sidebar {
 #header {
     display: flex;
     align-items: center;
-    background-color: var(--white); 
+    background-color: white; 
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     color: var(--navy);
