@@ -167,7 +167,6 @@ main > #sidebar > .nav-sidebar {
 }
 
 .content{
-    border: 1px solid black ;
     height: 100vh;
     flex: 1;
     margin-left: 320px;

@@ -43,14 +43,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="http://localhost/PHP-MVC/public/data_kost">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
                         <p>Data Kost</p>
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="http://localhost/PHP-MVC/public/kamar">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
                         <p>Data Kamar</p>
@@ -64,12 +64,12 @@
                     </a>
                 </li>
                 <li class="li-detail">
-                    <a href="youtube.com">
+                    <a href="http://localhost/PHP-MVC/public/pemesanan">
                         <details>
                             <summary>
                                 <span></span>
                                 <img src="http://localhost/PHP-MVC/public/image/pemesanan.png" alt="pemesanan">
-                                <a href="">Pemesanan</a>
+                                <a href="http://localhost/PHP-MVC/public/pemesanan">Pemesanan</a>
                                 <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
                             </summary>
                             <ul class="detail-ul">
@@ -80,7 +80,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="youtube.com">
+                    <a href="http://localhost/PHP-MVC/public/laporan">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
                         <p>Laporan</p>

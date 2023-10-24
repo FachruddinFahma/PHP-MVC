@@ -1,12 +1,12 @@
 <?php
-class Data_Kost extends Controller
+class Laporan extends Controller
 {
     public function index()
     {
-        $data['judul'] = 'Kost';
+        $data['judul'] = 'Laporan';
         //$data['dashboard'] = $this->model('Dashboard_model')->getAllPenghuni();
         $this->view('templates/header', $data);
-        $this->view('pemilik_kost/data_kost/index', $data);
+        $this->view('pemilik_kost/laporan/index', $data);
         $this->view('templates/footer');
     }
 }
