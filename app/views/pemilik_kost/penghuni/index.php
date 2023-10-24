@@ -105,36 +105,37 @@
         </div>
     </div> -->
 
-<section id="home">
-<div class="col-md-8">
-<table class="table table-dark table-borderless">
+<section id="home" class="content">
+    
+<div class="col-md-8e">
+<table class="table table-striped w-100">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Id</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Kamar</th>
+      <th scope="col">Jenis Kelamin</th>
+      <th scope="col">Tempat Tanggal Lahir</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+    <?php
+foreach ($data['penghuni']as $d) :
+?>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td><?= $d['nama_lengkap'] ?></td>
+      <td><?= $d['id_kamar'] ?></td>
+      <td><?= $d['jenis_kelamin'] ?></td>
+      <td><?= $d['tggl_lahir'] ?></td>
+      <td><?= $d['alamat'] ?></td>
+      <td><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></button> </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php endforeach ?>
   </tbody>
 </table>
 </div>
 </section>
+

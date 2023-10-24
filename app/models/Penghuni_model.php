@@ -10,7 +10,7 @@
 
         public function getAllPenghuni() 
         {
-            $this->db->query('SELECT * FROM tb_penghuni ');
+            $this->db->query('SELECT * FROM tb_user left JOIN tb_kamar ON tb_user.id_user = tb_kamar.id_user');
             return $this->db->resultSet();
         }
 
