@@ -1,0 +1,63 @@
+h1{
+    color: red;
+}
+body{
+    font-size: 12px;
+}
+
+.top{
+    padding: 100px 80px 0;
+}
+
+.top select{
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.top input.input-search{
+    width: 350px;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    border: 1px solid #9E9E9E;
+    margin: 0 10px;
+}
+
+.top button.button-search {
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    background-color: #385583;
+    border-radius: 5px;
+    height: auto;
+}
+
+.top button.tambah-kamar {
+    border: none;
+    padding: 10px 15px;
+    background-color: #1F9254;
+    color: white;
+    border-radius: 5px;
+    float: right;
+    margin-top: -10px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.bottom{
+    width: 1250px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 30px 80px 0;
+}
+
+/* Modal css */
+.modal-header {
+    display: flex;
+}
+
