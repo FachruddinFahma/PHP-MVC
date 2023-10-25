@@ -1,3 +1,6 @@
+<?php
+$judul = $data['judul'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +27,7 @@
     <header id="header">
         <div id="dashboard-title">
             <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
-            <h2><?php echo $data['judul'] ?></h2>
+            <h2><?php echo $judul ?></h2>
         </div>
         <div id="center-content">
             <div id="foto-profile">
@@ -37,35 +40,35 @@
         <aside id="sidebar">
             <img id="icon-jkost" src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
             <ul class="nav-sidebar">
-                <li>
+                <li id="link-dashboard">
                     <a href="http://localhost/PHP-MVC/public/dashboard">
                         <span></span>
                         <img src=" http://localhost/PHP-MVC/public/image/dashboard.png" alt="dashboard">
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
+                <li id="link-kost">
                     <a href="http://localhost/PHP-MVC/public/data_kost">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
                         <p>Data Kost</p>
                     </a>
                 </li>
-                <li>
+                <li id="link-kamar">
                     <a href="http://localhost/PHP-MVC/public/kamar">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
                         <p>Data Kamar</p>
                     </a>
                 </li>
-                <li>
+                <li id="link-penghuni">
                     <a href="http://localhost/PHP-MVC/public/penghuni">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/penghuni.png" alt="data penghuni">
                         <p>Data Penghuni</p>
                     </a>
                 </li>
-                <li class="li-detail">
+                <li id="link-pesanan" class="li-detail">
                     <a href="http://localhost/PHP-MVC/public/pemesanan">
                         <details>
                             <summary>
@@ -81,7 +84,7 @@
                         </details>
                     </a>
                 </li>
-                <li>
+                <li id="link-laporan">
                     <a href="http://localhost/PHP-MVC/public/laporan">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
@@ -102,4 +105,32 @@
         </aside>
 
     </main>
-    <!-- <script src="http://localhost/PHP-MVC/public/js/router.js"></script> -->
+    <script>
+        var judul = "<?php echo $judul; ?>";
+        console.log(judul);
+
+        const itemDashboard = document.getElementById('link-dashboard');
+        const itemKost = document.getElementById('link-kost');
+        const itemKamar = document.getElementById('link-kamar');
+        const itemPenghuni = document.getElementById('link-penghuni');
+        const itemPemesanan = document.getElementById('link-pesanan');
+        const itemLaporan = document.getElementById('link-laporan');
+
+        function addClickedClass(element) {
+            element.classList.add('clicked');
+        }
+
+        if (judul === "Dashboard") {
+            addClickedClass(itemDashboard);
+        } else if (judul === "Kost") {
+            addClickedClass(itemKost);
+        } else if (judul === "Kamar") {
+            addClickedClass(itemKamar);
+        } else if (judul === "Penghuni") {
+            addClickedClass(itemPenghuni);
+        } else if (judul === "Pemesanan") {
+            addClickedClass(itemPemesanan);
+        } else if (judul === "Laporan") {
+            addClickedClass(itemLaporan);
+        }
+    </script>
