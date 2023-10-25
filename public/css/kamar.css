@@ -88,15 +88,16 @@ body{
     flex-direction:column;
 }
 
-.modal-body .input .form-control{
+.modal-body .input .form-controll{
     margin: 20px 0;
     border-radius:20px;
     font-size: 14px;
-    padding-left: 20px;
+    padding: 10px 10px;
     width:400px;
+    border:1px solid var(--lightgrey);
 }
 
-.modal-body .input .form-control:focus{
+.modal-body .input .form-controll:focus{
     outline: none;
 }
 
@@ -147,3 +148,45 @@ body{
     margin-left:-12px;
     margin-top:-10px;
 }
+
+#input-ukuran-kamar{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#input-ukuran-kamar p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#input-ukuran-kamar .form-controll{
+    width: 50%;
+}
+
+/* Modal css - Modal Foto */
+
+.modal-body .foto {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.modal-body .foto .foto-group{
+    width: 115px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    padding-left:15px;
+    padding-right:15px;
+}
+.modal-body .foto .foto-group button{
+     background-color: white;
+     border:1px solid black;
+        padding: 5px 15px;
+        border-radius: 50px;
+}
+
