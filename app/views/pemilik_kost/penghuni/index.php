@@ -131,7 +131,7 @@ foreach ($data['penghuni']as $d) :
       <td><?= $d['jenis_kelamin'] ?></td>
       <td><?= $d['tggl_lahir'] ?></td>
       <td><?= $d['alamat'] ?></td>
-      <td><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></button> </td>
+      <td><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></button> <button class="btn btn-danger" type="button"><i class="fa-solid fa-trash"></i></button></td>
     </tr>
     <?php endforeach ?>
   </tbody>
