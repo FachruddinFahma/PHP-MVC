@@ -107,15 +107,15 @@
 
 <section id="home" class="content">
     
-<div class="col-md-8e">
-<table class="table table-striped w-100">
+<div class="col-md-8e p-4" >
+<table class="table table-striped w-100 ">
   <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Nama</th>
       <th scope="col">Kamar</th>
       <th scope="col">Jenis Kelamin</th>
-      <th scope="col">Tempat Tanggal Lahir</th>
+      <th scope="col">No HP</th>
       <th scope="col">Alamat</th>
       <th scope="col">Action</th>
     </tr>
@@ -123,19 +123,25 @@
   <tbody>
     <tr>
     <?php
+    $i = 1;
 foreach ($data['penghuni']as $d) :
 ?>
-      <th scope="row">1</th>
+      <th scope="row"><?= $i ?> </th>
       <td><?= $d['nama_lengkap'] ?></td>
       <td><?= $d['id_kamar'] ?></td>
       <td><?= $d['jenis_kelamin'] ?></td>
-      <td><?= $d['tggl_lahir'] ?></td>
+      <td><?= $d['no_hp'] ?></td>
       <td><?= $d['alamat'] ?></td>
-      <td><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></button> <button class="btn btn-danger" type="button"><i class="fa-solid fa-trash"></i></button></td>
+      <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $d['id_user'] ?>"><i class="fa-solid fa-circle-info"></i></button> <button class="btn btn-danger" type="button"><i class="fa-solid fa-trash"></i></button></td>
     </tr>
-    <?php endforeach ?>
+    <?php
+    include "modal.php";
+    $i++;
+    endforeach ?>
   </tbody>
 </table>
 </div>
 </section>
+
+
 
