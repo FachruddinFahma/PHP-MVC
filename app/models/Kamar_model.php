@@ -10,7 +10,7 @@ class Kamar_model
 
     public function getAllKamar()
     {
-        $this->db->query('SELECT * FROM tb_penghuni ');
+        $this->db->query('SELECT * FROM tb_kamar');
         return $this->db->resultSet();
     }
 
