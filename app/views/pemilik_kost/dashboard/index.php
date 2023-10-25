@@ -74,8 +74,48 @@
                 </div>
             </div>
         </div>
-    </div>
 
 
+        <div class="card-container">
+
+            <div name="chart_card" class="card mt-4">
+                <div class="card-body px-3 py-4-5 ms-2 mt-2">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Grafik Pendapatan</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div name="history_card" class="card mt-4">
+                <div class="card-body px-3 py-4-5 ms-2 mt-2">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>History Pembayaran</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
+
+<style>
+    .card {
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .card-container [name="chart_card"],
+    .card-container [name="history_card"] {
+        flex: 1;
+    }
+</style>
