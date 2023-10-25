@@ -1,3 +1,9 @@
+:root{
+    --lightgrey: #AEAEAE;
+    --blue: #295EF4;
+    --black: #282828;
+}
+
 h1{
     color: red;
 }
@@ -54,10 +60,90 @@ body{
     margin-right: auto;
     margin-top: 10px;
     padding: 30px 80px 0;
+    border-radius: 10px;
 }
 
 /* Modal css */
-.modal-header {
-    display: flex;
+.modal-content {
+    border-radius: 20px;
 }
 
+.modal-header {
+    display: flex;
+    justify-content:center;
+}
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-header h5{
+    position:absolute;
+    justify-content:center;
+    top:30px;
+}
+
+.modal-body .input-group{
+    padding: 0 30px;
+    display:flex;
+    flex-direction:column;
+}
+
+.modal-body .input .form-control{
+    margin: 20px 0;
+    border-radius:20px;
+    font-size: 14px;
+    padding-left: 20px;
+    width:400px;
+}
+
+.modal-body .input .form-control:focus{
+    outline: none;
+}
+
+.modal-footer .back, .next{
+    background-color: #1B3359;
+    border-radius: 10px;
+    font-size: 12px;
+    border: none;
+}
+
+#progress-data{
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    margin-top:40px;
+}
+
+.active-data .angka{
+    border-radius: 50px;
+    background-color: var(--lightgrey);
+    color: var(--black);
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.actived .angka{
+    background-color: var(--blue);
+    color: white;
+    font-weight: 600;
+}
+
+.actived #title-progress{
+    font-weight: 1000;
+}
+
+#progress-data .title-progress::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: var(--lightgrey);
+    width: 20%;
+    margin-left:-12px;
+    margin-top:-10px;
+}
