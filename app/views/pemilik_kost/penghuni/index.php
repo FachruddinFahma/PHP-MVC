@@ -132,7 +132,9 @@ foreach ($data['penghuni']as $d) :
       <td><?= $d['jenis_kelamin'] ?></td>
       <td><?= $d['no_hp'] ?></td>
       <td><?= $d['alamat'] ?></td>
-      <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $d['id_user'] ?>"><i class="fa-solid fa-circle-info"></i></button> <button class="btn btn-danger" type="button"><i class="fa-solid fa-trash"></i></button></td>
+      <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $d['id_user'] ?>"><i class="fa-solid fa-circle-info"></i></button>
+      <form method="POST" action="http://localhost/PHP-MVC/public/penghuni/deletePenghuni/<?= $d['id_user']; ?>" style="display:inline;">
+        <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus penghuni?')"><i class="fa-solid fa-trash"></i></button>
     </tr>
     <?php
     include "modal.php";

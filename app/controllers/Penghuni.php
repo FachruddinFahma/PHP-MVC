@@ -75,16 +75,19 @@ class Penghuni extends Controller
         return $namaFileBaru;
     }
 
-    public function deletePenghuni($id_Penghuni)
-    {
-        if ($this->model('Penghuni_model')->deletePenghuni($id_Penghuni) > 0) {
+    public function deletePenghuni($id_user)
+{
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if ($this->model('Penghuni_model')->deletePenghuni($id_user) > 0) {
             Flasher::setFlash('berhasil', 'dihapus', 'success');
         } else {
             Flasher::setFlash('gagal', 'dihapus', 'danger');
         }
-        header('Location: http://localhost/phpmvc/public/penghuni');
-        exit;
     }
+    header('Location: http://localhost/PHP-MVC/public/penghuni');
+    exit;
+}
+
 
     public function updatePenghuni($id_Penghuni)
     {
