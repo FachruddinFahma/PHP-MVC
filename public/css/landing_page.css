@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --navy: #1B3359;
+    --middleblue: #134BA4;
+    --lightblue: #F3F7FD; 
+    --darkblue: #061072;
+    --lightblueclick: #c9d8eb; 
+    --green:#1F9254;
+    --blue: #295EF4;
+    --lightgrey: #AEAEAE;
+    --brown: #404040;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--lightblue);
+}
+#why-jkost{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#why-jkost .title-why{
+    text-align: center;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#why-jkost .title-why h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+#why-jkost .title-why h3 span{
+    color: var(--middleblue);
+    font-weight: 800;
+}
+
+#why-jkost #kumpulan-icon-why{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#why-jkost #kumpulan-icon-why .icon-why{
+    max-width: 250px;
+    margin: 10px;
+    text-align: center;
+}
+#why-jkost #kumpulan-icon-why .icon-why .bg-icon-why{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color: var(--navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+#why-jkost #kumpulan-icon-why .icon-why .bg-icon-why .ic{
+    color: white;
+    font-size: 25px;
+}
+
+/* section fitur unggulan */
+#fitur-unggulan{
+    padding: 10px 30px;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+#fitur-unggulan h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+#fitur-unggulan #fiturunggulan-tulisan{
+    max-width: 600px;
+}
+
+#fitur-unggulan #fiturunggulan-tulisan .kumpulan-fiturunggulan .list-fitur{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#fitur-unggulan #fiturunggulan-tulisan .kumpulan-fiturunggulan .list-fitur .ic-fitur{
+    color:var(--green) ;
+    font-size: 25px;
+}
+
+#fitur-unggulan #fiturunggulan-gambar img{
+    max-width: 400px;
+}
+
+/* section order */
+#order{
+    padding: 250px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#order .title-section-order{
+   margin-bottom: 50px;
+}
+#order .title-section-order h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#order .content-order{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 150px;
+}
+
+#order .content-order .list-order{
+    max-width: 300px;
+}
+
+
+#order .content-order .list-order .title-order{
+    font-weight: 600;
+}
+
+/* belom bisa diterapkannn */
+#order .content-order .list-order .title-order-after::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: var(--brown);
+    width: 17%;
+    margin-top:-10px;
+    margin-left: 12px;
+}
+
+#order .content-order .list-order p{
+    max-width: 200px;
+}
+
+#order .content-order .list-order .penjelasan-order{
+    margin-top: -10px;
+}
+
+#order .content-order .list-order .gambar-order{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+#order .content-order .list-order .gambar-order .ic-order{
+    color: white;
+    font-size: 30px;
+}
+
+/* section testimoni */
+#testimoni{
+    padding: 0 100px;
+    padding-bottom: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+}
+
+#testimoni .title-section-testimoni h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#testimoni .title-section-testimoni{
+    padding-bottom: 50px;
+}
+#testimoni .content-testimoni{
+    display: flex;
+    text-align: left;
+}
+
+#testimoni .content-testimoni #kumpulan-card-testimoni{
+    display: flex;
+    gap: 30px;
+}
+
+#testimoni .content-testimoni #kumpulan-card-testimoni .card-testimoni{
+    max-width: 300px;
+    background-color: white;
+    padding: 30px 50px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.09);
+}
+
+#testimoni .content-testimoni .profile-testimoni{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#testimoni .content-testimoni .profile-testimoni .gambar-testimoni img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+#testimoni .content-testimoni .profile-testimoni .nama-testimoni p{
+   padding: 0;
+   margin: 0;
+}
+
+#testimoni .content-testimoni .profile-testimoni .nama-testimoni p{
+   padding: 0;
+   margin: 0;
+}
+
+#testimoni .content-testimoni .profile-testimoni .nama-testimoni .jabatan-testimoni{
+   color: var(--lightgrey);
+}
+
+#testimoni .content-testimoni .rating-testimoni .ic-testimoni{
+    color: #F9C200;
+    font-size: 17px;
+}
