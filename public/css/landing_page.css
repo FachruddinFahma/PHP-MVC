@@ -11,6 +11,18 @@
     --brown: #404040;
 }
 
+/* circle pemanis untuk effect effecttttt */
+.circle-pemanis{
+    width: 1000px;
+    height: 1000px;
+    background-color: #EAEFF6;
+    position: absolute;
+    border-radius: 1000px;
+    z-index: -99;
+    right: -300;
+    top: 300;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--lightblue);
@@ -49,6 +61,11 @@ body{
     max-width: 250px;
     margin: 10px;
     text-align: center;
+}
+
+#why-jkost #kumpulan-icon-why .icon-why p{
+    font-weight: 300;
+    color: var(--brown);
 }
 #why-jkost #kumpulan-icon-why .icon-why .bg-icon-why{
     width: 50px;

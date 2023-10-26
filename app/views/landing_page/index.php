@@ -40,6 +40,7 @@
             </div>
         </div>
     </section>
+    <div class="circle-pemanis"></div>
     <section id="fitur-unggulan">
         <div id="fiturunggulan-tulisan">
             <h2>Mencari Kost Lebih Cepat, Praktis, dan Aman</h2>
