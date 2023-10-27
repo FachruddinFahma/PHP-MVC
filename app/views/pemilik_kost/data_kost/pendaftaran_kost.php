@@ -35,14 +35,41 @@
                         <p>- Isi latitude dan longitude kost anda berada saat ini</p>
                         <p>- Isi alamat lengkap kost anda saat ini</p>
                     </div>
+                    <div class="input">
+                        <div class="file-upload">
+                            <label for="frontImage" class="custom-file-upload">Foto kost tampak depan</label>
+                            <input type="file" id="frontImage" class="file-input">
+                            <div class="preview-container">
+                                <img class="preview-image" src="#" alt="Preview">
+                            </div>
+                        </div>
+                        <div class="file-upload">
+                            <label for="sideImage" class="custom-file-upload">Foto kost tampak tengah</label>
+                            <input type="file" id="sideImage" class="file-input">
+                            <div class="preview-container">
+                                <img class="preview-image" src="#" alt="Preview">
+                            </div>
+                        </div>
+                        <div class="file-upload">
+                            <label for="backImage" class="custom-file-upload">Foto kost tampak belakang</label>
+                            <input type="file" id="backImage" class="file-input">
+                            <div class="preview-container">
+                                <img class="preview-image" src="#" alt="Preview">
+                            </div>
+                        </div>
+                    </div>
+
                     <button type="button" class="btn1" onclick="kembali()">Kembali</button>
                     <button type="button" class="btn2" onclick="selanjutnya()">Selanjutnya</button>
                 </div>
             </form>
         </div>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        // SCRIPT SELANJUTNYA DAN KEMBALI
         var visibleDiv = 0;
 
         function showDiv() {
@@ -63,8 +90,34 @@
             }
             showDiv();
         }
-
         showDiv();
+
+        const fileInputs = document.querySelectorAll('.file-input');
+        const previewContainers = document.querySelectorAll('.preview-container');
+        const previewImages = document.querySelectorAll('.preview-image');
+
+        fileInputs.forEach((input, index) => {
+            input.addEventListener('change', function() {
+                const file = this.files[0];
+                const previewContainer = previewContainers[index];
+                const previewImage = previewImages[index];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(event) {
+                        const imageUrl = event.target.result;
+                        previewImage.src = imageUrl;
+                        previewContainer.style.display = 'block';
+                    };
+
+                    reader.readAsDataURL(file);
+                } else {
+                    previewContainer.style.display = 'none';
+                    previewImage.src = '#';
+                }
+            });
+        });
     </script>
 </body>
 
