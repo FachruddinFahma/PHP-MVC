@@ -91,7 +91,7 @@
                         <div name="chart_card" class="card mt-4">
                             <div class="card-body px-4 py-4-5">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col">
                                         <h5>Grafik Transaksi</h5>
                                         <div class="card-body">
                                             <div id="chart-profile-visit"></div>
@@ -101,14 +101,14 @@
                             </div>
                         </div>
 
-                        <div name="history_card" class="card mt-4 ">
+                        <div name="history_card" class="card mt-4 mb-4">
                             <div class="card-body px-4 py-4-5">
                                 <div class="row">
 
                                     <div class="col">
                                         <h5 class="mb-3">History Pembayaran</h5>
 
-                                        <table class="table table-hover p-3">
+                                        <table class="table table-hover p-3 small">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">No</th>
@@ -151,11 +151,42 @@
 
                     <div class="card-container col-3">
                         <div name="chart_card" class="card mt-4">
-                            <div class="card-body px-4 py-4-5">
+                            <div class="card-body">
                                 <div class="row">
                                     <div class="col">
                                         <h5>Daftar Penghuni</h5>
                                     </div>
+
+                                    <div class="card-content pb-4">
+                                        <div class="recent-message d-flex px-4 py-3">
+                                            <div class="avatar avatar-lg">
+                                                <img src="http://localhost/PHP-MVC/public/image/user.png" />
+                                            </div>
+                                            <div class="name ms-4">
+                                                <p class="mb-1">Nico Flassy</p>
+                                                <p class="text-muted mb-0">+6281667584766</p>
+                                            </div>
+                                        </div>
+                                        <div class="recent-message d-flex px-4 py-3">
+                                            <div class="avatar avatar-lg">
+                                                <img src="http://localhost/PHP-MVC/public/image/user.png" />
+                                            </div>
+                                            <div class="name ms-4">
+                                                <p class="mb-1">Lutfi Hakim</p>
+                                                <p class="text-muted mb-0">+6281334394400</p>
+                                            </div>
+                                        </div>
+                                        <div class="recent-message d-flex px-4 py-3">
+                                            <div class="avatar avatar-lg">
+                                                <img src="http://localhost/PHP-MVC/public/image/user.png" />
+                                            </div>
+                                            <div class="name ms-4">
+                                                <p class="mb-1">Farhan Aryanto</p>
+                                                <p class="text-muted mb-0">+6281467387527</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
