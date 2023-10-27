@@ -10,9 +10,13 @@
 
         public function getAllPenghuni() 
         {
-            $this->db->query("select tb_user.tggl_lahir, tb_user.email, tb_user.foto_user, tb_user.id_user, nama_lengkap, tb_kamar.id_kamar, jenis_kelamin, alamat, no_hp from tb_penghuni_kamar join tb_user on tb_user.id_user = tb_penghuni_kamar.id_user join tb_kamar on tb_kamar.id_kamar = tb_penghuni_kamar.id_kamar;
-                            WHERE tb_user.id_role = '3'");
-            return $this->db->resultSet();
+            $this->db->query("SELECT tb_user.tggl_lahir, tb_user.email, tb_user.foto_user, tb_user.id_user, nama_lengkap, tb_kamar.id_kamar, jenis_kelamin, alamat, no_hp 
+FROM tb_penghuni_kamar 
+JOIN tb_user ON tb_user.id_user = tb_penghuni_kamar.id_user 
+JOIN tb_kamar ON tb_kamar.id_kamar = tb_penghuni_kamar.id_kamar 
+WHERE tb_user.id_role = '3'");
+return $this->db->resultSet();
+
         }
 
 

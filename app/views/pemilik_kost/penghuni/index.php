@@ -104,10 +104,21 @@
             </div>
         </div>
     </div> -->
+    
 
 <section id="home" class="content">
     
 <div class="col-md-8e p-4" >
+    
+<div class="input-group">
+    <input type="search" class="form-control rounded m-3" placeholder="Search" aria-label="Search" aria-describedby="search-addon" style="width: 100px !important;" />
+    <button type="button" class="btn btn-primary m-3">search</button>
+</div>
+
+
+
+<div style="border-radius: 20px; height: 500px;" class="bg-white p-3 ">
+
 <table class="table table-striped w-100 ">
   <thead>
     <tr>
@@ -136,14 +147,17 @@ foreach ($data['penghuni']as $d) :
       <form method="POST" action="http://localhost/PHP-MVC/public/penghuni/deletePenghuni/<?= $d['id_user']; ?>" style="display:inline;">
         <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus penghuni?')"><i class="fa-solid fa-trash"></i></button>
     </tr>
+    
     <?php
     include "modal.php";
     $i++;
     endforeach ?>
   </tbody>
+  </div>
 </table>
+
+
+
 </div>
 </section>
-
-
 
