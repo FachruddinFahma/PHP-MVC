@@ -11,9 +11,16 @@
         </div>
         <div class="modal-body">
             
-            <p><B>Foto: </B><?= $d['foto_user'] ?></p>
+
+        <img class="img-fluid mx-auto d-block mb-4" style="border-radius: 10px;"  width="200" src="http://localhost/PHP-MVC/public/image/<?= $d['foto_user'] ?>" alt="">
+            <p><B>Nama: </B><?= $d['nama_lengkap'] ?></p>
+            <p><b>Kamar: </b><?= $d['id_kamar'] ?></p>
+            <p><b>No Hp: </b><?= $d['no_hp'] ?></p>
+            <p><B>Alamat: </B><?= $d['alamat'] ?></p>
             <p><b>Email: </b><?= $d['email'] ?></p>
             <p><b>Tanggal Lahir: </b><?= $d['tggl_lahir'] ?></p>
+
+            
             
         </div>
         <div class="modal-footer">
