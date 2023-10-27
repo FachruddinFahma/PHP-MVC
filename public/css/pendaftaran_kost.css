@@ -4,7 +4,7 @@
     background-color: #fff;
     border-radius: 10px;
     max-width: 900px; 
-    height: 590px;
+    height: 600px;
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -33,6 +33,7 @@ h1{
 
 .form-group .col-sm-input {
     margin-bottom: 10px; 
+    font-size: 14px;
 }
 
 .form-group input[type="text"] {
@@ -94,4 +95,75 @@ h1{
     font-size: 12px;
     margin-bottom: 3px;
     color: #848484;
+}
+
+.input .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 25%;
+}
+
+.input .custom-file-upload:hover {
+    background-color: #45a049;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.input .preview-container {
+    margin-top: 20px;
+    display: none;
+    width: 100%; 
+}
+
+.input .preview-image {
+    width: 100%; /* Menetapkan lebar gambar pratinjau ke 100% */
+    max-width: 300px; /* Menetapkan lebar maksimum gambar pratinjau */
+    height: auto; /* Menggunakan tinggi otomatis untuk mempertahankan aspek rasio */
+}
+
+.form-group .input:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group .input:nth-child(3) .custom-file-upload {
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: auto; 
+    margin-right: 70px; 
+}
+
+.form-group .input:nth-child(3) .custom-file-upload:hover {
+    background-color: #45a049;
+}
+
+.form-group .input:nth-child(3) .file-input {
+    display: none;
+}
+
+.form-group .input:nth-child(3) .preview-container {
+    margin-top: 10px;
+    width: 250%;
+}
+
+.form-group .input:nth-child(3) .preview-image {
+    width: 210px;
+    height: 40vh;
 }
