@@ -7,7 +7,39 @@
             $this->view('pemilik_kost/register/register_pemilik', $data);
             $this->view('templates/footer');
         }
+        public function tambah_akun_pemilik()
+        {
+            $nama_lengkap = $_POST['nama_lengkap'];
+            $email = $_POST['email'];
+            $password =$_POST['password'];
+            $konfirpassword =$_POST['konfirpassword'];
+            echo $nama_lengkap;
+            if($password == $konfirpassword){
+                var_dump($_POST);
+            $dataisi = [
+                'nama_lengkap' => $nama_lengkap,
+                'email' => $email,
+                'password' => $password,
+            ];
+            try {
+                
+                $data['Pemilik_Kost'] = $this->model('Register_model')->addRegisterPemilik($dataisi);
 
+
+                echo 'sukses';
+                header('Location: http://localhost/PHP-MVC1/public/penghuni');
+                //code...
+            } catch (\Throwable $th) {
+                //throw $th;
+                echo 'gagal'. $th->getMessage();
+            }
+            
+            } else {
+                echo 'password gak sama';
+            } 
+
+        }
+    }
     // public function prosesRegister()
     // {
     //     // Ambil data yang diperlukan dari $_POST
@@ -34,7 +66,6 @@
     //         exit;
     //     }
     // }
-}
 
 
 // public function prosesRegister()
