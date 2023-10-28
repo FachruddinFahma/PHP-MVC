@@ -27,7 +27,7 @@
 
 
                 echo 'sukses';
-                header('Location: http://localhost/PHP-MVC1/public/penghuni');
+                header('Location: http://localhost/PHP-MVC/public/penghuni');
                 //code...
             } catch (\Throwable $th) {
                 //throw $th;
