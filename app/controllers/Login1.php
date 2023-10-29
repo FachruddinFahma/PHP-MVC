@@ -28,9 +28,9 @@
                     if ($ambil_id_role == 1) {
                         header('Location: http://localhost/PHP-MVC/public/dashboard');
                     } elseif ($ambil_id_role == 2) {
-                        header('Location: http://localhost/PHP-MVC/public/login');
+                        header('Location: http://localhost/PHP-MVC/public/pendaftaran_kost');
                     } elseif ($ambil_id_role == 3) {
-                        header('Location: http://localhost/PHP-MVC/public/penghuni');
+                        header('Location: http://localhost/PHP-MVC/public/kamar');
                     }else {
                         echo'Login gagal. Silakan coba lagi';
                         }

@@ -27,16 +27,7 @@
             var_dump($lastid1);
             var_dump($finallastid);
 
-            if($lastid == 0){
-                // echo $lastid;
-            $query = "INSERT INTO tb_user (`id_user`, `nama_lengkap`, `email`, `password`,`foto_user`, `id_role`) VALUES ('1',:nama_lengkap, :email, :password, '', 2)";
-            $this->db->query($query);
-            $this->db->bind("nama_lengkap", $dataPemilik["nama_lengkap"]);
-            $this->db->bind("email", $dataPemilik["email"]);
-            $this->db->bind("password", $dataPemilik["password"]);
-            // $this->db->bind("foto_user", $dataPemilik["foto_user"]);
-            $this->db->execute();
-            }else{
+            
                 $query = "INSERT INTO tb_user (`id_user`, `nama_lengkap`, `email`, `password`,`foto_user`, `id_role`) VALUES ('$finallastid',:nama_lengkap, :email, :password, '', 2)";
             $this->db->query($query);
             $this->db->bind("nama_lengkap", $dataPemilik["nama_lengkap"]);
@@ -45,9 +36,10 @@
             // $this->db->bind("foto_user", $dataPemilik["foto_user"]);
             // echo $lastid;
             $this->db->execute();
-            }
+            
             return $this->db->rowCount();
         }
+        
 
     }
 ?>

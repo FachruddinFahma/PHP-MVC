@@ -17,18 +17,18 @@
 <body>
     <div class="container">
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="http://localhost/PHP-MVC/public/login1/cekLogin" method="post">
                 <h1>Login</h1>
                 <span>Masukkan Email dan Password anda</span><br>
                 <div class="input-icon">
                     <i class="ri-mail-fill"></i>
                     <label for="">Email</label>
-                    <input type="email" placeholder="Masukkan email anda">
+                    <input type="email" placeholder="Masukkan email anda" name ="email" required>
                 </div><br>
                 <div class="input-icon">
                     <i class="ri-key-2-fill"></i>
                     <label for="">Password</label>
-                    <input type="password" placeholder="Masukkan password anda">
+                    <input type="password" placeholder="Masukkan password anda"name ="password" required>
                 </div>
                 <button>Login</button>
                 <p>Lupa Password?<a href="http://localhost/PHP-MVC/public/lupa_password" id="lupaPassword"> Silahkan ganti disini</a></p>
