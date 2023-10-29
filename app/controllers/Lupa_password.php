@@ -7,5 +7,5 @@
             $this->view('pemilik_kost/login1/lupa_password', $data);
             $this->view('templates/footer');
         }
+
     }
-?>

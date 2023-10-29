@@ -30,7 +30,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="http://localhost/PHP-MVC/public/register_penyewa/tambah_akun_penyewa" method="post">
                 <h1>Register Penyewa Kost</h1>
                 <span>Isi data dengan lengkap</span>
                 <div class="form-group">
@@ -38,28 +38,28 @@
                         <div class="input-icon">
                             <label for="">Nama Lengkap</label>
                             <i class="ri-user-fill"></i>
-                            <input type="text" placeholder="Masukkan nama lengkap anda">
+                            <input type="text" placeholder="Masukkan nama lengkap anda" name= "nama_lengkap" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-icon">
                             <i class="ri-mail-fill"></i>
                             <label for="">Email</label>
-                            <input type="email" placeholder="Masukkan email anda">
+                            <input type="email" placeholder="Masukkan email anda" name="email" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-icon">
                             <i class="ri-key-2-fill"></i>
                             <label for="">Password</label>
-                            <input type="password" placeholder="Masukkan password anda">
+                            <input type="password" placeholder="Masukkan password anda" name= "password" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-icon">
                             <i class="ri-key-2-fill"></i>
                             <label for="">Konfirmasi Password</label>
-                            <input type="password" placeholder="Konfirmasi password anda">
+                            <input type="password" placeholder="Konfirmasi password anda" name = "konfirpassword" required>
                         </div>
                     </div>
                     <div class="form-group">

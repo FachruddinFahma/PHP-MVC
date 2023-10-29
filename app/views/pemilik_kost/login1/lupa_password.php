@@ -13,21 +13,21 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="http://localhost/PHP-MVC/public/lupa_password/" method = "post">
                 <h1>Lupa Password</h1>
                 <span>Isi data dengan lengkap</span>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="ri-mail-fill"></i>
                         <label for="">Email</label>
-                        <input type="email" placeholder="Masukkan email anda">
+                        <input type="email" placeholder="Masukkan email anda" name = "email" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="ri-key-2-fill"></i>
                         <label for="">Password</label>
-                        <input type="password" placeholder="Masukkan password anda">
+                        <input type="password" placeholder="Masukkan password anda" name = "password" required>
                     </div>
                 </div>
                 <button>Ganti</button>

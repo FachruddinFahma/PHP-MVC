@@ -8,6 +8,31 @@
             $this->view('templates/footer');
         }
 
+        public function tambah_akun_penyewa(){
+            $nama_lengkap = $_POST['nama_lengkap'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $konfirpassword = $_POST['konfirpassword'];
+            //foto_user
+            if($password == $konfirpassword){
+                $isidata =[
+                    'nama_lengkap'=> $nama_lengkap,
+                    'email'=> $email,
+                    'password'=> $password,
+                ];
+                try {
+                    $data['Penyewa Kost'] = $this->model('Register_model')->addRegisterPenyewa($isidata);
+                    echo 'berhasil';
+                    header('Location: http://localhost/PHP-MVC/public/login1');
+                } catch (\Throwable $th) {
+                    //throw $th;
+                    echo 'gagal'. $th ->getMessage();
+                }
+        }else{
+            echo 'password tidak sama' ;
+        }
+    }
+}
     // public function prosesRegister()
     // {
     //     // Ambil data yang diperlukan dari $_POST
@@ -34,7 +59,7 @@
     //         exit;
     //     }
     // }
-}
+
 
 
 // public function prosesRegister()
