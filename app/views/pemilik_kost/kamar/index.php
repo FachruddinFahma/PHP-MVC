@@ -13,10 +13,11 @@
             </thead>
             <tbody>
                 <?php
-                foreach ($data as $item) {
+                ini_set('display_errors', 1);
+                foreach ($data['kamar'] as $item) {
                 ?>
                     <tr>
-                        <td><?php echo $item['id'] ?></td>
+                        <td><?php echo $item['id_kamar'] ?></td>
                         <td><?php echo $item['fasilitas'] ?></td>
                         <td><?php echo $item['ukuran'] ?></td>
                         <td><?php echo $item['harga'] ?></td>
@@ -29,6 +30,18 @@
                 <?php
                 }
                 ?>
+                <!-- data statik -->
+                <tr>
+                    <td>ID001</td>
+                    <td>Wifi, Kamar Mandi</td>
+                    <td>2 x 2 m</td>
+                    <td>800,000</td>
+                    <td>Kosong</td>
+                    <td>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
