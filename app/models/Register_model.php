@@ -42,8 +42,26 @@
         public function addRegisterPenyewa($dataPenyewa){
             $lastid = $this->getlastid();
             $lastidkestring = $lastid[0]["id_user"];
-            $lastid2 = intval($lastidkestring);
-            $finallastid = $lastid2 + 1 ; 
+            $ambilangka3 = substr($lastidkestring, -4);
+            if($ambilangka3 < 9 ){
+                $lastid2 = intval($ambilangka3);
+            $seklastid = $lastid2 + 1 ;
+            $finallastid = 'USER000'.$seklastid;
+            } elseif($ambilangka3 < 99 ) {
+                $lastid2 = intval($ambilangka3);
+            $seklastid = $lastid2 + 1 ;
+            $finallastid = 'USER00'.$seklastid;
+                echo $finallastid;
+        } elseif($ambilangka3 < 999 ) {
+            $lastid2 = intval($ambilangka3);
+        $seklastid = $lastid2 + 1 ;
+        $finallastid = 'USER0'.$seklastid;
+        } elseif($ambilangka3 <10000) {
+            $lastid2 = intval($ambilangka3);
+        $seklastid = $lastid2 + 1 ;
+        $finallastid = 'USER'.$seklastid;
+        }
+            echo $finallastid;
             
             var_dump($lastid);
             var_dump($lastid2);

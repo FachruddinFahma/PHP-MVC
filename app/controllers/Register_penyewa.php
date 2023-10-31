@@ -23,7 +23,7 @@
                 try {
                     $data['Penyewa Kost'] = $this->model('Register_model')->addRegisterPenyewa($isidata);
                     echo 'berhasil';
-                    header('Location: http://localhost/PHP-MVC/public/login1');
+                    header('Location: http://localhost/PHP-MVC/public/login1222');
                 } catch (\Throwable $th) {
                     //throw $th;
                     echo 'gagal'. $th ->getMessage();
