@@ -8,21 +8,16 @@
 <script src="http://localhost/PHP-MVC/public/vendor/apexcharts/apexcharts.js"></script>
 <script src="http://localhost/PHP-MVC/public/js/dashboard.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script>
-    new DataTable("#dataTable", {
-        info: false,
-  "columnDefs": [
-    { "orderable": true, "targets": 0 },
-    { "orderable": false, "targets": 1 },
-    { "orderable": true, "targets": 2 },
-    { "orderable": false, "targets": 3 },
-    { "orderable": false, "targets": 4 },
-    { "orderable": false, "targets": 5 },
-    { "orderable": false, "targets": 6 },
-  ]
-});
+<script>
+  new DataTable("#dataTable", {
+    info: false,
 
-    </script>
+  });
+  new DataTable("#example", {
+    info: false,
+
+  });
+</script>
 </body>
 
 </html>
