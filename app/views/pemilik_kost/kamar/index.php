@@ -1,5 +1,8 @@
+<header>
+    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/kamar.css">
+</header>
 <section id="kamar" class="content">
-    <div class="pt-4 px-4">
+    <div id="kamar_content" class="pt-4 px-4">
         <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>

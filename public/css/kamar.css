@@ -11,6 +11,13 @@ body{
     font-size: 12px;
 }
 
+#kamar #kamar_content{
+    padding: 30px 100px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
 .top{
     padding: 100px 80px 0;
 }
