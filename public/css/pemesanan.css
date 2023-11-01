@@ -1,0 +1,60 @@
+::root{
+    --gray : #C7C7C7;
+}
+
+#pemesanan #pemesanan_top {
+    display: flex;
+    align-items: flex-start;
+    gap: 75px;
+    padding: 60px 60px;
+}
+
+#pemesanan #pemesanan_top h4{
+    font-size: 18px;
+}
+
+#pemesanan #pemesanan_top #pesanan_masuk h4{
+    color: #295EF4;
+}
+
+#pemesanan #line{
+    margin-top:-60px;
+    margin-left: 60px;
+}
+
+#pemesanan #line .line-border{
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: #C7C7C7;
+    width: 80.5%;
+    margin-left:-60px;
+    margin-top:10px;
+}
+
+#pemesanan #line .line-bold{
+    position: absolute;
+    content: "";
+    height: 4px;
+    background-color: black;
+    width: 33%;
+    margin-left: -60px;
+    margin-top:10px;
+}
+#pemesanan #pemesanan_top .line-active{
+    z-index: 99;
+    position: absolute;
+    content: "";
+    height: 4px;
+    background-color: blue;
+    width: 15%;
+    margin-left: -60px;
+    margin-top:10px;
+}
+
+#pemesanan #pemesanan_content{
+    margin: 40px 30px;
+    padding: 40px 50px;
+    border-radius: 20px;
+    background-color: white;
+}
