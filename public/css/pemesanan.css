@@ -1,7 +1,6 @@
 ::root{
     --gray : #C7C7C7;
 }
-
 #pemesanan #pemesanan_top {
     display: flex;
     align-items: flex-start;
@@ -54,7 +53,7 @@
 
 #pemesanan #pemesanan_content{
     margin: 40px 30px;
-    padding: 40px 50px;
+    padding: 40px 70px 100px;
     border-radius: 20px;
     background-color: white;
 }

@@ -30,13 +30,13 @@
             </thead>
             <tbody>
                 <?php
-                for ($i = 0; $i <= 100; $i++) {
+                for ($i = 0; $i <= 30; $i++) {
                 ?>
                     <tr>
-                        <td>ID<?php echo $i ?></td>
+                        <td>ID001</td>
                         <td>Wifi, Kamar Mandi</td>
                         <td>2 x 2 m</td>
-                        <td>800,000</td>
+                        <td><?php echo $i ?>00,000</td>
                         <td>Kosong</td>
                         <td>Terima</td>
                     </tr>
