@@ -1,24 +1,36 @@
 <?php
     class PendaftaranKost_model {
         private $db;
+        private $db2;
     
         public function __construct()
         {
             $this->db = new Database;
+            $this->db2 = new Database;
         }
     
         public function addKost($kost)
         {
-            // Mendapatkan data gambar dari input file
-            $foto1 = file_get_contents($_FILES['fotokost1']['tmp_name']);
-            $foto2 = file_get_contents($_FILES['fotokost2']['tmp_name']);
-            $foto3 = file_get_contents($_FILES['fotokost3']['tmp_name']);
+            // Mendapatkan nama file sementara
+            $foto1 = $_FILES['fotokost1']['tmp_name'];
+            $foto2 = $_FILES['fotokost2']['tmp_name'];
+            $foto3 = $_FILES['fotokost3']['tmp_name'];
 
-            // Query untuk memasukkan data ke tb_kost dan tb_foto_kost
-            $query = "INSERT INTO tb_kost VALUES ('KOST02', 'PGHOO3', :nama_kost, :jenis_kost, :fasilitas_kost, :peraturan_kost, :latitude, :longitude, :alamat)";
-            $query .= "INSERT INTO tb_foto_kost VALUES ('KOST02', :link_fotoKost), ('KOST02', :link_fotoKost), ('KOST02', :link_fotoKost)";
+            // Menentukan lokasi penyimpanan file
+            $uploadDir = '../public/foto/'; // Ganti dengan lokasi penyimpanan yang sesuai di server Anda
 
-            // Eksekusi query
+            // Mendapatkan nama file asli
+            $fotoName1 = basename($_FILES['fotokost1']['name']);
+            $fotoName2 = basename($_FILES['fotokost2']['name']);
+            $fotoName3 = basename($_FILES['fotokost3']['name']);
+
+            // Memindahkan file ke lokasi penyimpanan
+            move_uploaded_file($foto1, $uploadDir . $fotoName1);
+            move_uploaded_file($foto2, $uploadDir . $fotoName2);
+            move_uploaded_file($foto3, $uploadDir . $fotoName3);
+            
+            // Query untuk memasukkan data ke tb_kost
+            $query = "INSERT INTO tb_kost VALUES ('', 'PGHOO3', :nama_kost, :jenis_kost, :fasilitas_kost, :peraturan_kost, :latitude, :longitude, :alamat , 'BELUM AKTIF')";
             $this->db->query($query);
             $this->db->bind('nama_kost', $kost['nama_kost']);
             $this->db->bind('jenis_kost', $kost['jenis_kost']);
@@ -27,10 +39,14 @@
             $this->db->bind('latitude', $kost['latitude']);
             $this->db->bind('longitude', $kost['longitude']);
             $this->db->bind('alamat', $kost['alamat']);
-            $this->db->bind('link_fotoKost', $foto1['fotoKost1']);
-            $this->db->bind('link_fotoKost', $foto2['fotoKost2']);
-            $this->db->bind('link_fotoKost', $foto3['fotoKost3']);
-            return $this->db->execute();
+            $this->db->execute();
+
+            // Menggabungkan nama file gambar dengan tanda pemisah koma (,)
+            $combinedFilenames = $fotoName1 . ',' . $fotoName2 . ',' . $fotoName3;
+            $queryFoto = "INSERT INTO tb_foto_kost VALUES ('', :link_foto)";
+            $this->db->query($queryFoto);
+            $this->db->bind('link_foto', $combinedFilenames);
+            $this->db->execute();
             return $this->db->rowCount();
         }
     }    
