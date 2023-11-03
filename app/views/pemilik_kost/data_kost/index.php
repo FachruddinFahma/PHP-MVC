@@ -21,11 +21,11 @@
             </div>
 
             <?php
-                $fotos = $data['fotos']['link_fotoKost'];
-                $fotoArray = explode(',', $fotos);
+            $fotos = $data['fotos']['link_fotoKost'];
+            $fotoArray = explode(',', $fotos);
 
-                // Ambil tiga foto pertama
-                $tigaFotoPertama = array_slice($fotoArray, 0, 3);
+            // Ambil tiga foto pertama
+            $tigaFotoPertama = array_slice($fotoArray, 0, 3);
             ?>
 
             <div class="carousel-inner">
@@ -84,20 +84,25 @@
                             </select>
                         </div>
                         <div class="col-sm-6">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">Latitude</label>
-                            <input type="text" class="form-control" id="" value="<?= $data['kost']['latitude'] ?>">
+                            <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?php echo $data['kost']['alamat']; ?></textarea>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-6">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">Longitude</label>
-                            <input type="text" class="form-control" id="" value="<?= $data['kost']['longitude'] ?>">
-                        </div>
-                    </div>
-                    <!-- <button type="button" class="btn btn-success" style="position: absolute; right: 30px;">Edit</button> -->
-                    <button class="btn btn-success">Edit</button>
                 </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-6">
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Latitude</label>
+                        <input type="text" class="form-control" id="" value="<?= $data['kost']['latitude'] ?>">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Longitude</label>
+                        <input type="text" class="form-control" id="" value="<?= $data['kost']['longitude'] ?>">
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-success" style="position: absolute; right: 30px;">Edit</button> -->
+                <button class="btn btn-success" type="submit">Edit</button>
             </div>
+        </div>
         </div><br>
     </section>
 </body>
