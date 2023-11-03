@@ -4,27 +4,71 @@
     --black: #282828;
 }
 
-#kamar{
-    padding: 40px 20px;
+h1{
+    color: red;
+}
+body{
+    font-size: 12px;
 }
 
 #kamar #kamar_content{
-    background-color: white;
+    padding: 30px 100px;
+    margin: 20px;
     border-radius: 20px;
+    background-color: white;
 }
 
-#kamar #kamar_content .add{
-    padding: 5px 20px;
-    border-radius: 30px;
-        display: block;
-        width: 150px;
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: #1F9254;
-    text-decoration: none;
+.top{
+    padding: 100px 80px 0;
+}
+
+.top select{
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.top input.input-search{
+    width: 350px;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    border: 1px solid #9E9E9E;
+    margin: 0 10px;
+}
+
+.top button.button-search {
+    border: none;
+    padding: 5px 10px;
     color: white;
+    background-color: #385583;
+    border-radius: 5px;
+    height: auto;
 }
 
+.top button.tambah-kamar {
+    border: none;
+    padding: 10px 15px;
+    background-color: #1F9254;
+    color: white;
+    border-radius: 5px;
+    float: right;
+    margin-top: -10px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.bottom{
+    width: 1250px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 30px 80px 0;
+    border-radius: 10px;
+}
 
 /* Modal css */
 .modal-content {
@@ -126,3 +170,31 @@
 #input-ukuran-kamar .form-controll{
     width: 50%;
 }
+
+/* Modal css - Modal Foto */
+
+.modal-body .foto {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.modal-body .foto .foto-group{
+    width: 115px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    padding-left:15px;
+    padding-right:15px;
+}
+.modal-body .foto .foto-group button{
+     background-color: white;
+     border:1px solid black;
+        padding: 5px 15px;
+        border-radius: 50px;
+}
+
+/* table */
