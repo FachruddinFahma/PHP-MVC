@@ -28,24 +28,12 @@
                         <td>Kosong</td>
                         <td>
                             <a href="">Edit</a>
-                            <a href="">Delete</a>
+                            <a href="http://localhost/PHP-MVC/public/kamar/hapusKamar?id_kamar=<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
                         </td>
                     </tr>
                 <?php
                 }
                 ?>
-                <!-- data statik -->
-                <tr>
-                    <td>ID001</td>
-                    <td>Wifi, Kamar Mandi</td>
-                    <td>2 x 2 m</td>
-                    <td>800,000</td>
-                    <td>Kosong</td>
-                    <td>
-                        <a href="">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </div>

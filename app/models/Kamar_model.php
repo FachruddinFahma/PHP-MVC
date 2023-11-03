@@ -21,7 +21,7 @@ class Kamar_model
     //     return $this->db->single();
     // }
 
-    public function addKamar($data)
+    public function insertKamar($data)
     {
         $query = "INSERT INTO tb_kamar(id_kamar, fasilitas, ukuran, harga) VALUES (:id_kamar, :fasilitas_kamar, :ukuran_kamar, :harga_kamar)";
 
@@ -31,6 +31,17 @@ class Kamar_model
         $this->db->bind(':fasilitas_kamar', $data['fasilitas_kamar']);
         $this->db->bind(':ukuran_kamar', $data['ukuran_kamar']);
         $this->db->bind(':harga_kamar', $data['harga_kamar']);
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
+    public function deleteKamar($id_kamar)
+    {
+        $query = "DELETE FROM tb_kamar WHERE id_kamar = :id_kamar";
+
+        $this->db->query($query);
+        $this->db->bind(':id_kamar', $id_kamar);
         $this->db->execute();
 
         return $this->db->rowCount();
