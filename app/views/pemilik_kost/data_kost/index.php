@@ -52,31 +52,32 @@
 
         <div class="card">
             <div class="card-body">
+            <form method="POST" action="http://localhost/PHP-MVC/public/data_kost/updateKost/<?= $data['kost']['id_kost'] ?>">
                 <div class="form-group">
                     <div class="mb-3 row">
                         <div class="col-sm-6">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Nama Kost</label>
-                            <input type="text" class="form-control" id="inputPassword" value="<?= $data['kost']['nama_kost'] ?>">
+                            <input type="text" class="form-control" id="inputPassword" value="<?= $data['kost']['nama_kost'] ?>" name="nama_kost">
                         </div>
                         <div class="col-sm-6">
                             <label for="inputPassword" class="col-sm-3 col-form-label">Nama Pemilik</label>
-                            <input type="text" class="form-control" id="inputPassword" value="<?= $data['kost']['id_user'] ?>">
+                            <input type="text" class="form-control" id="inputPassword" value="<?= $data['kost']['id_user'] ?>" readonly>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-sm-6">
                             <label for="staticEmail" class="col-sm-3 col-form-label">Fasilitas Kost</label>
-                            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required><?= $data['kost']['fasilitas_kost'] ?>  </textarea>
+                            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" name="fasilitas_kost" required><?= $data['kost']['fasilitas_kost'] ?></textarea>
                         </div>
                         <div class="col-sm-6">
                             <label for="inputPassword" class="col-sm-3 col-form-label">Peraturan Kost</label>
-                            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required><?= $data['kost']['peraturan_kost'] ?></textarea>
+                            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" name="peraturan_kost" required><?= $data['kost']['peraturan_kost'] ?></textarea>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-sm-6">
                             <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Kost</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="jenis_kost">
                                 <option selected>Pilih Jenis Kost</option>
                                 <option value="1" <?= ($data['kost']['jenis_kost'] == 1) ? 'selected' : '' ?>>Laki - Laki</option>
                                 <option value="2" <?= ($data['kost']['jenis_kost'] == 2) ? 'selected' : '' ?>>Perempuan</option>
@@ -85,22 +86,24 @@
                         </div>
                         <div class="col-sm-6">
                             <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?php echo $data['kost']['alamat']; ?></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat"><?php echo $data['kost']['alamat']; ?></textarea>
                         </div>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <div class="col-sm-6">
                         <label for="staticEmail" class="col-sm-3 col-form-label">Latitude</label>
-                        <input type="text" class="form-control" id="" value="<?= $data['kost']['latitude'] ?>">
+                        <input type="text" class="form-control" id="" name="latitude" value="<?= $data['kost']['latitude'] ?>">
                     </div>
                     <div class="col-sm-6">
                         <label for="staticEmail" class="col-sm-3 col-form-label">Longitude</label>
-                        <input type="text" class="form-control" id="" value="<?= $data['kost']['longitude'] ?>">
+                        <input type="text" class="form-control" id="" name="longitude" value="<?= $data['kost']['longitude'] ?>">
                     </div>
                 </div>
                 <!-- <button type="button" class="btn btn-success" style="position: absolute; right: 30px;">Edit</button> -->
                 <button class="btn btn-success" type="submit">Edit</button>
+                </form>
             </div>
         </div>
         </div><br>
