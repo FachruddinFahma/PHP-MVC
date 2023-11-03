@@ -80,15 +80,15 @@
             </div>
             <div class="modal-body">
                 <div class="input mb-3">
-                    <form action="">
+                    <form action="http://localhost/PHP-MVC/public/kamar/tambahKamar" method="post">
                         <div class="input-group">
                             <label for="id_kamar">ID Kamar</label>
                             <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
                         </div>
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <label for="id_kamar">Nama Kamar</label>
                             <input type="text" name="nama_kamar" class="form-controll" placeholder="Masukan Nama Kamar" id="nama_kamar">
-                        </div>
+                        </div> -->
                         <div class="input-group">
                             <label for="id_kamar">Fasilitas Kamar</label>
                             <input type="text" name="fasilitas_kamar" class="form-controll" placeholder="Masukan Fasilitas Kamar" id="fasilitas_kamar">
