@@ -99,8 +99,104 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary me-auto back" data-bs-dismiss="modal">Kembali</button>
-                <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-foto">Selanjutnya</button>
+                <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-foto" onclick="saveDataAndOpenModal('modal-foto')">Selanjutnya</button>
             </div>
         </div>
     </div>
 </div>
+<!-- modal foto-->
+<div class="modal fade" id="modal-foto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Input Foto Kamar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="progress-data">
+                <div id="progress-data-kamar" class="active-data">
+                    <div class="angka">
+                        <p>1</p>
+                    </div>
+                    <p class="title-progress">Data Kamar</p>
+                </div>
+                <div id="progress-foto" class="active-data actived">
+                    <div class="angka">
+                        <p>2</p>
+                    </div>
+                    <p class="title-progress">Foto Kamar</p>
+                </div>
+                <div id="progress-verifikasi" class="active-data">
+                    <div class="angka">
+                        <p>3</p>
+                    </div>
+                    <p>Verifikasi</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="foto mb-3">
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto1">
+                    </div>
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto2">
+                    </div>
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto3">
+                    </div>
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto4">
+                    </div>
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto5">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <<button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-identitas">Kembali</button>
+                    <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-verifikasi">Selanjutnya</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    function saveDataAndOpenModal(nextModalId) {
+        var idKamar = document.getElementById('id_kamar').value;
+        var namaKamar = document.getElementById('nama_kamar').value;
+        var fasilitasKamar = document.getElementById('fasilitas_kamar').value;
+        var ukuranPanjang = document.getElementById('ukuran_kamar_panjang').value;
+        var ukuranLebar = document.getElementById('ukuran_kamar_lebar').value;
+        var hargaKamar = document.getElementById('harga_kamar').value;
+
+        sessionStorage.setItem('idKamar', idKamar);
+        sessionStorage.setItem('namaKamar', namaKamar);
+        sessionStorage.setItem('fasilitasKamar', fasilitasKamar);
+        sessionStorage.setItem('ukuranPanjang', ukuranPanjang);
+        sessionStorage.setItem('ukuranLebar', ukuranLebar);
+        sessionStorage.setItem('hargaKamar', hargaKamar);
+
+        $('#' + nextModalId).modal('show');
+    }
+
+    function populateDataFromStorage() {
+        document.getElementById('id_kamar').value = sessionStorage.getItem('idKamar');
+        document.getElementById('nama_kamar').value = sessionStorage.getItem('namaKamar');
+        document.getElementById('fasilitas_kamar').value = sessionStorage.getItem('fasilitasKamar');
+        document.getElementById('ukuran_kamar_panjang').value = sessionStorage.getItem('ukuranPanjang');
+        document.getElementById('ukuran_kamar_lebar').value = sessionStorage.getItem('ukuranLebar');
+        document.getElementById('harga_kamar').value = sessionStorage.getItem('hargaKamar');
+    }
+
+    $('#modal-identitas').on('shown.bs.modal', function() {
+        populateDataFromStorage();
+    });
+
+    window.onload = function() {
+        sessionStorage.clear();
+    };
+</script>

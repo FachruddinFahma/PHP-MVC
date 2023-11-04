@@ -126,3 +126,25 @@
 #input-ukuran-kamar .form-controll{
     width: 50%;
 }
+
+/* modal foto */
+.modal-body .foto {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.modal-body .foto .foto-group{
+    display:flex;
+    justify-content:center;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    flex-wrap:wrap;
+    border: 1px solid var(--lightgrey);
+}
+
+.modal-body .foto img{
+    width: 110px;
+}
