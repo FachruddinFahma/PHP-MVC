@@ -38,7 +38,9 @@ $judul = $data['judul'];
             <div id="foto-profile">
                 <img src="http://localhost/PHP-MVC/public/image/img1.jpg" alt="User Photo">
             </div>
-            <p id="user-name">Farhan</p>
+            <p id="user-name">
+            <a href="http://localhost/PHP-MVC/public/profile">Farhan</a>
+            </p>
         </div>
     </header>
     <main class="container">

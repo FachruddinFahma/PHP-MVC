@@ -11,18 +11,24 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-  new DataTable("#dataTable", {
-    "columnDefs": [
-        { "visible": false, "targets": [indeks_kolom_tersembunyi] }
-    ]
-    
+   new DataTable("#dataTable", {
+        info: false,
+  "columnDefs": [
+    { "orderable": true, "targets": 0 },
+    { "orderable": false, "targets": 1 },
+    { "orderable": true, "targets": 2 },
+    { "orderable": false, "targets": 3 },
+    { "orderable": false, "targets": 4 },
+    { "orderable": false, "targets": 5 },
+    { "orderable": false, "targets": 6 },
+  ]
+});
+  </script>
+  <!-- new DataTable("#example", {
+    info: true,
 
   });
-  new DataTable("#example", {
-    info: false,
-
-  });
-</script>
+</script> -->
 </body>
 
 </html>
