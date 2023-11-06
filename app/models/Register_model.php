@@ -17,12 +17,28 @@
             
         }
         public function addRegisterPemilik($dataPemilik){
-
+            //tambah i user yang "USER0002"
             $lastid = $this->getlastid();
             $lastidkestring = $lastid[0]["id_user"];
-            $lastid1 = intval($lastidkestring);
-            $finallastid = $lastid1 + 1 ; 
-            
+            $ambilangka3 = substr($lastidkestring, -4);
+            if($ambilangka3 < 9){
+                $lastid1 = intval($ambilangka3);
+                $seklastid = $lastid1 +1;
+                $finallastid = 'USER000'. $seklastid;
+            }elseif($ambilangka3 > 99){
+                $lastid1 = intval($ambilangka3);
+                $seklastid = $lastid1 + 1;
+                $finallastid = 'USER00'. $seklastid;
+                echo $finallastid;
+            }elseif($ambilangka3 > 999){
+                $lastid1 = intval($ambilangka3);
+                $seklastid = $lastid1+1;
+                $finallastid = 'USER0'. $seklastid;
+            }elseif($ambilangka3 < 10000 ){
+                $lastid1 = intval($ambilangka3);
+                $seklastid = $lastid1 + 1;
+                $finallastid = 'USER'.$seklastid;
+            }
             var_dump($lastid);
             var_dump($lastid1);
             var_dump($finallastid);

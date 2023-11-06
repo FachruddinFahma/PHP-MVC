@@ -16,6 +16,10 @@
             
             return $this->db->single();
         }
+        public function lupaPassword($email, $password){
+            $query = "UPDATE tb_user SET email = :email , password = :password";
+            
+        }
 
     }
 ?>
