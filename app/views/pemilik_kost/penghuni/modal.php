@@ -12,13 +12,16 @@
         <div class="modal-body">
             
 
-        <img class="img-fluid mx-auto d-block mb-4" style="border-radius: 10px;"  width="200" src="http://localhost/PHP-MVC/public/image/<?= $d['foto_user'] ?>" alt="">
+        <img class="rounded-circle mt-5 img-fluid mx-auto d-block " style="object-fit: cover; height:260px; width:260px; margin-bottom: 40px;"  src="http://localhost/PHP-MVC/public/image/<?= $d['foto_user'] ?>" alt="">
+        <div class="container">
             <p><B>Nama: </B><?= $d['nama_lengkap'] ?></p>
             <p><b>Kamar: </b><?= $d['id_kamar'] ?></p>
             <p><b>No Hp: </b><?= $d['no_hp'] ?></p>
             <p><B>Alamat: </B><?= $d['alamat'] ?></p>
             <p><b>Email: </b><?= $d['email'] ?></p>
+            <p><b>Email: </b><?= $d['jenis_kelamin'] ?></p>
             <p><b>Tanggal Lahir: </b><?= $d['tggl_lahir'] ?></p>
+        </div>
 
             
             

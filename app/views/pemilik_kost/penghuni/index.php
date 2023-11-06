@@ -114,43 +114,41 @@
 
         <div class="card-body bg-white p-4" style="border-radius: 18px;">
 
-            <table class="table table-hover small" id="dataTable">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Kamar</th>
-                        <th scope="col">Jenis Kelamin</th>
-                        <th scope="col">No HP</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <?php
-                        $i = 1;
-                        foreach ($data['penghuni'] as $d) :
-                        ?>
-                            <th scope="row"><?= $i ?> </th>
-                            <td><?= $d['nama_lengkap'] ?></td>
-                            <td><?= $d['id_kamar'] ?></td>
-                            <td><?= $d['jenis_kelamin'] ?></td>
-                            <td><?= $d['no_hp'] ?></td>
-                            <td><?= $d['alamat'] ?></td>
-                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $d['id_user'] ?>"><i class="fa-solid fa-circle-info"></i></button>
-                                <form method="POST" action="http://localhost/PHP-MVC/public/penghuni/deletePenghuni/<?= $d['id_user']; ?>" style="display:inline;">
-                                    <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus penghuni?')"><i class="fa-solid fa-trash"></i></button>
-                    </tr>
-
-                <?php
-                            include "modal.php";
-                            $i++;
-                        endforeach ?>
-                </tbody>
-
-            </table>
-        </div>
-
-    </div>
-</section>
+        <table class="table table-hover small" id="dataTable">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Kamar</th>
+            <th scope="col">Jenis Kelamin</th>
+            <th scope="col">No HP</th>
+            <th scope="col">Alamat</th>
+            <th scope="col">Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $i = 1;
+        foreach ($data['penghuni'] as $d) :
+        ?>
+        <tr>
+            <td><?= $i ?></td>
+            <td><?= $d['nama_lengkap'] ?></td>
+            <td><?= $d['id_kamar'] ?></td>
+            <td><?= $d['jenis_kelamin'] ?></td>
+            <td><?= $d['no_hp'] ?></td>
+            <td><?= $d['alamat'] ?></td>
+            <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $d['id_user'] ?>"><i class="fa-solid fa-circle-info"></i></button>
+                <form method="POST" action="http://localhost/PHP-MVC/public/penghuni/deletePenghuni/<?= $d['id_user']; ?>" style="display:inline;">
+                    <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus penghuni?')"><i class="fa-solid fa-trash"></i></button>
+                </form>
+            </td>
+        </tr>
+        <?php
+        include"modal.php";
+        $i++;
+        endforeach;
+        ?>
+    </tbody>
+</table>
