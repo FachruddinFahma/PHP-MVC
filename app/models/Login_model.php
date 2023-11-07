@@ -22,7 +22,7 @@
         }
 
     public function checkLogin($email, $password){
-        $this->db->query("SELECT * FROM tb_user WHERE email = :email AND password = :password AND id_role = 3");
+        $this->db->query("SELECT * FROM tb_user WHERE email = :email AND password = :password");
         $this->db->bind(':email', $email);
         $this->db->bind(':password', $password);
 
