@@ -5,7 +5,7 @@ class Profile extends Controller
     {
     
         $data['judul'] = 'Profile';
-        $data['profile'] = $this->model('profile_model')->getProfile("PGH001"); 
+        $data['profile'] = $this->model('profile_model')->getProfile("USER002                                                                                                2"); 
 
         $this->view('templates/header', $data);
         $this->view('pemilik_kost/profile/index', $data);
@@ -34,6 +34,7 @@ class Profile extends Controller
         }
         
     }
+    
     
     
 }
