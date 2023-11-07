@@ -103,7 +103,7 @@
                 </div>
                 <!-- <button type="button" class="btn btn-success" style="position: absolute; right: 30px;">Edit</button> -->
                 <button class="btn btn-success" type="submit">Edit</button>
-                </form>
+            </form>
             </div>
         </div>
         </div><br>

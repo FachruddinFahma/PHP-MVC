@@ -3,7 +3,7 @@
     {
         public function index()
         {
-            $id_kost = 'KOST01';
+            $id_kost = 'KOST02';
             $data['judul'] = "KOST";
             $data['kost'] = $this->model('dataKost_model')->getKostById($id_kost);
             $data['fotos'] = $this->model('dataKost_model')->getfotKostById($id_kost);
@@ -29,9 +29,9 @@
             $alamat = $_POST['alamat'];
 
             if ($this->model('dataKost_model')->updateKost($id_kost, $nama_kost, $jenis_kost, $fasilitas_kost, $peraturan_kost, $latitude, $longitude, $alamat) > 0) {
-                header('Location:http://localhost/phpmvc/public/kost');
+                header('Location: http://localhost/phpmvc/public/data_kost');
             } else {
-                header('Location:http://localhost/phpmvc/public/login1');
+                header('Location: http://localhost/phpmvc/public/login1');
                 exit;
             }
         }
