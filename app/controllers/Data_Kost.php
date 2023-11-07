@@ -29,9 +29,9 @@
             $alamat = $_POST['alamat'];
 
             if ($this->model('dataKost_model')->updateKost($id_kost, $nama_kost, $jenis_kost, $fasilitas_kost, $peraturan_kost, $latitude, $longitude, $alamat) > 0) {
-                header('Location: http://localhost/phpmvc/public/data_kost');
+                header('Location: http://localhost/PHP-MVC/public/login1');
             } else {
-                header('Location: http://localhost/phpmvc/public/login1');
+                header('Location: http://localhost/PHP-MVC/public/data_kost');
                 exit;
             }
         }
