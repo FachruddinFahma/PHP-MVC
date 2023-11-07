@@ -21,5 +21,24 @@
             
         }
 
+    public function checkLogin($email, $password){
+        $this->db->query("SELECT * FROM tb_user WHERE email = :email AND password = :password");
+        $this->db->bind(':email', $email);
+        $this->db->bind(':password', $password);
+
+        $user = $this->db->single();
+
+        if ($user) {
+            return $user;
+        }
+
+        return null;
     }
-?>
+
+    public function getUserByEmail($email)
+    {
+        $this->db->query("SELECT * FROM tb_user WHERE email = :email");
+        $this->db->bind(':email', $email);
+        return $this->db->single();
+    }
+}

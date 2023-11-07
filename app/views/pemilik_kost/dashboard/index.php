@@ -157,7 +157,7 @@
                                         <h5>Daftar Penghuni</h5>
                                     </div>
 
-                                    <div class="card-content pb-4">
+                                    <div class="card-content">
                                         <div class="recent-message d-flex px-4 py-3">
                                             <div class="avatar avatar-lg">
                                                 <img src="http://localhost/PHP-MVC/public/image/user.png" />
