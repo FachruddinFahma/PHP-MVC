@@ -18,7 +18,7 @@
     <div class="container">
         <div class="form-container sign-in-container">
             <form action="http://localhost/PHP-MVC/public/login1/cekLogin" method="post">
-                <h1>Login</h1>
+                <h1>Login sebagai <?php echo $data['judul'] ?></h1>
                 <span>Masukkan Email dan Password anda</span><br>
                 <div class="input-icon">
                     <i class="ri-mail-fill"></i>
