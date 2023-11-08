@@ -20,7 +20,7 @@
     border-radius: 1000px;
     z-index: -99;
     right: -300;
-    top: 300;
+    top: 800;
 }
 
 .circle-pemanis2{
@@ -31,7 +31,7 @@
     border-radius: 4000px;
     z-index: -99;
     left: -400;
-    top: 2600;
+    top: 2900;
 }
 
 body{
@@ -40,6 +40,74 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--lightblue);overflow-x: hidden;
 }
+
+/* navbarrr  */
+nav{
+    padding: 8px 60px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .link-navbar ul{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav .link-navbar ul a{
+    text-decoration: none;
+}
+
+nav .link-navbar ul a.link-login{
+    padding: 10px 20px;
+    background-color: var(--middleblue);
+    color: white;
+    border-radius: 10px;
+}
+
+nav .title-navbar{
+    display: flex;
+    align-items: center;
+}
+
+nav .title-navbar img{
+    width: 200px;
+}
+
+/* hero section  */
+
+#hero{
+    padding: 150px 100px;
+}
+
+#hero .hero-left .tagline{
+    width: 600px;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--middleblue);
+}
+
+#hero .hero-left .tagline span{
+    color: black;
+}
+
+#hero .hero-left a{
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--navy);
+    color: white;
+    border-radius: 10px;
+}
+
+#hero .hero-left .deskripsi-hero{
+    width: 600px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    color: var(--brown);
+}
+
 #why-jkost{
     padding: 10px 30px;
     display: flex;
@@ -80,6 +148,7 @@ body{
     font-weight: 300;
     color: var(--brown);
 }
+
 #why-jkost #kumpulan-icon-why .icon-why .bg-icon-why{
     width: 50px;
     height: 50px;
@@ -401,7 +470,7 @@ body{
 
 #kost .content-kost #bottom-card-kost{
     text-align: end;
-    margin: 50px 95px;
+    margin: 50px 100px;
 }
 
 #kost .content-kost #bottom-card-kost a{

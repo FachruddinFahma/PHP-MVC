@@ -4,6 +4,29 @@
 </head>
 
 <body>
+    <nav>
+        <div class="title-navbar">
+            <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+        </div>
+        <div class="link-navbar">
+            <ul>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Testimoni</a>
+                <a href="">Cari Kost</a>
+                <a href="" class="link-login">Masuk</a>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-left">
+            <p class="tagline">Cari Kost Tanpa Ribet,<span> Semua Ada Disini</span></p>
+            <p class="deskripsi-hero">Tingkatkan kenyamanan hidupmu dengan sentuhan ajaib di ujung jari, <span>temukan kost impianmu di J-Kost!</span></p>
+            <a href="">Cari Kost Sekarang</a>
+        </div>
+        <div class="hero-right"></div>
+    </section>
     <section id="why-jkost">
         <div class="title-why">
             <h3>Kenapa harus <span>J-Kost</span></h3>
