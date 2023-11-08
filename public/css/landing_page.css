@@ -23,9 +23,22 @@
     top: 300;
 }
 
+.circle-pemanis2{
+    width: 1100px;
+    height: 1100px;
+    background-color: #EAEFF6;
+    position: absolute;
+    border-radius: 4000px;
+    z-index: -99;
+    left: -400;
+    top: 2600;
+}
+
 body{
+    padding: 0;
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--lightblue);
+    background-color: var(--lightblue);overflow-x: hidden;
 }
 #why-jkost{
     padding: 10px 30px;
@@ -188,7 +201,7 @@ body{
 /* section testimoni */
 #testimoni{
     padding: 0 100px;
-    padding-bottom: 400px;
+    padding-bottom: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,4 +265,203 @@ body{
 #testimoni .content-testimoni .rating-testimoni .ic-testimoni{
     color: #F9C200;
     font-size: 17px;
+}
+
+/* css kosttt */
+#kost{
+    padding: 0 100px;
+    padding-bottom: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#kost .title-section-kost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#kost .title-section-kost h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#kost .title-section-kost .sub-deskripsi{
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+
+#kost .title-section-kost #button-kost{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 260px;
+    padding: 3px 0;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+#kost .title-section-kost #button-kost #button-populer{
+    background-color: var(--blue);
+    color: white;
+    padding: 0 30px;
+    border-radius: 8px;
+}
+
+#kost .title-section-kost #button-kost #button-terbaru{
+    color: var(--blue);
+    padding: 0 30px;
+}
+
+#kost .content-kost #kumpulan-card-kost{
+    margin-top: 100px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#kost .content-kost #kumpulan-card-kost .card-kost{
+    background-color: white;
+    width: 220px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow:  0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+#kost .content-kost #kumpulan-card-kost .card-kost img{
+    width: 220px;
+    border-radius: 10px 10px 0 0;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost {
+   padding: 2px 15px;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost .kategori-kost{
+    border: 1px solid var(--lightgrey);
+    padding: 0 15px;
+    border-radius: 10px;
+    font-size: 13px;
+   display: flex;
+   align-items: center;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost i{
+    color: #E7D000;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .nama-kost{
+    text-align: start;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .location-kost{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    align-items: center ;
+    margin: 0;
+    font-size: 13px;
+    margin-top: -20px;
+    font-weight: 300;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .location-kost i{
+    color: #4B4B4B;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .harga{
+    text-align: start;
+    margin-top: -15px;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .harga p{
+    font-weight: 550;
+}
+
+#kost .content-kost #kumpulan-card-kost .content-card-kost .harga span{
+    font-weight: 400;
+}
+
+#kost .content-kost #bottom-card-kost{
+    text-align: end;
+    margin: 50px 95px;
+}
+
+#kost .content-kost #bottom-card-kost a{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* footer */
+footer{
+    background-color: #D3DCE7;
+    padding: 60px 60px;
+    color: #1A202C;
+}
+
+footer .top-footer{
+    display: flex;
+    justify-content: space-between;
+}
+footer .top-footer .left-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer .top-footer .left-footer img{
+    width: 250px;
+    margin-left: -38px;
+}
+
+footer .top-footer .left-footer p{
+    width: 400px;
+}
+
+footer .top-footer .left-footer .kumpulan-medsos i{
+    margin: 0 8px;
+    font-size: 35px;
+}
+
+footer .top-footer .right-footer{
+    display: flex;
+    gap: 150px;
+}
+
+footer .bottom-footer{
+    display: flex;
+    gap: 150px;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+footer .bottom-footer::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: var(--lightgrey);
+    width: 92%;
+    margin-top:-10px;
+}
+
+footer .bottom-footer .right-bottom-footer{
+    display: flex;
+    gap: 40px;
 }

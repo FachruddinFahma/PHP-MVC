@@ -61,7 +61,7 @@
             </div>
         </div>
         <div id="fiturunggulan-gambar">
-            <img src=" http://localhost/PHP-MVC/public/image/kumpulan-card.png" alt="kumpulan card">
+            <img src="http://localhost/PHP-MVC/public/image/kumpulan-card.png" alt="kumpulan card">
         </div>
     </section>
     <section id="order">
@@ -164,6 +164,97 @@
             </div>
         </div>
     </section>
+    <section id="kost">
+        <div class="title-section-kost">
+            <h2>Terafiliasi dengan kost di Jember</h2>
+            <p class="sub-deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+            <div id="button-kost">
+                <div id="button-populer">
+                    <p>Populer</p>
+                </div>
+                <div id="button-terbaru">
+                    <p>Terbaru</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-kost">
+            <div id="kumpulan-card-kost">
+                <?php
+                for ($i = 1; $i <= 8; $i++) {
+                ?>
+                    <div class="card-kost">
+                        <div class="foto-kost">
+                            <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
+                        </div>
+                        <div class="content-card-kost">
+                            <div class="top-content-kost">
+                                <p class="kategori-kost">putra</p>
+                                <p><i class="ri-star-fill"></i> 4.5</p>
+                            </div>
+                            <p class="nama-kost">Kost Marno</p>
+                            <div class="location-kost">
+                                <i class="ri-map-pin-2-fill"></i>
+                                <p>Jl. Jawa VI No.20</p>
+                            </div>
+                            <div class="harga">
+                                <p>Rp 300,000<span>/ Bulan</span></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <div id="bottom-card-kost">
+                <a href="#">Jelajahi selengkapnya</a>
+            </div>
+        </div>
+    </section>
+    <div class="circle-pemanis2"></div>
+    <footer>
+        <div class="top-footer">
+            <div class="left-footer">
+                <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+                <p>Our vision is to provide convenience and help increase your sales business.</p>
+                <div class="kumpulan-medsos">
+                    <i class="ri-facebook-circle-fill"></i>
+                    <i class="ri-facebook-circle-fill"></i>
+                    <i class="ri-facebook-circle-fill"></i>
+                </div>
+            </div>
+            <div class="right-footer">
+                <div class="content-right-footer">
+                    <p class="judul-right-footer">About</p>
+                    <p>How it works</p>
+                    <p>Featured</p>
+                    <p>Partnership</p>
+                    <p>Bussiness Relation</p>
+                </div>
+                <div class="content-right-footer">
+                    <p class="judul-right-footer">Comunity</p>
+                    <p>Event</p>
+                    <p>Blog</p>
+                    <p>Partnership</p>
+                    <p>Bussiness Relation</p>
+                </div>
+                <div class="content-right-footer">
+                    <p class="judul-right-footer">Sosial</p>
+                    <p>How it works</p>
+                    <p>Featured</p>
+                    <p>Partnership</p>
+                    <p>Bussiness Relation</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>©2023 J-Kost. All rights reserved</p>
+            <div class="right-bottom-footer">
+                <p>Privacy & Policy</p>
+                <p>Terms & Condition</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
