@@ -27,6 +27,7 @@
         </div>
         <div class="hero-right"></div>
     </section>
+
     <section id="why-jkost">
         <div class="title-why">
             <h3>Kenapa harus <span>J-Kost</span></h3>
@@ -230,7 +231,7 @@
                 ?>
             </div>
             <div id="bottom-card-kost">
-                <a href="#">Jelajahi selengkapnya</a>
+                <!-- <a href="http://localhost/PHP-MVC/public/landing_page/jelajah">Jelajahi selengkapnya</a> -->
             </div>
         </div>
     </section>

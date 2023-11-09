@@ -15,9 +15,11 @@ class profile_model
         return $this->db->resultSet();
     }
 
-    public function updateUser($id_user, $nama_lengkap, $email, $password, $tggl_lahir, $jenis_kelamin, $alamat, $no_hp)
+    public function updateUser($id_user, $nama_lengkap, $email, $password, $tggl_lahir, $jenis_kelamin, $alamat, $no_hp, $foto_user)
 {
-    $this->db->query("UPDATE tb_user SET nama_lengkap = :nama_lengkap, email = :email, password = :password, tggl_lahir = :tggl_lahir, jenis_kelamin = :jenis_kelamin, alamat = :alamat, no_hp = :no_hp WHERE id_user = :id_user");
+
+    if ($foto_user == "" ){
+        $this->db->query("UPDATE tb_user SET nama_lengkap = :nama_lengkap, email = :email, password = :password, tggl_lahir = :tggl_lahir, jenis_kelamin = :jenis_kelamin, alamat = :alamat, no_hp = :no_hp WHERE id_user = :id_user");
     $this->db->bind(':id_user', $id_user);
     $this->db->bind(':nama_lengkap', $nama_lengkap);
     $this->db->bind(':email', $email);
@@ -27,6 +29,29 @@ class profile_model
     $this->db->bind(':alamat', $alamat);
     $this->db->bind(':no_hp', $no_hp);
     return $this->db->execute();
+    
+    } else {
+
+    $this->db->query("UPDATE tb_user SET nama_lengkap = :nama_lengkap, email = :email, password = :password, tggl_lahir = :tggl_lahir, jenis_kelamin = :jenis_kelamin, alamat = :alamat, no_hp = :no_hp, foto_user = :foto_user WHERE id_user = :id_user");
+    $this->db->bind(':id_user', $id_user);
+    $this->db->bind(':nama_lengkap', $nama_lengkap);
+    $this->db->bind(':email', $email);
+    $this->db->bind(':password', $password);
+    $this->db->bind(':tggl_lahir', $tggl_lahir);
+    $this->db->bind(':jenis_kelamin', $jenis_kelamin);
+    $this->db->bind(':alamat', $alamat);
+    $this->db->bind(':no_hp', $no_hp);
+    $this->db->bind(':foto_user', $foto_user);
+    return $this->db->execute();
 }
+}
+
+// public function updateFoto($id_user, $foto_user)
+// {
+//     $this->db->query("UPDATE tb_user SET foto_user = :foto_user WHERE id_user = :id_user");
+//     $this->db->bind(':foto_user', $foto_user);
+//     $this->db->bind(':id_user', $id_user);
+//     return $this->db->execute();
+// }
 
 }
