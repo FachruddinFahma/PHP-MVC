@@ -7,38 +7,55 @@
             $this->view('pemilik_kost/register/register_pemilik', $data);
             $this->view('templates/footer');
         }
+
         public function tambah_akun_pemilik()
         {
+            // Ambil data dari formulir
             $nama_lengkap = $_POST['nama_lengkap'];
             $email = $_POST['email'];
-            $password =$_POST['password'];
-            $konfirpassword =$_POST['konfirpassword'];
-            echo $nama_lengkap;
-            if($password == $konfirpassword){
-                var_dump($_POST);
-            $dataisi = [
-                'nama_lengkap' => $nama_lengkap,
-                'email' => $email,
-                'password' => $password,
-            ];
-            try {
-                
-                $data['Pemilik_Kost'] = $this->model('Register_model')->addRegisterPemilik($dataisi);
+            $password = $_POST['password'];
+            $konfirpassword = $_POST['konfirpassword'];
 
+            // Ambil informasi file gambar yang diunggah
+            $namaFile = $_FILES['foto_user']['name'];
+            $error = $_FILES['foto_user']['error'];
+            $tmpName = $_FILES['foto_user']['tmp_name'];
 
-                echo 'sukses';
-                header('Location: http://localhost/PHP-MVC/public/login1');
-                //code...
-            } catch (\Throwable $th) {
-                //throw $th;
-                echo 'gagal'. $th->getMessage();
-            }
-            
+            // Tentukan direktori penyimpanan gambar
+            $direktori = '../public/foto/' . $namaFile;
+
+            // Validasi password dan proses upload gambar
+            if ($password == $konfirpassword) {
+                if ($error === 0) {
+                    if (move_uploaded_file($tmpName, $direktori)) {
+                        // File gambar berhasil diunggah, lanjutkan dengan penyimpanan data ke database
+                        $dataisi = [
+                            'nama_lengkap' => $nama_lengkap,
+                            'email' => $email,
+                            'password' => $password,
+                            'foto_user' => $namaFile // Simpan path gambar ke database
+                        ];
+
+                        try {
+                            // Panggil model untuk menyimpan data ke database
+                            $data['Pemilik_Kost'] = $this->model('Register_model')->addRegisterPemilik($dataisi);
+
+                            echo 'sukses';
+                            header('Location: http://localhost/PHP-MVC/public/login1');
+                        } catch (\Throwable $th) {
+                            echo 'gagal' . $th->getMessage();
+                        }
+                    } else {
+                        echo 'Gagal mengunggah file gambar.';
+                    }
+                } else {
+                    echo 'Error saat mengunggah file gambar.';
+                }
             } else {
-                echo 'password gak sama';
-            } 
-
+                echo 'Password tidak cocok.';
+            }
         }
+
     }
     // public function prosesRegister()
     // {

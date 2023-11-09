@@ -4,7 +4,7 @@
 
         public function index()
 {
-    $id_kost = 'KOST01';
+    $id_kost = 'KOST02';
     $data = $this->model('dataKost_model')->getKostById($id_kost);
 
     $defaultFormValues = [

@@ -30,7 +30,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="http://localhost/PHP-MVC/public/register_pemilik/tambah_akun_pemilik" method="post" >
+            <form action="http://localhost/PHP-MVC/public/register_pemilik/tambah_akun_pemilik" method="post" enctype="multipart/form-data">
                 <h1>Register Pemilik Kost</h1>
                 <span>Isi data dengan lengkap</span>
                 <div class="form-group">
@@ -66,7 +66,7 @@
                         <div class="input-icon">
                             <i class="ri-gallery-upload-fill"></i>
                             <label for="">Masukkan Foto</label>
-                            <input type="file" placeholder="Masukkan foto anda">
+                            <input type="file" placeholder="Masukkan foto anda" name="foto_user">
                         </div>
                     </div>
                 </div>
