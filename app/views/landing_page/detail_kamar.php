@@ -75,7 +75,66 @@
                 </div>
             </div>
             <div class="left-content-kamar">
-
+                <div class="harga-kost">
+                    <p>Diskon 100rb <span>Rp 1.350.000</span></p>
+                    <h2>Rp 1.250.000 <span>(bulan pertama)</span></h2>
+                    <div class="input-rentang-kost">
+                        <input type="text" placeholder="Rp 0" name="harga-awal" id="input-harga-awal">
+                        <p> - </p>
+                        <input type="text" placeholder="Rp 3,000,000" name="harga-akhir" id="input-harga-akhir">
+                    </div>
+                    <a>Pesan Sekarang</a>
+                </div>
+                <div class="review-kost">
+                    <p class="grand-review"><i class="ri-star-fill"></i> 4.5 (8 Review)</p>
+                    <div class="sub-review">
+                        <p>Kebersihan</p>
+                        <div class="star-sub-review">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="sub-review">
+                        <p>Kenyamanan</p>
+                        <div class="star-sub-review">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="sub-review">
+                        <p>Keamananan</p>
+                        <div class="star-sub-review">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="sub-review">
+                        <p>Fasilitas</p>
+                        <div class="star-sub-review">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="maps-kost">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2472.7281577870117!2d113.71830859203426!3d-8.170001002409187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695cd94262967%3A0xb7043f397fd93496!2sKost%20Putri%20B3!5e0!3m2!1sid!2sid!4v1699505407027!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
