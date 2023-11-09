@@ -15,15 +15,31 @@
         <div class="row">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle mt-3 mb-4" style="object-fit: cover;" height="190" width="190px" src="http://localhost/PHP-MVC/public/image/<?= $penghuni['foto_user']?>" id="outputProfile">
+                    <img class="rounded-circle mt-3 mb-4" style="object-fit: cover;" height="190" width="190px" src="http://localhost/PHP-MVC/public/foto/<?= $penghuni['foto_user']?>" id="outputProfile">
                     <span class="font-weight-bold"><?= $penghuni['nama_lengkap'] ?></span>
                     <span class="text-black-50"><?= $penghuni['email'] ?></span>
                 </div>
                 <div class="text-center">
                     
-                <div class="input-group mb-3">
-  <input type="file" class="form-control" id="imgInpProfile"  aria-label="Upload">
+
+                <form action="http://localhost/PHP-MVC/public/profile/updateUser/<?= $penghuni['id_user'] ?>" method="post" enctype="multipart/form-data">
+    <div class="input-group mb-3">
+    <div class="container ">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <!-- Input file tersembunyi -->
+      <input accept="image/*" type="file" class="form-control" id="imgInpProfile" name="profile_picture" aria-label="Upload" style="display:none;">
+      
+      <!-- Tombol menggunakan Bootstrap -->
+      <button type="button" class="btn btn-primary " onclick="document.getElementById('imgInpProfile').click()" <span>upload gambar</span></button>
+    </div>
+  </div>
 </div>
+
+    </div>
+    
+
+
 
                 </div>
             </div>
@@ -35,7 +51,7 @@
                         <h4 class="text-right">Profile Settings</h4>
                     </div>
                     <?php foreach ($data['profile'] as $penghuni) : ?>
-                        <form action="http://localhost/PHP-MVC/public/profile/updateUser/<?= $penghuni['id_user'] ?>" method="post">
+                        
                         <div class="row mt-2 mb-4">
                             <div class="col-md-6">
                                 <label class="labels">Nama Lengkap</label>
