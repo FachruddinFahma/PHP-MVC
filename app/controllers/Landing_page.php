@@ -5,4 +5,9 @@ class Landing_page extends Controller
     {
         $this->view('landing_page/index');
     }
+
+    public function jelajah()
+    {
+        $this->view('landing_page/jelajah');
+    }
 }
