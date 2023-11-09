@@ -1,0 +1,48 @@
+
+.halaman{
+    color: var(--brown);
+    font-weight: 300;
+    padding: 0 150px;
+    margin-top: 100px;
+}
+
+.halaman i{
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--brown);
+}
+
+#pemesanan{
+    display: flex;
+    width: 100%;
+    padding: 0 150px;
+    box-sizing: border-box;
+}
+
+#pemesanan .left-pemesanan{
+    display: flex;
+    flex-grow: 3;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#pemesanan .left-pemesanan #informasi-pemesanan-kost .input-pemesanan{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#pemesanan .left-pemesanan #informasi-pemesanan-kost .input-pemesanan input{
+    width: 300px;
+    padding: 10px 20px;
+}
+
+#pemesanan .right-pemesanan{
+    display: flex;
+    flex-grow: 1;
+    border: 1px solid black;
+    flex-direction: column;
+}
+

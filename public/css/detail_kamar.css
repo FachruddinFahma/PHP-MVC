@@ -82,6 +82,17 @@ nav .title-navbar img{
     padding: 80px 200px;
 }
 
+#detail_kamar .halaman{
+    color: var(--brown);
+    font-weight: 300;
+}
+
+#detail_kamar .halaman i{
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--brown);
+}
+
 #detail_kamar #kumpulan-foto-kamar {
     display: flex;
 }
@@ -174,7 +185,7 @@ nav .title-navbar img{
 #detail_kamar #content-kamar .left-content-kamar{
     /* border: 1px solid blue; */
     display: flex;
-    flex-grow: 2;
+    flex-grow: 1;
     flex-direction: column;
 }
 
@@ -215,6 +226,7 @@ nav .title-navbar img{
    margin-left: auto;
    margin-right: auto;
    text-align: center;
+   text-decoration: none;
 }
 
 #detail_kamar #content-kamar .left-content-kamar .harga-kost .input-rentang-kost {
@@ -228,6 +240,7 @@ nav .title-navbar img{
     width: 150px;
     padding: 10px 20px;
 }
+
 
 #detail_kamar #content-kamar .pengelola-kost{
     border-top: 1px dashed black;

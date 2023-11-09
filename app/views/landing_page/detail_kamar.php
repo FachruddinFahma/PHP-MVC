@@ -20,6 +20,9 @@
     </nav>
 
     <section id="detail_kamar">
+        <div class="halaman">
+            <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Kamar 3</p>
+        </div>
         <div id="kumpulan-foto-kamar">
             <img class="main-foto" src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
             <div class="right-foto-kamar">
@@ -83,7 +86,7 @@
                         <p> - </p>
                         <input type="text" placeholder="Rp 3,000,000" name="harga-akhir" id="input-harga-akhir">
                     </div>
-                    <a>Pesan Sekarang</a>
+                    <a href="http://localhost/PHP-MVC/public/landing_page/pemesanan">Pesan Sekarang</a>
                 </div>
                 <div class="review-kost">
                     <p class="grand-review"><i class="ri-star-fill"></i> 4.5 (8 Review)</p>
