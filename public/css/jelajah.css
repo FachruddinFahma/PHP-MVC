@@ -78,7 +78,7 @@ nav .title-navbar img{
 
 /*   menu jelajah   */
 
-#kost .menu-jelajah{
+#jelajah .menu-jelajah{
     background-color: white ;
     margin: 50px 100px 0px;
     padding: 0 30px 30px;
@@ -89,31 +89,31 @@ nav .title-navbar img{
     align-items: center;
 }
 
-#kost .menu-jelajah .container-kategori-kost, .container-lokasi-kost, .container-kategori-kost, .container-rentang-kost{
+#jelajah .menu-jelajah .container-kategori-kost, .container-lokasi-kost, .container-kategori-kost, .container-rentang-kost{
     text-align: start;
 }
 
-#kost .menu-jelajah select{
+#jelajah .menu-jelajah select{
     padding: 10px 12px;
     width: 200px;
     border: 1px solid var(--lightgrey);
     border-radius: 10px;
 }
 
-#kost .menu-jelajah .container-rentang-kost .input-rentang-kost{
+#jelajah .menu-jelajah .container-rentang-kost .input-rentang-kost{
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-#kost .menu-jelajah .container-rentang-kost input{
+#jelajah .menu-jelajah .container-rentang-kost input{
     padding: 10px 12px;
     width: 150px;
     border: 1px solid var(--lightgrey);
     border-radius: 10px;
 }
 
-#kost .menu-jelajah .container-rentang-kost button{
+#jelajah .menu-jelajah .container-rentang-kost button{
     padding: 10px 40px;
     border: none;
     border-radius: 5px;
@@ -123,7 +123,7 @@ nav .title-navbar img{
 }
 
 /* css kosttt */
-#kost{
+#jelajah{
     padding: 0 100px;
     padding-bottom: 400px;
     display: flex;
@@ -132,26 +132,26 @@ nav .title-navbar img{
     text-align: center;
 }
 
-#kost .title-section-kost{
+#jelajah .title-section-kost{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#kost .title-section-kost h2{
+#jelajah .title-section-kost h2{
     font-size: 40px;
     font-weight: 500;
     color: var(--navy);
 }
 
-#kost .title-section-kost .sub-deskripsi{
+#jelajah .title-section-kost .sub-deskripsi{
     width: 550px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -25px;
 }
 
-#kost .title-section-kost #button-kost{
+#jelajah .title-section-kost #button-kost{
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -164,19 +164,19 @@ nav .title-navbar img{
     border-radius: 10px;
 }
 
-#kost .title-section-kost #button-kost #button-populer{
+#jelajah .title-section-kost #button-kost #button-populer{
     background-color: var(--blue);
     color: white;
     padding: 0 30px;
     border-radius: 8px;
 }
 
-#kost .title-section-kost #button-kost #button-terbaru{
+#jelajah .title-section-kost #button-kost #button-terbaru{
     color: var(--blue);
     padding: 0 30px;
 }
 
-#kost .content-kost #kumpulan-card-kost{
+#jelajah .content-kost #kumpulan-card-kost{
     margin-top: 20px;
     display: flex;
     gap: 25px;
@@ -184,7 +184,7 @@ nav .title-navbar img{
     justify-content: center;
 }
 
-#kost .content-kost #kumpulan-card-kost .card-kost{
+#jelajah .content-kost #kumpulan-card-kost .card-kost{
     background-color: white;
     width: 220px;
     margin: 10px 20px;
@@ -192,22 +192,22 @@ nav .title-navbar img{
     box-shadow:  0 3px 10px rgb(0 0 0 / 0.1);
 }
 
-#kost .content-kost #kumpulan-card-kost .card-kost img{
+#jelajah .content-kost #kumpulan-card-kost .card-kost img{
     width: 220px;
     border-radius: 10px 10px 0 0;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost {
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost {
    padding: 2px 15px;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost{
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost .kategori-kost{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost .kategori-kost{
     border: 1px solid var(--lightgrey);
     padding: 0 15px;
     border-radius: 10px;
@@ -216,17 +216,17 @@ nav .title-navbar img{
    align-items: center;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost i{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost i{
     color: #E7D000;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .nama-kost{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .nama-kost{
     text-align: start;
     margin-top: -10px;
     font-size: 20px;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .location-kost{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .location-kost{
     display: flex;
     gap: 10px;
     padding: 0;
@@ -237,29 +237,29 @@ nav .title-navbar img{
     font-weight: 300;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .location-kost i{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .location-kost i{
     color: #4B4B4B;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .harga{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga{
     text-align: start;
     margin-top: -15px;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .harga p{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga p{
     font-weight: 550;
 }
 
-#kost .content-kost #kumpulan-card-kost .content-card-kost .harga span{
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga span{
     font-weight: 400;
 }
 
-#kost .content-kost #bottom-card-kost{
+#jelajah .content-kost #bottom-card-kost{
     text-align: end;
     margin: 50px 100px;
 }
 
-#kost .content-kost #bottom-card-kost a{
+#jelajah .content-kost #bottom-card-kost a{
     color: var(--blue);
     text-decoration: none;
 }

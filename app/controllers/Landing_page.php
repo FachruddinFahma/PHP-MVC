@@ -10,4 +10,9 @@ class Landing_page extends Controller
     {
         $this->view('landing_page/jelajah');
     }
+
+    public function detail_kamar()
+    {
+        $this->view('landing_page/detail_kamar');
+    }
 }

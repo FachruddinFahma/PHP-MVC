@@ -21,7 +21,7 @@
     </nav>
 
 
-    <section id="kost">
+    <section id="jelajah">
         <div class="menu-jelajah">
             <div class="container-kategori-kost">
                 <p>Tipe Kost</p>
