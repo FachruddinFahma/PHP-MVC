@@ -8,24 +8,26 @@
             $this->db = new Database;
         }
 
-        public function getKostById($id_kost)
+        public function getKostByUserId($id_user)
         {
             $this->db->query('SELECT tb_kost.id_kost, tb_kost.nama_kost, tb_user.nama_lengkap, tb_kost.fasilitas_kost, tb_kost.peraturan_kost, tb_kost.jenis_kost, 
             tb_kost.alamat, tb_kost.latitude, tb_kost.longitude, tb_kost.status
             FROM tb_kost 
             JOIN tb_user ON tb_user.id_user = tb_kost.id_user
-            WHERE id_kost = :id_kost && status = "AKTIF" ');
-            $this->db->bind('id_kost', $id_kost);
-            return $this->db->single();
+            WHERE tb_user.id_user = :id_user AND tb_kost.status = "AKTIF" ');
 
-            
+            $this->db->bind(':id_user', $id_user);
+            return $this->db->single();
         }
 
-        public function getfotKostById($id_kost)
+        public function getfotoKostByUserId($id_user)
         {
-            $this->db->query('SELECT * FROM tb_foto_kost WHERE id_kost = :id_kost');
-            $this->db->bind('id_kost', $id_kost);
-            return $this->db->single();
+            $this->db->query('SELECT tb_kost.id_kost, tb_foto_kost.link_fotoKost
+                            FROM tb_foto_kost
+                            JOIN tb_kost ON tb_foto_kost.id_kost = tb_kost.id_kost
+                            WHERE tb_kost.id_kost = :id_user');
+            $this->db->bind(':id_user', $id_user);
+            return $this->db->resultset();
         }
 
         public function updateKost($id_kost, $nama_kost, $jenis_kost, $fasilitas_kost, $peraturan_kost, $latitude, $longitude, $alamat)
@@ -43,4 +45,20 @@
             return $this->db->execute();
         }
     }
+?>
+
+
+<?php
+// public function getKostById($id_kost)
+        // {
+        //     $this->db->query('SELECT tb_kost.id_kost, tb_kost.nama_kost, tb_user.nama_lengkap, tb_kost.fasilitas_kost, tb_kost.peraturan_kost, tb_kost.jenis_kost, 
+        //     tb_kost.alamat, tb_kost.latitude, tb_kost.longitude, tb_kost.status
+        //     FROM tb_kost 
+        //     JOIN tb_user ON tb_user.id_user = tb_kost.id_user
+        //     WHERE id_kost = :id_kost && status = "AKTIF" ');
+        //     $this->db->bind('id_kost', $id_kost);
+        //     return $this->db->single();
+
+            
+        // }
 ?>

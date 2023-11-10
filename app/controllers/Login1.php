@@ -21,6 +21,7 @@ class Login1 extends Controller
         } else {
             $ambil_id_role = $data["login1"]["id_role"];
             $ambil_id_user = $data["login1"]["id_user"];
+            $_SESSION['id_user'] = $ambil_id_user;
 
             $data2['login1'] = $this->model('Login_model')->getKost($ambil_id_user);
 

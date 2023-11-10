@@ -3,46 +3,47 @@
     {
 
         public function index()
-{
-    $id_kost = 'KOST02';
-    $data = $this->model('dataKost_model')->getKostById($id_kost);
+        {
+            $id_user = $_SESSION['id_user'];
+            $data = $this->model('dataKost_model')->getKostByUserId($id_user);
+            // $data = $this->model('dataKost_model')->getKostById($id_user);
 
-    $defaultFormValues = [
-        'id_kost' => '',
-        'nama_kost' => '',
-        'nama_lengkap' => '',
-        'jenis_kost' => '',
-        'fasilitas_kost' => '',
-        'peraturan_kost' => '',
-        'latitude' => '',
-        'longitude' => '',
-        'alamat' => '',
-        'status' => ''
-    ];
+            $defaultFormValues = [
+                'id_kost' => '',
+                'nama_kost' => '',
+                'nama_lengkap' => '',
+                'jenis_kost' => '',
+                'fasilitas_kost' => '',
+                'peraturan_kost' => '',
+                'latitude' => '',
+                'longitude' => '',
+                'alamat' => '',
+                'status' => ''
+            ];
 
-    if ($data && $data['status'] === 'AKTIF') {
-        $defaultFormValues = [
-            'id_kost' => $data['id_kost'],
-            'nama_kost' => $data['nama_kost'],
-            'nama_lengkap' => $data['nama_lengkap'],
-            'jenis_kost' => $data['jenis_kost'],
-            'fasilitas_kost' => $data['fasilitas_kost'],
-            'peraturan_kost' => $data['peraturan_kost'],
-            'latitude' => $data['latitude'],
-            'longitude' => $data['longitude'],
-            'alamat' => $data['alamat'],
-            'status' => $data['status']
-        ];
-    }
+            if ($data && $data['status'] === 'AKTIF') {
+                $defaultFormValues = [
+                    'id_kost' => $data['id_kost'],
+                    'nama_kost' => $data['nama_kost'],
+                    'nama_lengkap' => $data['nama_lengkap'],
+                    'jenis_kost' => $data['jenis_kost'],
+                    'fasilitas_kost' => $data['fasilitas_kost'],
+                    'peraturan_kost' => $data['peraturan_kost'],
+                    'latitude' => $data['latitude'],
+                    'longitude' => $data['longitude'],
+                    'alamat' => $data['alamat'],
+                    'status' => $data['status']
+                ];
+            }
 
-    $data['judul'] = "KOST";
-    $data['kost'] = $defaultFormValues;
-    $data['fotos'] = $this->model('dataKost_model')->getfotKostById($id_kost);
+            $data['judul'] = "KOST";
+            $data['kost'] = $defaultFormValues;
+            $data['fotos'] = $this->model('dataKost_model')->getfotoKostByUserId($id_user);
 
-    $this->view('templates/header', $data);
-    $this->view('pemilik_kost/data_kost/index', $data);
-    $this->view('templates/footer');
-}
+            $this->view('templates/header', $data);
+            $this->view('pemilik_kost/data_kost/index', $data);
+            $this->view('templates/footer');
+        }
 
     
         public function updateKost($id_kost)
