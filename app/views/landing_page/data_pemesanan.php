@@ -120,7 +120,7 @@
                     <img src="http://localhost/PHP-MVC/public/image/pembayaran/MANDIRI.png" alt="">
                 </div>
             </div>
-            <a id="btn-pesan-sekarang">Bayar Sekarang</a>
+            <a href="http://localhost/PHP-MVC/public/landing_page/pembayaran" id="btn-pesan-sekarang">Bayar Sekarang</a>
         </div>
 
     </section>
