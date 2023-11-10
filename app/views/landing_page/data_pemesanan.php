@@ -98,7 +98,11 @@
                 <p>Total Pembayaran : </p>
                 <p>Rp 602,000</p>
             </div>
+            <div class="title-pembayaran">
+                <p>Pembayaran Via :</p>
+            </div>
             <div class="via-pembayaran">
+
                 <div class="opsi-pembayaran">
                     <input type="checkbox" name="" id="">
                     <img src="http://localhost/PHP-MVC/public/image/pembayaran/BCA.png" alt="">
@@ -116,7 +120,7 @@
                     <img src="http://localhost/PHP-MVC/public/image/pembayaran/MANDIRI.png" alt="">
                 </div>
             </div>
-            <button id="btn-pesan-sekarang">Bayar Sekarang</button>
+            <a id="btn-pesan-sekarang">Bayar Sekarang</a>
         </div>
 
     </section>

@@ -102,7 +102,7 @@
     text-align: center;
     padding: 20px 50px 50px;
     color: var(--brown);
-    height: 500px;
+    height: 550px;
 }
 
 .right-pemesanan > p{
@@ -148,4 +148,9 @@
     border-radius: 10px;
     font-weight: 500;
     font-size: 16px;
+    display: block;
+}
+
+.right-pemesanan .title-pembayaran{
+    text-align: start;
 }
