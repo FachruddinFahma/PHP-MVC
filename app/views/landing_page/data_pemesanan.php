@@ -28,26 +28,95 @@
             <p>IDP00162382</p>
             <div id="informasi-pemesanan-kost">
                 <h3>Informasi Pemesanan Kost</h3>
-                <div class="input-pemesanan">
-                    <label for="id_kost">ID Kost</label>
-                    <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                <div class="kumpulan-input-pemesanan">
+                    <div class="input-pemesanan">
+                        <label for="id_kost">ID Kost</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="id_kost">Nama Kost</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="id_kost">Alamat Kost</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="id_kost">Nama Kamar</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div id="full-input" class="input-pemesanan">
+                        <label for="id_kost">Fasilitas</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
                 </div>
-                <div class="input-pemesanan">
-                    <label for="id_kost">ID Kost</label>
-                    <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
-                </div>
-                <div class="input-pemesanan">
-                    <label for="id_kost">ID Kost</label>
-                    <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
-                </div>
-                <div class="input-pemesanan">
-                    <label for="id_kost">ID Kost</label>
-                    <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+            </div>
+            <div id="informasi-pemesanan-kost">
+                <h3>Informasi Calon Penghuni</h3>
+                <div class="kumpulan-input-pemesanan">
+                    <div class="input-pemesanan">
+                        <label for="id_kost">ID Kost</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="id_kost">Nama Kost</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="id_kost">Alamat Kost</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="id_kost">Nama Kamar</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div id="full-input" class="input-pemesanan">
+                        <label for="id_kost">Fasilitas</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right-pemesanan">
-
+            <p>Informasi Booking</p>
+            <div class="detail-pemesanan">
+                <p>Kost Mulya Putra Kencana</p>
+                <div class="sub-detail-pemesanan">
+                    <p>Kategori Pembayaran : </p>
+                    <p>Bulanan</p>
+                </div>
+                <div class="sub-detail-pemesanan">
+                    <p>Harga Kost :</p>
+                    <p>Rp 600,000</p>
+                </div>
+                <div class="sub-detail-pemesanan">
+                    <p>Biaya Admin : </p>
+                    <p>Rp 2,000</p>
+                </div>
+            </div>
+            <div class="total-pembayaran">
+                <p>Total Pembayaran : </p>
+                <p>Rp 602,000</p>
+            </div>
+            <div class="via-pembayaran">
+                <div class="opsi-pembayaran">
+                    <input type="checkbox" name="" id="">
+                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/BCA.png" alt="">
+                </div>
+                <div class="opsi-pembayaran">
+                    <input type="checkbox" name="" id="">
+                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/BRI.png" alt="">
+                </div>
+                <div class="opsi-pembayaran">
+                    <input type="checkbox" name="" id="">
+                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/DANA.png" alt="">
+                </div>
+                <div class="opsi-pembayaran">
+                    <input type="checkbox" name="" id="">
+                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/MANDIRI.png" alt="">
+                </div>
+            </div>
+            <button id="btn-pesan-sekarang">Bayar Sekarang</button>
         </div>
 
     </section>
