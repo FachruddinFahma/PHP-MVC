@@ -8,31 +8,55 @@
             $this->view('templates/footer');
         }
 
-        public function tambah_akun_penyewa(){
+        public function tambah_akun_penyewa()
+        {
+            // Ambil data dari formulir
             $nama_lengkap = $_POST['nama_lengkap'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $konfirpassword = $_POST['konfirpassword'];
-            //foto_user
-            if($password == $konfirpassword){
-                $isidata =[
-                    'nama_lengkap'=> $nama_lengkap,
-                    'email'=> $email,
-                    'password'=> $password,
-                ];
-                try {
-                    $data['Penyewa Kost'] = $this->model('Register_model')->addRegisterPenyewa($isidata);
-                    echo 'berhasil';
-                    header('Location: http://localhost/PHP-MVC/public/login1222');
-                } catch (\Throwable $th) {
-                    //throw $th;
-                    echo 'gagal'. $th ->getMessage();
+
+            // Ambil informasi file gambar yang diunggah
+            $namaFile = $_FILES['foto_user1']['name'];
+            $error = $_FILES['foto_user1']['error'];
+            $tmpName = $_FILES['foto_user1']['tmp_name'];
+
+            // Tentukan direktori penyimpanan gambar
+            $direktori = '../public/foto/' . $namaFile;
+
+            // Validasi password dan proses upload gambar
+            if ($password == $konfirpassword) {
+                if ($error === 0) {
+                    if (move_uploaded_file($tmpName, $direktori)) {
+                        // File gambar berhasil diunggah, lanjutkan dengan penyimpanan data ke database
+                        $dataisi = [
+                            'nama_lengkap' => $nama_lengkap,
+                            'email' => $email,
+                            'password' => $password,
+                            'foto_user' => $namaFile // Simpan nama file gambar ke database
+                        ];
+
+                        try {
+                            // Panggil model untuk menyimpan data ke database
+                            $this->model('Register_model')->addRegisterPenyewa($dataisi);
+
+                            echo 'sukses';
+                            header('Location: http://localhost/PHP-MVC/public/login1');
+                            exit();
+                        } catch (\Throwable $th) {
+                            echo 'gagal' . $th->getMessage();
+                        }
+                    } else {
+                        echo 'Gagal mengunggah file gambar.';
+                    }
+                } else {
+                    echo 'Error saat mengunggah file gambar.';
                 }
-        }else{
-            echo 'password tidak sama' ;
+            } else {
+                echo 'Password tidak cocok.';
+            }
         }
     }
-}
     // public function prosesRegister()
     // {
     //     // Ambil data yang diperlukan dari $_POST
@@ -59,7 +83,6 @@
     //         exit;
     //     }
     // }
-
 
 
 // public function prosesRegister()
