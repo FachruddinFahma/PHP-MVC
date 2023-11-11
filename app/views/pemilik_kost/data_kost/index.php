@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/datakost.css">
-    <!-- ICON J-KOST -->
-    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white.png">
+    <!-- LINK ICON J-KOS -->
+    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
     <title>Halaman <?php echo $data['judul'] ?></title>
 </head>
 
