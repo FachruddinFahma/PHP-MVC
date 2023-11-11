@@ -22,12 +22,12 @@
 
         public function getfotoKostByUserId($id_user)
         {
-            $this->db->query('SELECT tb_kost.id_kost, tb_foto_kost.link_fotoKost
-                            FROM tb_foto_kost
-                            JOIN tb_kost ON tb_foto_kost.id_kost = tb_kost.id_kost
-                            WHERE tb_kost.id_kost = :id_user');
+            $this->db->query('SELECT tb_kost.id_kost, tb_foto_kost.link_fotoKost as link_fotoKost
+            FROM tb_kost
+            JOIN tb_foto_kost ON tb_foto_kost.id_kost = tb_kost.id_kost
+            WHERE tb_kost.id_user = :id_user');
             $this->db->bind(':id_user', $id_user);
-            return $this->db->resultset();
+            return $this->db->single();
         }
 
         public function updateKost($id_kost, $nama_kost, $jenis_kost, $fasilitas_kost, $peraturan_kost, $latitude, $longitude, $alamat)

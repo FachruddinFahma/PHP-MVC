@@ -3,15 +3,14 @@ class Profile extends Controller
 {
     public function index()
     {
-    
+        $id_user = $_SESSION['id_user'];
         $data['judul'] = 'Profile';
-        $data['profile'] = $this->model('profile_model')->getProfile("USER002"); 
+        $data['profile'] = $this->model('profile_model')->getProfile($id_user);
 
         $this->view('templates/header', $data);
         $this->view('pemilik_kost/profile/index', $data);
-        $this->view('templates/footer');;
+        $this->view('templates/footer');
     }
-
 
     public function updateUser($id_user)
     {

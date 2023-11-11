@@ -36,6 +36,7 @@
                 ];
             }
 
+            $id_kost = "KOST02";
             $data['judul'] = "KOST";
             $data['kost'] = $defaultFormValues;
             $data['fotos'] = $this->model('dataKost_model')->getfotoKostByUserId($id_user);
