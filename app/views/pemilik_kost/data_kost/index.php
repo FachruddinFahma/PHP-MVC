@@ -101,11 +101,17 @@
                                     <input type="text" class="form-control" id="" name="longitude" value="<?= $data['kost']['longitude'] ?>">
                                 </div>
                             </div>
+                            <div class="mb-3 row">
+                                <iframe class="position-relative rounded w-100 h-100 wow fadeInUp" data-wow-delay="0.5s" 
+                                src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed" 
+                                frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                                </iframe>
+                            </div>
                         </div>
                         <button class="btn btn-success" type="submit">Edit</button>
                     </form>
                 <?php else : ?>
-                    <p>Status Kost tidak aktif</p>
+                    <p>Status Kost belum aktif, mohon untuk menunggu sampai status kost sampai aktif</p>
                 <?php endif; ?>
             </div>
         </div>
