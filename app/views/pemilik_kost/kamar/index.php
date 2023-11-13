@@ -4,11 +4,12 @@
 <section id="kamar" class="content">
     <div id="kamar_content" class="pt-4 px-4">
         <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas">Tambah</a>
-        <table id="example" class="display" style="width:100%">
+        <table id="dataKamar" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>ID Kamar</th>
                     <th>Fasilitas</th>
+                    <th>Kategori</th>
                     <th>Ukuran</th>
                     <th>Harga</th>
                     <th>Status</th>
@@ -23,6 +24,7 @@
                     <tr>
                         <td><?php echo $item['id_kamar'] ?></td>
                         <td><?php echo $item['fasilitas'] ?></td>
+                        <td><?php echo $item['kategori'] ?></td>
                         <td><?php echo $item['ukuran'] ?></td>
                         <td><?php echo $item['harga'] ?></td>
                         <td>Kosong</td>

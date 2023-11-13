@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 class Kamar_model
 {
     private $db;
@@ -23,7 +25,8 @@ class Kamar_model
 
     public function insertKamar($data)
     {
-        $query = "INSERT INTO tb_kamar(id_kamar, fasilitas, ukuran, harga) VALUES (:id_kamar, :fasilitas_kamar, :ukuran_kamar, :harga_kamar)";
+        $query = "INSERT INTO tb_kamar(id_kamar, fasilitas, kategori, ukuran, harga) VALUES (:id_kamar, :fasilitas_kamar, 'bulanan' , :ukuran_kamar, :harga_kamar)";
+
 
         $this->db->query($query);
 
@@ -31,19 +34,20 @@ class Kamar_model
         $this->db->bind(':fasilitas_kamar', $data['fasilitas_kamar']);
         $this->db->bind(':ukuran_kamar', $data['ukuran_kamar']);
         $this->db->bind(':harga_kamar', $data['harga_kamar']);
+
         $this->db->execute();
 
         return $this->db->rowCount();
     }
 
-    public function deleteKamar($id_kamar)
-    {
-        $query = "DELETE FROM tb_kamar WHERE id_kamar = :id_kamar";
+    // public function deleteKamar($id_kamar)
+    // {
+    //     $query = "DELETE FROM tb_kamar WHERE id_kamar = :id_kamar";
 
-        $this->db->query($query);
-        $this->db->bind(':id_kamar', $id_kamar);
-        $this->db->execute();
+    //     $this->db->query($query);
+    //     $this->db->bind(':id_kamar', $id_kamar);
+    //     $this->db->execute();
 
-        return $this->db->rowCount();
-    }
+    //     return $this->db->rowCount();
+    // }
 }

@@ -23,6 +23,14 @@
     margin-bottom: 100px;
 }
 
+@media only screen and (max-width: 1200px) {
+    #pemesanan{
+        flex-direction: column;
+        padding: 100px;
+        margin-top: -100px;
+    }
+}
+
 .left-pemesanan{
     flex: 2;
     background-color: white;
@@ -155,3 +163,4 @@
 .right-pemesanan .title-pembayaran{
     text-align: start;
 }
+
