@@ -74,6 +74,66 @@
     ]
   });
 </script>
+<script>
+  new DataTable("#dataPemesanan1", {
+    info: false,
+    "columnDefs": [{
+        "orderable": true,
+        "targets": 0
+      },
+      {
+        "orderable": false,
+        "targets": 1
+      },
+      {
+        "orderable": true,
+        "targets": 2
+      },
+      {
+        "orderable": false,
+        "targets": 3
+      },
+      {
+        "orderable": false,
+        "targets": 4
+      },
+      {
+        "orderable": false,
+        "targets": 5
+      },
+    ]
+  });
+</script>
+<script>
+  new DataTable("#dataPemesanan2", {
+    info: false,
+    "columnDefs": [{
+        "orderable": true,
+        "targets": 0
+      },
+      {
+        "orderable": false,
+        "targets": 1
+      },
+      {
+        "orderable": true,
+        "targets": 2
+      },
+      {
+        "orderable": false,
+        "targets": 3
+      },
+      {
+        "orderable": false,
+        "targets": 4
+      },
+      {
+        "orderable": false,
+        "targets": 5
+      },
+    ]
+  });
+</script>
 </body>
 
 </html>

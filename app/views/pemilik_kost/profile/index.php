@@ -27,12 +27,12 @@
                                 <div class="input-group mb-3">
                                     <div class="container ">
                                         <div class="row justify-content-center">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <!-- Input file tersembunyi -->
                                                 <input accept="image/*" type="file" class="form-control" id="imgInpProfile" name="profile_picture" aria-label="Upload" style="display:none;">
 
                                                 <!-- Tombol menggunakan Bootstrap -->
-                                                <button type="button" class="btn btn-primary " onclick="document.getElementById('imgInpProfile').click()" <span>upload gambar</span></button>
+                                                <button type="button" style="width: 170px;" class="btn btn-primary " onclick="document.getElementById('imgInpProfile').click()" <span>upload gambar</span></button>
                                             </div>
                                         </div>
                                     </div>

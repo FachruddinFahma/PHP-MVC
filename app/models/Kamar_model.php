@@ -25,7 +25,7 @@ class Kamar_model
 
     public function insertKamar($data)
     {
-        $query = "INSERT INTO tb_kamar(id_kamar, fasilitas, kategori, ukuran, harga) VALUES (:id_kamar, :fasilitas_kamar, 'bulanan' , :ukuran_kamar, :harga_kamar)";
+        $query = "INSERT INTO tb_kamar(id_kamar, fasilitas, kategori, ukuran, harga, id_kost) VALUES (:id_kamar, :fasilitas_kamar, 'bulanan' , :ukuran_kamar, :harga_kamar, 'KOST01')";
 
 
         $this->db->query($query);

@@ -11,9 +11,20 @@
 #pemesanan #pemesanan_top h4{
     font-size: 18px;
 }
+#pesanan_masuk.active {
+    color: blue;
+}
 
-#pemesanan #pemesanan_top #pesanan_masuk h4{
-    color: #295EF4;
+#pesanan_terkonfirmasi.active {
+    color: blue;
+}
+
+#pesanan_masuk.active {
+    color: blue;
+}
+
+#pesanan_terkonfirmasi.active {
+    color: blue;
 }
 
 #pemesanan #line{
@@ -51,9 +62,18 @@
     margin-top:10px;
 }
 
-#pemesanan #pemesanan_content{
+#pemesanan #pemesanan_content_masuk{
     margin: 40px 30px;
     padding: 40px 70px 100px;
     border-radius: 20px;
     background-color: white;
 }
+
+#pemesanan #pemesanan_content_terkonfirmasi{
+    margin: 40px 30px;
+    padding: 40px 70px 100px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
