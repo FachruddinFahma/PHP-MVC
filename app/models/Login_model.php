@@ -8,16 +8,23 @@ class Login_model
         $this->db = new Database;
     }
 
-    public function prosesLogin($email, $password)
+    public function prosesLogin($email)
     {
-        $query = "SELECT * FROM tb_user where email = :email AND password = :password";
+        // Hash password menggunakan MD5 sebelum melakukan query
+        // $hashedPassword = md5($password);
+        // $query = "SELECT * FROM tb_user WHERE email = :email AND password = :password";
+        // $this->db->query($query);
+        // $this->db->bind(':email', $email);
+        // $this->db->bind(':password', $hashedPassword);
+
+        // return $this->db->single();
+
+        $query = "SELECT * FROM tb_user WHERE email = :email";
         $this->db->query($query);
         $this->db->bind(':email', $email);
-        $this->db->bind(':password', $password);
 
         return $this->db->single();
     }
-
     public function getKost($id)
     {
         $query = "SELECT * FROM tb_user JOIN tb_kost ON tb_user.id_user = tb_kost.id_user where tb_user.id_user = :id";

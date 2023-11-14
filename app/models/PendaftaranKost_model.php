@@ -11,6 +11,8 @@
     
         public function addKost($kost)
         {
+            $id_user = $_SESSION['id_user'];
+
             // Mendapatkan nama file sementara
             $foto1 = $_FILES['fotokost1']['tmp_name'];
             $foto2 = $_FILES['fotokost2']['tmp_name'];
@@ -30,7 +32,7 @@
             move_uploaded_file($foto3, $uploadDir . $fotoName3);
             
             // Query untuk memasukkan data ke tb_kost
-            $query = "INSERT INTO tb_kost VALUES ('', 'USER016', :nama_kost, :jenis_kost, :fasilitas_kost, :peraturan_kost, :latitude, :longitude, :alamat , 'BELUM AKTIF')";
+            $query = "INSERT INTO tb_kost VALUES ('', '$id_user', :nama_kost, :jenis_kost, :fasilitas_kost, :peraturan_kost, :latitude, :longitude, :alamat , 'BELUM AKTIF')";
             $this->db->query($query);
             $this->db->bind('nama_kost', $kost['nama_kost']);
             $this->db->bind('jenis_kost', $kost['jenis_kost']);
