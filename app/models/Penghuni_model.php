@@ -22,15 +22,18 @@ class Penghuni_model
     }
 
 
-    public function getAllPenghuni()
+    public function getAllPenghuniByUserId($id_user)
     {
-        $this->db->query("SELECT tb_user.tggl_lahir, tb_user.email, tb_user.foto_user, tb_user.id_user, nama_lengkap, tb_kamar.id_kamar, jenis_kelamin, alamat, no_hp 
-            FROM tb_penghuni_kamar 
-            JOIN tb_user ON tb_user.id_user = tb_penghuni_kamar.id_user 
-            JOIN tb_kamar ON tb_kamar.id_kamar = tb_penghuni_kamar.id_kamar 
-            WHERE tb_user.id_role = '3'");
+        $this->db->query("SELECT tb_user.tggl_lahir, tb_user.email, tb_user.foto_user, tb_user.id_user, nama_lengkap, tb_kamar.id_kamar, tb_user.jenis_kelamin, tb_user.alamat, tb_user.no_hp 
+        FROM tb_penghuni_kamar 
+        JOIN tb_user ON tb_user.id_user = tb_penghuni_kamar.id_user 
+        JOIN tb_kamar ON tb_kamar.id_kamar = tb_penghuni_kamar.id_kamar 
+        JOIN tb_kost ON tb_kost.id_kost = tb_kamar.id_kost
+        WHERE tb_user.id_role = '3' AND tb_kost.id_user = :id_user");
+        
+        $this->db->bind(':id_user', $id_user);
         return $this->db->resultSet();
-    }   
+    }
 
     public function addPenghuni($data)
     {
