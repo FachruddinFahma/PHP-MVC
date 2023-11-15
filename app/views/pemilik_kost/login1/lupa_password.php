@@ -13,7 +13,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="http://localhost/PHP-MVC/public/lupa_password/" method="post">
+            <form action="http://localhost/PHP-MVC/public/lupa_password/gantiPassword" method="post">
                 <h1>Lupa Password</h1>
                 <span>Isi data dengan lengkap</span>
                 <div class="form-group">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <button>Ganti</button>
+                <button type="submit">Ganti</button>
             </form>
         </div>
         <div class="overlay-container">

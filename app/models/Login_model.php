@@ -34,9 +34,16 @@ class Login_model
         return $this->db->single();
     }
 
-    public function lupaPassword($email, $password)
+    public function updatePassword($email, $password)
     {
-        $query = "UPDATE tb_user SET email = :email , password = :password";
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $query = "UPDATE tb_user SET password = :password WHERE email = :email";
+        $this->db->query($query);
+        $this->db->bind(':email', $email);
+        $this->db->bind(':password', $hashedPassword);
+        
+        return $this->db->execute();
     }
 
     public function getUserByEmail($email)
