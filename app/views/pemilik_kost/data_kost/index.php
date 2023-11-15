@@ -81,9 +81,9 @@
                                     <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Kost</label>
                                     <select class="form-select" aria-label="Default select example" name="jenis_kost">
                                         <option selected>Pilih Jenis Kost</option>
-                                        <option value="1" <?= ($data['kost']['jenis_kost'] == 1) ? 'selected' : '' ?>>Laki - Laki</option>
-                                        <option value="2" <?= ($data['kost']['jenis_kost'] == 2) ? 'selected' : '' ?>>Perempuan</option>
-                                        <option value="3" <?= ($data['kost']['jenis_kost'] == 3) ? 'selected' : '' ?>>Campuran</option>
+                                        <option value="Laki - Laki" <?= ($data['kost']['jenis_kost'] == 'Laki - Laki') ? 'selected' : '' ?>>Laki - Laki</option>
+                                        <option value="Perempuan" <?= ($data['kost']['jenis_kost'] == 'Perempuan') ? 'selected' : '' ?>>Perempuan</option>
+                                        <option value="Campuran" <?= ($data['kost']['jenis_kost'] == 'Campuran') ? 'selected' : '' ?>>Campuran</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6">

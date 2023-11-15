@@ -3,7 +3,10 @@ class Landing_page extends Controller
 {
     public function index()
     {
-        $this->view('landing_page/index');
+        $data['judul'] = 'Home';
+        $data['data_kost'] = $this->model('landingPage_model')->getAllKost();
+        $data['foto_kost'] = $this->model('landingPage_model')->getAllFotoKost();
+        $this->view('landing_page/index', $data);
     }
 
     public function jelajah()

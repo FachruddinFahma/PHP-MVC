@@ -26,9 +26,9 @@
                         <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Kost</label>
                         <select class="form-select" aria-label="Default select example" name="jenis_kost">
                             <option selected>Open this select menu</option>
-                            <option value="1">Laki - Laki</option>
-                            <option value="2">Perempuan</option>
-                            <option value="3">Campuran</option>
+                            <option value="Laki - Laki">Laki - Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                            <option value="Campuran">Campuran</option>
                         </select>
                         <label for="staticEmail" class="col-sm-3 col-form-label">Fasilitas Kost</label>
                         <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea" name="fasilitas_kost" required></textarea>
