@@ -46,6 +46,12 @@ nav{
     padding: 0 60px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     display: flex;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    box-sizing:border-box;
+    background:white;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -79,7 +85,7 @@ nav .title-navbar img{
 /* hero section  */
 
 #hero{
-    padding: 150px 150px;
+    padding: 220px 150px;
     display: flex;
     justify-content: space-between;
 }
