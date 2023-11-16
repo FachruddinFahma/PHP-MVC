@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/detail_kamar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Halaman Kamar</title>
 </head>
 
 <body>
