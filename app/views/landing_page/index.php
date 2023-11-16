@@ -208,33 +208,47 @@
         <div class="content-kost">
             <div id="kumpulan-card-kost">
                 <?php
-                for ($i = 1; $i <= 8; $i++) {
+                if (!empty($data['data_kost'])) {
+                    foreach ($data['data_kost'] as $kost) {
+                        if ($kost['status'] === 'AKTIF') {
+                            if (isset($kost['link_foto'])) {
+                                $gambarArray = explode(',', $kost['link_foto']);
+                                $gambarPertama = $gambarArray[0];
+                            } else {
+                                $gambarPertama = 'kamar1.jpg';
+                            }
                 ?>
-                    <div class="card-kost">
-                        <div class="foto-kost">
-                            <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
-                        </div>
-                        <div class="content-card-kost">
-                            <div class="top-content-kost">
-                                <p class="kategori-kost">putra</p>
-                                <p><i class="ri-star-fill"></i> 4.5</p>
-                            </div>
-                            <p class="nama-kost">Kost Marno</p>
-                            <div class="location-kost">
-                                <i class="ri-map-pin-2-fill"></i>
-                                <p>Jl. Jawa VI No.20</p>
-                            </div>
-                            <div class="harga">
-                                <p>Rp 300,000<span>/ Bulan</span></p>
-                            </div>
-                        </div>
-                    </div>
+                            <a href="#" class="card-kost">
+                                <div class="foto-kost">
+                                    <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
+                                    <!-- <img class="gambar-kost" src="http://localhost/PHP-MVC/public/foto/<?php echo $gambarPertama; ?>" alt=""> -->
+                                </div>
+                                <div class="content-card-kost">
+                                    <div class="top-content-kost">
+                                        <p class="kategori-kost"><?php echo $kost['jenis_kost']; ?></p>
+                                        <p><i class="ri-star-fill"></i> 4.5</p>
+                                    </div>
+                                    <p class="nama-kost"><?php echo $kost['nama_kost']; ?></p>
+                                    <div class="location-kost">
+                                        <i class="ri-map-pin-2-fill"></i>
+                                        <p><?php echo $kost['alamat']; ?></p>
+                                    </div>
+                                    <div class="harga">
+                                        <p>Rp 300,000<span>/ Bulan</span></p>
+                                    </div>
+                                </div>
+                            </a>
                 <?php
+                        }
+                    }
+                } else {
+                    echo "Data kost tidak tersedia.";
                 }
                 ?>
+
             </div>
             <div id="bottom-card-kost">
-                <!-- <a href="http://localhost/PHP-MVC/public/landing_page/jelajah">Jelajahi selengkapnya</a> -->
+                <a href="http://localhost/PHP-MVC/public/landing_page/jelajah">Jelajahi selengkapnya</a>
             </div>
         </div>
     </section>

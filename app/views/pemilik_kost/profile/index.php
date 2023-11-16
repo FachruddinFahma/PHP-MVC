@@ -32,7 +32,7 @@
                                                 <input accept="image/*" type="file" class="form-control" id="imgInpProfile" name="profile_picture" aria-label="Upload" style="display:none;">
 
                                                 <!-- Tombol menggunakan Bootstrap -->
-                                                <button type="button" style="width: 170px;" class="btn btn-primary " onclick="document.getElementById('imgInpProfile').click()" <span>upload gambar</span></button>
+                                                <button type="button" style="width: 170px;" class="btn btn-primary " onclick="document.getElementById('imgInpProfile').click()"><span>upload gambar</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -62,11 +62,19 @@
                             <div class="row mt-2 mb-4">
                                 <div class="col-md-6">
                                     <label class="labels">Email</label>
-                                    <input type="text" class="form-control" name="email" placeholder="Masukkan Email" value="<?= $penghuni['email'] ?>">
+                                    <input type="text" class="form-control" name="email" placeholder="Masukkan Email" value="<?= $penghuni['email'] ?>" readonly>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label class="labels">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Masukkan Password" value="<?= $penghuni['password'] ?>">
+                                </div> -->
+                                <div class="col-md-6">
+                                    <label class="labels">Jenis Kelamin</label>
+                                    <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
+                                        <option selected>Jenis Kelamin</option>
+                                        <option value="Laki-laki" <?= ($penghuni['jenis_kelamin'] == 'Laki-laki') ? 'selected' : '' ?>>Laki-laki</option>
+                                        <option value="Perempuan" <?= ($penghuni['jenis_kelamin'] == 'Perempuan') ? 'selected' : '' ?>>Perempuan</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row mt-2 mb-4">
@@ -77,16 +85,6 @@
                                 <div class="col-md-6">
                                     <label class="labels">Nomor HP</label>
                                     <input type="text" class="form-control" name="no_hp" placeholder="Masukkan Nomor HP" value="<?= $penghuni['no_hp'] ?>">
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-md-6">
-                                    <label class="labels">Jenis Kelamin</label>
-                                    <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
-                                        <option selected>Jenis Kelamin</option>
-                                        <option value="Laki-laki" <?= ($penghuni['jenis_kelamin'] == 'Laki-laki') ? 'selected' : '' ?>>Laki-laki</option>
-                                        <option value="Perempuan" <?= ($penghuni['jenis_kelamin'] == 'Perempuan') ? 'selected' : '' ?>>Perempuan</option>
-                                    </select>
                                 </div>
                             </div>
                         <?php endforeach; ?>

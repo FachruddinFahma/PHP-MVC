@@ -5,7 +5,7 @@ $judul = $data['judul'];
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/style.css">
     <!-- LINK ICON J-KOS -->
@@ -38,11 +38,11 @@ $judul = $data['judul'];
         </div>
         <div id="center-content">
             <div id="foto-profile">
-                <img src="http://localhost/PHP-MVC/public/image/img1.jpg" alt="User Photo">
+                <img src="http://localhost/PHP-MVC/public/foto/user1.jpg" alt="User Photo">
             </div>
-            <p id="user-name">
-            <a href="http://localhost/PHP-MVC/public/profile">Farhan</a>
-            </p>
+            <div id="user-name">
+                <a href="http://localhost/PHP-MVC/public/profile">Farhan</a>
+            </div>
         </div>
     </header>
     <main class="container">

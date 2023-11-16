@@ -1,6 +1,16 @@
-::root{
+:root{
     --gray : #C7C7C7;
+    --navy: #1B3359;
+    --middleblue: #134BA4;
+    --lightblue: #F3F7FD; 
+    --darkblue: #061072;
+    --lightblueclick: #c9d8eb; 
+    --green:#1F9254;
+    --blue: #295EF4;
+    --lightgrey: #AEAEAE;
+    --brown: #404040;
 }
+
 #pemesanan #pemesanan_top {
     display: flex;
     align-items: flex-start;

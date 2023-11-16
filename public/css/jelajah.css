@@ -190,6 +190,12 @@ nav .title-navbar img{
     margin: 10px 20px;
     border-radius: 10px;
     box-shadow:  0 3px 10px rgb(0 0 0 / 0.1);
+    text-decoration: none;
+}
+
+#jelajah .content-kost #kumpulan-card-kost .card-kost p{
+    text-decoration: none;
+    color: var(--brown);
 }
 
 #jelajah .content-kost #kumpulan-card-kost .card-kost img{

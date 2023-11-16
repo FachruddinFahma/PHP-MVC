@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --navy: #1B3359;
     --middleblue: #134BA4;
-    --lightblue: #E5EBF4; 
+    --lightblue: #F3F7FD; 
+    --darkblue: #061072;
     --lightblueclick: #c9d8eb; 
+    --green:#1F9254;
+    --blue: #295EF4;
+    --lightgrey: #AEAEAE;
+    --brown: #404040;
 }
 
 * {
@@ -220,6 +226,11 @@ main > #sidebar > .nav-sidebar {
    align-items: center;
 }
 
+#center-content a{
+   text-decoration: none;
+   color: var(--brown);
+}
+
 #foto-profile img {
     width: 40px;
     height: 40px;
@@ -241,6 +252,14 @@ main > #sidebar > .nav-sidebar {
 #dashboard-title {
     display: flex;
     width: 30px;
-    height: 30px;
     gap: 30px;
+    align-items: center;
+}
+
+#dashboard-title h2{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
 }
