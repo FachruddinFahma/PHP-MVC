@@ -79,7 +79,9 @@ nav .title-navbar img{
 /* hero section  */
 
 #hero{
-    padding: 150px 100px;
+    padding: 150px 150px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #hero .hero-left .tagline{
@@ -106,6 +108,21 @@ nav .title-navbar img{
     margin-top: -40px;
     margin-bottom: 40px;
     color: var(--brown);
+}
+
+#hero .hero-right{
+ display: flex;
+ gap: 20px;
+}
+
+#hero .hero-right img{
+ width: 250px;
+ height: 380px;
+ border-radius: 20px;
+}
+
+#hero .hero-right img.gambar2{
+ margin-top: 80px;
 }
 
 #why-jkost{
@@ -290,11 +307,13 @@ nav .title-navbar img{
 #testimoni .content-testimoni{
     display: flex;
     text-align: left;
+    justify-content: center;
 }
 
 #testimoni .content-testimoni #kumpulan-card-testimoni{
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
 
 #testimoni .content-testimoni #kumpulan-card-testimoni .card-testimoni{
