@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/landing_page.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Home</title>
 </head>
 
 <body>
@@ -31,7 +25,10 @@
             <p class="deskripsi-hero">Tingkatkan kenyamanan hidupmu dengan sentuhan ajaib di ujung jari, <span>temukan kost impianmu di J-Kost!</span></p>
             <a href="">Cari Kost Sekarang</a>
         </div>
-        <div class="hero-right"></div>
+        <div class="hero-right">
+            <img class="gambar1" src="http://localhost/PHP-MVC/public/image/kamar.jpg" alt="">
+            <img class="gambar2" src="http://localhost/PHP-MVC/public/image/kamar.jpg" alt="">
+        </div>
     </section>
 
     <section id="why-jkost">
@@ -211,41 +208,28 @@
         <div class="content-kost">
             <div id="kumpulan-card-kost">
                 <?php
-                if (!empty($data['data_kost'])) {
-                    foreach ($data['data_kost'] as $kost) {
-                        if ($kost['status'] === 'AKTIF') {
-                            if (isset($kost['link_foto'])) {
-                                $gambarArray = explode(',', $kost['link_foto']);
-                                $gambarPertama = $gambarArray[0];
-                            } else {
-                                $gambarPertama = 'kamar1.jpg';
-                            }
+                for ($i = 1; $i <= 8; $i++) {
                 ?>
-                            <div class="card-kost">
-                                <div class="foto-kost">
-                                    <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
-                                    <!-- <img class="gambar-kost" src="http://localhost/PHP-MVC/public/foto/<?php echo $gambarPertama; ?>" alt=""> -->
-                                </div>
-                                <div class="content-card-kost">
-                                    <div class="top-content-kost">
-                                        <p class="kategori-kost"><?php echo $kost['jenis_kost']; ?></p>
-                                        <p><i class="ri-star-fill"></i> 4.5</p>
-                                    </div>
-                                    <p class="nama-kost"><?php echo $kost['nama_kost']; ?></p>
-                                    <div class="location-kost">
-                                        <i class="ri-map-pin-2-fill"></i>
-                                        <p><?php echo $kost['alamat']; ?></p>
-                                    </div>
-                                    <div class="harga">
-                                        <p>Rp 300,000<span>/ Bulan</span></p>
-                                    </div>
-                                </div>
+                    <div class="card-kost">
+                        <div class="foto-kost">
+                            <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
+                        </div>
+                        <div class="content-card-kost">
+                            <div class="top-content-kost">
+                                <p class="kategori-kost">putra</p>
+                                <p><i class="ri-star-fill"></i> 4.5</p>
                             </div>
+                            <p class="nama-kost">Kost Marno</p>
+                            <div class="location-kost">
+                                <i class="ri-map-pin-2-fill"></i>
+                                <p>Jl. Jawa VI No.20</p>
+                            </div>
+                            <div class="harga">
+                                <p>Rp 300,000<span>/ Bulan</span></p>
+                            </div>
+                        </div>
+                    </div>
                 <?php
-                        }
-                    }
-                } else {
-                    echo "Data kost tidak tersedia.";
                 }
                 ?>
             </div>
@@ -253,7 +237,6 @@
                 <!-- <a href="http://localhost/PHP-MVC/public/landing_page/jelajah">Jelajahi selengkapnya</a> -->
             </div>
         </div>
-
     </section>
     <div class="circle-pemanis2"></div>
     <footer>
