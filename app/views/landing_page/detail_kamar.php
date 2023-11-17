@@ -4,6 +4,8 @@
 <head>
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/detail_kamar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- LINK ICON J-KOS -->
+    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
     <title>Halaman Kamar</title>
 </head>
 

@@ -10,7 +10,8 @@
 
         public function getKamarbyIdKost()
         {
-            
+            $this->db->query('SELECT * FROM tb_kamar');
+            return $this->db->resultSet();
         }
     }
 ?>
