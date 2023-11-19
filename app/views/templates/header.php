@@ -103,6 +103,16 @@ $judul = $data['judul'];
                         </div>
                     </a>
                 </li>
+                <li id="link-komplain">
+                    <a href="http://localhost/PHP-MVC/public/komplain">
+                        <span></span>
+                        <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
+                        <p>Komplain</p>
+                        <div class="count-notif">
+                            <p>3</p>
+                        </div>
+                    </a>
+                </li>
                 <li id="link-keluar">
                     <a href="http://localhost/PHP-MVC/public/login1">
                         <span></span>
@@ -124,6 +134,7 @@ $judul = $data['judul'];
         const itemPenghuni = document.getElementById('link-penghuni');
         const itemPemesanan = document.getElementById('link-pesanan');
         const itemLaporan = document.getElementById('link-laporan');
+        const itemKomplain = document.getElementById('link-komplain');
 
         function addClickedClass(element) {
             element.classList.add('clicked');
@@ -141,5 +152,7 @@ $judul = $data['judul'];
             addClickedClass(itemPemesanan);
         } else if (judul === "Laporan") {
             addClickedClass(itemLaporan);
+        } else if (judul === "Komplain") {
+            addClickedClass(itemKomplain);
         }
     </script>

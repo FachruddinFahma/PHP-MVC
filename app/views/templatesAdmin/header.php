@@ -56,25 +56,25 @@ $judul = $data['judul'];
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li id="link-kost">
+                <li id="link-laporanKost">
                     <a href="http://localhost/PHP-MVC/public/data_kost">
+                        <span></span>
+                        <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
+                        <p>Laporan</p>
+                    </a>
+                </li>
+                <li id="link-kost">
+                    <a href="http://localhost/PHP-MVC/public/kamar">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
                         <p>Data Kost</p>
                     </a>
                 </li>
-                <li id="link-kamar">
-                    <a href="http://localhost/PHP-MVC/public/kamar">
-                        <span></span>
-                        <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
-                        <p>Data Kamar</p>
-                    </a>
-                </li>
-                <li id="link-penghuni">
+                <li id="link-user">
                     <a href="http://localhost/PHP-MVC/public/penghuni">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/penghuni.png" alt="data penghuni">
-                        <p>Data Penghuni</p>
+                        <p>Data User</p>
                     </a>
                 </li>
                 <li id="link-pesanan" class="li-detail">
@@ -93,11 +93,11 @@ $judul = $data['judul'];
                         </details>
                     </a>
                 </li>
-                <li id="link-laporan">
+                <li id="link-testimoni">
                     <a href="http://localhost/PHP-MVC/public/laporan">
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
-                        <p>Laporan</p>
+                        <p>Testimoni</p>
                         <div class="count-notif">
                             <p>3</p>
                         </div>
@@ -119,10 +119,10 @@ $judul = $data['judul'];
         console.log(judul);
 
         const itemDashboard = document.getElementById('link-dashboard');
-        const itemKost = document.getElementById('link-kost');
-        const itemKamar = document.getElementById('link-kamar');
-        const itemPenghuni = document.getElementById('link-penghuni');
-        const itemPemesanan = document.getElementById('link-pesanan');
+        const itemKost = document.getElementById('link-laporanKost');
+        const itemKamar = document.getElementById('link-kost');
+        const itemPenghuni = document.getElementById('link-user');
+        const itemPemesanan = document.getElementById('link-testimoni');
         const itemLaporan = document.getElementById('link-laporan');
 
         function addClickedClass(element) {
@@ -131,15 +131,13 @@ $judul = $data['judul'];
 
         if (judul === "Dashboard") {
             addClickedClass(itemDashboard);
-        } else if (judul === "Kost") {
+        } else if (judul === "laporanKost") {
             addClickedClass(itemKost);
-        } else if (judul === "Kamar") {
+        } else if (judul === "Kost") {
             addClickedClass(itemKamar);
-        } else if (judul === "Penghuni") {
+        } else if (judul === "User") {
             addClickedClass(itemPenghuni);
-        } else if (judul === "Pemesanan") {
+        } else if (judul === "Testimoni") {
             addClickedClass(itemPemesanan);
-        } else if (judul === "Laporan") {
-            addClickedClass(itemLaporan);
         }
     </script>
