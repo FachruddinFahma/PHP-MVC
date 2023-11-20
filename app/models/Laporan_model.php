@@ -14,10 +14,11 @@ class laporan_model{
         return $this->db->resultSet();
     }
 
-    public function getAllLaporan($id)
+    public function getAllLaporan()
     {
         $this->db->query("SELECT
         tb_transaksi.id_transaksi,
+        tb_pemesanan.id_pemesanan,
         tb_user.nama_lengkap,
         tb_pemesanan.harga,
         tb_transaksi.bayar,
@@ -30,12 +31,13 @@ class laporan_model{
         tb_pemesanan ON tb_pemesanan.id_pemesanan = tb_transaksi.id_pemesanan
         JOIN 
         tb_user ON tb_user.id_user = tb_pemesanan.id_user
-        WHERE tb_user.id_user = :id");
+        WHERE tb_user.id_role = '3'");
     
-        $this->db->bind(':id', $id);
+        //$this->db->bind(':id', $id);
         return $this->db->resultSet();
     }
-    public function searchByDate($id,  $tanggal_awal,  $tanggal_akhir)
+
+    public function searchByDate($id, $tanggal_awal, $tanggal_akhir)
     {
         $this->db->query("SELECT
             tb_transaksi.id_transaksi,
@@ -52,14 +54,15 @@ class laporan_model{
             JOIN 
             tb_user ON tb_user.id_user = tb_pemesanan.id_user
             WHERE tb_user.id_user = :id
-            AND tb_transaksi.tggl_transaksi BETWEEN :tanggal_awal AND :tanggal_akhir");
+            AND tb_transaksi.tggl_transaksi BETWEEN :start_date AND :end_date");
 
         $this->db->bind(':id', $id);
-        $this->db->bind(':start_date',  $tanggal_awal);
-        $this->db->bind(':end_date',  $tanggal_akhir);
+        $this->db->bind(':start_date', $tanggal_awal); // <-- Perubahan di sini
+        $this->db->bind(':end_date', $tanggal_akhir); // <-- Perubahan di sini
 
         return $this->db->resultSet();
     }
+
 
     }
 ?>
