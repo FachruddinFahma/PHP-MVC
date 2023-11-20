@@ -40,7 +40,7 @@
                 <?php
                 for ($i = 1; $i <= 12; $i++) {
                 ?>
-                    <a href="http://localhost/PHP-MVC/public/landing_page/detail_kamar?id=<?php echo $kost['id_kost'] ?>" class="card-kamar">
+                    <a href="http://localhost/PHP-MVC/public/landing_page/detail_kamar?id=<?php echo $i ?>" class="card-kamar">
                         <div class="foto-kamar">
                             <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
                         </div>

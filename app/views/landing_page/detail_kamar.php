@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,18 +43,23 @@
         <div id="content-kamar">
             <div class="right-content-kamar">
                 <div class="judul-kost">
-                    <h2>Kost Marno Kamar 3</h2>
-                    <p> <i class="ri-map-pin-2-fill"></i> Jalan Mastrib V - Sumbersari</p>
+                    <?php if (isset($_GET['id'])) : ?>
+                        <h2>Kost Marno Kamar <?php echo $_GET['id']; ?></h2>
+                    <?php endif; ?>
+                    <p><i class="ri-map-pin-2-fill"></i> Jalan Mastrib V - Sumbersari</p>
                 </div>
+
                 <div class="pengelola-kost">
                     <h5>Dikelola Oleh: </h5>
-                    <!-- <div class="card-pengelola">
-                        <img src="http://localhost/PHP-MVC/public/foto/pemilik-kost.jpeg" alt="">
-                        <div class="nama-pengelola">
-                            <p class="nama">Nico Flassy</p>
-                            <p>Owner Kost Flassy</p>
-                        </div>
-                    </div> -->
+                    <!-- 
+                        <div class="card-pengelola">
+                            <img src="http://localhost/PHP-MVC/public/foto/pemilik-kost.jpeg" alt="">
+                            <div class="nama-pengelola">
+                                <p class="nama">Nico Flassy</p>
+                                <p>Owner Kost Flassy</p>
+                            </div>
+                        </div> 
+                    -->
                 </div>
                 <div class="fasilitas-kamar">
                     <p class="judul-fasilitas">Fasilitas Kamar</p>
