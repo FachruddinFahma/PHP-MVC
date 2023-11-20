@@ -78,6 +78,10 @@ nav .title-navbar img{
 
 /*   menu jelajah   */
 
+#jelajah {
+    padding-top: 220px;
+}
+
 #jelajah .menu-jelajah{
     background-color: white ;
     margin: 50px 100px 0px;
@@ -130,6 +134,7 @@ nav .title-navbar img{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-top:100px;
 }
 
 #jelajah .title-section-kost{

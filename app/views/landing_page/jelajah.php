@@ -84,21 +84,21 @@
             <div class="content-kost">
                 <div id="kumpulan-card-kost">
                     <?php
-                    for ($i = 1; $i <= 12; $i++) {
+                    foreach ($data['jelajah'] as $kost) {
                     ?>
-                        <a href="http://localhost/PHP-MVC/public/landing_page/detail_kamar" class="card-kost">
+                        <a href="http://localhost/PHP-MVC/public/landing_page/kamar?id=<?php echo $kost['id_kost'] ?>" class="card-kost">
                             <div class="foto-kost">
                                 <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
                             </div>
                             <div class="content-card-kost">
                                 <div class="top-content-kost">
-                                    <p class="kategori-kost">putra</p>
+                                    <p class="kategori-kost"><?php echo $kost['jenis_kost'] ?></p>
                                     <p><i class="ri-star-fill"></i> 4.5</p>
                                 </div>
-                                <p class="nama-kost">Kost Marno</p>
+                                <p class="nama-kost"><?php echo $kost['nama_kost'] ?></p>
                                 <div class="location-kost">
                                     <i class="ri-map-pin-2-fill"></i>
-                                    <p>Jl. Jawa VI No.20</p>
+                                    <p><?php echo $kost['alamat'] ?></p>
                                 </div>
                                 <div class="harga">
                                     <p>Rp 300,000<span>/ Bulan</span></p>

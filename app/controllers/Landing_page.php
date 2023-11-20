@@ -11,7 +11,18 @@ class Landing_page extends Controller
 
     public function jelajah()
     {
-        $this->view('landing_page/jelajah');
+        $data['judul'] = 'Jelajah';
+        $data['jelajah'] = $this->model('landingPage_model')->getAllKost();
+        $data['foto_kost'] = $this->model('landingPage_model')->getAllFotoKost();
+        $this->view('landing_page/jelajah', $data);
+    }
+
+    public function kamar()
+    {
+        $data['judul'] = 'Kamar';
+        $data['jelajah'] = $this->model('landingPage_model')->getAllKost();
+        $data['foto_kost'] = $this->model('landingPage_model')->getAllFotoKost();
+        $this->view('landing_page/kamar', $data);
     }
 
     public function detail_kamar()

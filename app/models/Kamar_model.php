@@ -36,7 +36,6 @@ class Kamar_model
         $this->db->bind(':harga_kamar', $data['harga_kamar']);
 
         $this->db->execute();
-
         return $this->db->rowCount();
     }
 

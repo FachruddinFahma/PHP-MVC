@@ -8,17 +8,15 @@ class landingPage_model
         $this->db = new Database;
     }
 
-    public function getAllKost() 
+    public function getAllKost()
     {
         $this->db->query('SELECT * FROM tb_kost');
         return $this->db->resultSet();
     }
 
-    public function getAllFotoKost() 
+    public function getAllFotoKost()
     {
         $this->db->query('SELECT * FROM tb_foto_kost');
         return $this->db->resultSet();
     }
-
 }
-?>
