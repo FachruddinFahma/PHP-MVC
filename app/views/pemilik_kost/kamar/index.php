@@ -26,7 +26,7 @@
                         <td><?php echo $item['fasilitas'] ?></td>
                         <td><?php echo $item['kategori'] ?></td>
                         <td><?php echo $item['ukuran'] ?></td>
-                        <td><?php echo $item['harga'] ?></td>
+                        <td><?php echo $item['harga_bulanan'] ?></td>
                         <td>Kosong</td>
                         <td>
                             <a href="">Edit</a>
@@ -70,10 +70,10 @@
             </div>
             <div class="modal-body">
                 <div class="input mb-3">
-                    <form action="http://localhost/PHP-MVC/public/kamar/tambahKamar" method="post">
+                    <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
                         <div class="input-group">
                             <label for="id_kamar">ID Kamar</label>
-                            <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
+                            <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar" readonly>
                         </div>
                         <!-- <div class="input-group">
                             <label for="id_kamar">Nama Kamar</label>
@@ -81,12 +81,12 @@
                         </div> -->
                         <div class="input-group">
                             <label for="id_kamar">Fasilitas Kamar</label>
-                            <input type="text" name="fasilitas_kamar" class="form-controll" placeholder="Masukan Fasilitas Kamar" id="fasilitas_kamar">
+                            <input type="text" name="fasilitas" class="form-controll" placeholder="Masukan Fasilitas Kamar" id="fasilitas_kamar">
                         </div>
                         <div class="input-group">
                             <label for="id_kamar">Ukuran Kamar</label>
                             <div id="input-ukuran-kamar">
-                                <input type="text" name="ukuran_kamar" class="form-controll" placeholder="Panjang" class="ukuran_kamar">
+                                <input type="text" name="ukuran" class="form-controll" placeholder="Panjang" class="ukuran_kamar">
                                 <!-- <p> X </p>
                                 <input type="text" class="form-controll" placeholder="Lebar" class="ukuran_kamar"> -->
                             </div>

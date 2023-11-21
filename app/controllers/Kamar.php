@@ -12,23 +12,21 @@ class Kamar extends Controller
         $this->view('templates/footer');
     }
 
-    public function tambahKamar()
+    public function addKamar()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $data = [
-                'id_kamar' => $_POST['id_kamar'],
-                'fasilitas_kamar' => $_POST['fasilitas_kamar'],
-                'ukuran_kamar' => $_POST['ukuran_kamar'],
-                'harga_kamar' => $_POST['harga_kamar'],
-            ];
+        var_dump($_POST);
+        die();
+        $data = [
+            'fasilitas' => $_POST['fasilitas'],
+            'ukuran' => $_POST['ukuran'],
+            'harga_kamar' => $_POST['harga_kamar'],
+        ];
 
-            $added = $this->model('Kamar_model')->insertKamar($data);
-
-            if (!$added) {
-                echo "terjadi eror";
-            }
+        if($this->model('kamar_model')->insertKamar($data)){
+            header('Location: http://localhost/PHP-MVC/public/dashboard');
+        } else {
+            header('Location: http://localhost/PHP-MVC/public/kamar');
         }
-        $this->index();
     }
 
     public function hapusKamar()
