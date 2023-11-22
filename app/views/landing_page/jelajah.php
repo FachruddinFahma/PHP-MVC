@@ -86,29 +86,7 @@
                     <?php
                     foreach ($data['jelajah'] as $kost) {
                     ?>
-                    <form action="http://localhost/PHP-MVC/public/landing_page/kamarUser" method="POST">
-                        <button type="submit">
-                            <input type="hidden" name="id" value="<?php echo $kost['id_kost'] ?>">
-                        <div class="foto-kost">
-                                <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
-                            </div>
-                            <div class="content-card-kost">
-                                <div class="top-content-kost">
-                                    <p class="kategori-kost"><?php echo $kost['jenis_kost'] ?></p>
-                                    <p><i class="ri-star-fill"></i> 4.5</p>
-                                </div>
-                                <p class="nama-kost"><?php echo $kost['nama_kost'] ?></p>
-                                <div class="location-kost">
-                                    <i class="ri-map-pin-2-fill"></i>
-                                    <p><?php echo $kost['alamat'] ?></p>
-                                </div>
-                                <div class="harga">
-                                    <p>Rp 300,000<span>/ Bulan</span></p>
-                                </div>
-                            </div>
-                        </button>
-                    </form>
-                        <!-- <a href="http://localhost/PHP-MVC/public/landing_page/kamar?id=<?php echo $kost['id_kost'] ?>" class="card-kost">
+                        <a href="http://localhost/PHP-MVC/public/kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
                             <div class="foto-kost">
                                 <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
                             </div>
@@ -126,7 +104,7 @@
                                     <p>Rp 300,000<span>/ Bulan</span></p>
                                 </div>
                             </div>
-                        </a> -->
+                        </a>
                     <?php
                     }
                     ?>
