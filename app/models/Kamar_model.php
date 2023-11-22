@@ -10,9 +10,10 @@ class Kamar_model
         $this->db = new Database;
     }
 
-    public function getAllKamar()
+    public function getAllKamar($id_kost)
     {
-        $this->db->query('SELECT * FROM tb_kamar');
+        $this->db->query('SELECT * FROM tb_kamar WHERE id_kost = :id_kost');
+        $this->db->bind(':id_kost', $id_kost);
         return $this->db->resultSet();
     }
 
@@ -23,20 +24,39 @@ class Kamar_model
     //     return $this->db->single();
     // }
 
-    public function insertKamar($data)
-    {
-        $query = "INSERT INTO `tb_kamar`(`id_kamar`, `fasilitas`, `kategori`, `ukuran`, `harga_harian`, `harga_bulanan`, `harga_3bulanan`, `harga_tahunan`, `id_kost`) VALUES (':id_kamar',':fasilitas',':kategori',':ukuran', ':harga_harian',':harga_bulan',':harga_3bulan',':harga_tahun',':id_kost')";
+    // Model
+    // public function insertKamar($kamar)
+    // {
+    //     $query = "INSERT INTO tb_kamar (id_kamar, nama_kamar, kategori, fasilitas, ukuran, harga_harian, harga_bulan, harga_3bulan, harga_tahun, id_kost) 
+    //             VALUES ('', :nama_kamar, :fasilitas, :kategori, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahun, 'KOST01')";
 
+    //     $this->db->query($query);
+    //     $this->db->bind(':nama_kamar', $kamar['nama_kamar']);
+    //     $this->db->bind(':fasilitas', $kamar['fasilitas']);
+    //     $this->db->bind(':kategori', $kamar['kategori']);
+    //     $this->db->bind(':ukuran', $kamar['ukuran']);
+    //     $this->db->bind(':harga_harian', $kamar['harga_harian']);
+    //     $this->db->bind(':harga_bulan', $kamar['harga_bulan']);
+    //     $this->db->bind(':harga_3bulan', $kamar['harga_3bulan']);
+    //     $this->db->bind(':harga_tahun', $kamar['harga_tahun']);
+    //     $this->db->execute();
+    //     return $this->db->rowCount();
+    // }
+
+    // models Kamar_model
+    public function addKamar($kamar, $id_kost)
+    {
+        $query = "INSERT INTO tb_kamar VALUES ('', :nama_kamar, :fasilitas, :kategori, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahunan, :id_kost)";
         $this->db->query($query);
-        $this->db->bind(':id_kamar', $data['id_kamar']);
-        $this->db->bind(':fasilitas', $data['fasilitas']);
-        $this->db->bind(':kategori',  $data['kategori']);
-        $this->db->bind(':ukuran', $data['ukuran']);
-        $this->db->bind(':harga_harian', $data['harga_harian']);
-        $this->db->bind(':harga_bulan', $data['harga_bulan']);
-        $this->db->bind(':harga_3bulan', $data['harga_3bulan']);
-        $this->db->bind(':harga_tahun', $data['harga_tahun']);
-        $this->db->bind(':id_kost', $data['id_kost']);
+        $this->db->bind(':nama_kamar', $kamar['nama_kamar']);
+        $this->db->bind(':fasilitas', $kamar['fasilitas']);
+        $this->db->bind(':kategori', $kamar['kategori']);
+        $this->db->bind(':ukuran', $kamar['ukuran']);
+        $this->db->bind(':harga_harian', $kamar['harga_harian']);
+        $this->db->bind(':harga_bulanan', $kamar['harga_bulanan']);
+        $this->db->bind(':harga_3bulan', $kamar['harga_3bulan']);
+        $this->db->bind(':harga_tahunan', $kamar['harga_tahunan']);
+        $this->db->bind(':id_kost', $id_kost);
         $this->db->execute();
         return $this->db->rowCount();
     }

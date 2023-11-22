@@ -11,7 +11,7 @@
                     <th>Fasilitas</th>
                     <th>Kategori</th>
                     <th>Ukuran</th>
-                    <th>Harga</th>
+                    <th>Harga Harian</th>
                     <th>Status</th>
                     <th>Aksi</th>
                 </tr>
@@ -72,8 +72,8 @@
                 <div class="input mb-3">
                     <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
                         <div class="input-group">
-                            <label for="id_kamar">ID Kamar</label>
-                            <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
+                            <label for="nama_kamar">Nama Kamar</label>
+                            <input type="text" name="nama_kamar" class="form-controll" placeholder="Masukan Nama Kamar" id="nama_kamar">
                         </div>
                         <div class="input-group">
                             <label for="kategori">Kategori</label>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="input-group">
                             <label for="harga_bulan">Harga Bulan</label>
-                            <input type="text" name="harga_bulan" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_bulan">
+                            <input type="text" name="harga_bulanan" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_bulan">
                         </div>
                         <div class="input-group">
                             <label for="harga_3bulan">Harga 3 Bulan</label>
@@ -105,12 +105,12 @@
                         </div>
                         <div class="input-group">
                             <label for="harga_tahun">Harga Tahunan</label>
-                            <input type="text" name="harga_tahun" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_tahun">
+                            <input type="text" name="harga_tahunan" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_tahun">
                         </div>
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <label for="id_kost">ID Kost</label>
                             <input type="text" name="id_kost" class="form-controll" placeholder="Masukan Harga Kamar" id="id_kost">
-                        </div>
+                        </div> -->
                         <button type="submit">Tambah</button>
                     </form>
                 </div>
