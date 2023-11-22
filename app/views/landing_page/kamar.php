@@ -35,8 +35,14 @@
             </div>
         </div>
         <div id="maps-kost">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15797.611197201479!2d113.70681538715819!3d-8.162110099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b7774deb1d%3A0xb7a27ef2ee3874a6!2sKost%20Putri%20Bougenville!5e0!3m2!1sid!2sid!4v1700440099417!5m2!1sid!2sid" width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <?php if (!empty($data['kost'])) : ?>
+                <iframe src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed" width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            <?php else : ?>
+                <p>No kost data available.</p>
+            <?php endif; ?>
         </div>
+
         <div id="content-kamar">
             <h1>Daftar Kamar</h1>
             <div id="kumpulan_kamar">
