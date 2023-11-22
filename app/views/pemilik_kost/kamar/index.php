@@ -73,7 +73,7 @@
                     <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
                         <div class="input-group">
                             <label for="id_kamar">ID Kamar</label>
-                            <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar" readonly>
+                            <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
                         </div>
                         <!-- <div class="input-group">
                             <label for="id_kamar">Nama Kamar</label>

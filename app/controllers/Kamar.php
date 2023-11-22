@@ -14,15 +14,18 @@ class Kamar extends Controller
 
     public function addKamar()
     {
-        var_dump($_POST);
-        die();
+        // var_dump($_POST);
+        // die();
         $data = [
+            'id_kamar' => $_POST['id_kamar'],
             'fasilitas' => $_POST['fasilitas'],
+            'kategori' => 'bulanan',
             'ukuran' => $_POST['ukuran'],
             'harga_kamar' => $_POST['harga_kamar'],
+            'id_kost' => 'KOST01',
         ];
 
-        if($this->model('kamar_model')->insertKamar($data)){
+        if ($this->model('kamar_model')->insertKamar($data)) {
             header('Location: http://localhost/PHP-MVC/public/dashboard');
         } else {
             header('Location: http://localhost/PHP-MVC/public/kamar');

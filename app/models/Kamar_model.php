@@ -25,12 +25,15 @@ class Kamar_model
 
     public function insertKamar($data)
     {
-        $query = "INSERT INTO tb_kamar (id_kamar, fasilitas, kategori, ukuran, harga_harian, id_kost) 
-                VALUES ('', :fasilitas, 'BULANAN', :ukuran, NULL, :harga_kamar, NULL, NULL, 'KOST01')";
+        $query = "INSERT INTO `tb_kamar`(`id_kamar`, `fasilitas`, `kategori`, `ukuran`, `harga_harian`, `harga_bulanan`, `harga_3bulanan`, `harga_tahunan`, `id_kost`) VALUES (':id_kamar',':fasilitas',':kategori',':ukuran', NULL,':harga_kamar', NULL, NULL,'[:id_kost')";
+
         $this->db->query($query);
+        $this->db->bind(':id_kamar', $data['id_kamar']);
         $this->db->bind(':fasilitas', $data['fasilitas']);
+        $this->db->bind(':kategori',  $data['kategori']);
         $this->db->bind(':ukuran', $data['ukuran']);
         $this->db->bind(':harga_kamar', $data['harga_kamar']);
+        $this->db->bind(':id_kost', $data['id_kost']);
         $this->db->execute();
         return $this->db->rowCount();
     }
