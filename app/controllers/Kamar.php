@@ -19,10 +19,13 @@ class Kamar extends Controller
         $data = [
             'id_kamar' => $_POST['id_kamar'],
             'fasilitas' => $_POST['fasilitas'],
-            'kategori' => 'bulanan',
+            'kategori' => $_POST['kategori'],
             'ukuran' => $_POST['ukuran'],
-            'harga_kamar' => $_POST['harga_kamar'],
-            'id_kost' => 'KOST01',
+            'harga_harian' => $_POST['harga_harian'],
+            'harga_bulan' => $_POST['harga_bulan'],
+            'harga_3bulan' => $_POST['harga_3bulan'],
+            'harga_tahun' => $_POST['harga_tahun'],
+            'id_kost' => $_POST['id_kost']
         ];
 
         if ($this->model('kamar_model')->insertKamar($data)) {

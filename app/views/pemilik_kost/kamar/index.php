@@ -75,10 +75,10 @@
                             <label for="id_kamar">ID Kamar</label>
                             <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
                         </div>
-                        <!-- <div class="input-group">
-                            <label for="id_kamar">Nama Kamar</label>
-                            <input type="text" name="nama_kamar" class="form-controll" placeholder="Masukan Nama Kamar" id="nama_kamar">
-                        </div> -->
+                        <div class="input-group">
+                            <label for="kategori">Kategori</label>
+                            <input type="text" name="kategori" class="form-controll" placeholder="Masukan Nama Kamar" id="kategori">
+                        </div>
                         <div class="input-group">
                             <label for="id_kamar">Fasilitas Kamar</label>
                             <input type="text" name="fasilitas" class="form-controll" placeholder="Masukan Fasilitas Kamar" id="fasilitas_kamar">
@@ -92,8 +92,24 @@
                             </div>
                         </div>
                         <div class="input-group">
-                            <label for="id_kamar">Harga Kamar</label>
-                            <input type="text" name="harga_kamar" class="form-controll" placeholder="Masukan Harga Kamar" id="id_kamar">
+                            <label for="harga_harian">Harga Harian</label>
+                            <input type="text" name="harga_harian" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_harian">
+                        </div>
+                        <div class="input-group">
+                            <label for="harga_bulan">Harga Bulan</label>
+                            <input type="text" name="harga_bulan" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_bulan">
+                        </div>
+                        <div class="input-group">
+                            <label for="harga_3bulan">Harga 3 Bulan</label>
+                            <input type="text" name="harga_3bulan" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_3bulan">
+                        </div>
+                        <div class="input-group">
+                            <label for="harga_tahun">Harga Tahunan</label>
+                            <input type="text" name="harga_tahun" class="form-controll" placeholder="Masukan Harga Kamar" id="harga_tahun">
+                        </div>
+                        <div class="input-group">
+                            <label for="id_kost">ID Kost</label>
+                            <input type="text" name="id_kost" class="form-controll" placeholder="Masukan Harga Kamar" id="id_kost">
                         </div>
                         <button type="submit">Tambah</button>
                     </form>
@@ -147,14 +163,6 @@
                     <div class="foto-group">
                         <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
                         <input type="file" name="foto3">
-                    </div>
-                    <div class="foto-group">
-                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
-                        <input type="file" name="foto4">
-                    </div>
-                    <div class="foto-group">
-                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
-                        <input type="file" name="foto5">
                     </div>
                 </div>
             </div>
