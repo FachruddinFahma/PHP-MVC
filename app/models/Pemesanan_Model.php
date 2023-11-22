@@ -10,13 +10,13 @@ class Pemesanan_Model
 
     public function getPemesananMasuk()
     {
-        $this->db->query("SELECT * FROM tb_user WHERE tb_user.id_role = '3'");
+        $this->db->query("SELECT * FROM tb_pemesanan WHERE status = 'masuk'");
         return $this->db->resultSet();
     }
 
     public function getPemesananTerkonfirmasi()
     {
-        $this->db->query("SELECT * FROM tb_user WHERE tb_user.id_role = '3'");
+        $this->db->query("SELECT * FROM tb_pemesanan WHERE status = 'terkonfirmasi'");
         return $this->db->resultSet();
     }
 }

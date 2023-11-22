@@ -20,24 +20,26 @@
         <table id="dataPemesanan1" class="display" style="width:100%">
             <thead>
                 <tr>
+                    <th>ID Pemesanan</th>
                     <th>ID Kamar</th>
-                    <th>Fasilitas</th>
-                    <th>Ukuran</th>
+                    <th>ID User</th>
+                    <th>Tanggal Pemesanan</th>
+                    <th>Tanggal Masuk</th>
                     <th>Harga</th>
-                    <th>Status</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                for ($i = 0; $i <= 30; $i++) {
+                foreach ($data['pemesananMasuk'] as $pesananMasuk) {
                 ?>
                     <tr>
-                        <td>ID001</td>
-                        <td>Wifi, Kamar Mandi</td>
-                        <td>2 x 2 m</td>
-                        <td><?php echo $i ?>00,000</td>
-                        <td>Kosong</td>
+                        <td><?php echo $pesananMasuk['id_pemesanan'] ?></td>
+                        <td><?php echo $pesananMasuk['id_kamar'] ?></td>
+                        <td><?php echo $pesananMasuk['id_user'] ?></td>
+                        <td>22 Oktober 2003</td>
+                        <td><?php echo $pesananMasuk['tggl_masuk'] ?></td>
+                        <td><?php echo $pesananMasuk['harga'] ?></td>
                         <td>Terima</td>
                     </tr>
                 <?php
@@ -51,24 +53,26 @@
         <table id="dataPemesanan2" class="display" style="width:100%">
             <thead>
                 <tr>
+                    <th>ID Pemesanan</th>
                     <th>ID Kamar</th>
-                    <th>Fasilitas</th>
-                    <th>Ukuran</th>
+                    <th>ID User</th>
+                    <th>Tanggal Pemesanan</th>
+                    <th>Tanggal Masuk</th>
                     <th>Harga</th>
-                    <th>Status</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                for ($i = 0; $i <= 30; $i++) {
+                foreach ($data['pemesananTerkonfirmasi'] as $pesananTerkonfirmasi) {
                 ?>
                     <tr>
-                        <td>ID002</td>
-                        <td>Wifi, Kamar Mandi</td>
-                        <td>2 x 2 m</td>
-                        <td><?php echo $i ?>00,000</td>
-                        <td>Kosong</td>
+                        <td><?php echo $pesananTerkonfirmasi['id_pemesanan'] ?></td>
+                        <td><?php echo $pesananTerkonfirmasi['id_kamar'] ?></td>
+                        <td><?php echo $pesananTerkonfirmasi['id_user'] ?></td>
+                        <td>17 Agustus 1945</td>
+                        <td><?php echo $pesananTerkonfirmasi['tggl_masuk'] ?></td>
+                        <td><?php echo $pesananTerkonfirmasi['harga'] ?></td>
                         <td>Terima</td>
                     </tr>
                 <?php
