@@ -46,16 +46,14 @@
         <div id="content-kamar">
             <h1>Daftar Kamar</h1>
             <div id="kumpulan_kamar">
-                <?php
-                for ($i = 1; $i <= 12; $i++) {
-                ?>
-                    <a href="http://localhost/PHP-MVC/public/landing_page/detail_kamar?id=<?php echo $i ?>" class="card-kamar">
+                <?php foreach ($data['kamar'] as $kamar) : ?>
+                    <a href="http://localhost/PHP-MVC/public/landing_page/detail_kamar?id=<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
                         <div class="foto-kamar">
                             <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
                         </div>
                         <div class="content-card-kamar">
-                            <p class="nama-kost">Kamar <?php echo $i + 1 ?></p>
-                            <!-- <p class="ukuran-kost"><i class="ri-pencil-ruler-2-fill"></i>3 x 3 m</p> -->
+                            <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
+                            <!-- Tambahkan info kamar lainnya sesuai kebutuhan -->
                             <div class="fasilitas">
                                 <i class="ri-router-line"></i>
                                 <i class="ri-hotel-bed-fill"></i>
@@ -64,13 +62,11 @@
                                 <i class="ri-router-line"></i>
                             </div>
                             <div class="harga">
-                                <p>Rp 300,000<span>/ Bulan</span></p>
+                                <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
                             </div>
                         </div>
                     </a>
-                <?php
-                }
-                ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
