@@ -19,4 +19,10 @@ class Pemesanan_Model
         $this->db->query("SELECT * FROM tb_pemesanan WHERE status = 'terkonfirmasi'");
         return $this->db->resultSet();
     }
+
+    public function terimaPesanan($id_pemesanan)
+    {
+        $this->db->query("UPDATE `tb_pemesanan` SET `status` = 'terkonfirmasi' WHERE `id_pemesanan` = '$id_pemesanan'");
+        $this->db->execute();
+    }
 }

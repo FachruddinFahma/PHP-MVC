@@ -15,4 +15,13 @@ class Pemesanan extends Controller
         $this->view('pemilik_kost/pemesanan/index', $data);
         $this->view('templates/footer');
     }
+
+    public function terima($id_pemesanan)
+    {
+        $model = $this->model('Pemesanan_Model');
+        $model->terimaPesanan($id_pemesanan);
+
+        header("Location: /PHP-MVC/public/pemesanan/index");
+        exit();
+    }
 }
