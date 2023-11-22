@@ -40,7 +40,9 @@
                         <td>22 Oktober 2003</td>
                         <td><?php echo $pesananMasuk['tggl_masuk'] ?></td>
                         <td><?php echo $pesananMasuk['harga'] ?></td>
-                        <td>Terima</td>
+                        <td>
+                            <a href="http://localhost/PHP-MVC/public/pemesanan/terima/<?php echo $pesananMasuk['id_pemesanan'] ?>">Terima</a>
+                        </td>
                     </tr>
                 <?php
                 }
@@ -87,17 +89,23 @@
     $(document).ready(function() {
         $("#pemesanan_content_terkonfirmasi").hide();
 
+        var initialPosition = $(".line-active").position().left;
+
         $("#pesanan_masuk").click(function() {
             $("#pemesanan_content_masuk").show();
             $("#pemesanan_content_terkonfirmasi").hide();
 
             $(this).addClass("active");
             $("#pesanan_terkonfirmasi").removeClass("active");
+
+            $(".line-active").css("left", initialPosition);
         });
 
         $("#pesanan_terkonfirmasi").click(function() {
             $("#pemesanan_content_terkonfirmasi").show();
             $("#pemesanan_content_masuk").hide();
+
+            $(".line-active").css("left", "650px");
 
             $(this).addClass("active");
             $("#pesanan_masuk").removeClass("active");
