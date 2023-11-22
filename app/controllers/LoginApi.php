@@ -7,7 +7,7 @@ class LoginApi extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            $login_model = $this->model('Login_model');
+            $login_model = $this->model('Login_model_api');
             $userByEmail = $login_model->getUserByEmail($email);
 
             if ($userByEmail) {

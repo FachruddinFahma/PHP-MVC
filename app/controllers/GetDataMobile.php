@@ -2,51 +2,33 @@
 
 class GetDataMobile extends Controller
 {
-    public function getAllUser()
-    {
-        $data['penghuni'] = $this->model('Penghuni_model')->getAllPenghuni_TestApi();
-        $dataArray = array();
 
-        foreach ($data['penghuni'] as $value) {
-            array_push($dataArray, array(
-                'id' => $value['id_user'],
-                'name' => $value['nama_lengkap'],
-                'email' => $value['email']
-            ));
-        }
-
-        $result = [
-            'status' => '200',
-            'message' => 'success',
-            'data' => $dataArray
-        ];
-        echo json_encode($result);
-    }
-
-    public function getUserById($id)
+    public function getUserData($id)
     {
         try {
+            $user = $this->model('GetDataApi_model')->getUserById($id);
 
-            $data['penghuni'] = $this->model('Penghuni_model')->getUserById($id);
-            $dataArray = array();
-
-            foreach ($data['penghuni'] as $value) {
-                array_push($dataArray, array(
-                    'id' => $value['id_user'],
-                    'name' => $value['nama_lengkap'],
-                    'email' => $value['email'],
-                    'password' => $value['password']
-                ));
+            if ($user) {
+                $response = [
+                    'code' => 200,
+                    'status' => 'success',
+                    'data' => $user
+                ];
+            } else {
+                $response = [
+                    'code' => 404,
+                    'status' => 'error',
+                    'message' => 'User not found'
+                ];
             }
-
-            $result = [
-                'status' => '200',
-                'message' => 'success',
-                'data' => $dataArray
-            ];
-            echo json_encode($result);
         } catch (Exception $e) {
-            echo ($e->getMessage());
+            $response = [
+                'code' => 500,
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
         }
+
+        echo json_encode($response);
     }
 }
