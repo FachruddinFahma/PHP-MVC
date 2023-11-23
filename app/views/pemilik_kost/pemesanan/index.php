@@ -41,7 +41,9 @@
                         <td><?php echo $pesananMasuk['tggl_masuk'] ?></td>
                         <td><?php echo $pesananMasuk['harga'] ?></td>
                         <td>
-                            <a href="http://localhost/PHP-MVC/public/pemesanan/terima/<?php echo $pesananMasuk['id_pemesanan'] ?>">Terima</a>
+                            <a class="btn_terima" href="http://localhost/PHP-MVC/public/pemesanan/terima/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i class="ri-check-line"></i></a>
+                            <a class="btn_tolak" href="http://localhost/PHP-MVC/public/pemesanan/tolak/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i class="ri-close-line"></i></a>
+                            <a class="btn_detail" href="http://localhost/PHP-MVC/public/pemesanan/detail/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i class="ri-more-fill"></i></a>
                         </td>
                     </tr>
                 <?php
@@ -61,7 +63,6 @@
                     <th>Tanggal Pemesanan</th>
                     <th>Tanggal Masuk</th>
                     <th>Harga</th>
-                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,7 +76,6 @@
                         <td>17 Agustus 1945</td>
                         <td><?php echo $pesananTerkonfirmasi['tggl_masuk'] ?></td>
                         <td><?php echo $pesananTerkonfirmasi['harga'] ?></td>
-                        <td>Terima</td>
                     </tr>
                 <?php
                 }

@@ -24,4 +24,13 @@ class Pemesanan extends Controller
         header("Location: /PHP-MVC/public/pemesanan/index");
         exit();
     }
+
+    public function tolak($id_pemesanan)
+    {
+        $model = $this->model('Pemesanan_Model');
+        $model->tolakPesanan($id_pemesanan);
+
+        header("Location: /PHP-MVC/public/pemesanan/index");
+        exit();
+    }
 }

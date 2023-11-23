@@ -79,6 +79,30 @@
     background-color: white;
 }
 
+#pemesanan #pemesanan_content_masuk .btn_terima{
+    padding: 4px 8px;
+    background-color: #1F9254;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
+
+#pemesanan #pemesanan_content_masuk .btn_tolak{
+    padding: 4px 8px;
+    background-color: #b75348;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
+
+#pemesanan #pemesanan_content_masuk .btn_detail{
+    padding: 4px 8px;
+    background-color: #4848b7;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
+
 #pemesanan #pemesanan_content_terkonfirmasi{
     margin: 40px 30px;
     padding: 40px 70px 100px;
