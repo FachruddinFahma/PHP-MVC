@@ -17,7 +17,7 @@
 <body>
     <div class="box">
         <div class="box-content">
-        <form action="http://localhost/PHP-MVC/public/pendaftaran_kost/addKost" method="post" enctype="multipart/form-data">
+            <form action="http://localhost/PHP-MVC/public/pendaftaran_kost/addKost" method="post" enctype="multipart/form-data">
                 <h1>Silahkan Lengkapi Data Kost anda</h1>
                 <div class="form-group">
                     <div class="input">
@@ -45,6 +45,24 @@
                         <p>*keteranggan :</p>
                         <p>- Isi latitude dan longitude kost anda berada saat ini</p>
                         <p>- Isi alamat lengkap kost anda saat ini</p>
+                    </div>
+                    <div class="input">
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Bank</label>
+                        <select class="form-select" aria-label="Default select example" name="jenis_kost">
+                            <option selected>-- Pilih Jenis Bank --</option>
+                            <option value="BCAi">BCA</option>
+                            <option value="BRI">BRI</option>
+                            <option value="BNI">BNI</option>
+                            <option value=BTN"">BTN</option>
+                            <option value="BJB">BJB</option>
+                            <option value="MANDIRI">MANDIRI</option>
+                            <option value="MEGA">MEGA</option>
+                            <option value="PANIN">PANIN</option>
+                        </select>   
+                        <label for="staticEmail" class="col-sm-2 col-form-label">No Rekening</label>
+                        <input type="text" class="form-control" id="" name="no_rekening">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Nama Rekening</label>
+                        <input type="text" class="form-control" id="" name="nama_rekening">
                     </div>
                     <div class="input">
                         <div class="file-upload">
