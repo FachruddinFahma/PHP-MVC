@@ -6,7 +6,7 @@
 #kumpulan_kamar{
     display: flex;
     gap: 30px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 

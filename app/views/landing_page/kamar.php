@@ -28,10 +28,26 @@
             <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Daftar Kamar</p>
         </div>
         <div id="kumpulan-foto-kamar">
-            <img class="main-foto" src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
+            <?php
+            // Menyimpan URL foto pertama sebagai main-foto
+            $mainFoto = 'http://localhost/PHP-MVC/public/foto/' . ($data['foto_kost']['foto_kamar'][0] ?? '');
+            ?>
+            <img class="main-foto" src="<?= $mainFoto ?>" alt="">
             <div class="right-foto-kamar">
-                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
-                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
+                <?php
+                // Memastikan foto_kamar ada dan memiliki setidaknya 2 elemen
+                if (isset($data['foto_kost']['foto_kamar']) && count($data['foto_kost']['foto_kamar'])) {
+                    // Mengambil foto dengan index 1 dan 2
+                    $foto_1 = $data['foto_kost']['foto_kamar'][1];
+                    $foto_2 = $data['foto_kost']['foto_kamar'][2];
+                ?>
+                    <img src="http://localhost/PHP-MVC/public/foto/<?php echo $foto_1; ?>" alt="">
+                    <img src="http://localhost/PHP-MVC/public/foto/<?php echo $foto_2; ?>" alt="">
+                <?php
+                } else {
+                    echo "Tidak cukup foto untuk ditampilkan.";
+                }
+                ?>
             </div>
         </div>
         <div id="maps-kost">

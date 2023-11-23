@@ -16,12 +16,19 @@ class kamarUser_model
         return $this->db->single();
     }
 
-
     public function getAllFotoKost($id)
     {
-        $this->db->query("SELECT * FROM tb_foto_kost WHERE id = :id");
+        $this->db->query("SELECT * FROM tb_foto_kost WHERE id_kost = :id");
         $this->db->bind(':id', $id);
-        return $this->db->single();
+        $result = $this->db->single();
+        // Pastikan kolom "link_fotoKost" ada dalam hasil query
+        if (!isset($result['link_fotoKost'])) {
+            $result['link_fotoKost'] = '';
+        }
+        // Memecah string dengan delimiter ","
+        $result['foto_kamar'] = explode(',', $result['link_fotoKost']);
+
+        return $result;
     }
 
     public function getAllKamar($id_kost)

@@ -14,9 +14,9 @@ class landingPage_model
         return $this->db->resultSet();
     }
 
-    public function getAllFotoKost()
-    {
-        $this->db->query('SELECT * FROM tb_foto_kost');
-        return $this->db->resultSet();
-    }
+    // public function getAllFotoKost()
+    // {
+    //     $this->db->query('SELECT * FROM tb_foto_kost');
+    //     return $this->db->resultSet();
+    // }
 }
