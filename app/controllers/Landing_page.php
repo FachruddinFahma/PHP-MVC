@@ -5,18 +5,14 @@ class Landing_page extends Controller
     {
         $data['judul'] = 'Home';
         $data['data_kost'] = $this->model('landingPage_model')->getAllKost();
-        // $data['foto_kost'] = $this->model('landingPage_model')->getAllFotoKost();
+        // Ambil data foto pertama saja
+        foreach ($data['data_kost'] as &$kost) {
+            $foto_kost = $this->model('landingPage_model')->getAllFotoKostt($kost['id_kost']);
+            $kost['main_foto'] = $foto_kost['foto_kamar'][0] ?? ''; // Ambil gambar pertama
+        }
         $this->view('landing_page/index', $data);
     }
-
-    public function jelajah()
-    {
-        $data['judul'] = 'Jelajah';
-        $data['jelajah'] = $this->model('landingPage_model')->getAllKost();
-        // $data['foto_kost'] = $this->model('landingPage_model')->getAllFotoKost();
-        $this->view('landing_page/jelajah', $data);
-    }
-
+    
     // public function kamar()
     // {
     //     $data['judul'] = 'Kamar User';

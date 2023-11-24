@@ -2,6 +2,9 @@
         <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/landing_page.css">
         <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/jelajah.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- LINK ICON J-KOS -->
+        <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+        <title>Jelajah Kost</title>
     </head>
 
     <body>
@@ -83,34 +86,29 @@
             </div>
             <div class="content-kost">
                 <div id="kumpulan-card-kost">
-                    <?php
-                    foreach ($data['jelajah'] as $kost) {
-                    ?>
-                        <a href="http://localhost/PHP-MVC/public/kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
-                            <div class="foto-kost">
-                                <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
-                            </div>
-                            <div class="content-card-kost">
-                                <div class="top-content-kost">
-                                    <p class="kategori-kost"><?php echo $kost['jenis_kost'] ?></p>
-                                    <p><i class="ri-star-fill"></i> 4.5</p>
+                    <?php foreach ($data['jelajah'] as $kost) : ?>
+                        <?php if ($kost['status'] === 'AKTIF') : ?>
+                            <a href="http://localhost/PHP-MVC/public/kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
+                                <div class="foto-kost">
+                                    <img class="gambar-kost" src="<?php echo 'http://localhost/PHP-MVC/public/foto/' . $kost['main_foto']; ?>" alt="">
                                 </div>
-                                <p class="nama-kost"><?php echo $kost['nama_kost'] ?></p>
-                                <div class="location-kost">
-                                    <i class="ri-map-pin-2-fill"></i>
-                                    <p><?php echo $kost['alamat'] ?></p>
+                                <div class="content-card-kost">
+                                    <div class="top-content-kost">
+                                        <p class="kategori-kost"><?php echo $kost['jenis_kost'] ?></p>
+                                        <p><i class="ri-star-fill"></i> 4.5</p>
+                                    </div>
+                                    <p class="nama-kost"><?php echo $kost['nama_kost'] ?></p>
+                                    <div class="location-kost">
+                                        <i class="ri-map-pin-2-fill"></i>
+                                        <p><?php echo $kost['alamat'] ?></p>
+                                    </div>
+                                    <div class="harga">
+                                        <p>Rp 300,000<span>/ Bulan</span></p>
+                                    </div>
                                 </div>
-                                <div class="harga">
-                                    <p>Rp 300,000<span>/ Bulan</span></p>
-                                </div>
-                            </div>
-                        </a>
-                    <?php
-                    }
-                    ?>
-                </div>
-                <div id="bottom-card-kost">
-                    <a href="#">Jelajahi selengkapnya</a>
+                            </a>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>

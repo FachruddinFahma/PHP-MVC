@@ -1,5 +1,5 @@
 <?php
-class landingPage_model
+class jelajahKost_model
 {
     private $db;
 
