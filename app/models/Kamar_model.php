@@ -16,6 +16,16 @@ class Kamar_model
         $this->db->bind(':id_kost', $id_kost);
         return $this->db->resultSet();
     }
+    public function getIDOtomatis()
+    {
+        $this->db->query('SELECT id_kamar FROM tb_kamar ORDER BY id_kamar DESC LIMIT 1');
+        $result = $this->db->single();
+        if ($result) {
+            return $result;
+        } else {
+            return null;
+        }
+    }
 
     // public function getPenghuniById($id_Penghuni)
     // {
@@ -46,8 +56,9 @@ class Kamar_model
     // models Kamar_model
     public function addKamar($kamar, $id_kost)
     {
-        $query = "INSERT INTO tb_kamar VALUES ('', :nama_kamar, :fasilitas, :kategori, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahunan, :id_kost)";
+        $query = "INSERT INTO tb_kamar VALUES (:id_kamar, :nama_kamar, :fasilitas, :kategori, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahunan, :id_kost)";
         $this->db->query($query);
+        $this->db->bind(':id_kamar', $kamar['id_kamar']);
         $this->db->bind(':nama_kamar', $kamar['nama_kamar']);
         $this->db->bind(':fasilitas', $kamar['fasilitas']);
         $this->db->bind(':kategori', $kamar['kategori']);

@@ -1,7 +1,7 @@
 <header>
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/kamar.css">
 </header>
-<section id="kamar" class="content">
+<section id="kamar" class="content">    
     <div id="kamar_content" class="pt-4 px-4">
         <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas">Tambah</a>
         <table id="dataKamar" class="display" style="width:100%">
@@ -71,6 +71,10 @@
             <div class="modal-body">
                 <div class="input mb-3">
                     <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
+                        <div class="input-group">
+                            <label for="id_kamar">ID Kamar</label>
+                            <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar" value="<?php echo $data['id_baru']    ?>" readonly>
+                        </div>
                         <div class="input-group">
                             <label for="nama_kamar">Nama Kamar</label>
                             <input type="text" name="nama_kamar" class="form-controll" placeholder="Masukan Nama Kamar" id="nama_kamar">

@@ -8,6 +8,9 @@ class Kamar extends Controller
         $id_kost = $this->model('dataKost_model')->getKostByUserId($_SESSION['id_user'])['id_kost'];
         $data['judul'] = 'Kamar';
         $data['kamar'] = $this->model('Kamar_model')->getAllKamar($id_kost);
+        $data['id_lama'] = $this->model('Kamar_model')->getIDOtomatis();
+        $data['id_sementara'] = substr($data['id_lama']['id_kamar'], -2);
+        $data['id_baru'] = "KMR0" . $data['id_sementara'] + 1;
         $this->view('templates/header', $data);
         $this->view('pemilik_kost/kamar/index', $data);
         $this->view('templates/footer');
@@ -44,6 +47,7 @@ class Kamar extends Controller
 
         // Set data kamar yang akan ditambahkan
         $dataKamar = [
+            'id_kamar' => $_POST['id_kamar'],
             'nama_kamar' => $_POST['nama_kamar'],
             'fasilitas' => $_POST['fasilitas'],
             'kategori' => $_POST['kategori'],
