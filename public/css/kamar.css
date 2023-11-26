@@ -1,33 +1,32 @@
-:root{
-    --lightgrey: #AEAEAE;
-    --blue: #295EF4;
-    --black: #282828;
+:root {
+  --lightgrey: #aeaeae;
+  --blue: #295ef4;
+  --black: #282828;
 }
 
-#kamar{
-    padding: 40px 20px;
+#kamar {
+  padding: 40px 20px;
 }
 
-#kamar #kamar_content{
-    background-color: white;
-    border-radius: 20px;
+#kamar #kamar_content {
+  background-color: white;
+  border-radius: 20px;
 }
 
-#kamar #kamar_content .add{
-    padding: 5px 20px;
-    border-radius: 30px;
-        display: block;
-        width: 150px;
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: #1F9254;
-    text-decoration: none;
-    color: white;
+#kamar #kamar_content .add {
+  padding: 5px 20px;
+  border-radius: 30px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #1f9254;
+  text-decoration: none;
+  color: white;
 }
-
 
 /* Modal css */
-.modal-content {
+/* .modal-content {
     border-radius: 20px;
 }
 
@@ -127,24 +126,25 @@
     width: 50%;
 }
 
+
 /* modal foto */
 .modal-body .foto {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.modal-body .foto .foto-group{
-    display:flex;
-    justify-content:center;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-    flex-wrap:wrap;
-    border: 1px solid var(--lightgrey);
+.modal-body .foto .foto-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid var(--lightgrey);
 }
 
-.modal-body .foto img{
-    width: 110px;
+.modal-body .foto img {
+  width: 110px;
 }

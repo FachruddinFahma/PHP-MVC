@@ -71,7 +71,7 @@
             <div class="modal-body">
                 <div class="input mb-3">
                     <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
-                        <div class="input-group">
+                        <div class="input-group" hidden>
                             <label for="id_kamar">ID Kamar</label>
                             <input type="text" name="id_kamar" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar" value="<?php echo $data['id_baru']    ?>" readonly>
                         </div>
@@ -91,8 +91,8 @@
                             <label for="id_kamar">Ukuran Kamar</label>
                             <div id="input-ukuran-kamar">
                                 <input type="text" name="ukuran" class="form-controll" placeholder="Panjang" class="ukuran_kamar">
-                                <!-- <p> X </p>
-                                <input type="text" class="form-controll" placeholder="Lebar" class="ukuran_kamar"> -->
+                                <p> X </p>
+                                <input type="text" class="form-controll" placeholder="Lebar" class="ukuran_kamar">
                             </div>
                         </div>
                         <div class="input-group">

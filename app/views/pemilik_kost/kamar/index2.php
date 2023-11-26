@@ -1,281 +1,343 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<header>
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/kamar.css">
-</head>
-
-<body>
-    <section id="kamar" class="content">
-        <div class="top">
-            <label for="option">Filter : </label>
-            <select name="option" id="cars">
-                <option value="Kamar Termahal">Kamar Termahal</option>
-                <option value="Kamar Termurah">Kamar Termurah</option>
-                <option value="Kamar Kosong">Kamar Kosong</option>
-                <option value="Kamar Terisi">Kamar Terisi</option>
-            </select>
-            <input class="input-search" type="text" placeholder="Search">
-            <button class="button-search">Cari Kamar</button>
-            <button class="tambah-kamar" data-bs-toggle="modal" data-bs-target="#modal-identitas"> <span>+</span> Tambah Kamar</button>
-        </div>
-        <div class="bottom">
-            <h1>halo</h1>
-            <table class="table table-hover small" id="kamarTable">
-                <thead>
+    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/kamar2.css">
+</header>
+<section id="kamar" class="content">    
+    <div id="kamar_content" class="pt-4 px-4">
+        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas">Tambah</a>
+        <table id="dataKamar" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID Kamar</th>
+                    <th>Fasilitas</th>
+                    <th>Kategori</th>
+                    <th>Ukuran</th>
+                    <th>Harga Harian</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                ini_set('display_errors', 1);
+                foreach ($data['kamar'] as $item) {
+                ?>
                     <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Kamar</th>
-                        <th scope="col">Jenis Kelamin</th>
-                        <th scope="col">No HP</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Aksi</th>
+                        <td><?php echo $item['id_kamar'] ?></td>
+                        <td><?php echo $item['fasilitas'] ?></td>
+                        <td><?php echo $item['kategori'] ?></td>
+                        <td><?php echo $item['ukuran'] ?></td>
+                        <td><?php echo $item['harga_bulanan'] ?></td>
+                        <td>Kosong</td>
+                        <td>
+                            <a href="">Edit</a>
+                            <a href="http://localhost/PHP-MVC/public/kamar/hapusKamar?id_kamar=<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($data as $item) {
-                    ?>
-                        <tr>
-                            <th scope="col"><?php echo $item['id_kamar'] ?></th>
-                            <th scope="col"><?php echo $item['fasilitas'] ?></th>
-                            <th scope="col"><?php echo $item['ukuran'] ?></th>
-                            <th scope="col"><?php echo $item['harga'] ?></th>
-                            <th scope="col">Kosong</th>
-                            <th scope="col">
-                                <a href="">Edit</a>
-                                <a href="">Hapus</a>
-                            </th>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-
-            </table>
-        </div>
-        <!-- modal identitas -->
-        <div class="modal fade" id="modal-identitas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Input Data Kamar</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div id="progress-data">
-                        <div id="progress-data-kamar" class="active-data actived">
-                            <div class="angka">
-                                <p>1</p>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- modal identitas -->
+<div class="modal fade" id="modal-identitas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="content1">
+                <div class="modal-header">
+                    <h5>Input Data Kamar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input mb-3">
+                        <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">ID Kamar Kamar</label>
+                                    <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Nama Kamar</label>
+                                    <input type="text" name="nama_kamar" id="nama_kamar" placeholder="masukan nama kamar">
+                                </div>
+                               
                             </div>
-                            <p class="title-progress">Data Kamar</p>
-                        </div>
-                        <div id="progress-foto" class="active-data">
-                            <div class="angka">
-                                <p>2</p>
+                            <div class="input-group" >
+                                <label for="">Kategori</label>
+                                <div id="group-kategori">
+                                    <div class="kategori-group">
+                                        <p>harian</p>
+                                        <input type="checkbox" name="check_harian" id="check_harian"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>bulanan</p>
+                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>3 bulan</p>
+                                        <input type="checkbox" name="check_3bulan" id="check_3bulan"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>tahunan</p>
+                                        <input type="checkbox" name="check_tahunan" id="check_tahunan"> 
+                                    </div>
+                                </div>
                             </div>
-                            <p class="title-progress">Foto Kamar</p>
-                        </div>
-                        <div id="progress-verifikasi" class="active-data">
-                            <div class="angka">
-                                <p>3</p>
-                            </div>
-                            <p>Verifikasi</p>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="input mb-3">
-                            <div class="input-group">
-                                <label for="id_kamar">ID Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
-                            </div>
-                            <div class="input-group">
-                                <label for="id_kamar">Nama Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan Nama Kamar" id="nama_kamar">
-                            </div>
-                            <div class="input-group">
-                                <label for="id_kamar">Fasilitas Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan Fasilitas Kamar" id="fasilitas_kamar">
-                            </div>
-                            <div class="input-group">
-                                <label for="id_kamar">Ukuran Kamar</label>
-                                <div id="input-ukuran-kamar">
-                                    <input type="text" class="form-controll" placeholder="Panjang" id="ukuran_kamar">
-                                    <p> X </p>
-                                    <input type="text" class="form-controll" placeholder="Lebar" id="ukuran_kamar">
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">Ukuran</label>
+                                    <div class="input-group-double">
+                                        <input type="text" name="ukuran_kamar" id="ukuran_kamar" placeholder="panjang">
+                                        <p>x</p>
+                                        <input type="text" name="ukuran_kamar" id="ukuran_kamar" placeholder="lebar">
+                                    </div>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <label for="id_kamar">Harga Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan Harga Kamar" id="id_kamar">
+                                    <label for="">Fasilitas</label>
+                                    <textarea name="fasilitas_kamar" id="fasilitas_kamar" cols="30" rows="10" placeholder="masukan fasilitas"></textarea>
                             </div>
+                        </form>
+                        <div class="container-group">
+                                <div class="input-group" id="grup-input-bulanan">
+                                    <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
+                                    <input type="text" name="harga_bulanan" id="harga_bulanan" placeholder="masukan harga bulanan">
+                                </div>
+                                <div class="input-group" id="grup-input-harian">
+                                    <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
+                                    <input type="text" name="harga_harian" id="harga_harian" placeholder="masukan harga harian">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="container-group">
+                            <div class="input-group" id="grup-input-3bulanan">
+                                <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
+                                <input type="text" name="harga_3bulanan" id="harga_3bulanan" placeholder="masukan harga 3 bulan">
+                            </div>
+                            <div class="input-group" id="grup-input-tahunan">
+                                <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
+                                <input type="text" name="harga_tahunan" id="harga_tahunan" placeholder="masukan harga tahunan">
+                            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-back" id="back1">Kembali</button>
+                    <button type="button" class="btn-next" id="next1">Selanjutnya</button>
+                </div>
+            </div>
 
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary me-auto back" data-bs-dismiss="modal">Kembali</button>
-                        <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-foto">Selanjutnya</button>
-                    </div>
+            <!------------------------------------- CONTENT KAMAR 2 ---------------------------------->
+
+            <div id="content2">
+                <div class="modal-header">
+                    <h5>Verikasi Data Kamar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </div>
-        <!-- modal foto-->
-        <div class="modal fade" id="modal-foto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Input Foto Kamar</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div id="progress-data">
-                        <div id="progress-data-kamar" class="active-data">
-                            <div class="angka">
-                                <p>1</p>
+                <div class="modal-body">
+                    <div class="input mb-3">
+                        <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">ID Kamar Kamar</label>
+                                    <input type="text" name="id_kamar_fix" id="id_kamar_fix" placeholder="masukan ID kamar">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Nama Kamar</label>
+                                    <input type="text" name="nama_kamar_fix" id="nama_kamar_fix" placeholder="masukan nama kamar">
+                                </div>
+                               
                             </div>
-                            <p class="title-progress">Data Kamar</p>
-                        </div>
-                        <div id="progress-foto" class="active-data actived">
-                            <div class="angka">
-                                <p>2</p>
+                            <div class="input-group" >
+                                <label for="">Kategori</label>
+                                <div id="group-kategori">
+                                    <div class="kategori-group">
+                                        <p>harian</p>
+                                        <input type="checkbox" name="check_harian" id="check_harian"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>bulanan</p>
+                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>3 bulan</p>
+                                        <input type="checkbox" name="check_3bulan" id="check_3bulan"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>tahunan</p>
+                                        <input type="checkbox" name="check_tahunan" id="check_tahunan"> 
+                                    </div>
+                                </div>
                             </div>
-                            <p class="title-progress">Foto Kamar</p>
-                        </div>
-                        <div id="progress-verifikasi" class="active-data">
-                            <div class="angka">
-                                <p>3</p>
-                            </div>
-                            <p>Verifikasi</p>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="foto mb-3">
-                            <div class="foto-group">
-                                <button>Gambar</button>
-                            </div>
-                            <div class="foto-group">
-                                <button>Gambar</button>
-                            </div>
-                            <div class="foto-group">
-                                <button>Gambar</button>
-                            </div>
-                            <div class="foto-group">
-                                <button>Gambar</button>
-                            </div>
-                            <div class="foto-group">
-                                <button>Gambar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary me-auto back" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-indentitas">Kembali</button>
-                        <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-verifikasi">Selanjutnya</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- modal identitas -->
-        <div class="modal fade" id="modal-verifikasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Input Data Kamar</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div id="progress-data">
-                        <div id="progress-data-kamar" class="active-data">
-                            <div class="angka">
-                                <p>1</p>
-                            </div>
-                            <p class="title-progress">Data Kamar</p>
-                        </div>
-                        <div id="progress-foto" class="active-data">
-                            <div class="angka">
-                                <p>2</p>
-                            </div>
-                            <p class="title-progress">Foto Kamar</p>
-                        </div>
-                        <div id="progress-verifikasi" class="active-data actived">
-                            <div class="angka">
-                                <p>3</p>
-                            </div>
-                            <p>Verifikasi</p>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="input mb-3">
-                            <div class="input-group">
-                                <label for="id_kamar">ID Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan ID Kamar" id="id_kamar">
-                            </div>
-                            <div class="input-group">
-                                <label for="id_kamar">Nama Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan Nama Kamar" id="nama_kamar">
-                            </div>
-                            <div class="input-group">
-                                <label for="id_kamar">Fasilitas Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan Fasilitas Kamar" id="fasilitas_kamar">
-                            </div>
-                            <div class="input-group">
-                                <label for="id_kamar">Ukuran Kamar</label>
-                                <div id="input-ukuran-kamar">
-                                    <input type="text" class="form-controll" placeholder="Panjang" id="ukuran_kamar">
-                                    <p> X </p>
-                                    <input type="text" class="form-controll" placeholder="Lebar" id="ukuran_kamar">
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">Ukuran</label>
+                                    <div class="input-group-double">
+                                        <input type="text" name="ukuran_kamar_panjang_fix" id="ukuran_kamar_panjang_fix" placeholder="panjang">
+                                        <p>x</p>
+                                        <input type="text" name="ukuran_kamar_lebar_fix" id="ukuran_kamar_lebar_fix" placeholder="lebar">
+                                    </div>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <label for="id_kamar">Harga Kamar</label>
-                                <input type="text" class="form-controll" placeholder="Masukan Harga Kamar" id="id_kamar">
+                                    <label for="">Fasilitas</label>
+                                    <textarea name="fasilitas_kamar_fix" id="fasilitas_kamar_fix" cols="30" rows="10" placeholder="masukan fasilitas"></textarea>
                             </div>
-
+                        </form>
+                        <div class="container-group">
+                                <div class="input-group" id="grup-input-bulanan">
+                                    <label for="harga_bulanan_fix" id="lbl_harga_bulanan_fix">Harga Bulanan</label>
+                                    <input type="text" name="harga_bulanan)fix" id="harga_bulanan_fix" placeholder="masukan harga bulanan">
+                                </div>
+                                <div class="input-group" id="grup-input-harian">
+                                    <label for="harga_harian_fix" id="lbl_harga_harian_fix">Harga Harian</label>
+                                    <input type="text" name="harga_harian_fix" id="harga_harian_fix" placeholder="masukan harga harian">
+                                </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary me-auto back" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-foto">Kembali</button>
-                        <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal">Selanjutnya</button>
+                    <div class="container-group">
+                            <div class="input-group" id="grup-input-3bulanan">
+                                <label for="harga_3bulanan_fix" id="lbl_harga_3bulanan_fix">Harga 3 Bulanan</label>
+                                <input type="text" name="harga_3bulanan_fix" id="harga_3bulanan_fix" placeholder="masukan harga 3 bulan">
+                            </div>
+                            <div class="input-group" id="grup-input-tahunan">
+                                <label for="harga_tahunan_fix" id="lbl_harga_tahunan_fix">Harga Tahunan</label>
+                                <input type="text" name="harga_tahunan_fix" id="harga_tahunan_fix" placeholder="masukan harga tahunan">
+                            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-back" id="back2">Kembali</button>
+                    <button type="button" class="btn-next" id="next2" onclick="saveDataSession()">Selanjutnya</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- modal foto-->
+<div class="modal fade" id="modal-foto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Input Foto Kamar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="progress-data">
+                <div id="progress-data-kamar" class="active-data">
+                    <div class="angka">
+                        <p>1</p>
+                    </div>
+                    <p class="title-progress">Data Kamar</p>
+                </div>
+                <div id="progress-foto" class="active-data actived">
+                    <div class="angka">
+                        <p>2</p>
+                    </div>
+                    <p class="title-progress">Foto Kamar</p>
+                </div>
+                <div id="progress-verifikasi" class="active-data">
+                    <div class="angka">
+                        <p>3</p>
+                    </div>
+                    <p>Verifikasi</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="foto mb-3">
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto1">
+                    </div>
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto2">
+                    </div>
+                    <div class="foto-group">
+                        <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                        <input type="file" name="foto3">
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <<button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-identitas">Kembali</button>
+                    <button type="button" class="btn btn-primary next" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modal-verifikasi">Selanjutnya</button>
+            </div>
         </div>
-    </section>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script>
-        new DataTable("#kamarTable", {
-            info: false,
-            "columnDefs": [{
-                    "orderable": true,
-                    "targets": 0
-                },
-                {
-                    "orderable": false,
-                    "targets": 1
-                },
-                {
-                    "orderable": true,
-                    "targets": 2
-                },
-                {
-                    "orderable": false,
-                    "targets": 3
-                },
-                {
-                    "orderable": false,
-                    "targets": 4
-                },
-                {
-                    "orderable": false,
-                    "targets": 5
-                },
-                {
-                    "orderable": false,
-                    "targets": 6
-                },
-            ]
+    </div>
+</div>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+   $(document).ready(function() {
+        $("#content2").hide();
+
+        $("#next1").click(function() {
+            $("#content1").hide();
+            $("#content2").show();
         });
-    </script>
-</body>
 
-</html>
+        $("#back2").click(function() {
+            $("#content1").show();
+            $("#content2").hide();
+        });
+    });
+
+    $(document).ready(function () {
+        $('#grup-input-harian').hide();
+        $('#grup-input-3bulanan').hide();
+        $('#grup-input-tahunan').hide();
+
+        $('#check_harian').change(function () {
+            $('#grup-input-harian').toggle(this.checked);
+        });
+
+        $('#check_3bulan').change(function () {
+            $('#grup-input-3bulanan').toggle(this.checked);
+        });
+
+        $('#check_tahunan').change(function () {
+            $('#grup-input-tahunan').toggle(this.checked);
+        });
+    });
+
+    function saveDataSession() {
+        var idKamar = $('#id_kamar').val();
+        var namaKamar = $('#nama_kamar').val();
+        var fasilitasKamar = $('#fasilitas_kamar').val();
+        var ukuranPanjang = $('#ukuran_kamar_panjang').val();
+        var ukuranLebar = $('#ukuran_kamar_lebar').val();
+        var hargaHarian = $('#harga_harian').val();
+        var hargaBulanan = $('#harga_bulanan').val();
+        var harga3Bulanan = $('#harga_3bulanan').val();
+        var hargaTahunan = $('#harga_tahunan').val();
+
+        sessionStorage.setItem('idKamar', idKamar);
+        sessionStorage.setItem('namaKamar', namaKamar);
+        sessionStorage.setItem('fasilitasKamar', fasilitasKamar);
+        sessionStorage.setItem('ukuranPanjang', ukuranPanjang);
+        sessionStorage.setItem('ukuranLebar', ukuranLebar);
+        sessionStorage.setItem('hargaHarian', hargaHarian);
+        sessionStorage.setItem('hargaBulanan', hargaBulanan);
+        sessionStorage.setItem('harga3Bulanan', harga3Bulanan);
+        sessionStorage.setItem('hargaTahunan', hargaTahunan);
+
+        $('#content2').modal('show');
+        showDataSession();
+    }
+
+    function showDataSession() {
+        $('#id_kamar_fix').val(sessionStorage.getItem('idKamar'));
+        $('#nama_kamar_fix').val(sessionStorage.getItem('namaKamar'));
+        $('#fasilitas_kamar_fix').val(sessionStorage.getItem('fasilitasKamar'));
+        $('#ukuran_kamar_panjang_fix').val(sessionStorage.getItem('ukuranPanjang'));
+        $('#ukuran_kamar_lebar_fix').val(sessionStorage.getItem('ukuranLebar'));
+        $('#harga_harian_fix').val(sessionStorage.getItem('hargaHarian'));
+        $('#harga_bulanan_fix').val(sessionStorage.getItem('hargaBulanan'));
+        $('#harga_3bulanan_fix').val(sessionStorage.getItem('harga3Bulanan'));
+        $('#harga_tahunan_fix').val(sessionStorage.getItem('hargaTahunan'));
+    }
+
+</script>

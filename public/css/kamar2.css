@@ -1,200 +1,79 @@
-:root{
-    --lightgrey: #AEAEAE;
-    --blue: #295EF4;
-    --black: #282828;
+:root {
+  --lightgrey: #aeaeae;
+  --blue: #295ef4;
+  --black: #282828;
 }
 
-h1{
-    color: red;
-}
-body{
-    font-size: 12px;
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
-#kamar #kamar_content{
-    padding: 30px 100px;
-    margin: 20px;
-    border-radius: 20px;
-    background-color: white;
+#back1,
+#next1,
+#back2,
+#next2 {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
 }
 
-.top{
-    padding: 100px 80px 0;
+.modal-body {
+  padding: 5px 30px;
 }
 
-.top select{
-    padding: 5px 10px;
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.top input.input-search{
-    width: 350px;
-    padding: 5px 10px;
-    border-radius: 5px; 
-    border: 1px solid #9E9E9E;
-    margin: 0 10px;
+.modal-body .container-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.top button.button-search {
-    border: none;
-    padding: 5px 10px;
-    color: white;
-    background-color: #385583;
-    border-radius: 5px;
-    height: auto;
+.input-group-double {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.top button.tambah-kamar {
-    border: none;
-    padding: 10px 15px;
-    background-color: #1F9254;
-    color: white;
-    border-radius: 5px;
-    float: right;
-    margin-top: -10px;
-    margin-left: 10px;
-    align-items: center;
+.input-group-double p {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.bottom{
-    width: 1250px;
-    height: 600px;
-    background-color: white;
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    padding: 30px 80px 0;
-    border-radius: 10px;
+.modal-body .input-group {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Modal css */
-.modal-content {
-    border-radius: 20px;
+#group-kategori {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.modal-header {
+.modal-body .input-group .kategori-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70px;
+  text-align: center;
+}
+
+/* #group-kategori {
     display: flex;
-    justify-content:center;
-}
-.modal-header, .modal-footer {
-    border: none;
-}
+    flex-direction: column;
+  } */
 
-.modal-header h5{
-    position:absolute;
-    justify-content:center;
-    top:30px;
+.modal-body .input-group input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  font-size: 14px;
 }
-
-.modal-body .input-group{
-    padding: 0 30px;
-    display:flex;
-    flex-direction:column;
-}
-
-.modal-body .input .form-controll{
-    margin: 20px 0;
-    border-radius:20px;
-    font-size: 14px;
-    padding: 10px 10px;
-    width:400px;
-    border:1px solid var(--lightgrey);
-}
-
-.modal-body .input .form-controll:focus{
-    outline: none;
-}
-
-.modal-footer .back, .next{
-    background-color: #1B3359;
-    border-radius: 10px;
-    font-size: 12px;
-    border: none;
-}
-
-#progress-data{
-    display: flex;
-    gap: 75px;
-    justify-content: center;
-    margin-top:40px;
-}
-
-.active-data .angka{
-    border-radius: 50px;
-    background-color: var(--lightgrey);
-    color: var(--black);
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.actived .angka{
-    background-color: var(--blue);
-    color: white;
-    font-weight: 600;
-}
-
-.actived #title-progress{
-    font-weight: 1000;
-}
-
-#progress-data .title-progress::after{
-    position: absolute;
-    content: "";
-    height: 2px;
-    background-color: var(--lightgrey);
-    width: 20%;
-    margin-left:-12px;
-    margin-top:-10px;
-}
-
-#input-ukuran-kamar{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-#input-ukuran-kamar p{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-#input-ukuran-kamar .form-controll{
-    width: 50%;
-}
-
-/* Modal css - Modal Foto */
-
-.modal-body .foto {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-.modal-body .foto .foto-group{
-    width: 115px;
-    height: 160px;
-    border: 1px solid black;
-    border-radius:10px;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    padding-left:15px;
-    padding-right:15px;
-}
-.modal-body .foto .foto-group button{
-     background-color: white;
-     border:1px solid black;
-        padding: 5px 15px;
-        border-radius: 50px;
-}
-
-/* table */

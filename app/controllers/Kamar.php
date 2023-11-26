@@ -12,7 +12,7 @@ class Kamar extends Controller
         $data['id_sementara'] = substr($data['id_lama']['id_kamar'], -2);
         $data['id_baru'] = "KMR0" . $data['id_sementara'] + 1;
         $this->view('templates/header', $data);
-        $this->view('pemilik_kost/kamar/index', $data);
+        $this->view('pemilik_kost/kamar/index2', $data);
         $this->view('templates/footer');
     }
 
