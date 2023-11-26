@@ -47,7 +47,7 @@
         <div class="modal-content">
             <div id="content1">
                 <div class="modal-header">
-                    <h5>Input Data Kamar</h5>
+                    <h5>Input Data Kamar Branchs</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -124,7 +124,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-back" id="back1">Kembali</button>
-                    <button type="button" class="btn-next" id="next1">Selanjutnya</button>
+                    <button type="button" class="btn-next" id="next1" onclick="saveDataSession()">Selanjutnya</button>
                 </div>
             </div>
 
@@ -141,11 +141,11 @@
                             <div class="container-group">
                                 <div class="input-group">
                                     <label for="">ID Kamar Kamar</label>
-                                    <input type="text" name="id_kamar_fix" id="id_kamar_fix" placeholder="masukan ID kamar">
+                                    <input type="text" name="id_kamar_fix" id="id_kamar_fix" placeholder="masukan ID kamar" readonly>
                                 </div>
                                 <div class="input-group">
                                     <label for="">Nama Kamar</label>
-                                    <input type="text" name="nama_kamar_fix" id="nama_kamar_fix" placeholder="masukan nama kamar">
+                                    <input type="text" name="nama_kamar_fix" id="nama_kamar_fix" placeholder="masukan nama kamar" readonly>
                                 </div>
                                
                             </div>
@@ -154,19 +154,19 @@
                                 <div id="group-kategori">
                                     <div class="kategori-group">
                                         <p>harian</p>
-                                        <input type="checkbox" name="check_harian" id="check_harian"> 
+                                        <input type="checkbox" name="check_harian_fix" id="check_harian_fix" disabled> 
                                     </div>
                                     <div class="kategori-group">
                                         <p>bulanan</p>
-                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan"> 
+                                        <input type="checkbox" checked disabled name="check_bulanan_fix" id="check_bulanan_fix"> 
                                     </div>
                                     <div class="kategori-group">
                                         <p>3 bulan</p>
-                                        <input type="checkbox" name="check_3bulan" id="check_3bulan"> 
+                                        <input type="checkbox" name="check_3bulan_fix" id="check_3bulan_fix" disabled> 
                                     </div>
                                     <div class="kategori-group">
                                         <p>tahunan</p>
-                                        <input type="checkbox" name="check_tahunan" id="check_tahunan"> 
+                                        <input type="checkbox" name="check_tahunan_fix" id="check_tahunan_fix" disabled> 
                                     </div>
                                 </div>
                             </div>
@@ -174,42 +174,42 @@
                                 <div class="input-group">
                                     <label for="">Ukuran</label>
                                     <div class="input-group-double">
-                                        <input type="text" name="ukuran_kamar_panjang_fix" id="ukuran_kamar_panjang_fix" placeholder="panjang">
+                                        <input type="text" name="ukuran_kamar_panjang_fix" id="ukuran_kamar_panjang_fix" placeholder="panjang" readonly>
                                         <p>x</p>
-                                        <input type="text" name="ukuran_kamar_lebar_fix" id="ukuran_kamar_lebar_fix" placeholder="lebar">
+                                        <input type="text" name="ukuran_kamar_lebar_fix" id="ukuran_kamar_lebar_fix" placeholder="lebar" readonly>
                                     </div>
                                 </div>
                             </div>
                             <div class="input-group">
                                     <label for="">Fasilitas</label>
-                                    <textarea name="fasilitas_kamar_fix" id="fasilitas_kamar_fix" cols="30" rows="10" placeholder="masukan fasilitas"></textarea>
+                                    <textarea name="fasilitas_kamar_fix" id="fasilitas_kamar_fix" cols="30" rows="10" placeholder="masukan fasilitas"></textarea readonly>
                             </div>
                         </form>
                         <div class="container-group">
                                 <div class="input-group" id="grup-input-bulanan">
                                     <label for="harga_bulanan_fix" id="lbl_harga_bulanan_fix">Harga Bulanan</label>
-                                    <input type="text" name="harga_bulanan)fix" id="harga_bulanan_fix" placeholder="masukan harga bulanan">
+                                    <input type="text" name="harga_bulanan_fix" id="harga_bulanan_fix" placeholder="masukan harga bulanan" readonly>
                                 </div>
                                 <div class="input-group" id="grup-input-harian">
                                     <label for="harga_harian_fix" id="lbl_harga_harian_fix">Harga Harian</label>
-                                    <input type="text" name="harga_harian_fix" id="harga_harian_fix" placeholder="masukan harga harian">
+                                    <input type="text" name="harga_harian_fix" id="harga_harian_fix" placeholder="masukan harga harian" readonly>
                                 </div>
                         </div>
                     </div>
                     <div class="container-group">
                             <div class="input-group" id="grup-input-3bulanan">
                                 <label for="harga_3bulanan_fix" id="lbl_harga_3bulanan_fix">Harga 3 Bulanan</label>
-                                <input type="text" name="harga_3bulanan_fix" id="harga_3bulanan_fix" placeholder="masukan harga 3 bulan">
+                                <input type="text" name="harga_3bulanan_fix" id="harga_3bulanan_fix" placeholder="masukan harga 3 bulan" readonly>
                             </div>
                             <div class="input-group" id="grup-input-tahunan">
                                 <label for="harga_tahunan_fix" id="lbl_harga_tahunan_fix">Harga Tahunan</label>
-                                <input type="text" name="harga_tahunan_fix" id="harga_tahunan_fix" placeholder="masukan harga tahunan">
+                                <input type="text" name="harga_tahunan_fix" id="harga_tahunan_fix" placeholder="masukan harga tahunan" readonly>
                             </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-back" id="back2">Kembali</button>
-                    <button type="button" class="btn-next" id="next2" onclick="saveDataSession()">Selanjutnya</button>
+                    <button type="button" class="btn-next" id="next2" >Selanjutnya</button>
                 </div>
             </div>
             
@@ -271,15 +271,15 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-   $(document).ready(function() {
+    $(document).ready(function () {
         $("#content2").hide();
 
-        $("#next1").click(function() {
+        $("#next1").click(function () {
             $("#content1").hide();
             $("#content2").show();
         });
 
-        $("#back2").click(function() {
+        $("#back2").click(function () {
             $("#content1").show();
             $("#content2").hide();
         });
@@ -314,6 +314,11 @@
         var harga3Bulanan = $('#harga_3bulanan').val();
         var hargaTahunan = $('#harga_tahunan').val();
 
+        //checkbox ni boss
+        var checkHarian = $('#check_harian').prop('checked');
+        var check3Bulan = $('#check_3bulan').prop('checked');
+        var checkTahunan = $('#check_tahunan').prop('checked');
+
         sessionStorage.setItem('idKamar', idKamar);
         sessionStorage.setItem('namaKamar', namaKamar);
         sessionStorage.setItem('fasilitasKamar', fasilitasKamar);
@@ -324,7 +329,11 @@
         sessionStorage.setItem('harga3Bulanan', harga3Bulanan);
         sessionStorage.setItem('hargaTahunan', hargaTahunan);
 
-        $('#content2').modal('show');
+        //checked masuk session
+        sessionStorage.setItem('checkHarian', checkHarian);
+        sessionStorage.setItem('check3Bulan', check3Bulan);
+        sessionStorage.setItem('checkTahunan', checkTahunan);
+
         showDataSession();
     }
 
@@ -338,6 +347,9 @@
         $('#harga_bulanan_fix').val(sessionStorage.getItem('hargaBulanan'));
         $('#harga_3bulanan_fix').val(sessionStorage.getItem('harga3Bulanan'));
         $('#harga_tahunan_fix').val(sessionStorage.getItem('hargaTahunan'));
-    }
 
+        $('#check_harian_fix').prop('checked', sessionStorage.getItem('checkHarian') === 'true');
+        $('#check_3bulan_fix').prop('checked', sessionStorage.getItem('check3Bulan') === 'true');
+        $('#check_tahunan_fix').prop('checked', sessionStorage.getItem('checkTahunan') === 'true');
+    }
 </script>
