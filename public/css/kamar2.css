@@ -1,7 +1,14 @@
 :root {
-  --lightgrey: #aeaeae;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
   --blue: #295ef4;
-  --black: #282828;
+  --red: #c73447;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
 }
 
 .modal-footer {
@@ -76,4 +83,20 @@
   border-radius: 20px;
   border: 1px solid black;
   font-size: 14px;
+}
+
+#btn-edit {
+  padding: 2px 15px;
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+#btn-hapus {
+  padding: 2px 15px;
+  background-color: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
 }
