@@ -16,8 +16,8 @@
             JOIN tb_user ON tb_user.id_user = tb_kost.id_user
             WHERE tb_user.id_user = :id_user AND tb_kost.status = "AKTIF" ');
 
-        $this->db->bind(':id_user', $id_user);
-        return $this->db->single();
+            $this->db->bind(':id_user', $id_user);
+            return $this->db->single();
         }
 
         public function getfotoKostByUserId($id_user)

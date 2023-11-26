@@ -12,15 +12,17 @@
         public function addKost($kost)
         {
             $id_user = $_SESSION['id_user'];
+            $fotoQris = $_FILES['foto_qris']['tmp_name'];
+            $uploadDir = '../public/qris/'; 
+            $fotoQrisName = basename($_FILES['foto_qris']['name']);
+            move_uploaded_file($fotoQris, $uploadDir . $fotoQrisName);
 
             // Mendapatkan nama file sementara
             $foto1 = $_FILES['fotokost1']['tmp_name'];
             $foto2 = $_FILES['fotokost2']['tmp_name'];
             $foto3 = $_FILES['fotokost3']['tmp_name'];
-
             // Menentukan lokasi penyimpanan file
             $uploadDir = '../public/foto/'; // Ganti dengan lokasi penyimpanan yang sesuai di server Anda
-
             // Mendapatkan nama file asli
             $fotoName1 = basename($_FILES['fotokost1']['name']);
             $fotoName2 = basename($_FILES['fotokost2']['name']);
@@ -32,7 +34,8 @@
             move_uploaded_file($foto3, $uploadDir . $fotoName3);
             
             // Query untuk memasukkan data ke tb_kost
-            $query = "INSERT INTO tb_kost VALUES ('', '$id_user', :nama_kost, :jenis_kost, :fasilitas_kost, :peraturan_kost, :latitude, :longitude, :alamat , 'BELUM AKTIF')";
+            $query = "INSERT INTO tb_kost VALUES ('', '$id_user', :nama_kost, :jenis_kost, :fasilitas_kost, :peraturan_kost, :latitude, :longitude, :alamat,
+            :jenis_bank, :no_rekening, :nama_rekening, :foto_qris, 'BELUM AKTIF')";
             $this->db->query($query);
             $this->db->bind('nama_kost', $kost['nama_kost']);
             $this->db->bind('jenis_kost', $kost['jenis_kost']);
@@ -41,6 +44,10 @@
             $this->db->bind('latitude', $kost['latitude']);
             $this->db->bind('longitude', $kost['longitude']);
             $this->db->bind('alamat', $kost['alamat']);
+            $this->db->bind('jenis_bank', $kost['jenis_bank']);
+            $this->db->bind('no_rekening', $kost['no_rekening']);
+            $this->db->bind('nama_rekening', $kost['nama_rekening']);
+            $this->db->bind('foto_qris', $fotoQrisName);
             $this->db->execute();
 
             // Menggabungkan nama file gambar dengan tanda pemisah koma (,)

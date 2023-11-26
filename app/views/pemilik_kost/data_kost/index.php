@@ -90,14 +90,14 @@
                                     <label for="staticEmail" class="col-sm-4 col-form-label">Jenis Bank</label>
                                     <select class="form-select" aria-label="Default select example" name="jenis_bank">
                                         <option selected>Pilih Jenis Bank</option>
-                                        <option value="BCA" <?= ($data['kost']['jenis_kost'] == 'BCA') ? 'selected' : '' ?>>BCA</option>
-                                        <option value="BRI" <?= ($data['kost']['jenis_kost'] == 'BRI') ? 'selected' : '' ?>>BRI</option>
-                                        <option value="BNI" <?= ($data['kost']['jenis_kost'] == 'BNI') ? 'selected' : '' ?>>BNI</option>
-                                        <option value="BTN" <?= ($data['kost']['jenis_kost'] == 'BTN') ? 'selected' : '' ?>>BTN</option>
-                                        <option value="BJB" <?= ($data['kost']['jenis_kost'] == 'BJB') ? 'selected' : '' ?>>BJB</option>
-                                        <option value="MANDIRI" <?= ($data['kost']['jenis_kost'] == 'MANDIRI') ? 'selected' : '' ?>>MANDIRI</option>
-                                        <option value="MEGA" <?= ($data['kost']['jenis_kost'] == 'MEGA') ? 'selected' : '' ?>>MEGA</option>
-                                        <option value="PANIN" <?= ($data['kost']['jenis_kost'] == 'PANIN') ? 'selected' : '' ?>>PANIN</option>
+                                        <option value="BCA" <?= ($data['kost']['jenis_bank'] == 'BCA') ? 'selected' : '' ?>>BCA</option>
+                                        <option value="BRI" <?= ($data['kost']['jenis_bank'] == 'BRI') ? 'selected' : '' ?>>BRI</option>
+                                        <option value="BNI" <?= ($data['kost']['jenis_bank'] == 'BNI') ? 'BNI' : '' ?>>BNI</option>
+                                        <option value="BTN" <?= ($data['kost']['jenis_bank'] == 'BTN') ? 'selected' : '' ?>>BTN</option>
+                                        <option value="BJB" <?= ($data['kost']['jenis_bank'] == 'BJB') ? 'selected' : '' ?>>BJB</option>
+                                        <option value="MANDIRI" <?= ($data['kost']['jenis_bank'] == 'MANDIRI') ? 'selected' : '' ?>>MANDIRI</option>
+                                        <option value="MEGA" <?= ($data['kost']['jenis_bank'] == 'MEGA') ? 'selected' : '' ?>>MEGA</option>
+                                        <option value="PANIN" <?= ($data['kost']['jenis_bank'] == 'PANIN') ? 'selected' : '' ?>>PANIN</option>
                                     </select>
                                 </div>
                             </div>

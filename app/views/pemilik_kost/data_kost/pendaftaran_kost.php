@@ -48,7 +48,7 @@
                     </div>
                     <div class="input">
                         <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Bank</label>
-                        <select class="form-select" aria-label="Default select example" name="jenis_kost">
+                        <select class="form-select" aria-label="Default select example" name="jenis_bank">
                             <option selected>-- Pilih Jenis Bank --</option>
                             <option value="BCAi">BCA</option>
                             <option value="BRI">BRI</option>
@@ -58,11 +58,20 @@
                             <option value="MANDIRI">MANDIRI</option>
                             <option value="MEGA">MEGA</option>
                             <option value="PANIN">PANIN</option>
-                        </select>   
+                        </select>
                         <label for="staticEmail" class="col-sm-2 col-form-label">No Rekening</label>
                         <input type="text" class="form-control" id="" name="no_rekening">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nama Rekening</label>
                         <input type="text" class="form-control" id="" name="nama_rekening">
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Foto Qris</label>
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control" id="foto_qris_input" name="foto_qris" onchange="showImagePreview(this)">
+                            </div>
+                            <div class="col-sm-6">
+                                <img id="foto_qris_preview" src="#" alt="Preview" style="display:none; max-width: 100px; max-height: 100px; border: 1px solid #ddd; border-radius: 5px;">
+                            </div>
+                        </div>
                     </div>
                     <div class="input">
                         <div class="file-upload">
@@ -107,6 +116,22 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        //image qris
+        function showImagePreview(input) {
+            var preview = document.getElementById('foto_qris_preview');
+            var fileInput = document.getElementById('foto_qris_input');
+
+            // Hanya melakukan preview jika file yang dipilih adalah gambar
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+
         // SCRIPT SELANJUTNYA DAN KEMBALI
         var visibleDiv = 0;
 
@@ -130,6 +155,7 @@
         }
         showDiv();
 
+        //image kost
         const fileInputs = document.querySelectorAll('.file-input');
         const previewContainers = document.querySelectorAll('.preview-container');
         const previewImages = document.querySelectorAll('.preview-image');
