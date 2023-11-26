@@ -21,7 +21,7 @@
                 <?php
                 ini_set('display_errors', 1);
                 foreach ($data['kamar'] as $item) {
-                ?>
+                ?>  
                     <tr>
                         <td><?php echo $item['id_kamar'] ?></td>
                         <td><?php echo $item['fasilitas'] ?></td>
@@ -30,8 +30,8 @@
                         <td><?php echo $item['harga_bulanan'] ?></td>
                         <td>Kosong</td>
                         <td>
-                            <a href="">Edit</a>
-                            <a href="http://localhost/PHP-MVC/public/kamar/hapusKamar?id_kamar=<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
+                            <a href="" id="btn-edit">Edit</a>
+                            <a id="btn-hapus" href="http://localhost/PHP-MVC/public/kamar/index2/hapusKamar?id_kamar=<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
                         </td>
                     </tr>
                 <?php
@@ -52,11 +52,11 @@
                 </div>
                 <div class="modal-body">
                     <div class="input mb-3">
-                        <form action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
+                        <form id="form-input" action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
                             <div class="container-group">
                                 <div class="input-group">
                                     <label for="">ID Kamar Kamar</label>
-                                    <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar">
+                                    <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar" value="<?php echo $data['id_baru'] ?>" readonly>
                                 </div>
                                 <div class="input-group">
                                     <label for="">Nama Kamar</label>
@@ -89,9 +89,9 @@
                                 <div class="input-group">
                                     <label for="">Ukuran</label>
                                     <div class="input-group-double">
-                                        <input type="text" name="ukuran_kamar" id="ukuran_kamar" placeholder="panjang">
+                                        <input type="text" name="panjang_kamar" id="panjang_kamar" placeholder="panjang">
                                         <p>x</p>
-                                        <input type="text" name="ukuran_kamar" id="ukuran_kamar" placeholder="lebar">
+                                        <input type="text" name="lebar_kamar" id="lebar_kamar" placeholder="lebar">
                                     </div>
                                 </div>
                             </div>
@@ -99,28 +99,29 @@
                                     <label for="">Fasilitas</label>
                                     <textarea name="fasilitas_kamar" id="fasilitas_kamar" cols="30" rows="10" placeholder="masukan fasilitas"></textarea>
                             </div>
+                                <div class="container-group">
+                                    <div class="input-group" id="grup-input-bulanan">
+                                        <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
+                                        <input type="text" name="harga_bulanan" id="harga_bulanan" placeholder="masukan harga bulanan">
+                                    </div>
+                                    <div class="input-group" id="grup-input-harian">
+                                        <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
+                                        <input type="text" name="harga_harian" id="harga_harian" placeholder="masukan harga harian">
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="container-group">
+                                    <div class="input-group" id="grup-input-3bulanan">
+                                        <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
+                                        <input type="text" name="harga_3bulanan" id="harga_3bulanan" placeholder="masukan harga 3 bulan">
+                                    </div>
+                                    <div class="input-group" id="grup-input-tahunan">
+                                        <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
+                                        <input type="text" name="harga_tahunan" id="harga_tahunan" placeholder="masukan harga tahunan">
+                                    </div>
+                            </div>
                         </form>
-                        <div class="container-group">
-                                <div class="input-group" id="grup-input-bulanan">
-                                    <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
-                                    <input type="text" name="harga_bulanan" id="harga_bulanan" placeholder="masukan harga bulanan">
-                                </div>
-                                <div class="input-group" id="grup-input-harian">
-                                    <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
-                                    <input type="text" name="harga_harian" id="harga_harian" placeholder="masukan harga harian">
-                                </div>
-                        </div>
-                    </div>
-                    <div class="container-group">
-                            <div class="input-group" id="grup-input-3bulanan">
-                                <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
-                                <input type="text" name="harga_3bulanan" id="harga_3bulanan" placeholder="masukan harga 3 bulan">
-                            </div>
-                            <div class="input-group" id="grup-input-tahunan">
-                                <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
-                                <input type="text" name="harga_tahunan" id="harga_tahunan" placeholder="masukan harga tahunan">
-                            </div>
-                    </div>
+                        
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-back" id="back1">Kembali</button>
@@ -209,7 +210,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-back" id="back2">Kembali</button>
-                    <button type="button" class="btn-next" id="next2" >Selanjutnya</button>
+                    <button type="button" class="btn-next" id="next2" >Tambah</button>
                 </div>
             </div>
             
@@ -303,12 +304,18 @@
         });
     });
 
+    $(document).ready(function () {
+        $("#next2").click(function () {
+            $("#form-input").submit();
+        });
+    });
+
     function saveDataSession() {
         var idKamar = $('#id_kamar').val();
         var namaKamar = $('#nama_kamar').val();
         var fasilitasKamar = $('#fasilitas_kamar').val();
-        var ukuranPanjang = $('#ukuran_kamar_panjang').val();
-        var ukuranLebar = $('#ukuran_kamar_lebar').val();
+        var ukuranPanjang = $('#panjang_kamar').val();
+        var ukuranLebar = $('#lebar_kamar').val();
         var hargaHarian = $('#harga_harian').val();
         var hargaBulanan = $('#harga_bulanan').val();
         var harga3Bulanan = $('#harga_3bulanan').val();

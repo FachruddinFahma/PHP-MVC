@@ -12,34 +12,10 @@ class Kamar extends Controller
         $data['id_sementara'] = substr($data['id_lama']['id_kamar'], -2);
         $data['id_baru'] = "KMR0" . $data['id_sementara'] + 1;
         $this->view('templates/header', $data);
-        $this->view('pemilik_kost/kamar/index2', $data);
+        $this->view('pemilik_kost/kamar/index', $data);
         $this->view('templates/footer');
     }
 
-    // public function addKamar()
-    // {
-    //     // var_dump($_POST);
-    //     // die();
-    //     $data = [
-    //         'id_kamar' => $_POST['id_kamar'],
-    //         'fasilitas' => $_POST['fasilitas'],
-    //         'kategori' => $_POST['kategori'],
-    //         'ukuran' => $_POST['ukuran'],
-    //         'harga_harian' => $_POST['harga_harian'],
-    //         'harga_bulan' => $_POST['harga_bulan'],
-    //         'harga_3bulan' => $_POST['harga_3bulan'],
-    //         'harga_tahun' => $_POST['harga_tahun'],
-    //         'id_kost' => $_POST['id_kost']
-    //     ];
-
-    //     if ($this->model('kamar_model')->insertKamar($data)) {
-    //         header('Location: http://localhost/PHP-MVC/public/dashboard');
-    //     } else {
-    //         header('Location: http://localhost/PHP-MVC/public/kamar');
-    //     }
-    // }
-
-    // controller
     public function addKamar()
     {
         // Ambil id_kost dari data yang sudah login
@@ -49,12 +25,12 @@ class Kamar extends Controller
         $dataKamar = [
             'id_kamar' => $_POST['id_kamar'],
             'nama_kamar' => $_POST['nama_kamar'],
-            'fasilitas' => $_POST['fasilitas'],
-            'kategori' => $_POST['kategori'],
-            'ukuran' => $_POST['ukuran'],
+            'fasilitas' => $_POST['fasilitas_kamar'],
+            'kategori' => "bulanan",
+            'ukuran' => $_POST['panjang_kamar'] . "x" . $_POST['lebar_kamar'],
             'harga_harian' => $_POST['harga_harian'],
             'harga_bulanan' => $_POST['harga_bulanan'],
-            'harga_3bulan' => $_POST['harga_3bulan'],
+            'harga_3bulan' => $_POST['harga_3bulanan'],
             'harga_tahunan' => $_POST['harga_tahunan']
         ];
 
@@ -65,15 +41,13 @@ class Kamar extends Controller
         }
     }
 
-    public function hapusKamar()
+    public function hapusKamar($id_kamar)
     {
-        if (isset($_GET['id_kamar'])) {
-            $id_kamar = $_GET['id_kamar'];
-
+        if (isset($id_kamar)) {
             echo "ID to delete: $id_kamar";
-
+    
             $deleted = $this->model('Kamar_model')->deleteKamar($id_kamar);
-
+    
             if ($deleted) {
                 echo "Record deleted successfully.";
             } else {
@@ -84,4 +58,13 @@ class Kamar extends Controller
         }
         $this->index();
     }
+
+    public function getKamarById($id_kamar)
+    {
+        $kamar = $this->model('Kamar_model')->getKamarById($id_kamar);
+        $data['kamar'] = $kamar;
+        $this->view('pemilik_kost/kamar', $data);
+    }
+
+    
 }
