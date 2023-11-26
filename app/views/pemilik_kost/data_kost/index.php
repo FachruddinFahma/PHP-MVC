@@ -87,15 +87,36 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="col-sm-6">
-                                        <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Bank</label>
-                                        <select class="form-select" aria-label="Default select example" name="jenis_kost">
-                                            <option selected>Pilih Jenis Bank</option>
-                                            <option value="Laki - Laki" <?= ($data['kost']['jenis_kost'] == 'Laki - Laki') ? 'selected' : '' ?>>Laki - Laki</option>
-                                            <option value="Perempuan" <?= ($data['kost']['jenis_kost'] == 'Perempuan') ? 'selected' : '' ?>>Perempuan</option>
-                                            <option value="Campuran" <?= ($data['kost']['jenis_kost'] == 'Campuran') ? 'selected' : '' ?>>Campuran</option>
-                                        </select>
-                                    </div>
+                                    <label for="staticEmail" class="col-sm-4 col-form-label">Jenis Bank</label>
+                                    <select class="form-select" aria-label="Default select example" name="jenis_bank">
+                                        <option selected>Pilih Jenis Bank</option>
+                                        <option value="BCA" <?= ($data['kost']['jenis_kost'] == 'BCA') ? 'selected' : '' ?>>BCA</option>
+                                        <option value="BRI" <?= ($data['kost']['jenis_kost'] == 'BRI') ? 'selected' : '' ?>>BRI</option>
+                                        <option value="BNI" <?= ($data['kost']['jenis_kost'] == 'BNI') ? 'selected' : '' ?>>BNI</option>
+                                        <option value="BTN" <?= ($data['kost']['jenis_kost'] == 'BTN') ? 'selected' : '' ?>>BTN</option>
+                                        <option value="BJB" <?= ($data['kost']['jenis_kost'] == 'BJB') ? 'selected' : '' ?>>BJB</option>
+                                        <option value="MANDIRI" <?= ($data['kost']['jenis_kost'] == 'MANDIRI') ? 'selected' : '' ?>>MANDIRI</option>
+                                        <option value="MEGA" <?= ($data['kost']['jenis_kost'] == 'MEGA') ? 'selected' : '' ?>>MEGA</option>
+                                        <option value="PANIN" <?= ($data['kost']['jenis_kost'] == 'PANIN') ? 'selected' : '' ?>>PANIN</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-sm-6">
+                                    <label for="exampleFormControlTextarea1" class="form-label">No Rekening</label>
+                                    <input type="text" class="form-control" id="" name="no_rekening" value="<?= $data['kost']['no_rekening'] ?>">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">Nama Rekening</label>
+                                    <input type="text" class="form-control" id="" name="nama_rekening" value="<?= $data['kost']['nama_rekening'] ?>">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-sm-6">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Foto Qris</label>
+                                    <input type="text" class="form-control" id="" name="foto_qris" value="">
+                                </div>
+                                <div class="col-sm-6">
                                     <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat"><?= $data['kost']['alamat'] ?></textarea>
                                 </div>
