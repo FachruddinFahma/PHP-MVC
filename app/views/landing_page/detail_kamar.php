@@ -46,20 +46,10 @@ ini_set('display_errors', 1);
                     <?php if (isset($_GET['id'])) : ?>
                         <h2>Kost Marno Kamar <?php echo $_GET['id']; ?></h2>
                     <?php endif; ?>
-                    <p><i class="ri-map-pin-2-fill"></i> Jalan Mastrib V - Sumbersari</p>
+                    <p><i class="ri-map-pin-2-fill"></i> <?php echo $data['kamar']['alamat']; ?></p>
                 </div>
-
                 <div class="pengelola-kost">
-                    <h5>Dikelola Oleh: </h5>
-                    <!-- 
-                        <div class="card-pengelola">
-                            <img src="http://localhost/PHP-MVC/public/foto/pemilik-kost.jpeg" alt="">
-                            <div class="nama-pengelola">
-                                <p class="nama">Nico Flassy</p>
-                                <p>Owner Kost Flassy</p>
-                            </div>
-                        </div> 
-                    -->
+                    <h5>Dikelola Oleh: <?php echo $data['kamar']['id_user']; ?> </h5>
                 </div>
                 <div class="fasilitas-kamar">
                     <p class="judul-fasilitas">Fasilitas Kamar</p>

@@ -1,10 +1,10 @@
 <?php
     class Detail_kamar extends Controller
     {
-        public function index()
+        public function index($id_kamar)
         {
-            // $data['judul'] = 'Kamar';
-            $this->view('landing_page/jelajah');
+            $data['kamar'] = $this->model('detailKamar_model')->getKamarbyIdKamar($id_kamar);
+            $this->view('landing_page/detail_kamar', $data);
         }
     }
 ?>

@@ -22,10 +22,10 @@ class Landing_page extends Controller
     // }
 
 
-    public function detail_kamar()
-    {
-        $this->view('landing_page/detail_kamar');
-    }
+    // public function detail_kamar()
+    // {
+    //     $this->view('landing_page/detail_kamar');
+    // }
 
     public function pemesanan()
     {
