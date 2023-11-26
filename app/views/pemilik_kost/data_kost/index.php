@@ -87,6 +87,15 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
+                                    <div class="col-sm-6">
+                                        <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Bank</label>
+                                        <select class="form-select" aria-label="Default select example" name="jenis_kost">
+                                            <option selected>Pilih Jenis Bank</option>
+                                            <option value="Laki - Laki" <?= ($data['kost']['jenis_kost'] == 'Laki - Laki') ? 'selected' : '' ?>>Laki - Laki</option>
+                                            <option value="Perempuan" <?= ($data['kost']['jenis_kost'] == 'Perempuan') ? 'selected' : '' ?>>Perempuan</option>
+                                            <option value="Campuran" <?= ($data['kost']['jenis_kost'] == 'Campuran') ? 'selected' : '' ?>>Campuran</option>
+                                        </select>
+                                    </div>
                                     <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat"><?= $data['kost']['alamat'] ?></textarea>
                                 </div>
@@ -102,9 +111,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <iframe class="position-relative rounded w-100 h-100 wow fadeInUp" data-wow-delay="0.5s" 
-                                src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed" 
-                                frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                                <iframe class="position-relative rounded w-100 h-100 wow fadeInUp" data-wow-delay="0.5s" src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed" frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
                                 </iframe>
                             </div>
                         </div>
