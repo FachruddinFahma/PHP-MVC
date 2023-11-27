@@ -21,7 +21,6 @@
             $foto1 = $_FILES['fotokost1']['tmp_name'];
             $foto2 = $_FILES['fotokost2']['tmp_name'];
             $foto3 = $_FILES['fotokost3']['tmp_name'];
-            // Menentukan lokasi penyimpanan file
             $uploadDir = '../public/foto/'; // Ganti dengan lokasi penyimpanan yang sesuai di server Anda
             // Mendapatkan nama file asli
             $fotoName1 = basename($_FILES['fotokost1']['name']);

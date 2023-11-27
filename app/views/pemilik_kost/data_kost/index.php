@@ -114,7 +114,12 @@
                             <div class="mb-3 row">
                                 <div class="col-sm-6">
                                     <label for="exampleFormControlTextarea1" class="form-label">Foto Qris</label>
-                                    <input type="text" class="form-control" id="" name="foto_qris" value="">
+                                    <?php
+                                    // Ambil URL foto QRIS dari database
+                                    $fotoQrisURL = $data['kost']['foto_qris'];
+                                    var_dump($fotoQrisURL);
+                                    ?>
+                                    <img id="foto_qris_preview" src="<?= $fotoQrisURL ?>" alt="Preview" style="max-width: 100px; max-height: 100px; border: 1px solid #ddd; border-radius: 5px;">
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
@@ -147,6 +152,22 @@
     </section>
 
     <script>
+        //foto qris
+        function showImagePreview(input) {
+            var preview = document.getElementById('foto_qris_preview');
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.src = '#';
+                preview.style.display = 'none';
+            }
+        }
+
         // Mengambil semua elemen input file dengan class custom-file-input
         const fileInputs = document.querySelectorAll('.custom-file-input');
         // Menambahkan event listener untuk setiap input file
