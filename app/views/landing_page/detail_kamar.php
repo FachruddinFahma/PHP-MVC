@@ -64,7 +64,12 @@ ini_set('display_errors', 1);
                         <p><i class="ri-hotel-bed-fill"></i><?php echo $data['kamar']['ukuran']; ?></p>
                     </div>
                 </div>
-
+                <div class="peraturan-kost">
+                    <p class="judul-fasilitas">Fasilitas Kost</p>
+                    <div class="kumpulan-fasilitas">
+                        <p><i class="ri-hotel-bed-fill"></i><?php echo $data['kamar']['fasilitas_kost']; ?></p>
+                    </div>
+                </div>
                 <div class="peraturan-kost">
                     <p class="judul-fasilitas">Peraturan Kost</p>
                     <div class="kumpulan-fasilitas">
@@ -90,7 +95,7 @@ ini_set('display_errors', 1);
                         <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan</option>
                     </select>
                     </div>
-                    <a href="http://localhost/PHP-MVC/public/landing_page/pemesanan">Pesan Sekarang</a>
+                    <a href="http://localhost/PHP-MVC/public/pemesanan_kost/pemesanan">Pesan Sekarang</a>
                 </div>
                 <!-- <div class="review-kost">
                     <p class="grand-review"><i class="ri-star-fill"></i> 4.5 (8 Review)</p>

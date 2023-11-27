@@ -2,6 +2,9 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/landing_page.css">
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/data_pemesanan.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- LINK ICON J-KOS -->
+    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+    <title>Pemesanan Kost</title>
 </head>
 
 <body>
@@ -31,31 +34,31 @@
                 <div class="kumpulan-input-pemesanan">
                     <div class="input-pemesanan">
                         <label for="id_kost">ID Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Nama Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Alamat Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Nama Kamar</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" readonly>
                     </div>
                     <div id="full-input" class="input-pemesanan">
                         <label for="id_kost">Fasilitas</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="tanggal_masuk">Tanggal Masuk</label>
-                        <input type="date" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="date" placeholder="Masukkan ID Kost" name="tggl_masuk" id="id_kost">
                     </div>
                     <div class="input-pemesanan">
                         <label for="tanggal_keluar">Tanggal Keluar</label>
-                        <input type="date" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <input type="date" placeholder="Masukkan ID Kost" name="tggl_keluar" id="id_kost">
                     </div>
                 </div>
             </div>
@@ -63,24 +66,20 @@
                 <h3>Informasi Calon Penghuni</h3>
                 <div class="kumpulan-input-pemesanan">
                     <div class="input-pemesanan">
-                        <label for="id_kost">ID Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <label for="id_kost">Nama Penghuni</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#" readonly>
                     </div>
                     <div class="input-pemesanan">
-                        <label for="id_kost">Nama Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <label for="id_kost">Jenis Kelamin</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#" readonly>
                     </div>
                     <div class="input-pemesanan">
-                        <label for="id_kost">Alamat Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <label for="id_kost">Alamat Penghuni</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#" readonly>
                     </div>
                     <div class="input-pemesanan">
-                        <label for="id_kost">Nama Kamar</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
-                    </div>
-                    <div id="full-input" class="input-pemesanan">
-                        <label for="id_kost">Fasilitas</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                        <label for="id_kost">Nomor HP Aktif</label>
+                        <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#" readonly>
                     </div>
                 </div>
             </div>
