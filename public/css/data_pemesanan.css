@@ -1,166 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-    --navy: #1B3359;
-    --middleblue: #134BA4;
-    --lightblue: #F3F7FD; 
-    --darkblue: #061072;
-    --lightblueclick: #c9d8eb; 
-    --green:#1F9254;
-    --blue: #295EF4;
-    --lightgrey: #AEAEAE;
-    --brown: #404040;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
+  --blue: #295ef4;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
 }
 
-.halaman{
-    padding: 0 200px;
-    margin-top: 100px;
+.halaman {
+  padding: 0 200px;
+  margin-top: 100px;
 }
 
-#pemesanan{
-    padding: 0 200px;
-    display: flex;
-    gap: 20px;
-    margin-bottom: 100px;
+#pemesanan {
+  padding: 0 200px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 1200px) {
-    #pemesanan{
-        flex-direction: column;
-        padding: 100px;
-        margin-top: -100px;
-    }
-}
-
-.left-pemesanan{
-    flex: 2;
-    background-color: white;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 50px 50px;
-    color: var(--brown);
-}
-
-.left-pemesanan #informasi-pemesanan-kost{
-    display: flex;
+  #pemesanan {
     flex-direction: column;
-    justify-content: left;
-    text-align: center;
-    align-items: start;
+    padding: 100px;
+    margin-top: -100px;
+  }
+}
+
+.left-pemesanan {
+  flex: 2;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 50px 50px;
+  color: var(--brown);
+}
+
+.left-pemesanan #informasi-pemesanan-kost {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: center;
+  align-items: start;
 }
 
 .left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan .input-pemesanan{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    width: 50%;
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  .input-pemesanan {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 50%;
 }
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan #full-input{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    width: 100%;
-}
-
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan #full-input input{
-    flex:1 ;
-    box-sizing: border-box;
-    margin: 0 10px;
-}
-
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan #full-input label{
-    flex:1 ;
-    box-sizing: border-box;
-    margin: 0 10px;
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  #full-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: start;
+  width: 100%;
 }
 
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan .input-pemesanan label{
-    flex:1 ;
-    box-sizing: border-box;
-    margin: 0 10px;
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  #full-input
+  input {
+  flex: 1;
+  box-sizing: border-box;
+  margin: 0 10px;
 }
 
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan .input-pemesanan input{
-    padding: 10px 10px;
-    flex:1 ;
-    box-sizing: border-box;
-    margin: 10px 10px;
-
-    border: 1px solid var(--lightgrey);
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  #full-input
+  label {
+  flex: 1;
+  box-sizing: border-box;
+  margin: 0 10px;
 }
 
-.left-pemesanan #informasi-pemesanan-kost .kumpulan-input-pemesanan #full-input input{
-    padding: 10px 10px;
-    flex: 2;
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  .input-pemesanan
+  label {
+  flex: 1;
+  box-sizing: border-box;
+  margin: 0 10px;
+}
+
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  .input-pemesanan
+  input {
+  padding: 10px 10px;
+  flex: 1;
+  box-sizing: border-box;
+  margin: 10px 10px;
+
+  border: 1px solid var(--lightgrey);
+}
+
+.left-pemesanan
+  #informasi-pemesanan-kost
+  .kumpulan-input-pemesanan
+  #full-input
+  input {
+  padding: 10px 10px;
+  flex: 2;
 }
 
 /* right pemesanan */
-.right-pemesanan{
-    flex: 1;
-    background-color: white;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 50px 50px;
-    color: var(--brown);
-    height: 550px;
+.right-pemesanan {
+  flex: 1;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 50px 50px;
+  color: var(--brown);
+  height: 600px;
 }
 
-.right-pemesanan > p{
-    font-size: 18px;
-    font-weight: 600;
+.right-pemesanan > p {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.right-pemesanan .detail-pemesanan{
-    font-size: 14px;
-    border-top: 1px dashed var(--brown);
-    border-bottom: 1px dashed var(--brown);
+.right-pemesanan .detail-pemesanan {
+  font-size: 14px;
+  border-top: 1px dashed var(--brown);
+  border-bottom: 1px dashed var(--brown);
 }
 
-.right-pemesanan .detail-pemesanan .sub-detail-pemesanan{
-    display: flex;
-    justify-content: space-between;
+.right-pemesanan .detail-pemesanan .sub-detail-pemesanan {
+  display: flex;
+  justify-content: space-between;
 }
 
-.right-pemesanan .total-pembayaran{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
+.right-pemesanan .total-pembayaran {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
 }
 
-.right-pemesanan .via-pembayaran{
-    display: flex;
-    gap: 5px;
+.right-pemesanan .via-pembayaran {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.right-pemesanan .via-pembayaran .opsi-pembayaran{
-    display: flex;
-    gap: 5px;
-    box-sizing: border-box;
-    align-items: center;
+.right-pemesanan .via-pembayaran .row-pembayaran {
+  display: flex;
+  gap: 5px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.right-pemesanan .via-pembayaran .opsi-pembayaran {
+  display: flex;
+  gap: 5px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
-.right-pemesanan #btn-pesan-sekarang{
-    padding: 12px 55px;
-    background-color: var(--blue);
-    color: white;
-    border: none;
-    margin: 40px 0;
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    display: block;
-    text-decoration: none;
+.right-pemesanan .via-pembayaran .opsi-pembayaran img {
+  width: 50px;
 }
 
-.right-pemesanan .title-pembayaran{
-    text-align: start;
+.right-pemesanan #btn-pesan-sekarang {
+  padding: 12px 55px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  margin: 40px 0;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
 }
 
+.right-pemesanan .title-pembayaran {
+  text-align: start;
+}

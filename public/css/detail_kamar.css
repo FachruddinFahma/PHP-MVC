@@ -1,382 +1,437 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-    --navy: #1B3359;
-    --middleblue: #134BA4;
-    --lightblue: #F3F7FD; 
-    --darkblue: #061072;
-    --lightblueclick: #c9d8eb; 
-    --green:#1F9254;
-    --blue: #295EF4;
-    --lightgrey: #AEAEAE;
-    --brown: #404040;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
+  --blue: #295ef4;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
 }
 
 /* circle pemanis untuk effect effecttttt */
-.circle-pemanis{
-    width: 1000px;
-    height: 1000px;
-    background-color: #EAEFF6;
-    position: absolute;
-    border-radius: 1000px;
-    z-index: -99;
-    right: -300;
-    top: 800;
+.circle-pemanis {
+  width: 1000px;
+  height: 1000px;
+  background-color: #eaeff6;
+  position: absolute;
+  border-radius: 1000px;
+  z-index: -99;
+  right: -300;
+  top: 800;
 }
 
-.circle-pemanis2{
-    width: 1100px;
-    height: 1100px;
-    background-color: #EAEFF6;
-    position: absolute;
-    border-radius: 4000px;
-    z-index: -99;
-    left: -400;
-    top: 2900;
+.circle-pemanis2 {
+  width: 1100px;
+  height: 1100px;
+  background-color: #eaeff6;
+  position: absolute;
+  border-radius: 4000px;
+  z-index: -99;
+  left: -400;
+  top: 2900;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #FAFBFF;overflow-x: hidden;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafbff;
+  overflow-x: hidden;
 }
 
 /* navbarrr  */
-nav{
-    padding: 0 60px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    display: flex;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    box-sizing:border-box;
-    background:white;
-    flex-direction: row;
-    justify-content: space-between;
+nav {
+  padding: 0 60px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-nav .link-navbar ul{
-    display: flex;
-    gap: 40px;
-    align-items: center;
+nav .link-navbar ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-nav .link-navbar ul a{
-    text-decoration: none;
+nav .link-navbar ul a {
+  text-decoration: none;
 }
 
-nav .link-navbar ul a.link-login{
-    padding: 10px 20px;
-    background-color: var(--middleblue);
-    color: white;
-    border-radius: 10px;
+nav .link-navbar ul a.link-login {
+  padding: 10px 20px;
+  background-color: var(--middleblue);
+  color: white;
+  border-radius: 10px;
 }
 
-nav .title-navbar{
-    display: flex;
-    align-items: center;
+nav .title-navbar {
+  display: flex;
+  align-items: center;
 }
 
-nav .title-navbar img{
-    width: 200px;
+nav .title-navbar img {
+  width: 200px;
 }
 
 /* konten detail kamar */
 
-#detail_kamar{
-    padding: 80px 200px;
+#detail_kamar {
+  padding: 80px 200px;
 }
 
-#detail_kamar .halaman{
-    color: var(--brown);
-    font-weight: 300;
+#detail_kamar .halaman {
+  color: var(--brown);
+  font-weight: 300;
 }
 
-#detail_kamar .halaman i{
-    margin-right: 10px;
-    font-size: 20px;
-    color: var(--brown);
+#detail_kamar .halaman i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--brown);
 }
 
 #detail_kamar #kumpulan-foto-kamar {
-    display: flex;
+  display: flex;
 }
 
-#detail_kamar #kumpulan-foto-kamar .main-foto{
-    width: 700px;
+#detail_kamar #kumpulan-foto-kamar .main-foto {
+  width: 700px;
 }
 
-#detail_kamar #kumpulan-foto-kamar .right-foto-kamar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    gap: 10px;
-    justify-content: center;
+#detail_kamar #kumpulan-foto-kamar .right-foto-kamar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 10px;
+  justify-content: center;
 }
 
-#detail_kamar #kumpulan-foto-kamar .left-foto-kamar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    gap: 10px;
-    justify-content: center;
+#detail_kamar #kumpulan-foto-kamar .left-foto-kamar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 10px;
+  justify-content: center;
 }
 
-#detail_kamar #kumpulan-foto-kamar .right-foto-kamar img{
-    width: 370px;
+#detail_kamar #kumpulan-foto-kamar .right-foto-kamar img {
+  width: 370px;
 }
 
 #detail_kamar #content-kamar {
-    display: flex;
-    margin-top: 30px;
-    gap: 30px;
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
 }
 
-#detail_kamar #content-kamar .right-content-kamar{
-    display: flex;
-    flex-grow: 10;
-    flex-direction: column;
+#detail_kamar #content-kamar .right-content-kamar {
+  display: flex;
+  flex-grow: 10;
+  flex-direction: column;
 }
 
-#detail_kamar #content-kamar .right-content-kamar .judul-kost h2{
-    font-size: 45px;
-    font-weight: 600;
+#detail_kamar #content-kamar .right-content-kamar .judul-kost h2 {
+  font-size: 45px;
+  font-weight: 600;
 }
 
-#detail_kamar #content-kamar .right-content-kamar .judul-kost p{
-    margin-top: -30px;
-    margin-bottom: 50px;
+#detail_kamar #content-kamar .right-content-kamar .judul-kost p {
+  margin-top: -30px;
+  margin-bottom: 50px;
 }
 
-#detail_kamar #content-kamar .right-content-kamar .fasilitas-kamar p.judul-fasilitas{
-   font-size: 30px;
-   font-weight: 500;
+#detail_kamar
+  #content-kamar
+  .right-content-kamar
+  .fasilitas-kamar
+  p.judul-fasilitas {
+  font-size: 30px;
+  font-weight: 500;
 }
 
-#detail_kamar #content-kamar .right-content-kamar .fasilitas-kamar .kumpulan-fasilitas{
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    flex-wrap: wrap;
-    max-height: 300px;
+#detail_kamar
+  #content-kamar
+  .right-content-kamar
+  .fasilitas-kamar
+  .kumpulan-fasilitas {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  flex-wrap: wrap;
+  max-height: 300px;
 }
 /* spefisikasi kamar */
-#detail_kamar #content-kamar .right-content-kamar .spesifikasi-kamar p.judul-fasilitas{
-   font-size: 30px;
-   font-weight: 500;
+#detail_kamar
+  #content-kamar
+  .right-content-kamar
+  .spesifikasi-kamar
+  p.judul-fasilitas {
+  font-size: 30px;
+  font-weight: 500;
 }
 
-#detail_kamar #content-kamar .right-content-kamar .peraturan-kost .kumpulan-fasilitas{
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    flex-wrap: wrap;
-    max-height: 300px;
+#detail_kamar
+  #content-kamar
+  .right-content-kamar
+  .peraturan-kost
+  .kumpulan-fasilitas {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  flex-wrap: wrap;
+  max-height: 300px;
 }
 /* peraturan kost */
-#detail_kamar #content-kamar .right-content-kamar .peraturan-kost p.judul-fasilitas{
-   font-size: 30px;
-   font-weight: 500;
+#detail_kamar
+  #content-kamar
+  .right-content-kamar
+  .peraturan-kost
+  p.judul-fasilitas {
+  font-size: 30px;
+  font-weight: 500;
 }
 
-#detail_kamar #content-kamar .right-content-kamar .peraturan-kost .kumpulan-fasilitas{
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    flex-wrap: wrap;
-    max-height: 400px;
+#detail_kamar
+  #content-kamar
+  .right-content-kamar
+  .peraturan-kost
+  .kumpulan-fasilitas {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  flex-wrap: wrap;
+  max-height: 400px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar{
-    /* border: 1px solid blue; */
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
+#detail_kamar #content-kamar .left-content-kamar {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost{
-    width: 100%;
-    background-color: white;
-    height: 300px;
-    padding: 10px 30px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+#detail_kamar #content-kamar .left-content-kamar .harga-kost {
+  width: 100%;
+  background-color: white;
+  height: 300px;
+  padding: 10px 30px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost p span{
-   color: var(--lightgrey);
-   text-decoration-line:line-through;
+#detail_kamar #content-kamar .left-content-kamar .harga-kost p span {
+  color: var(--lightgrey);
+  text-decoration-line: line-through;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost h2{
-   font-weight: 500;
+#detail_kamar #content-kamar .left-content-kamar .harga-kost h2 {
+  font-weight: 500;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost h2 span{
-   font-size: 14px;
-   color: var(--brown);
-   font-weight: 400;
+#detail_kamar #content-kamar .left-content-kamar .harga-kost h2 span {
+  font-size: 14px;
+  color: var(--brown);
+  font-weight: 400;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost a{
-   width: 85%;
-   padding: 10px 15px;
-   background-color: var(--blue);
-   color: white;
-   border: none;
-   margin-top:30px;
-   border-radius: 10px;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: center;
-   text-decoration: none;
+#detail_kamar #content-kamar .left-content-kamar .harga-kost a {
+  width: 85%;
+  padding: 10px 15px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  margin-top: 30px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-decoration: none;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost .input-rentang-kost {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+#detail_kamar
+  #content-kamar
+  .left-content-kamar
+  .harga-kost
+  .input-rentang-kost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost .input-rentang-kost input{
-    width: 150px;
-    padding: 10px 20px;
+#detail_kamar
+  #content-kamar
+  .left-content-kamar
+  .harga-kost
+  .input-rentang-kost
+  input {
+  width: 150px;
+  padding: 10px 20px;
 }
 
-
-#detail_kamar #content-kamar .pengelola-kost{
-    border-top: 1px dashed black;
-    border-bottom: 1px dashed black;
-    display: flex;
-    gap: 30px;
+#detail_kamar #content-kamar .pengelola-kost {
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  display: flex;
+  gap: 30px;
 }
 
-#detail_kamar #content-kamar .pengelola-kost .card-pengelola{
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background-color: white;
-    margin: 10px 0;
-    padding: 0 10px;
-    border-radius: 20px;
+#detail_kamar #content-kamar .pengelola-kost .card-pengelola {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 20px;
 }
 
-#detail_kamar #content-kamar .pengelola-kost .card-pengelola .nama-pengelola{
-    /* kosong */
+#detail_kamar #content-kamar .pengelola-kost .card-pengelola .nama-pengelola {
+  /* kosong */
 }
 
-#detail_kamar #content-kamar .pengelola-kost .card-pengelola .nama-pengelola p.nama{
-    font-size: 20px;
-    font-weight: 600;
+#detail_kamar
+  #content-kamar
+  .pengelola-kost
+  .card-pengelola
+  .nama-pengelola
+  p.nama {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-#detail_kamar #content-kamar .pengelola-kost .card-pengelola img{
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
+#detail_kamar #content-kamar .pengelola-kost .card-pengelola img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .review-kost{
-    background-color: white;
-    margin-top: 30px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-    padding: 20px 30px;
+#detail_kamar
+  #content-kamar
+  .left-content-kamar
+  .input-rentang-kost
+  #pilihan-harga {
+  padding: 11px 15px;
+  width: 250px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .review-kost i{
-    color: #FCE300;
+#detail_kamar #content-kamar .left-content-kamar .review-kost {
+  background-color: white;
+  margin-top: 30px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  padding: 20px 30px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .review-kost p.grand-review{
-    font-size: 24px;
-    font-weight: 500;
+#detail_kamar #content-kamar .left-content-kamar .review-kost i {
+  color: #fce300;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .review-kost .sub-review{
-   display: flex;
-   justify-content: space-between;
+#detail_kamar #content-kamar .left-content-kamar .review-kost p.grand-review {
+  font-size: 24px;
+  font-weight: 500;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .review-kost .sub-review .star-sub-review{
-   display: flex;
-   align-items: center;
-   gap: 2px;
+#detail_kamar #content-kamar .left-content-kamar .review-kost .sub-review {
+  display: flex;
+  justify-content: space-between;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .review-kost .sub-review .star-sub-review p{
-   margin-left: 10px;
+#detail_kamar
+  #content-kamar
+  .left-content-kamar
+  .review-kost
+  .sub-review
+  .star-sub-review {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .maps-kost{
-   margin-top: 30px;
+#detail_kamar
+  #content-kamar
+  .left-content-kamar
+  .review-kost
+  .sub-review
+  .star-sub-review
+  p {
+  margin-left: 10px;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .maps-kost iframe{
-   width: 100%;
-   height: 300px;
+#detail_kamar #content-kamar .left-content-kamar .maps-kost {
+  margin-top: 30px;
 }
 
-
+#detail_kamar #content-kamar .left-content-kamar .maps-kost iframe {
+  width: 100%;
+  height: 300px;
+}
 
 /* footer */
-footer{
-    background-color: #D3DCE7;
-    padding: 60px 60px;
-    color: #1A202C;
+footer {
+  background-color: #d3dce7;
+  padding: 60px 60px;
+  color: #1a202c;
 }
 
-footer .top-footer{
-    display: flex;
-    justify-content: space-between;
+footer .top-footer {
+  display: flex;
+  justify-content: space-between;
 }
-footer .top-footer .left-footer{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-footer .top-footer .left-footer img{
-    width: 250px;
-    margin-left: -38px;
+footer .top-footer .left-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-footer .top-footer .left-footer p{
-    width: 400px;
+footer .top-footer .left-footer img {
+  width: 250px;
+  margin-left: -38px;
 }
 
-footer .top-footer .left-footer .kumpulan-medsos i{
-    margin: 0 8px;
-    font-size: 35px;
+footer .top-footer .left-footer p {
+  width: 400px;
 }
 
-footer .top-footer .right-footer{
-    display: flex;
-    gap: 150px;
+footer .top-footer .left-footer .kumpulan-medsos i {
+  margin: 0 8px;
+  font-size: 35px;
 }
 
-footer .bottom-footer{
-    display: flex;
-    gap: 150px;
-    margin-top: 60px;
-    justify-content: space-between;
+footer .top-footer .right-footer {
+  display: flex;
+  gap: 150px;
 }
 
-footer .bottom-footer::after{
-    position: absolute;
-    content: "";
-    height: 1px;
-    background-color: var(--lightgrey);
-    width: 92%;
-    margin-top:-10px;
+footer .bottom-footer {
+  display: flex;
+  gap: 150px;
+  margin-top: 60px;
+  justify-content: space-between;
 }
 
-footer .bottom-footer .right-bottom-footer{
-    display: flex;
-    gap: 40px;
+footer .bottom-footer::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: var(--lightgrey);
+  width: 92%;
+  margin-top: -10px;
 }
 
+footer .bottom-footer .right-bottom-footer {
+  display: flex;
+  gap: 40px;
+}

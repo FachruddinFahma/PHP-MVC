@@ -9,6 +9,7 @@
             <thead>
                 <tr>
                     <th>ID Kamar</th>
+                    <th>Nama Kamar</th>
                     <th>Fasilitas</th>
                     <th>Kategori</th>
                     <th>Ukuran</th>
@@ -24,13 +25,15 @@
                 ?>  
                     <tr>
                         <td><?php echo $item['id_kamar'] ?></td>
+                        <td><?php echo $item['nama_kamar'] ?></td>
                         <td><?php echo $item['fasilitas'] ?></td>
                         <td><?php echo $item['kategori'] ?></td>
                         <td><?php echo $item['ukuran'] ?></td>
                         <td><?php echo $item['harga_bulanan'] ?></td>
                         <td>Kosong</td>
                         <td>
-                            <a href="" id="btn-edit">Edit</a>
+                            <!-- <a href="http://localhost/PHP-MVC/public/kamar/editKamar/<?php echo $item['id_kamar'] ?>" id="btn-edit" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-edit">Edit</a> -->
+                            <a href="#" id="btn-edit" onclick="toggleEditForm(<?php echo $item['id_kamar']; ?>)">Edit</a>
                             <a id="btn-hapus" href="http://localhost/PHP-MVC/public/kamar/hapusKamar/<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
                         </td>
                     </tr>
@@ -213,7 +216,90 @@
                     <button type="button" class="btn-next" id="next2" >Tambah</button>
                 </div>
             </div>
-            
+
+            <!------------------------------------- CONTENT MODAL EDIT---------------------------------->
+            <div id="content_edit">
+                <div class="modal-header">
+                    <h5>Edit Data Kamar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input mb-3">
+                        <form id="form-input" action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">ID Kamar Kamar</label>
+                                    <input type="text" name="id_kamar_edit" id="id_kamar_edit" placeholder="masukan ID kamar" value="<?php echo $data['id_baru'] ?>" readonly>
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Nama Kamar</label>
+                                    <input type="text" name="nama_kamar_edit" id="nama_kamar_edit" placeholder="masukan nama kamar">
+                                </div>
+                            </div>
+                            <div class="input-group" >
+                                <label for="">Kategori</label>
+                                <div id="group-kategori">
+                                    <div class="kategori-group">
+                                        <p>harian</p>
+                                        <input type="checkbox" name="check_harian" id="check_harian"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>bulanan</p>
+                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>3 bulan</p>
+                                        <input type="checkbox" name="check_3bulan" id="check_3bulan"> 
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>tahunan</p>
+                                        <input type="checkbox" name="check_tahunan" id="check_tahunan"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">Ukuran</label>
+                                    <div class="input-group-double">
+                                        <input type="text" name="panjang_kamar_edit" id="panjang_kamar_edit" placeholder="panjang">
+                                        <p>x</p>
+                                        <input type="text" name="lebar_kamar_edit" id="lebar_kamar_edit" placeholder="lebar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                    <label for="">Fasilitas</label>
+                                    <textarea name="fasilitas_kamar_edit" id="fasilitas_kamar_edit" cols="30" rows="10" placeholder="masukan fasilitas"></textarea>
+                            </div>
+                            <div class="container-group">
+                                    <div class="input-group" id="grup-input-bulanan">
+                                        <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
+                                        <input type="text" name="harga_bulanan_edit" id="harga_bulanan_edit" placeholder="masukan harga bulanan">
+                                    </div>
+                                    <div class="input-group" id="grup-input-harian">
+                                        <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
+                                        <input type="text" name="harga_harian_edit" id="harga_harian_edit" placeholder="masukan harga harian">
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="container-group">
+                                    <div class="input-group" id="grup-input-3bulanan">
+                                        <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
+                                        <input type="text" name="harga_3bulanan_Edit" id="harga_3bulanan_edit" placeholder="masukan harga 3 bulan">
+                                    </div>
+                                    <div class="input-group" id="grup-input-tahunan">
+                                        <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
+                                        <input type="text" name="harga_tahunan_edit" id="harga_tahunan_edit" placeholder="masukan harga tahunan">
+                                    </div>
+                            </div>
+                        </form>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-back" id="back1">Kembali</button>
+                    <button type="button" class="btn-next" id="next1" onclick="saveDataSession()">Update</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -273,6 +359,7 @@
 
 <script>
     $(document).ready(function () {
+        //tombol next backk
         $("#content2").hide();
 
         $("#next1").click(function () {
@@ -284,9 +371,8 @@
             $("#content1").show();
             $("#content2").hide();
         });
-    });
 
-    $(document).ready(function () {
+        //validasi check inputt
         $('#grup-input-harian').hide();
         $('#grup-input-3bulanan').hide();
         $('#grup-input-tahunan').hide();
@@ -302,12 +388,29 @@
         $('#check_tahunan').change(function () {
             $('#grup-input-tahunan').toggle(this.checked);
         });
-    });
 
-    $(document).ready(function () {
+        //submit ketika klik tambah
         $("#next2").click(function () {
             $("#form-input").submit();
         });
+
+        //ketika edit
+        $('#btn-edit').click(function() {
+            $("#content1").hide();
+            $("#content2").hide();
+            $("#content_edit").show();
+        });
+    });
+
+    $.ajax({
+        url: "http://localhost/PHP-MVC/public/kamar/editKamar/" + id_kamar,
+        method: "GET",
+        success: function (data) {
+            $("#nama_kamar_edit").val(data.nama_kamar);
+        },
+        error: function (error) {
+            console.error("Error fetching data:", error);
+        }
     });
 
     function saveDataSession() {
@@ -360,3 +463,26 @@
         $('#check_tahunan_fix').prop('checked', sessionStorage.getItem('checkTahunan') === 'true');
     }
 </script>
+<script>
+    $(document).ready(function () {
+        $("#content_edit").hide();
+        window.toggleEditForm = function (id_kamar) {
+            if ($("#content_edit").is(":visible")) {
+                $("#content_edit").hide();
+            } else {
+                $("#content_edit").show();
+            }
+        };
+    });
+    $.ajax({
+        url: "http://localhost/PHP-MVC/public/kamar/getKamarById/" + id_kamar,
+        method: "GET",
+        success: function (data) {
+            $("#nama_kamar_edit").val(data.nama_kamar);
+        },
+        error: function (error) {
+            console.error("Error fetching data:", error);
+        }
+    });
+</script>
+

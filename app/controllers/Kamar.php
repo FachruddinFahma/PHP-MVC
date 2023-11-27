@@ -18,10 +18,8 @@ class Kamar extends Controller
 
     public function addKamar()
     {
-        // Ambil id_kost dari data yang sudah login
         $id_kost = $this->model('dataKost_model')->getKostByUserId($_SESSION['id_user'])['id_kost'];
 
-        // Set data kamar yang akan ditambahkan
         $dataKamar = [
             'id_kamar' => $_POST['id_kamar'],
             'nama_kamar' => $_POST['nama_kamar'],
@@ -44,13 +42,9 @@ class Kamar extends Controller
     public function hapusKamar($id_kamar)
     {
         if (isset($id_kamar)) {
-            echo "ID to delete: $id_kamar";
-    
             $deleted = $this->model('Kamar_model')->deleteKamar($id_kamar);
     
-            if ($deleted) {
-                echo "Record deleted successfully.";
-            } else {
+            if (!$deleted) {
                 echo "Failed to delete record.";
             }
         } else {
@@ -59,12 +53,11 @@ class Kamar extends Controller
         $this->index();
     }
 
-    public function getKamarById($id_kamar)
+    public function editKamar($id_kamar)
     {
         $kamar = $this->model('Kamar_model')->getKamarById($id_kamar);
-        $data['kamar'] = $kamar;
-        $this->view('pemilik_kost/kamar', $data);
+        $data['edit_kamar'] = $kamar;
+        $this->index();
     }
 
-    
 }

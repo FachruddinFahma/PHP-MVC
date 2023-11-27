@@ -77,14 +77,18 @@ ini_set('display_errors', 1);
                     <p>Diskon 100rb <span>Rp 1.350.000</span></p>
                     <h2 id="harga-display">Rp <?php echo $data['kamar']['harga_bulanan']; ?> <span>(Per Bulan)</span></h2>
                     <div class="input-rentang-kost">
-                        <select id="pilihan-harga">
-                            <option value="harian">Harian</option>
-                            <option value="bulanan">1 Bulan</option>
-                            <option value="3bulan">3 Bulan</option>
-                            <option value="tahunan">1 Tahun</option>
-                        </select>
-                        <p> - </p>
-                        <input type="date" name="tanggal_masuk" id="input-harga-akhir">
+                    <select id="pilihan-harga">
+                        <?php
+                            $kategori_harian = $data['kamar']['harga_harian'];
+                            $kategori_bulanan = $data['kamar']['harga_bulanan'];
+                            $kategori_3bulanan = $data['kamar']['harga_3bulanan'];
+                            $kategori_tahunan = $data['kamar']['harga_tahunan'];
+                        ?>
+                        <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian</option>
+                        <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>Bulanan</option>
+                        <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3 Bulanan</option>
+                        <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan</option>
+                    </select>
                     </div>
                     <a href="http://localhost/PHP-MVC/public/landing_page/pemesanan">Pesan Sekarang</a>
                 </div>

@@ -49,6 +49,14 @@
                         <label for="id_kost">Fasilitas</label>
                         <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
                     </div>
+                    <div class="input-pemesanan">
+                        <label for="tanggal_masuk">Tanggal Masuk</label>
+                        <input type="date" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
+                    <div class="input-pemesanan">
+                        <label for="tanggal_keluar">Tanggal Keluar</label>
+                        <input type="date" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost">
+                    </div>
                 </div>
             </div>
             <div id="informasi-pemesanan-kost">
@@ -102,23 +110,43 @@
                 <p>Pembayaran Via :</p>
             </div>
             <div class="via-pembayaran">
-
-                <div class="opsi-pembayaran">
-                    <input type="checkbox" name="" id="">
-                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/BCA.png" alt="">
+                <div class="row-pembayaran">
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="BCA">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/BCA.png" alt="">
+                    </div>
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="BRI">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/BRI.png" alt="">
+                    </div>
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="BNI">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/bni.png" alt="">
+                    </div>
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="Mandiri">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/MANDIRI.png" alt="">
+                    </div>
                 </div>
-                <div class="opsi-pembayaran">
-                    <input type="checkbox" name="" id="">
-                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/BRI.png" alt="">
+                <div class="row-pembayaran">
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="Dana">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/DANA.png" alt="">
+                    </div>
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="Gopay">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/gopay.png" alt="">
+                    </div>
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="Shoope Pay">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/shopeepay.png" alt="">
+                    </div>
+                    <div class="opsi-pembayaran">
+                        <input type="radio" name="opsi-pembayaran" id="" value="OVO">
+                        <img src="http://localhost/PHP-MVC/public/image/pembayaran/ovo.png" alt="">
+                    </div>
                 </div>
-                <div class="opsi-pembayaran">
-                    <input type="checkbox" name="" id="">
-                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/DANA.png" alt="">
-                </div>
-                <div class="opsi-pembayaran">
-                    <input type="checkbox" name="" id="">
-                    <img src="http://localhost/PHP-MVC/public/image/pembayaran/MANDIRI.png" alt="">
-                </div>
+                
             </div>
             <a href="http://localhost/PHP-MVC/public/landing_page/pembayaran" id="btn-pesan-sekarang">Bayar Sekarang</a>
         </div>
