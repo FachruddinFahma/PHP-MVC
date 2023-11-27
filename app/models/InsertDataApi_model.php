@@ -5,13 +5,13 @@ class InsertDataApi_model{
     public function __construct()
     {
         $this->db = new Database;
-        date_default_timezone_set('Asia/Jakarta'); // Sesuaikan dengan zona waktumu
+        date_default_timezone_set('Asia/Jakarta');
     }
 
     public function addKomplain($id_komplain, $id_user, $jenis_komplain, $tipe_komplain, $deskripsi_komplain, $tggl_komplain){
-        // Jika $tggl_komplain kosong, atur nilainya sebagai waktu saat ini
+        
         if(empty($tggl_komplain)) {
-            $tggl_komplain = date('Y-m-d H:i:s'); // Mengambil waktu saat ini
+            $tggl_komplain = date('Y-m-d H:i:s'); 
         }
 
         $this->db->query('INSERT INTO tb_komplain (id_komplain, id_user, jenis_komplain, tipe_komplain, deskripsi_komplain, tggl_komplain) VALUES (:id_komplain, :id_user, :jenis_komplain, :tipe_komplain, :deskripsi_komplain, :tggl_komplain)');
