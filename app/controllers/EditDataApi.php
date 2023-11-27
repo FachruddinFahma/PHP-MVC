@@ -3,35 +3,37 @@
 class EditDataApi extends Controller
 {
     public function editUser($idUser)
-{
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {                        
-        $nama = $_POST['nama_lengkap'];
-        $noHp = $_POST['no_hp'];
-        $alamat = $_POST['alamat'];
-        $jk = $_POST['jenis_kelamin'];
-        $tglLahir = $_POST['tggl_lahir'];
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
+            $putData = file_get_contents('php://input');
+            $data = json_decode($putData, true);
 
-        $edit_user_model = $this->model('EditDataApi_model');
-        $success = $edit_user_model->updateUser($nama, $noHp, $alamat, $jk, $tglLahir, $idUser);
+            $nama = $data['nama_lengkap'];
+            $noHp = $data['no_hp'];
+            $alamat = $data['alamat'];
+            $jk = $data['jenis_kelamin'];
+            $tglLahir = $data['tggl_lahir'];
 
-        if ($success) {
-            $response = array(
-                'code' => 200,
-                'status' => 'Update User Sukses',
-            );
+            $edit_user_model = $this->model('EditDataApi_model');
+            $success = $edit_user_model->updateUser($nama, $noHp, $alamat, $jk, $tglLahir, $idUser);
+
+            if ($success) {
+                $response = array(
+                    'code' => 200,
+                    'status' => 'Update User Sukses',
+                );
+            } else {
+                $response = array(
+                    'code' => 400,
+                    'status' => 'Gagal mengubah data user',
+                );
+            }
         } else {
             $response = array(
-                'code' => 400,
-                'status' => 'Gagal mengubah data user',
+                'code' => 404,
+                'status' => 'Data tidak ditemukan',
             );
         }
-    } else {
-        $response = array(
-            'code' => 404,
-            'status' => 'Data tidak ditemukan',
-        );
+        echo json_encode($response);
     }
-    echo json_encode($response);
-}
-
 }
