@@ -5,7 +5,7 @@ class EditDataApi extends Controller
     public function editUser($idUser)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {                        
-        $nama = $_POST['nama'];
+        $nama = $_POST['nama_lengkap'];
         $noHp = $_POST['no_hp'];
         $alamat = $_POST['alamat'];
         $jk = $_POST['jenis_kelamin'];
