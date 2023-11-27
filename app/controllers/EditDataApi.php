@@ -1,40 +1,37 @@
 
 <?php
-class EditUserApi extends Controller
+class EditDataApi extends Controller
 {
-    public function editUser()
-    {
-        
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {                        
-            $idUser = $_POST['id_user'];
-            $nama = $_POST['nama'];
-            $email = $_POST['email'];
-            $noHp = $_POST['no_hp'];
-            $password = $_POST['password'];
-            $alamat = $_POST['alamat'];
+    public function editUser($idUser)
+{
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {                        
+        $nama = $_POST['nama'];
+        $noHp = $_POST['no_hp'];
+        $alamat = $_POST['alamat'];
+        $jk = $_POST['jenis_kelamin'];
+        $tglLahir = $_POST['tggl_lahir'];
 
-            
+        $edit_user_model = $this->model('EditDataApi_model');
+        $success = $edit_user_model->updateUser($nama, $noHp, $alamat, $jk, $tglLahir, $idUser);
 
-            $edit_user_model = $this->model('EditUser_model_api');
-            $success = $edit_user_model->updateUser($idUser, $nama, $email, $noHp, $password, $alamat);
-
-            if ($success) {
-                $response = array(
-                    'code' => 200,
-                    'status' => 'Update User Sukses',
-                );
-            } else {
-                $response = array(
-                    'code' => 400,
-                    'status' => 'Gagal mengubah data user',
-                );
-            }
+        if ($success) {
+            $response = array(
+                'code' => 200,
+                'status' => 'Update User Sukses',
+            );
         } else {
             $response = array(
-                'code' => 404,
-                'status' => 'Data tidak ditemukan',
+                'code' => 400,
+                'status' => 'Gagal mengubah data user',
             );
         }
-        echo json_encode($response);
+    } else {
+        $response = array(
+            'code' => 404,
+            'status' => 'Data tidak ditemukan',
+        );
     }
+    echo json_encode($response);
+}
+
 }
