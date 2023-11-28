@@ -45,6 +45,23 @@ class Kamar_model
         return $this->db->rowCount();
     }
 
+    public function updateKamarById($kamar)
+    {
+        $query = "UPDATE tb_kamar SET `nama_kamar` = :nama_kamar, `fasilitas` = :fasilitas, `ukuran` = :ukuran, `harga_harian` = :harga_harian, `harga_bulanan` = :harga_bulanan, `harga_3bulanan` = :harga_3bulanan, `harga_tahunan` = :harga_tahunan WHERE `id_kamar` = :id_kamar";
+        $this->db->query($query);
+        $this->db->bind(':nama_kamar', $kamar['nama_kamar']);
+        $this->db->bind(':fasilitas', $kamar['fasilitas']);
+        $this->db->bind(':ukuran', $kamar['ukuran']);
+        $this->db->bind(':harga_harian', $kamar['harga_harian']);
+        $this->db->bind(':harga_bulanan', $kamar['harga_bulanan']);
+        $this->db->bind(':harga_3bulanan', $kamar['harga_3bulanan']);
+        $this->db->bind(':harga_tahunan', $kamar['harga_tahunan']);
+        $this->db->bind(':id_kamar', $kamar['id_kamar']);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
+
     public function deleteKamar($id_kamar)
     {
         $query = "DELETE FROM tb_kamar WHERE id_kamar = :id_kamar";
