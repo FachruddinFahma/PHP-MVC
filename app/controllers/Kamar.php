@@ -24,7 +24,6 @@ class Kamar extends Controller
             'id_kamar' => $_POST['id_kamar'],
             'nama_kamar' => $_POST['nama_kamar'],
             'fasilitas' => $_POST['fasilitas_kamar'],
-            'kategori' => "bulanan",
             'ukuran' => $_POST['panjang_kamar'] . "x" . $_POST['lebar_kamar'],
             'harga_harian' => $_POST['harga_harian'],
             'harga_bulanan' => $_POST['harga_bulanan'],
@@ -56,8 +55,13 @@ class Kamar extends Controller
     public function editKamar($id_kamar)
     {
         $kamar = $this->model('Kamar_model')->getKamarById($id_kamar);
-        $data['edit_kamar'] = $kamar;
-        $this->index();
+        echo json_encode($kamar);
     }
+
+
+    // public function testKamar()
+    // {
+    //    alert("woi");
+    // }
 
 }

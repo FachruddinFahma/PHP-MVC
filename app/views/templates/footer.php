@@ -70,7 +70,7 @@
       {
         "orderable": false,
         "targets": 5
-      },
+      }
     ]
   });
 </script>

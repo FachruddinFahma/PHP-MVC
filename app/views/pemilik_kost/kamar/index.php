@@ -11,7 +11,6 @@
                     <th>ID Kamar</th>
                     <th>Nama Kamar</th>
                     <th>Fasilitas</th>
-                    <th>Kategori</th>
                     <th>Ukuran</th>
                     <th>Harga Harian</th>
                     <th>Status</th>
@@ -27,12 +26,11 @@
                         <td><?php echo $item['id_kamar'] ?></td>
                         <td><?php echo $item['nama_kamar'] ?></td>
                         <td><?php echo $item['fasilitas'] ?></td>
-                        <td><?php echo $item['kategori'] ?></td>
                         <td><?php echo $item['ukuran'] ?></td>
                         <td><?php echo $item['harga_bulanan'] ?></td>
                         <td>Kosong</td>
                         <td>
-                            <a href="#" id="btn-edit">Edit</a>
+                            <a href="http://localhost/PHP-MVC/public/kamar/editKamar/<?php echo $item['id_kamar'] ?>" id="btn-edit" data-id="<?php echo $item['id_kamar'] ?>" data-bs-toggle="modal" data-bs-target="#modal-identitas">Edit</a>
                             <a id="btn-hapus" href="http://localhost/PHP-MVC/public/kamar/hapusKamar/<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
                         </td>
                     </tr>
@@ -228,7 +226,7 @@
                             <div class="container-group">
                                 <div class="input-group">
                                     <label for="">ID Kamar Kamar</label>
-                                    <input type="text" name="id_kamar_edit" id="id_kamar_edit" placeholder="masukan ID kamar" value="<?php echo $data['id_baru'] ?>" readonly>
+                                    <input type="text" name="id_kamar_edit" id="id_kamar_edit" placeholder="masukan ID kamar" readonly>
                                 </div>
                                 <div class="input-group">
                                     <label for="">Nama Kamar</label>
@@ -393,12 +391,32 @@
             $("#form-input").submit();
         });
 
-        //ketika edit
         $('#btn-edit').click(function() {
             $("#content1").hide();
             $("#content2").hide();
             $("#content_edit").show();
-        });
+
+            const id = $(this).data('id');
+
+            $.ajax({
+                url: 'http://localhost/PHP-MVC/public/kamar/editKamar/' + id,
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    $('#id_kamar_edit').val(data.id_kamar);
+                    $('#nama_kamar_edit').val(data.nama_kamar);
+                    $('#fasilitas_kamar_edit').val(data.fasilitas);
+                    $('#harga_harian_edit').val(data.harga_harian);
+                    $('#harga_bulanan_edit').val(data.harga_bulanan);
+                    $('#harga_3bulanan_edit').val(data.harga_3bulanan);
+                    $('#harga_tahunan_edit').val(data.harga_tahunan);
+                },
+                error: function(error) {
+                    console.error('Error:', error);
+                }
+            });
+
+        }); 
     });
 
     function saveDataSession() {
