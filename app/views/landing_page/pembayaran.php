@@ -38,7 +38,6 @@
                 <input type="file" id="input-bukti">
                 <button id="verifikasi-pemesanan">Verifikasi Pemesanan</button>
             </div>
-
         </div>
     </section>
 </body>

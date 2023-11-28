@@ -8,9 +8,16 @@
             $this->db = new Database;
         }
 
+        function generateRandomID() {
+            // Tambahkan 7 angka random
+            $randomNumbers = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+            $pemesananID = "IDP" . $randomNumbers;
+            return $pemesananID;
+        }        
+
         public function getAll($id_kamar)
         {
-            $this->db->query("SELECT tb_kost.id_kost, tb_kamar.id_kamar, tb_kost.nama_kost, tb_kost.alamat, tb_kamar.nama_kamar, tb_kamar.fasilitas
+            $this->db->query("SELECT tb_kost.id_kost, tb_kamar.id_kamar, tb_kost.nama_kost, tb_kost.alamat, tb_kamar.nama_kamar, tb_kamar.fasilitas, tb_kamar.harga_bulanan, tb_kamar.harga_harian, tb_kamar.harga_3bulanan, tb_kamar.harga_tahunan
                             FROM tb_kamar 
                             JOIN tb_kost ON tb_kamar.id_kost = tb_kost.id_kost
                             WHERE tb_kamar.id_kamar = :id_kamar");
@@ -35,6 +42,26 @@
             $this->db->bind(':id_kamar', $id_kamar);
 
             return $this->db->single();
+        }
+
+        public function addPemesanan($pemesanan)
+        {
+            $id_user = $_SESSION['id_user'];
+            $generateRandomID = $this->generateRandomID();
+
+            $query = "INSERT INTO tb_pemesanan (id_pemesanan, id_kamar, id_user, tggl_pemesaan, tggl_masuk, tggl_keluar, kategori, harga, metode_pembayaran, status) 
+                    VALUES (:id_pemesanan, :id_kamar, :id_user, CURRENT_TIMESTAMP, :tggl_masuk, :tggl_keluar, :kategori, :harga, :metode_pembayaran, 'PROSES')";
+
+            $this->db->query($query);
+            $this->db->bind(':id_pemesanan', $generateRandomID);
+            $this->db->bind(':id_kamar', $pemesanan['id_kamar']);
+            $this->db->bind(':id_user', $id_user);
+            $this->db->bind(':tggl_masuk', $pemesanan['tggl_masuk']);
+            $this->db->bind(':tggl_keluar', $pemesanan['tggl_keluar']);
+            $this->db->bind(':kategori', $pemesanan['kategori']);
+            $this->db->bind(':harga', $pemesanan['harga']);
+            $this->db->bind(':metode_pembayaran', $pemesanan['metode_pembayaran']);
+            $this->db->execute();
         }
     }
 ?>
