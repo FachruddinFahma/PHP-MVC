@@ -1,150 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-    --navy: #1B3359;
-    --middleblue: #134BA4;
-    --lightblue: #F3F7FD; 
-    --darkblue: #061072;
-    --lightblueclick: #c9d8eb; 
-    --green:#1F9254;
-    --blue: #295EF4;
-    --lightgrey: #AEAEAE;
-    --brown: #404040;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
+  --blue: #295ef4;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
 }
 
 /* circle pemanis untuk effect effecttttt */
-.circle-pemanis{
-    width: 1000px;
-    height: 1000px;
-    background-color: #EAEFF6;
-    position: absolute;
-    border-radius: 1000px;
-    z-index: -99;
-    right: -300;
-    top: 800;
+.circle-pemanis {
+  width: 1000px;
+  height: 1000px;
+  background-color: #eaeff6;
+  position: absolute;
+  border-radius: 1000px;
+  z-index: -99;
+  right: -300;
+  top: 800;
 }
 
-.circle-pemanis2{
-    width: 1100px;
-    height: 1100px;
-    background-color: #EAEFF6;
-    position: absolute;
-    border-radius: 4000px;
-    z-index: -99;
-    left: -400;
-    top: 2900;
+.circle-pemanis2 {
+  width: 1100px;
+  height: 1100px;
+  background-color: #eaeff6;
+  position: absolute;
+  border-radius: 4000px;
+  z-index: -99;
+  left: -400;
+  top: 2900;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #FAFBFF;overflow-x: hidden;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafbff;
+  overflow-x: hidden;
 }
 
 /* navbarrr  */
-nav{
-    padding: 0 60px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+nav {
+  padding: 0 60px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-nav .link-navbar ul{
-    display: flex;
-    gap: 40px;
-    align-items: center;
+nav .link-navbar ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-nav .link-navbar ul a{
-    text-decoration: none;
+nav .link-navbar ul a {
+  text-decoration: none;
 }
 
-nav .link-navbar ul a.link-login{
-    padding: 10px 20px;
-    background-color: var(--middleblue);
-    color: white;
-    border-radius: 10px;
+nav .link-navbar ul a.link-login {
+  padding: 10px 20px;
+  background-color: var(--middleblue);
+  color: white;
+  border-radius: 10px;
 }
 
-nav .title-navbar{
-    display: flex;
-    align-items: center;
+nav .title-navbar {
+  display: flex;
+  align-items: center;
 }
 
-nav .title-navbar img{
-    width: 200px;
+nav .title-navbar img {
+  width: 200px;
 }
 
-body{
-
-    overflow-y: visible;
+body {
+  overflow-y: visible;
 }
 /* konten pembayaran */
-#pembayaran{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#pembayaran {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#pembayaran #form-pembayaran{
-   background-color: white;
-   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-   width: 500px;
-   padding: 5px 20px;
-   box-sizing: border-box;
-   margin-top: 60px;
+#pembayaran #form-pembayaran {
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  width: 500px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  margin-top: 60px;
 }
-#pembayaran #form-pembayaran{
-   background-color: white;
-   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-   width: 500px;
-}
-
-#pembayaran #form-pembayaran #top-pembayaran{
-   display: flex;
-   justify-content: space-between;
+#pembayaran #form-pembayaran {
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  width: 500px;
 }
 
-#pembayaran #form-pembayaran #top-pembayaran .total-pembayaran{
-    text-align: start;
+#pembayaran #form-pembayaran #top-pembayaran {
+  display: flex;
+  justify-content: space-between;
 }
 
-#pembayaran #form-pembayaran #top-pembayaran .bayar-dalam{
-    text-align: end;
+#pembayaran #form-pembayaran #top-pembayaran .total-pembayaran {
+  text-align: start;
 }
 
-#pembayaran #form-pembayaran #top-pembayaran .bayar-dalam .detik{
-    color: #295EF4;
+#pembayaran #form-pembayaran #top-pembayaran .bayar-dalam {
+  text-align: end;
 }
 
-#pembayaran #form-pembayaran .main-pembayaran{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#pembayaran #form-pembayaran #top-pembayaran .bayar-dalam .detik {
+  color: #295ef4;
 }
 
-#pembayaran #form-pembayaran .main-pembayaran img#logo-qris{
-    margin-bottom: 20px;
+#pembayaran #form-pembayaran .main-pembayaran {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#pembayaran #form-pembayaran .main-pembayaran input{
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: flex;
-    background-color: #E9EAEF;
+#pembayaran #form-pembayaran .main-pembayaran img#logo-qris {
+  margin-bottom: 20px;
 }
 
-#pembayaran #form-pembayaran .main-pembayaran button{
-    padding: 10px 30px;
-    border: none;
-    margin: 20px 0 40px;
-    display: flex;
-    background-color: var(--blue);
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
+#pembayaran #form-pembayaran .main-pembayaran input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  background-color: #e9eaef;
+}
+
+#pembayaran #form-pembayaran .main-pembayaran button {
+  padding: 10px 30px;
+  border: none;
+  margin: 20px 0 40px;
+  display: flex;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
 }

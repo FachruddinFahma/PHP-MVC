@@ -10,7 +10,7 @@
 
         public function getKamarbyIdKamar($id_kamar)
         {
-            $this->db->query("SELECT tb_kost.alamat, tb_kost.id_user, tb_kamar.id_kamar, tb_kamar.fasilitas, tb_kamar.ukuran, tb_kost.fasilitas_kost, tb_kost.peraturan_kost, tb_kamar.harga_harian, tb_kamar.harga_bulanan, 
+            $this->db->query("SELECT tb_kost.alamat, tb_kost.id_user, tb_kamar.id_kamar, tb_kamar.nama_kamar ,tb_kamar.fasilitas, tb_kamar.ukuran, tb_kost.fasilitas_kost, tb_kost.peraturan_kost, tb_kamar.harga_harian, tb_kamar.harga_bulanan, 
             tb_kamar.harga_3bulanan, tb_kamar.harga_tahunan, tb_kost.latitude, tb_kost.longitude
                 FROM tb_kamar
                 JOIN tb_kost ON tb_kamar.id_kost  = tb_kost.id_kost

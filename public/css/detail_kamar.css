@@ -140,6 +140,10 @@ nav .title-navbar img {
   flex-direction: column;
 }
 
+#detail_kamar #content-kamar .right-content-kamar .judul-kost {
+  margin-top: -40px;
+}
+
 #detail_kamar #content-kamar .right-content-kamar .judul-kost h2 {
   font-size: 45px;
   font-weight: 600;
@@ -229,6 +233,20 @@ nav .title-navbar img {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+#detail_kamar #content-kamar .left-content-kamar .harga-kost #container-harga {
+  display: flex;
+  align-items: center;
+}
+
+#detail_kamar
+  #content-kamar
+  .left-content-kamar
+  .harga-kost
+  #container-harga
+  #span-harga-display {
+  color: var(--brown);
 }
 
 #detail_kamar #content-kamar .left-content-kamar .harga-kost p span {

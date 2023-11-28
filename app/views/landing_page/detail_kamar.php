@@ -43,9 +43,7 @@ ini_set('display_errors', 1);
         <div id="content-kamar">
             <div class="right-content-kamar">
                 <div class="judul-kost">
-                    <?php if (isset($_GET['id'])) : ?>
-                        <h2>Kost Marno Kamar <?php echo $_GET['id']; ?></h2>
-                    <?php endif; ?>
+                    <h2><?php echo $data['kamar']['nama_kamar']; ?></h2>
                     <p><i class="ri-map-pin-2-fill"></i> <?php echo $data['kamar']['alamat']; ?></p>
                 </div>
                 <div class="pengelola-kost">
@@ -80,7 +78,11 @@ ini_set('display_errors', 1);
             <div class="left-content-kamar">
                 <div class="harga-kost">
                     <p>Diskon 100rb <span>Rp 1.350.000</span></p>
-                    <h2 id="harga-display">Rp <?php echo $data['kamar']['harga_bulanan']; ?> <span>(Per Bulan)</span></h2>
+                    <div id="container-harga">
+                        <h2 id="harga-display"><?php echo "Rp " . $data['kamar']['harga_bulanan'] ?></h2>
+                        <span id="span-harga-display">/bulan</span>
+                    </div>
+                    
                     <div class="input-rentang-kost">
                         <select id="pilihan-harga">
                             <?php
@@ -199,17 +201,17 @@ ini_set('display_errors', 1);
             </div>
         </div>
     </footer>
-    <script>
+    <!-- <script>
         document.getElementById('pilihan-harga').addEventListener('change', function() {
             updateHarga();
         });
 
         function updateHarga() {
-            var pilihanHarga = document.getElementById('pilihan-harga').value;
-            var hargaBulanan = <?php echo $data['kamar']['harga_bulanan']; ?>;
-            var hargaHarian = <?php echo $data['kamar']['harga_harian']; ?>;
-            var harga3Bulan = <?php echo $data['kamar']['harga_3bulanan']; ?>; =
-            var hargaTahunan = <?php echo $data['kamar']['harga_tahunan']; ?>;
+            var pilihanHarga = $('.pilihan-harga').val();
+            var hargaBulanan = <?php $data['kamar']['harga_bulanan']; ?>;
+            var hargaHarian = <?php $data['kamar']['harga_harian']; ?>;
+            var harga3Bulan = <?php $data['kamar']['harga_3bulanan']; ?>; =
+            var hargaTahunan = <?php $data['kamar']['harga_tahunan']; ?>;
 
             var hargaDisplay = document.getElementById('harga-display');
 
@@ -228,7 +230,49 @@ ini_set('display_errors', 1);
                     break;
             }
         }
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#pilihan-harga').on('change', function () {
+                var hargaBulanan = <?php echo isset($data['kamar']['harga_bulanan']) ? $data['kamar']['harga_bulanan'] : "null"; ?>;
+                var hargaHarian = <?php echo isset($data['kamar']['harga_harian']) ? $data['kamar']['harga_harian'] : "null"; ?>;
+                var harga3Bulanan = <?php echo isset($data['kamar']['harga_3bulanan']) ? $data['kamar']['harga_3bulanan'] : "null"; ?>;
+                var hargaTahunan = <?php echo isset($data['kamar']['harga_tahunan']) ? $data['kamar']['harga_tahunan'] : "null"; ?>;
+                var spanHarian = "/ hari";
+                var spanBulanan = "/ bulan";
+                var span3Bulan = "/ 3 bulan";
+                var spanTahunan = "/ tahun";
+                var harga = null;
+
+                var pilihanHarga = $('#pilihan-harga').val();
+                var hargaDisplay = $('#harga-display');
+                var spanDisplay = $('#span-harga-display');
+
+                if (pilihanHarga === 'harian') {
+                    harga = hargaHarian;
+                    hargaDisplay.text('Rp ' + harga );
+                    spanDisplay.text(spanHarian);
+                } else if (pilihanHarga === 'bulanan') {
+                    harga = hargaBulanan;
+                    hargaDisplay.text('Rp ' + harga);
+                    spanDisplay.text(spanBulanan);
+                } else if (pilihanHarga === '3bulanan') {
+                    harga = harga3Bulanan;
+                    hargaDisplay.text('Rp ' + harga);
+                    spanDisplay.text(span3Bulan);
+                } else if (pilihanHarga === 'tahunan') {
+                    harga = hargaTahunan;
+                    hargaDisplay.text('Rp ' + harga);
+                    spanDisplay.text(spanTahunan);
+                } else if(pilihanHarga === null){
+                    hargaDisplay.text('null');
+                }
+            });
+        });
     </script>
+
+
 </body>
 
 </html>
