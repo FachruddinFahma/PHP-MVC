@@ -32,8 +32,7 @@
                         <td><?php echo $item['harga_bulanan'] ?></td>
                         <td>Kosong</td>
                         <td>
-                            <!-- <a href="http://localhost/PHP-MVC/public/kamar/editKamar/<?php echo $item['id_kamar'] ?>" id="btn-edit" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-edit">Edit</a> -->
-                            <a href="#" id="btn-edit" onclick="toggleEditForm(<?php echo $item['id_kamar']; ?>)">Edit</a>
+                            <a href="#" id="btn-edit">Edit</a>
                             <a id="btn-hapus" href="http://localhost/PHP-MVC/public/kamar/hapusKamar/<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
                         </td>
                     </tr>
@@ -402,17 +401,6 @@
         });
     });
 
-    $.ajax({
-        url: "http://localhost/PHP-MVC/public/kamar/editKamar/" + id_kamar,
-        method: "GET",
-        success: function (data) {
-            $("#nama_kamar_edit").val(data.nama_kamar);
-        },
-        error: function (error) {
-            console.error("Error fetching data:", error);
-        }
-    });
-
     function saveDataSession() {
         var idKamar = $('#id_kamar').val();
         var namaKamar = $('#nama_kamar').val();
@@ -463,7 +451,7 @@
         $('#check_tahunan_fix').prop('checked', sessionStorage.getItem('checkTahunan') === 'true');
     }
 </script>
-<script>
+<!-- <script>
     $(document).ready(function () {
         $("#content_edit").hide();
         window.toggleEditForm = function (id_kamar) {
@@ -484,5 +472,5 @@
             console.error("Error fetching data:", error);
         }
     });
-</script>
+</script> -->
 
