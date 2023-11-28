@@ -82,20 +82,20 @@ ini_set('display_errors', 1);
                     <p>Diskon 100rb <span>Rp 1.350.000</span></p>
                     <h2 id="harga-display">Rp <?php echo $data['kamar']['harga_bulanan']; ?> <span>(Per Bulan)</span></h2>
                     <div class="input-rentang-kost">
-                    <select id="pilihan-harga">
-                        <?php
+                        <select id="pilihan-harga">
+                            <?php
                             $kategori_harian = $data['kamar']['harga_harian'];
                             $kategori_bulanan = $data['kamar']['harga_bulanan'];
                             $kategori_3bulanan = $data['kamar']['harga_3bulanan'];
                             $kategori_tahunan = $data['kamar']['harga_tahunan'];
-                        ?>
-                        <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian</option>
-                        <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>Bulanan</option>
-                        <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3 Bulanan</option>
-                        <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan</option>
-                    </select>
+                            ?>
+                            <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian</option>
+                            <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>Bulanan</option>
+                            <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3 Bulanan</option>
+                            <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan</option>
+                        </select>
                     </div>
-                    <a href="http://localhost/PHP-MVC/public/pemesanan_kost/pemesanan">Pesan Sekarang</a>
+                    <a href="http://localhost/PHP-MVC/public/pemesanan_kost/pemesanan/<?= $data['kamar']['id_kamar']; ?>">Pesan Sekarang</a>
                 </div>
                 <!-- <div class="review-kost">
                     <p class="grand-review"><i class="ri-star-fill"></i> 4.5 (8 Review)</p>
@@ -208,7 +208,7 @@ ini_set('display_errors', 1);
             var pilihanHarga = document.getElementById('pilihan-harga').value;
             var hargaBulanan = <?php echo $data['kamar']['harga_bulanan']; ?>;
             var hargaHarian = <?php echo $data['kamar']['harga_harian']; ?>;
-            var harga3Bulan = <?php echo $data['kamar']['harga_3bulan']; ?>;
+            var harga3Bulan = <?php echo $data['kamar']['harga_3bulanan']; ?>; =
             var hargaTahunan = <?php echo $data['kamar']['harga_tahunan']; ?>;
 
             var hargaDisplay = document.getElementById('harga-display');
@@ -220,8 +220,8 @@ ini_set('display_errors', 1);
                 case 'bulanan':
                     hargaDisplay.innerText = 'Rp ' + hargaBulanan + ' (Per Bulan)';
                     break;
-                case '3bulan':
-                    hargaDisplay.innerText = 'Rp ' + harga3Bulan + ' (Untuk 3 Bulan)';
+                case '3bulanan':
+                    hargaDisplay.innerText = 'Rp ' + harga3Bulan + ' (Untuk 3 Bulan)'; 
                     break;
                 case 'tahunan':
                     hargaDisplay.innerText = 'Rp ' + hargaTahunan + ' (Per Tahun)';

@@ -34,23 +34,23 @@
                 <div class="kumpulan-input-pemesanan">
                     <div class="input-pemesanan">
                         <label for="id_kost">ID Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost" value="<?= $data['pemesanan']['id_kost']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Nama Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" value="<?= $data['pemesanan']['nama_kost']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Alamat Kost</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost" value="<?= $data['pemesanan']['alamat']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Nama Kamar</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" value="<?= $data['pemesanan']['nama_kamar']; ?>" readonly>
                     </div>
                     <div id="full-input" class="input-pemesanan">
                         <label for="id_kost">Fasilitas</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost" value="<?= $data['pemesanan']['fasilitas']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="tanggal_masuk">Tanggal Masuk</label>
@@ -67,19 +67,19 @@
                 <div class="kumpulan-input-pemesanan">
                     <div class="input-pemesanan">
                         <label for="id_kost">Nama Penghuni</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#" value="<?= $data['penghuni']['nama_lengkap']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Jenis Kelamin</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#" value="<?= $data['penghuni']['jenis_kelamin']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Alamat Penghuni</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#" value="<?= $data['penghuni']['alamat']; ?>" readonly>
                     </div>
                     <div class="input-pemesanan">
                         <label for="id_kost">Nomor HP Aktif</label>
-                        <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#" readonly>
+                        <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#" value="<?= $data['penghuni']['no_hp']; ?>" readonly>
                     </div>
                 </div>
             </div>
@@ -87,19 +87,19 @@
         <div class="right-pemesanan">
             <p>Informasi Booking</p>
             <div class="detail-pemesanan">
-                <p>Kost Mulya Putra Kencana</p>
+                <p><?= $data['pemesanan']['nama_kost']; ?></p>
                 <div class="sub-detail-pemesanan">
                     <p>Kategori Pembayaran : </p>
                     <p>Bulanan</p>
                 </div>
                 <div class="sub-detail-pemesanan">
                     <p>Harga Kost :</p>
-                    <p>Rp 600,000</p>
+                    <p>Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
                 </div>
-                <div class="sub-detail-pemesanan">
+                <!-- <div class="sub-detail-pemesanan">
                     <p>Biaya Admin : </p>
                     <p>Rp 2,000</p>
-                </div>
+                </div> -->
             </div>
             <div class="total-pembayaran">
                 <p>Total Pembayaran : </p>
@@ -145,7 +145,7 @@
                         <img src="http://localhost/PHP-MVC/public/image/pembayaran/ovo.png" alt="">
                     </div>
                 </div>
-                
+
             </div>
             <a href="http://localhost/PHP-MVC/public/landing_page/pembayaran" id="btn-pesan-sekarang">Bayar Sekarang</a>
         </div>
