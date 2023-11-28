@@ -7,7 +7,17 @@
             $data['pemesanan'] = $this->model('pemesananKost_model')->getAll($id_kamar);
             $data['detail_kamar'] = $this->model('pemesananKost_model')->getDetailKamarById($id_kamar);
             $data['penghuni'] = $this->model('pemesananKost_model')->getPenggunaById($id_user);
+            $data['idRnamdom'] = $this->model('pemesananKost_model')->generateRandomID();
             $this->view('landing_page/data_pemesanan', $data);
+        }
+
+        public function addPemesanan()
+        {
+            if ($this->model('pemesananKost_model')->addPemesanan($_POST) > 0) {
+                header('Location: http://localhost/PHP-MVC/public/landing_page/detail_kamar');
+            }else{
+                header('Location:http://localhost/PHP-MVC/public/landing_page/pembayaran');
+            }
         }
     }    
 ?>

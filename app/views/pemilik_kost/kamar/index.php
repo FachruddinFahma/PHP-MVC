@@ -4,7 +4,7 @@
 </header>
 <section id="kamar" class="content">    
     <div id="kamar_content" class="pt-4 px-4">
-        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas">Tambah</a>
+        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-tambah-kamar">Tambah</a>
         <table id="dataKamar" class="display" style="width:100%">
             <thead>
                 <tr>
@@ -222,7 +222,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="input mb-3">
-                        <form id="form-input" action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post">
+                        <form id="form-input-update" action="http://localhost/PHP-MVC/public/kamar/updateKamar" method="post">
                             <div class="container-group">
                                 <div class="input-group">
                                     <label for="">ID Kamar Kamar</label>
@@ -238,19 +238,19 @@
                                 <div id="group-kategori">
                                     <div class="kategori-group">
                                         <p>harian</p>
-                                        <input type="checkbox" name="check_harian" id="check_harian"> 
+                                        <input type="checkbox" name="check_harian" id="check_harian_edit"> 
                                     </div>
                                     <div class="kategori-group">
                                         <p>bulanan</p>
-                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan"> 
+                                        <input type="checkbox" checked disabled name="check_bulanan_edit" id="check_bulanan"> 
                                     </div>
                                     <div class="kategori-group">
                                         <p>3 bulan</p>
-                                        <input type="checkbox" name="check_3bulan" id="check_3bulan"> 
+                                        <input type="checkbox" name="check_3bulan" id="check_3bulan_edit"> 
                                     </div>
                                     <div class="kategori-group">
                                         <p>tahunan</p>
-                                        <input type="checkbox" name="check_tahunan" id="check_tahunan"> 
+                                        <input type="checkbox" name="check_tahunan" id="check_tahunan_edit"> 
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +282,7 @@
                             <div class="container-group">
                                     <div class="input-group" id="grup-input-3bulanan">
                                         <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
-                                        <input type="text" name="harga_3bulanan_Edit" id="harga_3bulanan_edit" placeholder="masukan harga 3 bulan">
+                                        <input type="text" name="harga_3bulanan_edit" id="harga_3bulanan_edit" placeholder="masukan harga 3 bulan">
                                     </div>
                                     <div class="input-group" id="grup-input-tahunan">
                                         <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
@@ -294,7 +294,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-back" id="back1">Kembali</button>
-                    <button type="button" class="btn-next" id="next1" onclick="saveDataSession()">Update</button>
+                    <button type="button" class="btn-next" id="btn-update">Update</button>
                 </div>
             </div>
         </div>
@@ -391,6 +391,16 @@
             $("#form-input").submit();
         });
 
+        $("#btn-update").click(function () {
+            $("#form-input-update").submit();
+        });
+        
+        $("#btn-tambah-kamar").click(function () {
+            $("#content1").show();
+            $("#content2").hide();
+            $("#content_edit").hide();
+        });
+
         $('#btn-edit').click(function() {
             $("#content1").hide();
             $("#content2").hide();
@@ -405,11 +415,35 @@
                 success: function(data) {
                     $('#id_kamar_edit').val(data.id_kamar);
                     $('#nama_kamar_edit').val(data.nama_kamar);
+                    var ukuran = data.ukuran;
+                    var result = ukuran.split(" X ");
+                    var panjang = result[0];
+                    var lebar = result[1];
+
+                    $('#panjang_kamar_edit').val(panjang);
+                    $('#lebar_kamar_edit').val(lebar);
                     $('#fasilitas_kamar_edit').val(data.fasilitas);
                     $('#harga_harian_edit').val(data.harga_harian);
                     $('#harga_bulanan_edit').val(data.harga_bulanan);
                     $('#harga_3bulanan_edit').val(data.harga_3bulanan);
                     $('#harga_tahunan_edit').val(data.harga_tahunan);
+
+                    $('#check_harian_edit').prop('checked', data.harga_harian_edit !== null && data.harga_harian_edit !== '');
+                    $('#check_3bulan_edit').prop('checked', data.harga_3bulanan_edit !== null && data.harga_3bulanan_edit !== '');
+                    $('#check_tahunan_edit').prop('checked', data.harga_tahunan_edit !== null && data.harga_tahunan_edit !== '');
+
+                    if (data.harga_harian_edit === null || data.harga_harian_edit === '') {
+                        $('#check_harian_edit').prop('checked', false);
+                    }
+
+                    if (data.harga_3bulanan_edit === null || data.harga_3bulanan_edit === '') {
+                        $('#check_3bulan_edit').prop('checked', false);
+                    }
+
+                    if (data.harga_tahunan_edit === null || data.harga_tahunan_edit === '') {
+                        $('#check_tahunan_edit').prop('checked', false);
+                    }
+
                 },
                 error: function(error) {
                     console.error('Error:', error);

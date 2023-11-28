@@ -19,7 +19,8 @@
 #back1,
 #next1,
 #back2,
-#next2 {
+#next2,
+#btn-update {
   border: none;
   padding: 5px 20px;
   border-radius: 20px;

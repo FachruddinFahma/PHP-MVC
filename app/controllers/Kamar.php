@@ -57,6 +57,26 @@ class Kamar extends Controller
         $kamar = $this->model('Kamar_model')->getKamarById($id_kamar);
         echo json_encode($kamar);
     }
+    
+    public function updateKamar()
+    {
+        $dataKamar = [
+            'id_kamar' => $_POST['id_kamar_edit'],
+            'nama_kamar' => $_POST['nama_kamar_edit'],
+            'fasilitas' => $_POST['fasilitas_kamar_edit'],
+            'ukuran' => $_POST['panjang_kamar_edit'] . "x" . $_POST['lebar_kamar_edit'],
+            'harga_harian' => $_POST['harga_harian_edit'],
+            'harga_bulanan' => $_POST['harga_bulanan_edit'],
+            'harga_3bulanan' => $_POST['harga_3bulanan_edit'],
+            'harga_tahunan' => $_POST['harga_tahunan_edit']
+        ];
+
+        if ($this->model('Kamar_model')->updateKamarById($dataKamar) > 0) {
+            header('Location: http://localhost/PHP-MVC/public/kamar');
+        } else {
+            header('Location: http://localhost/PHP-MVC/public/dashboard');
+        }
+    }
 
 
     // public function testKamar()
