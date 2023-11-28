@@ -33,14 +33,13 @@ class EditDataApi_model
     }
 
     public function updatePassword($password, $idUser){
-        // Lakukan hashing pada kata sandi
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
         $query = "UPDATE tb_user SET password = :pass
         WHERE id_user = :idUser";
     
         $this->db->query($query);
-        $this->db->bind(':pass', $hashedPassword); // Gunakan hasil hash sebagai nilai password
+        $this->db->bind(':pass', $hashedPassword); 
         $this->db->bind(':idUser', $idUser);
     
         $this->db->execute();
