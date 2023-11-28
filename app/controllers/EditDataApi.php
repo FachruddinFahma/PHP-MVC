@@ -9,13 +9,14 @@ class EditDataApi extends Controller
             $data = json_decode($putData, true);
 
             $nama = $data['nama_lengkap'];
+            $foto = $data['foto_user'];
             $noHp = $data['no_hp'];
             $alamat = $data['alamat'];
             $jk = $data['jenis_kelamin'];
             $tglLahir = $data['tggl_lahir'];
 
             $edit_user_model = $this->model('EditDataApi_model');
-            $success = $edit_user_model->updateUser($nama, $noHp, $alamat, $jk, $tglLahir, $idUser);
+            $success = $edit_user_model->updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser);
 
             if ($success) {
                 $response = array(
