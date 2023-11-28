@@ -70,12 +70,10 @@ class EditDataApi extends Controller
     
     
     public function editPass($idUser){
-        if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
-            $putData = file_get_contents('php://input');
-            $data = json_decode($putData, true);
-    
-            if (isset($data['password']) && !empty($data['password'])) {
-                $password = $data['password'];     
+        if ($_SERVER['REQUEST_METHOD'] == 'PUT' || $_SERVER['REQUEST_METHOD'] == 'POST') {
+            if(isset($_POST['password']) && !empty($_POST['password'])) {
+                
+                $password = $_POST['password'];
                 $edit_user_model = $this->model('EditDataApi_model');
     
                 $success = $edit_user_model->updatePassword($password, $idUser);
@@ -105,4 +103,5 @@ class EditDataApi extends Controller
         }
         echo json_encode($response);
     }
+    
 }

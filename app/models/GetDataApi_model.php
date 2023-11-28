@@ -18,8 +18,7 @@ class GetDataApi_model
          `tb_user`.`no_hp` AS 'Notelp User',
         `tb_user`.`foto_user`,
         `tb_kamar`.`id_kamar` AS 'Nomor Kamar', 
-        `tb_kamar`.`fasilitas`, 
-        -- `tb_kamar`.`kategori`, 
+        `tb_kost`.`fasilitas_kost`,           
         `tb_kamar`.`ukuran` AS 'Ukuran Kamar',
         `tb_kost`.`nama_kost`, 
         `tb_kost`.`alamat` AS 'Alamat Kost',
@@ -31,5 +30,10 @@ class GetDataApi_model
         WHERE `tb_user`.`id_user` = :id_user");
         $this->db->bind(':id_user', $id);
         return $this->db->single();
+    }
+
+    public function getDataKost($id){
+        $this->db->query("");
+        
     }
 }
