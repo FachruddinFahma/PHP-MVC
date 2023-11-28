@@ -37,4 +37,72 @@ class EditDataApi extends Controller
         }
         echo json_encode($response);
     }
+
+    public function checkPassword($idUser) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+            $password = $_POST['password'];
+            $edit_user_model = $this->model('EditDataApi_model');
+    
+            $storedPassword = $edit_user_model->getStoredPassword($idUser);
+    
+            if (password_verify($password, $storedPassword)) {
+                $response = array(
+                    'code' => 200,
+                    'status' => 'Password benar',
+                );
+            } else {
+                $response = array(
+                    'code' => 400,
+                    'status' => 'Password salah',
+                );
+            }
+    
+            echo json_encode($response);
+        } else {
+            $response = array(
+                'code' => 404,
+                'status' => 'Metode request tidak diizinkan',
+            );
+            echo json_encode($response);
+        }
+    }
+    
+    
+    public function editPass($idUser){
+        if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
+            $putData = file_get_contents('php://input');
+            $data = json_decode($putData, true);
+    
+            if (isset($data['password']) && !empty($data['password'])) {
+                $password = $data['password'];     
+                $edit_user_model = $this->model('EditDataApi_model');
+    
+                $success = $edit_user_model->updatePassword($password, $idUser);
+    
+                if ($success) {
+                    $response = array(
+                        'code' => 200,
+                        'status' => 'Update Kata Sandi Sukses',
+                    );
+                } else {
+                    $response = array(
+                        'code' => 400,
+                        'status' => 'Gagal mengubah kata sandi',
+                    );
+                }
+            } else {
+                $response = array(
+                    'code' => 400,
+                    'status' => 'Data password tidak ditemukan atau kosong',
+                );
+            }
+        } else {
+            $response = array(
+                'code' => 404,
+                'status' => 'Metode request tidak diizinkan',
+            );
+        }
+        echo json_encode($response);
+    }
 }

@@ -10,7 +10,8 @@ class EditDataApi_model
 
     public function updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser)
     {
-        $query = "UPDATE tb_user SET nama_lengkap = :nama, 
+        $query = "UPDATE tb_user SET 
+        nama_lengkap = :nama, 
         foto_user = :foto, 
         no_hp = :noHp, 
         alamat = :alamat, 
@@ -30,4 +31,30 @@ class EditDataApi_model
         $this->db->execute(); 
         return true;
     }
+
+    public function updatePassword($password, $idUser){
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    
+        $query = "UPDATE tb_user SET password = :pass
+        WHERE id_user = :idUser";
+    
+        $this->db->query($query);
+        $this->db->bind(':pass', $hashedPassword); 
+        $this->db->bind(':idUser', $idUser);
+    
+        $this->db->execute();
+        return true;
+    }
+
+    public function getStoredPassword($idUser) {
+        $query = "SELECT password FROM tb_user WHERE id_user = :idUser";
+    
+        $this->db->query($query);
+        $this->db->bind(':idUser', $idUser);
+        $storedPassword = $this->db->single();
+    
+        return $storedPassword['password'];
+    }
+    
+    
 }
