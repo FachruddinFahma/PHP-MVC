@@ -39,7 +39,7 @@
                 <img src="http://localhost/PHP-MVC/public/foto/user1.jpg" alt="User Photo">
             </div>
             <div id="user-name">
-                <a href="http://localhost/PHP-MVC/public/profile"><?php echo $data['profile']['nama_lengkap'] ?></a>
+                <a href="http://localhost/PHP-MVC/public/profile"><?php echo "User" ?></a>
             </div>
         </div>
     </header>

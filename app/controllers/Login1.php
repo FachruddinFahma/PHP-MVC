@@ -11,15 +11,18 @@ class Login1 extends Controller
 
     public function cekLogin()
 {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
     $email = $_POST['email'];
     $password = $_POST['password'];
     
     // Hash password menggunakan MD5
     $data['login1'] = $this->model('Login_model')->prosesLogin($email);
     
-    session_start();
-
     if ($data['login1']['email'] == $email && password_verify($password, $data['login1']['password'])) {
+        session_start();
+
         if ($data['login1'] == NULL) {
             header("Location: http://localhost/PHP-MVC/public/login1");
         } else {
@@ -48,6 +51,7 @@ class Login1 extends Controller
         }
     }
 }
+
 
    
 }
