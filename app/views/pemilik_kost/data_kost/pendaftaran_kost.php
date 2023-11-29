@@ -11,13 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK ICON J-KOS -->
     <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
-    <title>Halaman Pnedaftaraan Kost</title>
+    <title>Halaman Pendaftaraan Kost</title>
 </head>
 
 <body>
     <div class="box">
         <div class="box-content">
-            <form action="http://localhost/PHP-MVC/public/pendaftaran_kost/addKost" method="post" enctype="multipart/form-data">
+            <form action="http://localhost/PHP-MVC/public/pendaftaran_kost/addKost" method="post"
+                enctype="multipart/form-data">
                 <h1>Silahkan Lengkapi Data Kost anda</h1>
                 <div class="form-group">
                     <div class="input">
@@ -31,9 +32,11 @@
                             <option value="Campuran">Campuran</option>
                         </select>
                         <label for="staticEmail" class="col-sm-3 col-form-label">Fasilitas Kost</label>
-                        <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea" name="fasilitas_kost" required></textarea>
+                        <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea"
+                            name="fasilitas_kost" required></textarea>
                         <label for="staticEmail" class="col-sm-3 col-form-label">Peraturan Kost Kost</label>
-                        <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea" name="peraturan_kost" required></textarea>
+                        <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea"
+                            name="peraturan_kost" required></textarea>
                     </div>
                     <div class="input">
                         <label for="staticEmail" class="col-sm-3 col-form-label">Latitude</label>
@@ -41,7 +44,8 @@
                         <label for="staticEmail" class="col-sm-3 col-form-label">Longitude</label>
                         <input type="text" class="form-control" id="" name="longitude">
                         <label for="staticEmail" class="col-sm-3 col-form-label">Alamat Lengkap</label>
-                        <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea" name="alamat" required></textarea>
+                        <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea"
+                            name="alamat" required></textarea>
                         <p>*keteranggan :</p>
                         <p>- Isi latitude dan longitude kost anda berada saat ini</p>
                         <p>- Isi alamat lengkap kost anda saat ini</p>
@@ -50,10 +54,10 @@
                         <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Bank</label>
                         <select class="form-select" aria-label="Default select example" name="jenis_bank">
                             <option selected>-- Pilih Jenis Bank --</option>
-                            <option value="BCAi">BCA</option>
+                            <option value="BCA">BCA</option>
                             <option value="BRI">BRI</option>
                             <option value="BNI">BNI</option>
-                            <option value=BTN"">BTN</option>
+                            <option value="BTN">BTN</option>
                             <option value="BJB">BJB</option>
                             <option value="MANDIRI">MANDIRI</option>
                             <option value="MEGA">MEGA</option>
@@ -66,10 +70,12 @@
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Foto Qris</label>
                             <div class="col-sm-4">
-                                <input type="file" class="form-control" id="foto_qris_input" name="foto_qris" onchange="showImagePreview(this)">
+                                <input type="file" class="form-control" id="foto_qris_input" name="foto_qris"
+                                    onchange="showImagePreview(this)">
                             </div>
                             <div class="col-sm-6">
-                                <img id="foto_qris_preview" src="#" alt="Preview" style="display:none; max-width: 100px; max-height: 100px; border: 1px solid #ddd; border-radius: 5px;">
+                                <img id="foto_qris_preview" src="#" alt="Preview"
+                                    style="display:none; max-width: 100px; max-height: 100px; border: 1px solid #ddd; border-radius: 5px;">
                             </div>
                         </div>
                     </div>
@@ -116,72 +122,72 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        //image qris
-        function showImagePreview(input) {
-            var preview = document.getElementById('foto_qris_preview');
-            var fileInput = document.getElementById('foto_qris_input');
+    //image qris
+    function showImagePreview(input) {
+        var preview = document.getElementById('foto_qris_preview');
+        var fileInput = document.getElementById('foto_qris_input');
 
-            // Hanya melakukan preview jika file yang dipilih adalah gambar
-            if (fileInput.files && fileInput.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                }
-                reader.readAsDataURL(fileInput.files[0]);
+        // Hanya melakukan preview jika file yang dipilih adalah gambar
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
             }
+            reader.readAsDataURL(fileInput.files[0]);
         }
+    }
 
-        // SCRIPT SELANJUTNYA DAN KEMBALI
-        var visibleDiv = 0;
+    // SCRIPT SELANJUTNYA DAN KEMBALI
+    var visibleDiv = 0;
 
-        function showDiv() {
-            $(".input").hide();
-            $(".input:eq(" + visibleDiv + ")").show();
-        }
+    function showDiv() {
+        $(".input").hide();
+        $(".input:eq(" + visibleDiv + ")").show();
+    }
 
-        function kembali() {
-            if (visibleDiv > 0) {
-                visibleDiv--;
-            }
-            showDiv();
-        }
-
-        function selanjutnya() {
-            if (visibleDiv < $(".input").length - 1) {
-                visibleDiv++;
-            }
-            showDiv();
+    function kembali() {
+        if (visibleDiv > 0) {
+            visibleDiv--;
         }
         showDiv();
+    }
 
-        //image kost
-        const fileInputs = document.querySelectorAll('.file-input');
-        const previewContainers = document.querySelectorAll('.preview-container');
-        const previewImages = document.querySelectorAll('.preview-image');
+    function selanjutnya() {
+        if (visibleDiv < $(".input").length - 1) {
+            visibleDiv++;
+        }
+        showDiv();
+    }
+    showDiv();
 
-        fileInputs.forEach((input, index) => {
-            input.addEventListener('change', function() {
-                const file = this.files[0];
-                const previewContainer = previewContainers[index];
-                const previewImage = previewImages[index];
+    //image kost
+    const fileInputs = document.querySelectorAll('.file-input');
+    const previewContainers = document.querySelectorAll('.preview-container');
+    const previewImages = document.querySelectorAll('.preview-image');
 
-                if (file) {
-                    const reader = new FileReader();
+    fileInputs.forEach((input, index) => {
+        input.addEventListener('change', function() {
+            const file = this.files[0];
+            const previewContainer = previewContainers[index];
+            const previewImage = previewImages[index];
 
-                    reader.onload = function(event) {
-                        const imageUrl = event.target.result;
-                        previewImage.src = imageUrl;
-                        previewContainer.style.display = 'block';
-                    };
+            if (file) {
+                const reader = new FileReader();
 
-                    reader.readAsDataURL(file);
-                } else {
-                    previewContainer.style.display = 'none';
-                    previewImage.src = '#';
-                }
-            });
+                reader.onload = function(event) {
+                    const imageUrl = event.target.result;
+                    previewImage.src = imageUrl;
+                    previewContainer.style.display = 'block';
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                previewContainer.style.display = 'none';
+                previewImage.src = '#';
+            }
         });
+    });
     </script>
 </body>
 

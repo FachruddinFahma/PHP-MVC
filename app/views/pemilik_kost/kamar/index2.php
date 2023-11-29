@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/kamar.css">
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/kamar2.css">
 </header>
-<section id="kamar" class="content">    
+<section id="kamar" class="content">
     <div id="kamar_content" class="pt-4 px-4">
         <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas">Tambah</a>
         <table id="dataKamar" class="display" style="width:100%">
@@ -21,19 +21,21 @@
                 <?php
                 ini_set('display_errors', 1);
                 foreach ($data['kamar'] as $item) {
-                ?>  
-                    <tr>
-                        <td><?php echo $item['id_kamar'] ?></td>
-                        <td><?php echo $item['fasilitas'] ?></td>
-                        <td><?php echo $item['kategori'] ?></td>
-                        <td><?php echo $item['ukuran'] ?></td>
-                        <td><?php echo $item['harga_bulanan'] ?></td>
-                        <td>Kosong</td>
-                        <td>
-                            <a href="" id="btn-edit">Edit</a>
-                            <a id="btn-hapus" href="http://localhost/PHP-MVC/public/kamar/index2/hapusKamar?id_kamar=<?php echo $item['id_kamar'] ?>" onclick="return confirm('Hapus data nihhh?')">Delete</a>
-                        </td>
-                    </tr>
+                ?>
+                <tr>
+                    <td><?php echo $item['id_kamar'] ?></td>
+                    <td><?php echo $item['fasilitas'] ?></td>
+                    <td><?php echo $item['kategori'] ?></td>
+                    <td><?php echo $item['ukuran'] ?></td>
+                    <td><?php echo $item['harga_bulanan'] ?></td>
+                    <td>Kosong</td>
+                    <td>
+                        <a href="" id="btn-edit">Edit</a>
+                        <a id="btn-hapus"
+                            href="http://localhost/PHP-MVC/public/kamar/index2/hapusKamar?id_kamar=<?php echo $item['id_kamar'] ?>"
+                            onclick="return confirm('Hapus data nihhh?')">Delete</a>
+                    </td>
+                </tr>
                 <?php
                 }
                 ?>
@@ -56,32 +58,34 @@
                             <div class="container-group">
                                 <div class="input-group">
                                     <label for="">ID Kamar Kamar</label>
-                                    <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar" value="<?php echo $data['id_baru'] ?>" readonly>
+                                    <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar"
+                                        value="<?php echo $data['id_baru'] ?>" readonly>
                                 </div>
                                 <div class="input-group">
                                     <label for="">Nama Kamar</label>
-                                    <input type="text" name="nama_kamar" id="nama_kamar" placeholder="masukan nama kamar">
+                                    <input type="text" name="nama_kamar" id="nama_kamar"
+                                        placeholder="masukan nama kamar">
                                 </div>
-                               
+
                             </div>
-                            <div class="input-group" >
+                            <div class="input-group">
                                 <label for="">Kategori</label>
                                 <div id="group-kategori">
                                     <div class="kategori-group">
                                         <p>harian</p>
-                                        <input type="checkbox" name="check_harian" id="check_harian"> 
+                                        <input type="checkbox" name="check_harian" id="check_harian">
                                     </div>
                                     <div class="kategori-group">
                                         <p>bulanan</p>
-                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan"> 
+                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan">
                                     </div>
                                     <div class="kategori-group">
                                         <p>3 bulan</p>
-                                        <input type="checkbox" name="check_3bulan" id="check_3bulan"> 
+                                        <input type="checkbox" name="check_3bulan" id="check_3bulan">
                                     </div>
                                     <div class="kategori-group">
                                         <p>tahunan</p>
-                                        <input type="checkbox" name="check_tahunan" id="check_tahunan"> 
+                                        <input type="checkbox" name="check_tahunan" id="check_tahunan">
                                     </div>
                                 </div>
                             </div>
@@ -89,39 +93,45 @@
                                 <div class="input-group">
                                     <label for="">Ukuran</label>
                                     <div class="input-group-double">
-                                        <input type="text" name="panjang_kamar" id="panjang_kamar" placeholder="panjang">
+                                        <input type="text" name="panjang_kamar" id="panjang_kamar"
+                                            placeholder="panjang">
                                         <p>x</p>
                                         <input type="text" name="lebar_kamar" id="lebar_kamar" placeholder="lebar">
                                     </div>
                                 </div>
                             </div>
                             <div class="input-group">
-                                    <label for="">Fasilitas</label>
-                                    <textarea name="fasilitas_kamar" id="fasilitas_kamar" cols="30" rows="10" placeholder="masukan fasilitas"></textarea>
-                            </div>
-                                <div class="container-group">
-                                    <div class="input-group" id="grup-input-bulanan">
-                                        <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
-                                        <input type="text" name="harga_bulanan" id="harga_bulanan" placeholder="masukan harga bulanan">
-                                    </div>
-                                    <div class="input-group" id="grup-input-harian">
-                                        <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
-                                        <input type="text" name="harga_harian" id="harga_harian" placeholder="masukan harga harian">
-                                    </div>
-                            </div>
+                                <label for="">Fasilitas</label>
+                                <textarea name="fasilitas_kamar" id="fasilitas_kamar" cols="30" rows="10"
+                                    placeholder="masukan fasilitas"></textarea>
                             </div>
                             <div class="container-group">
-                                    <div class="input-group" id="grup-input-3bulanan">
-                                        <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
-                                        <input type="text" name="harga_3bulanan" id="harga_3bulanan" placeholder="masukan harga 3 bulan">
-                                    </div>
-                                    <div class="input-group" id="grup-input-tahunan">
-                                        <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
-                                        <input type="text" name="harga_tahunan" id="harga_tahunan" placeholder="masukan harga tahunan">
-                                    </div>
+                                <div class="input-group" id="grup-input-bulanan">
+                                    <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
+                                    <input type="text" name="harga_bulanan" id="harga_bulanan"
+                                        placeholder="masukan harga bulanan">
+                                </div>
+                                <div class="input-group" id="grup-input-harian">
+                                    <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
+                                    <input type="text" name="harga_harian" id="harga_harian"
+                                        placeholder="masukan harga harian">
+                                </div>
                             </div>
-                        </form>
-                        
+                    </div>
+                    <div class="container-group">
+                        <div class="input-group" id="grup-input-3bulanan">
+                            <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
+                            <input type="text" name="harga_3bulanan" id="harga_3bulanan"
+                                placeholder="masukan harga 3 bulan">
+                        </div>
+                        <div class="input-group" id="grup-input-tahunan">
+                            <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
+                            <input type="text" name="harga_tahunan" id="harga_tahunan"
+                                placeholder="masukan harga tahunan">
+                        </div>
+                    </div>
+                    </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-back" id="back1">Kembali</button>
@@ -142,32 +152,35 @@
                             <div class="container-group">
                                 <div class="input-group">
                                     <label for="">ID Kamar Kamar</label>
-                                    <input type="text" name="id_kamar_fix" id="id_kamar_fix" placeholder="masukan ID kamar" readonly>
+                                    <input type="text" name="id_kamar_fix" id="id_kamar_fix"
+                                        placeholder="masukan ID kamar" readonly>
                                 </div>
                                 <div class="input-group">
                                     <label for="">Nama Kamar</label>
-                                    <input type="text" name="nama_kamar_fix" id="nama_kamar_fix" placeholder="masukan nama kamar" readonly>
+                                    <input type="text" name="nama_kamar_fix" id="nama_kamar_fix"
+                                        placeholder="masukan nama kamar" readonly>
                                 </div>
-                               
+
                             </div>
-                            <div class="input-group" >
+                            <div class="input-group">
                                 <label for="">Kategori</label>
                                 <div id="group-kategori">
                                     <div class="kategori-group">
                                         <p>harian</p>
-                                        <input type="checkbox" name="check_harian_fix" id="check_harian_fix" disabled> 
+                                        <input type="checkbox" name="check_harian_fix" id="check_harian_fix" disabled>
                                     </div>
                                     <div class="kategori-group">
                                         <p>bulanan</p>
-                                        <input type="checkbox" checked disabled name="check_bulanan_fix" id="check_bulanan_fix"> 
+                                        <input type="checkbox" checked disabled name="check_bulanan_fix"
+                                            id="check_bulanan_fix">
                                     </div>
                                     <div class="kategori-group">
                                         <p>3 bulan</p>
-                                        <input type="checkbox" name="check_3bulan_fix" id="check_3bulan_fix" disabled> 
+                                        <input type="checkbox" name="check_3bulan_fix" id="check_3bulan_fix" disabled>
                                     </div>
                                     <div class="kategori-group">
                                         <p>tahunan</p>
-                                        <input type="checkbox" name="check_tahunan_fix" id="check_tahunan_fix" disabled> 
+                                        <input type="checkbox" name="check_tahunan_fix" id="check_tahunan_fix" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -175,15 +188,18 @@
                                 <div class="input-group">
                                     <label for="">Ukuran</label>
                                     <div class="input-group-double">
-                                        <input type="text" name="ukuran_kamar_panjang_fix" id="ukuran_kamar_panjang_fix" placeholder="panjang" readonly>
+                                        <input type="text" name="ukuran_kamar_panjang_fix" id="ukuran_kamar_panjang_fix"
+                                            placeholder="panjang" readonly>
                                         <p>x</p>
-                                        <input type="text" name="ukuran_kamar_lebar_fix" id="ukuran_kamar_lebar_fix" placeholder="lebar" readonly>
+                                        <input type="text" name="ukuran_kamar_lebar_fix" id="ukuran_kamar_lebar_fix"
+                                            placeholder="lebar" readonly>
                                     </div>
                                 </div>
                             </div>
                             <div class="input-group">
-                                    <label for="">Fasilitas</label>
-                                    <textarea name="fasilitas_kamar_fix" id="fasilitas_kamar_fix" cols="30" rows="10" placeholder="masukan fasilitas"></textarea readonly>
+                                <label for="">Fasilitas</label>
+                                <textarea name="fasilitas_kamar_fix" id="fasilitas_kamar_fix" cols="30" rows="10"
+                                    placeholder="masukan fasilitas"></textarea readonly>
                             </div>
                         </form>
                         <div class="container-group">
@@ -225,7 +241,7 @@
                 <h5>Input Foto Kamar</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div id="progress-data">
+                <div id="progress-data">
                 <div id="progress-data-kamar" class="active-data">
                     <div class="angka">
                         <p>1</p>
