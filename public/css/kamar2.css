@@ -20,7 +20,9 @@
 #next1,
 #back2,
 #next2,
-#btn-update {
+#btn-update,
+#btn-back-foto,
+#btn-next-foto {
   border: none;
   padding: 5px 20px;
   border-radius: 20px;
@@ -100,4 +102,49 @@
   color: white;
   text-decoration: none;
   border-radius: 8px;
+}
+
+#progress-data {
+  display: flex;
+  gap: 75px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.active-data .angka {
+  border-radius: 50px;
+  background-color: var(--lightgrey);
+  color: var(--black);
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.actived .angka {
+  background-color: var(--blue);
+  color: white;
+  font-weight: 600;
+}
+
+.actived #title-progress {
+  font-weight: 1000;
+}
+
+#progress-data .title-progress::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: var(--lightgrey);
+  width: 20%;
+  margin-left: -12px;
+  margin-top: -10px;
+}
+
+textarea {
+  height: 100px;
 }

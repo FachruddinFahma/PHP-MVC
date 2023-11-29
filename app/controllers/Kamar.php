@@ -15,7 +15,7 @@ class Kamar extends Controller
         $this->view('pemilik_kost/kamar/index', $data);
         $this->view('templates/footer');
     }
-
+   
     public function addKamar()
     {
         $id_kost = $this->model('dataKost_model')->getKostByUserId($_SESSION['id_user'])['id_kost'];
