@@ -32,8 +32,8 @@ class Landing_page extends Controller
     //     $this->view('landing_page/data_pemesanan');
     // }
 
-    public function pembayaran()
-    {
-        $this->view('landing_page/pembayaran');
-    }
+    // public function pembayaran()
+    // {
+    //     $this->view('landing_page/pembayaran');
+    // }
 }
