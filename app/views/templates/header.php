@@ -1,6 +1,4 @@
-<?php
-$judul = $data['judul'];
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,14 +32,14 @@ $judul = $data['judul'];
     <header id="header">
         <div id="dashboard-title">
             <img id="icon-menu" src="http://localhost/PHP-MVC/public/image/menu.png" alt="">
-            <h2><?php echo $judul ?></h2>
+            <h2><?php echo $data['judul'] ?></h2>
         </div>
         <div id="center-content">
             <div id="foto-profile">
                 <img src="http://localhost/PHP-MVC/public/foto/user1.jpg" alt="User Photo">
             </div>
             <div id="user-name">
-                <a href="http://localhost/PHP-MVC/public/profile">Farhan</a>
+                <a href="http://localhost/PHP-MVC/public/profile"><?php echo $data['profile']['nama_lengkap'] ?></a>
             </div>
         </div>
     </header>

@@ -27,7 +27,7 @@
     </div>
 
     <section id="pemesanan">
-        <form action="http://localhost/PHP-MVC/public/pemesanan_kost/addPemesanan" method="post">
+        <form action="http://localhost/PHP-MVC/public/pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
             <div class="left-pemesanan">
                 <h1>Data Pemesanan</h1>
                 <p name="id_pemesanan"><?php echo $data['idRnamdom']; ?></p>

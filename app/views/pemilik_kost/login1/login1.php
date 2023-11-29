@@ -47,6 +47,11 @@
         </div>
     </div>
 </body>
+<script>
+    function addSession() {
+        sessionStorage.setItem('idKamar', ambilIdUser);
+    }
+</script>
 
 </html>
 
