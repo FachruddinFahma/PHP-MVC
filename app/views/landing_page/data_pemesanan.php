@@ -157,6 +157,7 @@
                     </div>
                 </div>
                 <button type="submit" id="btn-pesan-sekarang">Bayar Sekarang</button>
+                <!-- <a href="http://localhost/PHP-MVC/public/pemesanan_kost/" id="btn-pesan-sekarang" type="submit">Bayar Sekarang</a> -->
             </div>
         </form>
     </section>

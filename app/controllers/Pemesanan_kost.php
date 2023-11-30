@@ -13,10 +13,12 @@
 
         public function addPemesanan()
         {
-            if ($this->model('pemesananKost_model')->addPemesanan($_POST) > 0) {
+            $id_kamar = $_POST['id_kamar']; // Assuming id_kamar is in the form data
+            $id_pemesanan = $this->model('pemesananKost_model')->generateRandomID();
+            if ($this->model('pemesananKost_model')->addPemesanan($_POST, $id_pemesanan) > 0) {
                 header('Location: http://localhost/PHP-MVC/public/landing_page/detail_kamar');
             }else{
-                header('Location:http://localhost/PHP-MVC/public/pembayaran/pembayaran');
+                header("Location: http://localhost/PHP-MVC/public/pembayaran/pembayaran?$id_pemesanan&$id_kamar");
             }
         }
     }    
