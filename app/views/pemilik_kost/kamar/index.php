@@ -293,27 +293,27 @@
                                 <textarea name="fasilitas_kamar_fix" id="fasilitas_kamar_fix" cols="30" rows="10"
                                     placeholder="masukan fasilitas"></textarea readonly>
                             </div>
+                            <div class="container-group">
+                                    <div class="input-group" id="grup-input-bulanan">
+                                        <label for="harga_bulanan_fix" id="lbl_harga_bulanan_fix">Harga Bulanan</label>
+                                        <input type="text" name="harga_bulanan_fix" id="harga_bulanan_fix" placeholder="masukan harga bulanan" readonly>
+                                    </div>
+                                    <div class="input-group" id="grup-input-harian">
+                                        <label for="harga_harian_fix" id="lbl_harga_harian_fix">Harga Harian</label>
+                                        <input type="text" name="harga_harian_fix" id="harga_harian_fix" placeholder="masukan harga harian" readonly>
+                                    </div>
+                            </div>
+                            <div class="container-group">
+                                    <div class="input-group" id="grup-input-3bulanan">
+                                        <label for="harga_3bulanan_fix" id="lbl_harga_3bulanan_fix">Harga 3 Bulanan</label>
+                                        <input type="text" name="harga_3bulanan_fix" id="harga_3bulanan_fix" placeholder="masukan harga 3 bulan" readonly>
+                                    </div>
+                                    <div class="input-group" id="grup-input-tahunan">
+                                        <label for="harga_tahunan_fix" id="lbl_harga_tahunan_fix">Harga Tahunan</label>
+                                        <input type="text" name="harga_tahunan_fix" id="harga_tahunan_fix" placeholder="masukan harga tahunan" readonly>
+                                    </div>
+                            </div>
                         </form>
-                        <div class="container-group">
-                                <div class="input-group" id="grup-input-bulanan">
-                                    <label for="harga_bulanan_fix" id="lbl_harga_bulanan_fix">Harga Bulanan</label>
-                                    <input type="text" name="harga_bulanan_fix" id="harga_bulanan_fix" placeholder="masukan harga bulanan" readonly>
-                                </div>
-                                <div class="input-group" id="grup-input-harian">
-                                    <label for="harga_harian_fix" id="lbl_harga_harian_fix">Harga Harian</label>
-                                    <input type="text" name="harga_harian_fix" id="harga_harian_fix" placeholder="masukan harga harian" readonly>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="container-group">
-                            <div class="input-group" id="grup-input-3bulanan">
-                                <label for="harga_3bulanan_fix" id="lbl_harga_3bulanan_fix">Harga 3 Bulanan</label>
-                                <input type="text" name="harga_3bulanan_fix" id="harga_3bulanan_fix" placeholder="masukan harga 3 bulan" readonly>
-                            </div>
-                            <div class="input-group" id="grup-input-tahunan">
-                                <label for="harga_tahunan_fix" id="lbl_harga_tahunan_fix">Harga Tahunan</label>
-                                <input type="text" name="harga_tahunan_fix" id="harga_tahunan_fix" placeholder="masukan harga tahunan" readonly>
-                            </div>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -12,6 +12,7 @@
     <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
 
     <title>Halaman <?php echo $data['judul'] ?></title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -31,7 +32,8 @@
                     <input type="password" placeholder="Masukkan password anda" name="password" required>
                 </div>
                 <button type="submit">Login</button>
-                <p>Lupa Password?<a href="http://localhost/PHP-MVC/public/lupa_password" id="lupaPassword"> Silahkan ganti disini</a></p>
+                <p>Lupa Password?<a href="http://localhost/PHP-MVC/public/lupa_password" id="lupaPassword"> Silahkan
+                        ganti disini</a></p>
             </form>
         </div>
         <div class="overlay-container">
@@ -40,17 +42,19 @@
                     <img src="http://localhost/PHP-MVC/public/image/project logo j-kost white.png" alt="" id="logo"><br>
                     <h1>Welcome To J-KOST</h1><br><br>
                     <p>J-Kost Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, possimus?</p><br><br>
-                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Daftar Pemilik Kost</a><br>
-                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_penyewa">Daftar Penyewa Kost</a>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_pemilik">Daftar Pemilik
+                        Kost</a><br>
+                    <a class="signup-link" href="http://localhost/PHP-MVC/public/register_penyewa">Daftar Penyewa
+                        Kost</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script>
-    function addSession() {
-        sessionStorage.setItem('idKamar', ambilIdUser);
-    }
+function addSession() {
+    sessionStorage.setItem('idKamar', ambilIdUser);
+}
 </script>
 
 </html>

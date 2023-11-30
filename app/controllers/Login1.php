@@ -33,7 +33,10 @@ class Login1 extends Controller
             $data2['login1'] = $this->model('Login_model')->getKost($ambil_id_user);
 
             $ambil_id_kost = $data2["login1"]["id_kost"];
-
+            echo "alert('oke')";
+            // echo "<script>";
+            // echo "Swal.fire('Success!', 'Your action was successful!', 'success');";
+            // echo "</script>";
             if ($ambil_id_role == 1) {
                 header('Location: http://localhost/PHP-MVC/public/dashboard');
             } elseif ($ambil_id_role == 2) {
@@ -51,7 +54,13 @@ class Login1 extends Controller
         }
     }
 }
-
-
+public function cekNotif()
+{
+    echo "<script>";
+    echo "Swal.fire('Success!', 'Your action was successful!', 'success');";
+    //echo "alert('haloo')";
+    echo "</script>";
+   
+}
    
 }

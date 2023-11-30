@@ -79,9 +79,12 @@ class Kamar extends Controller
     }
 
 
-    // public function testKamar()
-    // {
-    //    alert("woi");
-    // }
+    public function testKamar()
+    {
+       echo "<script>";
+       echo " alert('woi')";
+       echo "</script>";
+      
+    }
 
 }
