@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-:root {
+b93d8d7 :root {
+  --gray: #c7c7c7;
   --navy: #1b3359;
   --middleblue: #134ba4;
   --lightblue: #f3f7fd;
@@ -11,141 +11,100 @@
   --brown: #404040;
 }
 
-/* circle pemanis untuk effect effecttttt */
-.circle-pemanis {
-  width: 1000px;
-  height: 1000px;
-  background-color: #eaeff6;
-  position: absolute;
-  border-radius: 1000px;
-  z-index: -99;
-  right: -300;
-  top: 800;
-}
-
-.circle-pemanis2 {
-  width: 1100px;
-  height: 1100px;
-  background-color: #eaeff6;
-  position: absolute;
-  border-radius: 4000px;
-  z-index: -99;
-  left: -400;
-  top: 2900;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #fafbff;
-  overflow-x: hidden;
-}
-
-/* navbarrr  */
-nav {
-  padding: 0 60px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+#pemesanan #pemesanan_top {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 60px 60px;
+}
+#pemesanan #pemesanan_top h4 {
+  font-size: 18px;
 }
 
-nav .link-navbar ul {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+#pesanan_masuk.active {
+  color: blue;
 }
 
-nav .link-navbar ul a {
+#pesanan_terkonfirmasi.active {
+  color: blue;
+}
+
+#pesanan_masuk.active {
+  color: blue;
+}
+#pesanan_terkonfirmasi.active {
+  color: blue;
+}
+
+#pemesanan #line {
+  margin-top: -60px;
+  margin-left: 60px;
+}
+
+#pemesanan #line .line-border {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #c7c7c7;
+  width: 80.5%;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+#pemesanan #line .line-bold {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: black;
+  width: 36.3%;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+#pemesanan #pemesanan_top .line-active {
+  z-index: 99;
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: blue;
+  width: 20%;
+  margin-left: -110px;
+  margin-top: 10px;
+}
+
+#pemesanan #pemesanan_content_masuk {
+  margin: 40px 30px;
+  padding: 40px 70px 100px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#pemesanan #pemesanan_content_masuk .btn_terima {
+  padding: 4px 8px;
+  background-color: #1f9254;
   text-decoration: none;
-}
-
-nav .link-navbar ul a.link-login {
-  padding: 10px 20px;
-  background-color: var(--middleblue);
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
 }
-
-nav .title-navbar {
-  display: flex;
-  align-items: center;
-}
-
-nav .title-navbar img {
-  width: 200px;
-}
-
-body {
-  overflow-y: visible;
-}
-/* konten pembayaran */
-#pembayaran {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 100px;
-}
-
-#pembayaran #form-pembayaran {
-  background-color: white;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-  width: 500px;
-  padding: 5px 20px;
-  box-sizing: border-box;
-  margin-top: 60px;
-}
-#pembayaran #form-pembayaran {
-  background-color: white;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-  width: 500px;
-}
-
-#pembayaran #form-pembayaran #top-pembayaran {
-  display: flex;
-  justify-content: space-between;
-}
-
-#pembayaran #form-pembayaran #top-pembayaran .total-pembayaran {
-  text-align: start;
-}
-
-#pembayaran #form-pembayaran #top-pembayaran .bayar-dalam {
-  text-align: end;
-}
-
-#pembayaran #form-pembayaran #top-pembayaran .bayar-dalam .detik {
-  color: #295ef4;
-}
-
-#pembayaran #form-pembayaran .main-pembayaran {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#pembayaran #form-pembayaran .main-pembayaran img#logo-qris {
-  margin-bottom: 20px;
-}
-
-#pembayaran #form-pembayaran .main-pembayaran input {
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 20px;
-  display: flex;
-  background-color: #e9eaef;
-}
-
-#pembayaran #form-pembayaran .main-pembayaran button {
-  padding: 10px 30px;
-  border: none;
-  margin: 20px 0 40px;
-  display: flex;
-  background-color: var(--blue);
+#pemesanan #pemesanan_content_masuk .btn_tolak {
+  padding: 4px 8px;
+  background-color: #b75348;
+  text-decoration: none;
   color: white;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 20px;
+}
+
+#pemesanan #pemesanan_content_masuk .btn_detail {
+  padding: 4px 8px;
+  background-color: #4848b7;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+}
+
+#pemesanan #pemesanan_content_terkonfirmasi {
+  margin: 40px 30px;
+  padding: 40px 70px 100px;
+  border-radius: 20px;
+  background-color: white;
 }
