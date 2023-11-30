@@ -3,7 +3,8 @@
     {
         public function pembayaran()
         {
-            $this->view('landing_page/pembayaran');
+            $data['foto'] = $this->model('Pembayaran_model')->getFotoQris();
+            $this->view('landing_page/pembayaran', $data);
         }
     }
 ?>
