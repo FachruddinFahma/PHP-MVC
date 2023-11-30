@@ -1,0 +1,150 @@
+[29-Nov-2023 15:49:32 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:49:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:10 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:16 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:20 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:25 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:27 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:29 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:51:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:52:43 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:52:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:52:44 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:52:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:53:35 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:53:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:53:54 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:53:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:11 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:21 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:28 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:31 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:48 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:54:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:55:11 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:55:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:25 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:28 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:37 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:41 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:44 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 15:59:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 16:00:12 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 16:00:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 16:00:19 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 16:00:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 16:01:00 UTC] PHP Warning:  require_once(../app/controllers/Home.php): Failed to open stream: No such file or directory in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16
+[29-Nov-2023 16:01:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../app/controllers/Home.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php:16
+Stack trace:
+#0 /home/tifdmyho/j-kost.tifd.myhost.id/jkost/public/index.php(7): App->__construct()
+#1 {main}
+  thrown in /home/tifdmyho/j-kost.tifd.myhost.id/jkost/app/core/App.php on line 16

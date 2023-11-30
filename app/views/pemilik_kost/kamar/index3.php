@@ -4,7 +4,8 @@
 </header>
 <section id="kamar" class="content">
     <div id="kamar_content" class="pt-4 px-4">
-        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-tambah-kamar">Tambah</a>
+        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-tambah-kamar">Tambah
+            (3)</a>
         <table id="dataKamar" class="display" style="width:100%">
             <thead>
                 <tr>
@@ -49,19 +50,20 @@
 <div class="modal fade" id="modal-identitas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
+            <div class="modal-header">
+                <h5>Input Data Kamar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!------------------------------------- modal 1 (input) ---------------------------------->
             <div id="content1">
-                <div class="modal-header">
-                    <h5>Input Data Kamar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div id="progress-data">
-                    <div id="progress-data-kamar" class="active-data">
+                    <div id="progress-data-kamar" class="active-data actived">
                         <div class="angka">
                             <p>1</p>
                         </div>
                         <p class="title-progress">Data Kamar</p>
                     </div>
-                    <div id="progress-foto" class="active-data actived">
+                    <div id="progress-foto" class="active-data">
                         <div class="angka">
                             <p>2</p>
                         </div>
@@ -156,18 +158,9 @@
 
 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-back" id="back1">Kembali</button>
-                    <button type="button" class="btn-next" id="next1" onclick="saveDataSession()">Selanjutnya</button>
-                </div>
             </div>
-
-            <!------------------------------------- CONTENT FOTO ---------------------------------->
+            <!------------------------------------- modal 2 (foto) ---------------------------------->
             <div id="content2">
-                <div class="modal-header">
-                    <h5>Input Foto Kamar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div id="progress-data">
                     <div id="progress-data-kamar" class="active-data">
                         <div class="angka">
@@ -204,20 +197,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-back" id="btn-back-foto">Kembali</button>
-                    <button type="button" class="btn-next" id="btn-next-foto"
-                        onclick="saveDataSession()">Selanjutnya</button>
-                </div>
             </div>
-
-            <!------------------------------------- CONTENT KAMAR 2 ---------------------------------->
-
+            <!------------------------------------- modal 3 (verifikasi) ---------------------------------->
             <div id="content3">
-                <div class="modal-header">
-                    <h5>Verikasi Data Kamar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div id="progress-data">
                     <div id="progress-data-kamar" class="active-data">
                         <div class="angka">
@@ -225,13 +207,13 @@
                         </div>
                         <p class="title-progress">Data Kamar</p>
                     </div>
-                    <div id="progress-foto" class="active-data actived">
+                    <div id="progress-foto" class="active-data ">
                         <div class="angka">
                             <p>2</p>
                         </div>
                         <p class="title-progress">Foto Kamar</p>
                     </div>
-                    <div id="progress-verifikasi" class="active-data">
+                    <div id="progress-verifikasi" class="active-data actived">
                         <div class="angka">
                             <p>3</p>
                         </div>
@@ -316,10 +298,10 @@
                             </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-back" id="back2">Kembali</button>
-                    <button type="button" class="btn-next" id="next2" >Tambah</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-back" id="back1">Kembali</button>
+                <button type="button" class="btn-next" id="next1">Selanjutnya</button>
             </div>
 
             <!------------------------------------- CONTENT MODAL EDIT---------------------------------->
@@ -417,32 +399,66 @@
 
 <script>
 $(document).ready(function() {
-    //tombol next backk
-    $("#content2").hide();
+    $("#btn-tambah-kamar").click(function() {
+        $("#content1").show();
+        $("#content2").hide();
+        $("#content_edit").hide();
+        $("#content3").hide();
+    });
+
+    var visibleContent = 1;
+
+    function nextContent() {
+        $("#content" + (visibleContent - 1)).hide();
+        $("#content" + visibleContent).show();
+    }
+
+    function backContent() {
+        $("#content" + (visibleContent + 1)).hide();
+        $("#content" + visibleContent).show();
+    }
+
+    nextContent();
 
     $("#next1").click(function() {
-        $("#content1").hide();
-        $("#content2").hide();
-        $("#content_foto").show();
+        if (visibleContent <= 3) {
+            visibleContent++;
+        }
+        nextContent();
     });
 
-    $("#btn-next-foto").click(function() {
-        $("#content1").hide();
-        $("#content_foto").hide();
-        $("#content2").show();
+    $("#back1").click(function() {
+        if (visibleContent >= 1) {
+            visibleContent--;
+        }
+        backContent();
     });
+    //tombol next backk
+    // $("#content2").hide();
 
-    $("#btn-back-foto").click(function() {
-        $("#content1").show();
-        $("#content_foto").hide();
-        $("#content2").hide();
-    });
+    // $("#next1").click(function() {
+    //     $("#content1").hide();
+    //     $("#content2").hide();
+    //     $("#content_foto").show();
+    // });
 
-    $("#back2").click(function() {
-        $("#content1").hide();
-        $("#content2").hide();
-        $("#content_foto").show();
-    });
+    // $("#btn-next-foto").click(function() {
+    //     $("#content1").hide();
+    //     $("#content_foto").hide();
+    //     $("#content2").show();
+    // });
+
+    // $("#btn-back-foto").click(function() {
+    //     $("#content1").show();
+    //     $("#content_foto").hide();
+    //     $("#content2").hide();
+    // });
+
+    // $("#back2").click(function() {
+    //     $("#content1").hide();
+    //     $("#content2").hide();
+    //     $("#content_foto").show();
+    // });
 
     //validasi check inputt
     $('#grup-input-harian').hide();
@@ -461,21 +477,15 @@ $(document).ready(function() {
         $('#grup-input-tahunan').toggle(this.checked);
     });
 
-
-    $("#next2").click(function() {
-        $("#form-input").submit();
-    });
+    //submit ketika klik tambah
+    // $("#next2").click(function() {
+    //     $("#form-input").submit();
+    // });
 
     $("#btn-update").click(function() {
         $("#form-input-update").submit();
     });
 
-    $("#btn-tambah-kamar").click(function() {
-        $("#content_foto1").hide();
-        $("#content1").show();
-        $("#content2").hide();
-        $("#content_edit").hide();
-    });
 
     $('#btn-edit').click(function() {
         $("#content1").hide();

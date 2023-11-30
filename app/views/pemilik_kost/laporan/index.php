@@ -18,19 +18,19 @@
 
 
                 <div class="cari-tanggal">
-                <form class="d-flex " action="http://localhost/PHP-MVC/public/Laporan/cariByTanggal" method="post">
-    <div class="label-input-group date1">
-        <label for="tanggal_awal">Tanggal Awal</label>
-        <input type="date" name="tanggal_awal" id="tanggal_awal">
-    </div>
-    <div class="label-input-group date2">
-        <label for="tanggal_akhir">Tanggal Akhir</label>
-        <input type="date" name="tanggal_akhir" id="tanggal_akhir">
-    </div>
-    <div class="label-input-group">
-        <button type="submit" class="btn btn-primary">Cari</button>
-    </div>
-</form>
+                    <form class="d-flex " action="http://localhost/PHP-MVC/public/Laporan/cariByTanggal" method="post">
+                        <div class="label-input-group date1">
+                            <label for="tanggal_awal">Tanggal Awal</label>
+                            <input type="date" name="tanggal_awal" id="tanggal_awal">
+                        </div>
+                        <div class="label-input-group date2">
+                            <label for="tanggal_akhir">Tanggal Akhir</label>
+                            <input type="date" name="tanggal_akhir" id="tanggal_akhir">
+                        </div>
+                        <div class="label-input-group">
+                            <button type="submit" class="btn btn-primary">Cari</button>
+                        </div>
+                    </form>
 
                 </div>
                 <table class="table table-hover small" id="dataTable">
@@ -49,21 +49,22 @@
                     </thead>
                     <tbody>
                         <?php foreach ($data['laporan'] as $d) : ?>
-                            <tr>
-                                <td><?= $d['id_transaksi'] ?></td>
-                                <td><?= $d['nama_lengkap'] ?></td>
-                                <td><?= $d['harga'] ?></td>
-                                <td><?= $d['bayar'] ?></td>
-                                <td><?= $d['tggl_transaksi'] ?></td>
-                                <td><?= $d['foto_bukti_bayar'] ?></td>
-                                <td><?= $d['status'] ?></td>
-                                <td>Bayar Bulan November</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary m-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        <i class="fa-solid fa-circle-info"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td><?= $d['id_transaksi'] ?></td>
+                            <td><?= $d['nama_lengkap'] ?></td>
+                            <td><?= $d['harga'] ?></td>
+                            <td><?= $d['bayar'] ?></td>
+                            <td><?= $d['tggl_transaksi'] ?></td>
+                            <td><?= $d['foto_bukti_bayar'] ?></td>
+                            <td><?= $d['status'] ?></td>
+                            <td>Bayar Bulan November</td>
+                            <td>
+                                <button type="button" class="btn btn-primary m-0" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>

@@ -12,7 +12,7 @@ class Kamar extends Controller
         $data['id_sementara'] = substr($data['id_lama']['id_kamar'], -2);
         $data['id_baru'] = "KMR0" . $data['id_sementara'] + 1;
         $this->view('templates/header', $data);
-        $this->view('pemilik_kost/kamar/index', $data);
+        $this->view('pemilik_kost/kamar/index3', $data);
         $this->view('templates/footer');
     }
    
@@ -32,7 +32,7 @@ class Kamar extends Controller
         ];
 
         if ($this->model('Kamar_model')->addKamar($dataKamar, $id_kost) > 0) {
-            header('Location: http://localhost/PHP-MVC/public/kamar');
+            header('Location: http://localhost/PHP-MVC/public/kamar3');
         } else {
             header('Location: http://localhost/PHP-MVC/public/dashboard');
         }
