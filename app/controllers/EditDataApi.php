@@ -3,40 +3,37 @@
 class EditDataApi extends Controller
 {
     public function editUser($idUser)
-    {
-        if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
-            $putData = file_get_contents('php://input');
-            $data = json_decode($putData, true);
+{
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $nama = $_POST['nama_lengkap'];
+        $foto = $_POST['foto_user'];
+        $noHp = $_POST['no_hp'];
+        $alamat = $_POST['alamat'];
+        $jk = $_POST['jenis_kelamin'];
+        $tglLahir = $_POST['tggl_lahir'];
+        $edit_user_model = $this->model('EditDataApi_model');
+        $success = $edit_user_model->updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser);
 
-            $nama = $data['nama_lengkap'];
-            $foto = $data['foto_user'];
-            $noHp = $data['no_hp'];
-            $alamat = $data['alamat'];
-            $jk = $data['jenis_kelamin'];
-            $tglLahir = $data['tggl_lahir'];
-
-            $edit_user_model = $this->model('EditDataApi_model');
-            $success = $edit_user_model->updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser);
-
-            if ($success) {
-                $response = array(
-                    'code' => 200,
-                    'status' => 'Update User Sukses',
-                );
-            } else {
-                $response = array(
-                    'code' => 400,
-                    'status' => 'Gagal mengubah data user',
-                );
-            }
+        if ($success) {
+            $response = array(
+                'code' => 200,
+                'status' => 'Update User Sukses',
+            );
         } else {
             $response = array(
-                'code' => 404,
-                'status' => 'Data tidak ditemukan',
+                'code' => 400,
+                'status' => 'Gagal mengubah data user',
             );
         }
-        echo json_encode($response);
+    } else {
+        $response = array(
+            'code' => 404,
+            'status' => 'Data tidak ditemukan',
+        );
     }
+    echo json_encode($response);
+}
+
 
     public function checkPassword($idUser) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
