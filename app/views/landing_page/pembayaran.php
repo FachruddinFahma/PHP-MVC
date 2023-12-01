@@ -34,7 +34,8 @@
             </div>
             <div class="main-pembayaran">
                 <img src="http://localhost/PHP-MVC/public/image/pembayaran/qris.png" alt="" id="logo-qris">
-                <img src="http://localhost/PHP-MVC/public/qris/<?php echo $data['foto']['foto_qris']; ?>" alt="">
+                <img src="http://localhost/PHP-MVC/public/qris/<?php echo $data['foto']['foto_qris']; ?>" alt="" style="width: 75%;">
+                <input type="file" id="input-bukti">
                 <button id="verifikasi-pemesanan">Verifikasi Pemesanan</button>
             </div>
         </div>
