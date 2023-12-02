@@ -38,7 +38,7 @@ class Login1 extends Controller
             // echo "Swal.fire('Success!', 'Your action was successful!', 'success');";
             // echo "</script>";
             if ($ambil_id_role == 1) {
-                header('Location: http://localhost/PHP-MVC/public/dashboard');
+                header('Location: http://localhost/PHP-MVC/public/dashboardAdmin');
             } elseif ($ambil_id_role == 2) {
                 if ($ambil_id_kost) {
                     header('Location: http://localhost/PHP-MVC/public/dashboard');

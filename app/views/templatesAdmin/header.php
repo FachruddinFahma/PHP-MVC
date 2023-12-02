@@ -49,58 +49,50 @@ $judul = $data['judul'];
         <aside id="sidebar">
             <img id="icon-jkost" src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
             <ul class="nav-sidebar">
-                <li id="link-dashboard">
-                    <a href="http://localhost/PHP-MVC/public/dashboard">
+                <li id="link-dashboardAdmin">
+                    <a href="http://localhost/PHP-MVC/public/dashboardAdmin">
                         <span></span>
                         <img src=" http://localhost/PHP-MVC/public/image/dashboard.png" alt="dashboard">
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li id="link-laporanKost">
-                    <a href="http://localhost/PHP-MVC/public/data_kost">
-                        <span></span>
-                        <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
-                        <p>Laporan</p>
-                    </a>
-                </li>
-                <li id="link-kost">
-                    <a href="http://localhost/PHP-MVC/public/kamar">
-                        <span></span>
-                        <img src="http://localhost/PHP-MVC/public/image/kamar.png" alt="data kamar">
-                        <p>Data Kost</p>
-                    </a>
-                </li>
-                <li id="link-user">
-                    <a href="http://localhost/PHP-MVC/public/penghuni">
-                        <span></span>
-                        <img src="http://localhost/PHP-MVC/public/image/penghuni.png" alt="data penghuni">
-                        <p>Data User</p>
-                    </a>
-                </li>
-                <li id="link-pesanan" class="li-detail">
-                    <a href="http://localhost/PHP-MVC/public/pemesanan">
+                <li id="link-dataKostAdmin" class="li-detail">
+                    <a href="http://localhost/PHP-MVC/public/DataKost_Admin">
                         <details>
                             <summary>
                                 <span></span>
                                 <img src="http://localhost/PHP-MVC/public/image/pemesanan.png" alt="pemesanan">
-                                <a href="http://localhost/PHP-MVC/public/pemesanan">Pemesanan</a>
+                                <a href="http://localhost/PHP-MVC/public/dataKost_Admin">Data Kost</a>
                                 <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
                             </summary>
                             <ul class="detail-ul">
-                                <li><a href="#">Pesanan Baru</a></li>
-                                <li><a href="#">Pesanan Disetujui</a></li>
+                                <li><a href="#">Data kost belum diverifikasi</a></li>
+                                <li><a href="#">Data kost yang sudah diverifikasi</a></li>
+                            </ul>
+                        </details>
+                    </a>
+                </li>
+                <li id="link-dataUserAdmin" class="li-detail">
+                    <a href="http://localhost/PHP-MVC/public/DataUser_Admin">
+                        <details>
+                            <summary>
+                                <span></span>
+                                <img src="http://localhost/PHP-MVC/public/image/pemesanan.png" alt="pemesanan">
+                                <a href="http://localhost/PHP-MVC/public/DataUser_Admin">Data User</a>
+                                <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
+                            </summary>
+                            <ul class="detail-ul">
+                                <li><a href="#">Data User Pemilik Kost</a></li>
+                                <li><a href="#">Data User Penyewa Kost</a></li>
                             </ul>
                         </details>
                     </a>
                 </li>
                 <li id="link-testimoni">
-                    <a href="http://localhost/PHP-MVC/public/laporan">
+                    <a href="http://localhost/PHP-MVC/public/Testimoni_Admin">
                         <span></span>
-                        <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
-                        <p>Testimoni</p>
-                        <div class="count-notif">
-                            <p>3</p>
-                        </div>
+                        <img src="http://localhost/PHP-MVC/public/image/penghuni.png" alt="data penghuni">
+                        <p>Testtimoni</p>
                     </a>
                 </li>
                 <li id="link-keluar">
@@ -118,26 +110,22 @@ $judul = $data['judul'];
         var judul = "<?php echo $judul; ?>";
         console.log(judul);
 
-        const itemDashboard = document.getElementById('link-dashboard');
-        const itemKost = document.getElementById('link-laporanKost');
-        const itemKamar = document.getElementById('link-kost');
-        const itemPenghuni = document.getElementById('link-user');
-        const itemPemesanan = document.getElementById('link-testimoni');
-        const itemLaporan = document.getElementById('link-laporan');
+        const itemDashboardAdmin = document.getElementById('link-dashboardAdmin');
+        const itemKost = document.getElementById('link-dataKostAdmin');
+        const itemUser = document.getElementById('link-dataUserAdmin');
+        const itemTestimoni = document.getElementById('link-testimoni');
 
         function addClickedClass(element) {
             element.classList.add('clicked');
         }
 
         if (judul === "Dashboard") {
-            addClickedClass(itemDashboard);
-        } else if (judul === "laporanKost") {
+            addClickedClass(itemDashboardAdmin);
+        } else if (judul === "dataKostAdmin") {
             addClickedClass(itemKost);
-        } else if (judul === "Kost") {
-            addClickedClass(itemKamar);
-        } else if (judul === "User") {
-            addClickedClass(itemPenghuni);
+        } else if (judul === "dataKostAdmin") {
+            addClickedClass(itemUser);
         } else if (judul === "Testimoni") {
-            addClickedClass(itemPemesanan);
+            addClickedClass(itemTestimoni);
         }
     </script>
