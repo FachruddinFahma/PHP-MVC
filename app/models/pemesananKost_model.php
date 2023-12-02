@@ -44,7 +44,7 @@
             return $this->db->single();
         }
 
-        public function addPemesanan($pemesanan, $id_pemesanan)
+        public function addPemesanan($pemesanan)
         {
             $id_user = $_SESSION['id_user'];
             //$id_pemesanan = $this->generateRandomID();
@@ -53,7 +53,7 @@
                     VALUES (:id_pemesanan, :id_kamar, :id_user, CURRENT_TIMESTAMP, :tggl_masuk, :tggl_keluar, :kategori, :harga, :metode_pembayaran, 'PROSES')";
 
             $this->db->query($query);
-            $this->db->bind(':id_pemesanan', $pemesanan['id_pemesanan']);
+            $this->db->bind(':id_pemesanan', $pemesanan['id_pesanan']);
             $this->db->bind(':id_kamar', $pemesanan['id_kamar']);
             $this->db->bind(':id_user', $id_user);
             $this->db->bind(':tggl_masuk', $pemesanan['tggl_masuk']);
