@@ -27,11 +27,10 @@
             <p class="tagline">Cari Kost Tanpa Ribet,<span> Semua Ada Disini</span></p>
             <p class="deskripsi-hero">Tingkatkan kenyamanan hidupmu dengan sentuhan ajaib di ujung jari, <span>temukan
                     kost impianmu di J-Kost!</span></p>
-            <a href="">Cari Kost Sekarang</a>
+            <a href="#kost" class="smooth-scroll">Cari Kost Sekarang</a>
         </div>
         <div class="hero-right">
-            <img class="gambar1" src="<?php echo BASEURL; ?>image/kamar.jpg" alt="">
-            <img class="gambar2" src="<?php echo BASEURL; ?>image/kamar.jpg" alt="">
+            <img class="gambar1" src="<?php echo BASEURL; ?>image/landing_img.png" alt="">
         </div>
     </section>
 
@@ -107,22 +106,22 @@
                 <div class="gambar-order">
                     <i class="ri-shopping-bag-3-fill ic-order"></i>
                 </div>
-                <p class="title-order title-order-after">Klik Kost</p>
-                <p class="penjelasan-order">Pilih kost dan klik pesan kost</p>
+                <p class="title-order title-order-after">Cari Kost</p>
+                <p class="penjelasan-order">Pilih kost dan klik pesan kost sesuai dengan selera</p>
+            </div>
+            <div class="list-order list-order2">
+                <div class="gambar-order">
+                    <i class="ri-shopping-bag-3-fill ic-order"></i>
+                </div>
+                <p class="title-order title-order-after">Proses Pembayaran</p>
+                <p class="penjelasan-order">Calon penyewa melakukan pembayaran melalui rekening/e-wallet</p>
             </div>
             <div class="list-order">
                 <div class="gambar-order">
                     <i class="ri-shopping-bag-3-fill ic-order"></i>
                 </div>
-                <p class="title-order title-order-after">Klik Kost</p>
-                <p class="penjelasan-order">Pilih kost dan klik pesan kost</p>
-            </div>
-            <div class="list-order">
-                <div class="gambar-order">
-                    <i class="ri-shopping-bag-3-fill ic-order"></i>
-                </div>
-                <p class="title-order">Klik Kost</p>
-                <p class="penjelasan-order">Pilih kost dan klik pesan kost</p>
+                <p class="title-order">Verifikasi Pembayaran</p>
+                <p class="penjelasan-order">Pemilik kost melakukan verifikasi bukti pembayaran</p>
             </div>
         </div>
     </section>
@@ -216,7 +215,6 @@
                 <div id="button-terbaru">
                     <p>Terbaru</p>
                 </div>
-
             </div>
         </div>
         <div class="content-kost">
@@ -308,5 +306,49 @@
         </div>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".smooth-scroll").on("click", function(event) {
+        event.preventDefault();
+        var targetId = $(this).attr("href");
+        if ($(targetId).length) {
+            $("html, body").animate({
+                scrollTop: $(targetId).offset().top
+            }, 800);
+        }
+    });
+
+    //button kost terbaru dan terlaris
+    $("#button-populer").click(function() {
+        $(this).css({
+            "background-color": "var(--blue)",
+            "color": "white",
+            "border-radius": "8px"
+        });
+
+        $("#button-terbaru").css({
+            "background-color": "",
+            "color": "var(--blue)",
+            "border-radius": ""
+        });
+    });
+
+    $("#button-terbaru").click(function() {
+        $(this).css({
+            "background-color": "var(--blue)",
+            "color": "white",
+            "border-radius": "8px"
+        });
+
+        $("#button-populer").css({
+            "background-color": "var(--lightblue)",
+            "color": "var(--blue)",
+            "border-radius": ""
+        });
+    });
+
+});
+</script>
 
 </html>
