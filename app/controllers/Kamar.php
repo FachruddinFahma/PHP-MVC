@@ -30,7 +30,6 @@ class Kamar extends Controller
             'harga_3bulan' => $_POST['harga_3bulanan'],
             'harga_tahunan' => $_POST['harga_tahunan']
         ];
-
         if ($this->model('Kamar_model')->addKamar($dataKamar, $id_kost) > 0) {
             header('Location: http://localhost/PHP-MVC/public/kamar3');
         } else {

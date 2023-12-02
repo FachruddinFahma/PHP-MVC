@@ -56,146 +56,150 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div id="content1">
-                    <div id="progress-data">
-                        <div id="progress-data-kamar" class="active-data actived">
-                            <div class="angka">
-                                <p>1</p>
-                            </div>
-                            <p class="title-progress">Data Kamar</p>
-                        </div>
-                        <div id="progress-foto" class="active-data">
-                            <div class="angka">
-                                <p>2</p>
-                            </div>
-                            <p class="title-progress">Foto Kamar</p>
-                        </div>
-                        <div id="progress-verifikasi" class="active-data">
-                            <div class="angka">
-                                <p>3</p>
-                            </div>
-                            <p>Verifikasi</p>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="input mb-3">
-                            <div class="container-group">
-                                <div class="input-group">
-                                    <label for="">ID Kamar Kamar</label>
-                                    <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar"
-                                        value="<?php echo $data['id_baru'] ?>" readonly>
+                <form id="form-tambah-kamar" action="http://localhost/PHP-MVC/public/kamar/addKamar" method="post"
+                    enctype="multipart/form-data">
+                    <div id="content1">
+                        <div id="progress-data">
+                            <div id="progress-data-kamar" class="active-data actived">
+                                <div class="angka">
+                                    <p>1</p>
                                 </div>
-                                <div class="input-group">
-                                    <label for="">Nama Kamar</label>
-                                    <input type="text" name="nama_kamar" id="nama_kamar"
-                                        placeholder="masukan nama kamar">
+                                <p class="title-progress">Data Kamar</p>
+                            </div>
+                            <div id="progress-foto" class="active-data">
+                                <div class="angka">
+                                    <p>2</p>
                                 </div>
+                                <p class="title-progress">Foto Kamar</p>
+                            </div>
+                            <div id="progress-verifikasi" class="active-data">
+                                <div class="angka">
+                                    <p>3</p>
+                                </div>
+                                <p>Verifikasi</p>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input mb-3">
+                                <div class="container-group">
+                                    <div class="input-group">
+                                        <label for="">ID Kamar Kamar</label>
+                                        <input type="text" name="id_kamar" id="id_kamar" placeholder="masukan ID kamar"
+                                            value="<?php echo $data['id_baru'] ?>" readonly>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Nama Kamar</label>
+                                        <input type="text" name="nama_kamar" id="nama_kamar"
+                                            placeholder="masukan nama kamar">
+                                    </div>
 
-                            </div>
-                            <div class="input-group">
-                                <label for="">Kategori</label>
-                                <div id="group-kategori">
-                                    <div class="kategori-group">
-                                        <p>harian</p>
-                                        <input type="checkbox" name="check_harian" id="check_harian">
-                                    </div>
-                                    <div class="kategori-group">
-                                        <p>bulanan</p>
-                                        <input type="checkbox" checked disabled name="check_bulanan" id="check_bulanan">
-                                    </div>
-                                    <div class="kategori-group">
-                                        <p>3 bulan</p>
-                                        <input type="checkbox" name="check_3bulan" id="check_3bulan">
-                                    </div>
-                                    <div class="kategori-group">
-                                        <p>tahunan</p>
-                                        <input type="checkbox" name="check_tahunan" id="check_tahunan">
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="container-group">
                                 <div class="input-group">
-                                    <label for="">Ukuran</label>
-                                    <div class="input-group-double">
-                                        <input type="text" name="panjang_kamar" id="panjang_kamar"
-                                            placeholder="panjang">
-                                        <p>x</p>
-                                        <input type="text" name="lebar_kamar" id="lebar_kamar" placeholder="lebar">
+                                    <label for="">Kategori</label>
+                                    <div id="group-kategori">
+                                        <div class="kategori-group">
+                                            <p>harian</p>
+                                            <input type="checkbox" name="check_harian" id="check_harian">
+                                        </div>
+                                        <div class="kategori-group">
+                                            <p>bulanan</p>
+                                            <input type="checkbox" checked disabled name="check_bulanan"
+                                                id="check_bulanan">
+                                        </div>
+                                        <div class="kategori-group">
+                                            <p>3 bulan</p>
+                                            <input type="checkbox" name="check_3bulan" id="check_3bulan">
+                                        </div>
+                                        <div class="kategori-group">
+                                            <p>tahunan</p>
+                                            <input type="checkbox" name="check_tahunan" id="check_tahunan">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-group">
+                                    <div class="input-group">
+                                        <label for="">Ukuran</label>
+                                        <div class="input-group-double">
+                                            <input type="text" name="panjang_kamar" id="panjang_kamar"
+                                                placeholder="panjang">
+                                            <p>x</p>
+                                            <input type="text" name="lebar_kamar" id="lebar_kamar" placeholder="lebar">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Fasilitas</label>
+                                    <textarea name="fasilitas_kamar" id="fasilitas_kamar" cols="30" rows="10"
+                                        placeholder="masukan fasilitas"></textarea>
+                                </div>
+                                <div class="container-group">
+                                    <div class="input-group" id="grup-input-bulanan">
+                                        <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
+                                        <input type="text" name="harga_bulanan" id="harga_bulanan"
+                                            placeholder="masukan harga bulanan">
+                                    </div>
+                                    <div class="input-group" id="grup-input-harian">
+                                        <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
+                                        <input type="text" name="harga_harian" id="harga_harian"
+                                            placeholder="masukan harga harian">
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-group">
-                                <label for="">Fasilitas</label>
-                                <textarea name="fasilitas_kamar" id="fasilitas_kamar" cols="30" rows="10"
-                                    placeholder="masukan fasilitas"></textarea>
-                            </div>
                             <div class="container-group">
-                                <div class="input-group" id="grup-input-bulanan">
-                                    <label for="harga_bulanan" id="lbl_harga_bulanan">Harga Bulanan</label>
-                                    <input type="text" name="harga_bulanan" id="harga_bulanan"
-                                        placeholder="masukan harga bulanan">
+                                <div class="input-group" id="grup-input-3bulanan">
+                                    <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
+                                    <input type="text" name="harga_3bulanan" id="harga_3bulanan"
+                                        placeholder="masukan harga 3 bulan">
                                 </div>
-                                <div class="input-group" id="grup-input-harian">
-                                    <label for="harga_harian" id="lbl_harga_harian">Harga Harian</label>
-                                    <input type="text" name="harga_harian" id="harga_harian"
-                                        placeholder="masukan harga harian">
+                                <div class="input-group" id="grup-input-tahunan">
+                                    <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
+                                    <input type="text" name="harga_tahunan" id="harga_tahunan"
+                                        placeholder="masukan harga tahunan">
                                 </div>
                             </div>
-                        </div>
-                        <div class="container-group">
-                            <div class="input-group" id="grup-input-3bulanan">
-                                <label for="harga_3bulanan" id="lbl_harga_3bulanan">Harga 3 Bulanan</label>
-                                <input type="text" name="harga_3bulanan" id="harga_3bulanan"
-                                    placeholder="masukan harga 3 bulan">
-                            </div>
-                            <div class="input-group" id="grup-input-tahunan">
-                                <label for="harga_tahunan" id="lbl_harga_tahunan">Harga Tahunan</label>
-                                <input type="text" name="harga_tahunan" id="harga_tahunan"
-                                    placeholder="masukan harga tahunan">
-                            </div>
-                        </div>
 
 
-                    </div>
-                </div>
-                <div id="content2">
-                    <div id="progress-data">
-                        <div id="progress-data-kamar" class="active-data">
-                            <div class="angka">
-                                <p>1</p>
-                            </div>
-                            <p class="title-progress">Data Kamar</p>
-                        </div>
-                        <div id="progress-foto" class="active-data actived">
-                            <div class="angka">
-                                <p>2</p>
-                            </div>
-                            <p class="title-progress">Foto Kamar</p>
-                        </div>
-                        <div id="progress-verifikasi" class="active-data">
-                            <div class="angka">
-                                <p>3</p>
-                            </div>
-                            <p>Verifikasi</p>
                         </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="foto mb-3">
-                            <div class="foto-group">
-                                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
-                                <input type="file" name="foto1">
+                    <div id="content2">
+                        <div id="progress-data">
+                            <div id="progress-data-kamar" class="active-data">
+                                <div class="angka">
+                                    <p>1</p>
+                                </div>
+                                <p class="title-progress">Data Kamar</p>
                             </div>
-                            <div class="foto-group">
-                                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
-                                <input type="file" name="foto2">
+                            <div id="progress-foto" class="active-data actived">
+                                <div class="angka">
+                                    <p>2</p>
+                                </div>
+                                <p class="title-progress">Foto Kamar</p>
                             </div>
-                            <div class="foto-group">
-                                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
-                                <input type="file" name="foto3">
+                            <div id="progress-verifikasi" class="active-data">
+                                <div class="angka">
+                                    <p>3</p>
+                                </div>
+                                <p>Verifikasi</p>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="foto mb-3">
+                                <div class="foto-group">
+                                    <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                                    <input type="file" id="foto1" name="foto1">
+                                </div>
+                                <div class="foto-group">
+                                    <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                                    <input type="file" id="foto2" name="foto2">
+                                </div>
+                                <div class="foto-group">
+                                    <img src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="foto kamar">
+                                    <input type="file" id="foto3" name="foto3">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div id="content3">
                     <div id="progress-data">
                         <div id="progress-data-kamar" class="active-data">
@@ -317,7 +321,7 @@ $(document).ready(function() {
 
     function nextContent() {
         if (visibleContent == 4) {
-            alert("udah 3 bang")
+            $('#form-tambah-kamar').submit();
         } else {
             $("#content" + (visibleContent - 1)).hide();
             $("#content" + visibleContent).show();

@@ -35,15 +35,18 @@ class Kamar_model
             $foto2 = $_FILES['foto2']['tmp_name'];
             $foto3 = $_FILES['foto3']['tmp_name'];
             $uploadDir = '../public/image/kamar'; 
-            
+            if (!file_exists($uploadDir)) {
+                mkdir($uploadDir, 0755, true);
+            }
             $fotoName1 = basename($_FILES['foto1']['name']);
             $fotoName2 = basename($_FILES['foto2']['name']);
             $fotoName3 = basename($_FILES['foto3']['name']);
 
             // Memindahkan file ke lokasi penyimpanan
-            move_uploaded_file($foto1, $uploadDir . $fotoName1);
-            move_uploaded_file($foto2, $uploadDir . $fotoName2);
-            move_uploaded_file($foto3, $uploadDir . $fotoName3);
+            move_uploaded_file($foto1, $uploadDir . '/' . $fotoName1);
+            move_uploaded_file($foto2, $uploadDir . '/' . $fotoName2);
+            move_uploaded_file($foto3, $uploadDir . '/' . $fotoName3);
+
             
             $query = "INSERT INTO tb_kamar VALUES (:id_kamar, :nama_kamar, :fasilitas, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahunan, :id_kost)";
             $this->db->query($query);
@@ -59,8 +62,9 @@ class Kamar_model
             $this->db->execute();
 
             $combinedFilenames = $fotoName1 . ',' . $fotoName2 . ',' . $fotoName3;
-            $queryFoto = "INSERT INTO tb_foto_kamar VALUES ('', :link_fotoKamar)";
+            $queryFoto = "INSERT INTO tb_foto_kamar VALUES (:id_kamar, :link_fotoKamar)";
             $this->db->query($queryFoto);
+            $this->db->bind(':id_kamar', $kamar['id_kamar']);
             $this->db->bind('link_fotoKamar', $combinedFilenames);
             $this->db->execute();
             return $this->db->rowCount();
