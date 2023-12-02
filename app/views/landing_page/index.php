@@ -229,8 +229,7 @@
                         <?php
                                     $data['data_kost']
                                     ?>
-                        <img class="gambar-kost" src="<?php echo '<?php echo BASEURL; ?>foto/' . $kost['main_foto']; ?>"
-                            alt="">
+                        <img class="gambar-kost" src="<?php echo BASEURL . 'foto/' . $kost['main_foto']; ?>" alt="">
                     </div>
                     <div class="content-card-kost">
                         <div class="top-content-kost">

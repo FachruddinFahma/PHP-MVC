@@ -29,8 +29,7 @@
         </div>
         <div id="kumpulan-foto-kamar">
             <?php
-            // Menyimpan URL foto pertama sebagai main-foto
-            $mainFoto = '<?php echo BASEURL; ?>foto/' . ($data['foto_kost']['foto_kamar'][0] ?? '');
+            $mainFoto = BASEURL . 'foto/' . ($data['foto_kost']['foto_kamar'][0] ?? '');
             ?>
             <img class="main-foto" src="<?= $mainFoto ?>" alt="">
             <div class="right-foto-kamar">
