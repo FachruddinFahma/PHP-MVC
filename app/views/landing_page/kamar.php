@@ -1,16 +1,16 @@
 <head>
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/detail_kamar.css">
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/daftar-kamar.css">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>css/detail_kamar.css">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>css/daftar-kamar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK ICON J-KOS -->
-    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASEURL; ?>image/project logo j-kost white 1.png">
     <title><?php echo $data['judul']; ?></title>
 </head>
 
 <body>
     <nav>
         <div class="title-navbar">
-            <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+            <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
         </div>
         <div class="link-navbar">
             <ul>
@@ -30,7 +30,7 @@
         <div id="kumpulan-foto-kamar">
             <?php
             // Menyimpan URL foto pertama sebagai main-foto
-            $mainFoto = 'http://localhost/PHP-MVC/public/foto/' . ($data['foto_kost']['foto_kamar'][0] ?? '');
+            $mainFoto = '<?php echo BASEURL; ?>foto/' . ($data['foto_kost']['foto_kamar'][0] ?? '');
             ?>
             <img class="main-foto" src="<?= $mainFoto ?>" alt="">
             <div class="right-foto-kamar">
@@ -41,8 +41,8 @@
                     $foto_1 = $data['foto_kost']['foto_kamar'][1];
                     $foto_2 = $data['foto_kost']['foto_kamar'][2];
                 ?>
-                    <img src="http://localhost/PHP-MVC/public/foto/<?php echo $foto_1; ?>" alt="">
-                    <img src="http://localhost/PHP-MVC/public/foto/<?php echo $foto_2; ?>" alt="">
+                <img src="<?php echo BASEURL; ?>foto/<?php echo $foto_1; ?>" alt="">
+                <img src="<?php echo BASEURL; ?>foto/<?php echo $foto_2; ?>" alt="">
                 <?php
                 } else {
                     echo "Tidak cukup foto untuk ditampilkan.";
@@ -52,10 +52,13 @@
         </div>
         <div id="maps-kost">
             <?php if (!empty($data['kost'])) : ?>
-                <iframe src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed" width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <iframe
+                src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed"
+                width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
             <?php else : ?>
-                <p>No kost data available.</p>
+            <p>No kost data available.</p>
             <?php endif; ?>
         </div>
 
@@ -63,25 +66,25 @@
             <h1>Daftar Kamar</h1>
             <div id="kumpulan_kamar">
                 <?php foreach ($data['kamar'] as $kamar) : ?>
-                    <a href="http://localhost/PHP-MVC/public/detail_kamar/<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
-                        <div class="foto-kamar">
-                            <img class="gambar-kost" src="http://localhost/PHP-MVC/public/image/kamar/kamar1.jpg" alt="">
+                <a href="<?php echo BASEURL; ?>detail_kamar/<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
+                    <div class="foto-kamar">
+                        <img class="gambar-kost" src="<?php echo BASEURL; ?>image/kamar/kamar1.jpg" alt="">
+                    </div>
+                    <div class="content-card-kamar">
+                        <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
+                        <!-- Tambahkan info kamar lainnya sesuai kebutuhan -->
+                        <div class="fasilitas">
+                            <i class="ri-router-line"></i>
+                            <i class="ri-hotel-bed-fill"></i>
+                            <i class="ri-battery-2-charge-fill"></i>
+                            <i class="ri-router-line"></i>
+                            <i class="ri-router-line"></i>
                         </div>
-                        <div class="content-card-kamar">
-                            <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
-                            <!-- Tambahkan info kamar lainnya sesuai kebutuhan -->
-                            <div class="fasilitas">
-                                <i class="ri-router-line"></i>
-                                <i class="ri-hotel-bed-fill"></i>
-                                <i class="ri-battery-2-charge-fill"></i>
-                                <i class="ri-router-line"></i>
-                                <i class="ri-router-line"></i>
-                            </div>
-                            <div class="harga">
-                                <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
-                            </div>
+                        <div class="harga">
+                            <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
                         </div>
-                    </a>
+                    </div>
+                </a>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -90,7 +93,7 @@
     <footer>
         <div class="top-footer">
             <div class="left-footer">
-                <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+                <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
                 <p>Our vision is to provide convenience and help increase your sales business.</p>
                 <div class="kumpulan-medsos">
                     <i class="ri-facebook-circle-fill"></i>

@@ -1,16 +1,16 @@
 <head>
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/landing_page.css">
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/data_pemesanan.css">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>css/landing_page.css">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>css/data_pemesanan.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK ICON J-KOS -->
-    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASEURL; ?>image/project logo j-kost white 1.png">
     <title>Pemesanan Kost</title>
 </head>
 
 <body>
     <nav>
         <div class="title-navbar">
-            <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+            <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
         </div>
         <div class="link-navbar">
             <ul>
@@ -27,7 +27,7 @@
     </div>
 
     <section id="pemesanan">
-        <form action="http://localhost/PHP-MVC/public/pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
+        <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
             <div class="left-pemesanan">
                 <h1>Data Pemesanan</h1>
                 <p name="id_pemesanan"><?php echo $data['idRnamdom']; ?></p>
@@ -36,19 +36,23 @@
                     <div class="kumpulan-input-pemesanan">
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Kost</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" value="<?= $data['pemesanan']['nama_kost']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost"
+                                value="<?= $data['pemesanan']['nama_kost']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Kamar</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" value="<?= $data['pemesanan']['nama_kamar']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost"
+                                value="<?= $data['pemesanan']['nama_kamar']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Fasilitas</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost" value="<?= $data['pemesanan']['fasilitas']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost"
+                                value="<?= $data['pemesanan']['fasilitas']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Alamat Kost</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost" value="<?= $data['pemesanan']['alamat']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost"
+                                value="<?= $data['pemesanan']['alamat']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="tanggal_masuk">Tanggal Masuk</label>
@@ -60,11 +64,13 @@
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">ID Kost</label> -->
-                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost" value="<?= $data['pemesanan']['id_kost']; ?>" readonly>
+                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost"
+                                value="<?= $data['pemesanan']['id_kost']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">ID Kamar</label> -->
-                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kamar" id="id_kost" value="<?= $data['pemesanan']['id_kamar']; ?>" readonly>
+                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kamar" id="id_kost"
+                                value="<?= $data['pemesanan']['id_kamar']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">Kategori</label> -->
@@ -85,19 +91,23 @@
                     <div class="kumpulan-input-pemesanan">
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Penghuni</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#" value="<?= $data['penghuni']['nama_lengkap']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#"
+                                value="<?= $data['penghuni']['nama_lengkap']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Jenis Kelamin</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#" value="<?= $data['penghuni']['jenis_kelamin']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#"
+                                value="<?= $data['penghuni']['jenis_kelamin']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Alamat Penghuni</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#" value="<?= $data['penghuni']['alamat']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#"
+                                value="<?= $data['penghuni']['alamat']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Nomor HP Aktif</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#" value="<?= $data['penghuni']['no_hp']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#"
+                                value="<?= $data['penghuni']['no_hp']; ?>" readonly>
                         </div>
                     </div>
                 </div>
@@ -126,42 +136,42 @@
                     <div class="row-pembayaran">
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="BCA">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/BCA.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/BCA.png" alt="">
                         </div>
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="BRI">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/BRI.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/BRI.png" alt="">
                         </div>
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="BNI">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/bni.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/bni.png" alt="">
                         </div>
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="Mandiri">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/MANDIRI.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/MANDIRI.png" alt="">
                         </div>
                     </div>
                     <div class="row-pembayaran">
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="Dana">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/DANA.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/DANA.png" alt="">
                         </div>
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="Gopay">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/gopay.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/gopay.png" alt="">
                         </div>
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="Shoope Pay">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/shopeepay.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/shopeepay.png" alt="">
                         </div>
                         <div class="opsi-pembayaran">
                             <input type="radio" name="metode_pembayaran" id="" value="OVO">
-                            <img src="http://localhost/PHP-MVC/public/image/pembayaran/ovo.png" alt="">
+                            <img src="<?php echo BASEURL; ?>image/pembayaran/ovo.png" alt="">
                         </div>
                     </div>
                 </div>
                 <button type="submit" id="btn-pesan-sekarang">Bayar Sekarang</button>
-                <!-- <a href="http://localhost/PHP-MVC/public/pemesanan_kost/" id="btn-pesan-sekarang" type="submit">Bayar Sekarang</a> -->
+                <!-- <a href="<?php echo BASEURL; ?>pemesanan_kost/" id="btn-pesan-sekarang" type="submit">Bayar Sekarang</a> -->
             </div>
         </form>
     </section>
@@ -169,7 +179,7 @@
     <footer>
         <div class="top-footer">
             <div class="left-footer">
-                <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+                <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
                 <p>Our vision is to provide convenience and help increase your sales business.</p>
                 <div class="kumpulan-medsos">
                     <i class="ri-facebook-circle-fill"></i>
@@ -211,42 +221,42 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#pilihan-harga').on('change', function() {
-                // Mendapatkan harga berdasarkan kategori yang dipilih
-                var hargaBulanan = <?= json_encode($data['kamar']['harga_bulanan']); ?>;
-                var hargaHarian = <?= json_encode($data['kamar']['harga_harian']); ?>;
-                var harga3Bulanan = <?= json_encode($data['kamar']['harga_3bulanan']); ?>;
-                var hargaTahunan = <?= json_encode($data['kamar']['harga_tahunan']); ?>;
+    $(document).ready(function() {
+        $('#pilihan-harga').on('change', function() {
+            // Mendapatkan harga berdasarkan kategori yang dipilih
+            var hargaBulanan = <?= json_encode($data['kamar']['harga_bulanan']); ?>;
+            var hargaHarian = <?= json_encode($data['kamar']['harga_harian']); ?>;
+            var harga3Bulanan = <?= json_encode($data['kamar']['harga_3bulanan']); ?>;
+            var hargaTahunan = <?= json_encode($data['kamar']['harga_tahunan']); ?>;
 
-                var pilihanHarga = $(this).val();
-                var hargaDisplay = $('#harga-display');
-                var spanDisplay = $('#span-harga-display');
+            var pilihanHarga = $(this).val();
+            var hargaDisplay = $('#harga-display');
+            var spanDisplay = $('#span-harga-display');
 
-                // Menampilkan harga berdasarkan kategori yang dipilih
-                switch (pilihanHarga) {
-                    case 'harian':
-                        hargaDisplay.text('Rp ' + hargaHarian);
-                        spanDisplay.text('/ hari');
-                        break;
-                    case 'bulanan':
-                        hargaDisplay.text('Rp ' + hargaBulanan);
-                        spanDisplay.text('/ bulan');
-                        break;
-                    case '3bulanan':
-                        hargaDisplay.text('Rp ' + harga3Bulanan);
-                        spanDisplay.text('/ 3 bulan');
-                        break;
-                    case 'tahunan':
-                        hargaDisplay.text('Rp ' + hargaTahunan);
-                        spanDisplay.text('/ tahun');
-                        break;
-                    default:
-                        hargaDisplay.text('Invalid');
-                        spanDisplay.text('');
-                }
-            });
+            // Menampilkan harga berdasarkan kategori yang dipilih
+            switch (pilihanHarga) {
+                case 'harian':
+                    hargaDisplay.text('Rp ' + hargaHarian);
+                    spanDisplay.text('/ hari');
+                    break;
+                case 'bulanan':
+                    hargaDisplay.text('Rp ' + hargaBulanan);
+                    spanDisplay.text('/ bulan');
+                    break;
+                case '3bulanan':
+                    hargaDisplay.text('Rp ' + harga3Bulanan);
+                    spanDisplay.text('/ 3 bulan');
+                    break;
+                case 'tahunan':
+                    hargaDisplay.text('Rp ' + hargaTahunan);
+                    spanDisplay.text('/ tahun');
+                    break;
+                default:
+                    hargaDisplay.text('Invalid');
+                    spanDisplay.text('');
+            }
         });
+    });
     </script>
 </body>
 

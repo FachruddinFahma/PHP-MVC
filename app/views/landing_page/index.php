@@ -1,15 +1,15 @@
 <head>
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/landing_page.css">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>css/landing_page.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK ICON J-KOS -->
-    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASEURL; ?>image/project logo j-kost white 1.png">
     <title>Home</title>
 </head>
 
 <body>
     <nav>
         <div class="title-navbar">
-            <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+            <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
         </div>
         <div class="link-navbar">
             <ul>
@@ -25,19 +25,21 @@
     <section id="hero">
         <div class="hero-left">
             <p class="tagline">Cari Kost Tanpa Ribet,<span> Semua Ada Disini</span></p>
-            <p class="deskripsi-hero">Tingkatkan kenyamanan hidupmu dengan sentuhan ajaib di ujung jari, <span>temukan kost impianmu di J-Kost!</span></p>
+            <p class="deskripsi-hero">Tingkatkan kenyamanan hidupmu dengan sentuhan ajaib di ujung jari, <span>temukan
+                    kost impianmu di J-Kost!</span></p>
             <a href="">Cari Kost Sekarang</a>
         </div>
         <div class="hero-right">
-            <img class="gambar1" src="http://localhost/PHP-MVC/public/image/kamar.jpg" alt="">
-            <img class="gambar2" src="http://localhost/PHP-MVC/public/image/kamar.jpg" alt="">
+            <img class="gambar1" src="<?php echo BASEURL; ?>image/kamar.jpg" alt="">
+            <img class="gambar2" src="<?php echo BASEURL; ?>image/kamar.jpg" alt="">
         </div>
     </section>
 
     <section id="why-jkost">
         <div class="title-why">
             <h3>Kenapa harus <span>J-Kost</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet! consectetur adipisicing elit. Facilis, amet!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet! consectetur adipisicing elit.
+                Facilis, amet!</p>
         </div>
         <div id="kumpulan-icon-why">
             <div class="icon-why">
@@ -74,7 +76,9 @@
     <section id="fitur-unggulan">
         <div id="fiturunggulan-tulisan">
             <h2>Mencari Kost Lebih Cepat, Praktis, dan Aman</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum quae neque sed voluptatem dolorem illo, dolor minima veniam quo! sit amet consectetur adipisicing elit. Aliquam ipsum quae neque sed voluptatem dolorem illo, dolor minima veniam quo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum quae neque sed voluptatem dolorem
+                illo, dolor minima veniam quo! sit amet consectetur adipisicing elit. Aliquam ipsum quae neque sed
+                voluptatem dolorem illo, dolor minima veniam quo!</p>
             <div class="kumpulan-fiturunggulan">
                 <div class="list-fitur">
                     <i class="ri-checkbox-circle-fill ic-fitur"></i>
@@ -91,7 +95,7 @@
             </div>
         </div>
         <div id="fiturunggulan-gambar">
-            <img src="http://localhost/PHP-MVC/public/image/kumpulan-card.png" alt="kumpulan card">
+            <img src="<?php echo BASEURL; ?>image/kumpulan-card.png" alt="kumpulan card">
         </div>
     </section>
     <section id="order">
@@ -131,7 +135,7 @@
                 <div class="card-testimoni">
                     <div class="profile-testimoni">
                         <div class="gambar-testimoni">
-                            <img src=" http://localhost/PHP-MVC/public/image/kumpulan-card.png" alt="kumpulan card">
+                            <img src=" <?php echo BASEURL; ?>image/kumpulan-card.png" alt="kumpulan card">
                         </div>
                         <div class="nama-testimoni">
                             <p><b>Nico Flassy</b></p>
@@ -139,7 +143,9 @@
                         </div>
                     </div>
                     <div class="content-testimoni">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptates debitis, neque deleniti nobis sit consequatur minima facere! Tenetur veniam rem debitis quas sapiente temporibus aut est repudiandae porro fuga!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptates debitis, neque
+                            deleniti nobis sit consequatur minima facere! Tenetur veniam rem debitis quas sapiente
+                            temporibus aut est repudiandae porro fuga!</p>
                     </div>
                     <div class="rating-testimoni">
                         <i class="ri-star-fill ic-testimoni"></i>
@@ -152,7 +158,7 @@
                 <div class="card-testimoni">
                     <div class="profile-testimoni">
                         <div class="gambar-testimoni">
-                            <img src=" http://localhost/PHP-MVC/public/image/kumpulan-card.png" alt="kumpulan card">
+                            <img src=" <?php echo BASEURL; ?>image/kumpulan-card.png" alt="kumpulan card">
                         </div>
                         <div class="nama-testimoni">
                             <p><b>Nico Flassy</b></p>
@@ -160,7 +166,9 @@
                         </div>
                     </div>
                     <div class="content-testimoni">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptates debitis, neque deleniti nobis sit consequatur minima facere! Tenetur veniam rem debitis quas sapiente temporibus aut est repudiandae porro fuga!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptates debitis, neque
+                            deleniti nobis sit consequatur minima facere! Tenetur veniam rem debitis quas sapiente
+                            temporibus aut est repudiandae porro fuga!</p>
                     </div>
                     <div class="rating-testimoni">
                         <i class="ri-star-fill ic-testimoni"></i>
@@ -173,7 +181,7 @@
                 <div class="card-testimoni">
                     <div class="profile-testimoni">
                         <div class="gambar-testimoni">
-                            <img src=" http://localhost/PHP-MVC/public/image/kumpulan-card.png" alt="kumpulan card">
+                            <img src=" <?php echo BASEURL; ?>image/kumpulan-card.png" alt="kumpulan card">
                         </div>
                         <div class="nama-testimoni">
                             <p><b>Nico Flassy</b></p>
@@ -181,7 +189,9 @@
                         </div>
                     </div>
                     <div class="content-testimoni">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptates debitis, neque deleniti nobis sit consequatur minima facere! Tenetur veniam rem debitis quas sapiente temporibus aut est repudiandae porro fuga!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptates debitis, neque
+                            deleniti nobis sit consequatur minima facere! Tenetur veniam rem debitis quas sapiente
+                            temporibus aut est repudiandae porro fuga!</p>
                     </div>
                     <div class="rating-testimoni">
                         <i class="ri-star-fill ic-testimoni"></i>
@@ -197,7 +207,8 @@
     <section id="kost">
         <div class="title-section-kost">
             <h2>Terafiliasi dengan kost di Jember</h2>
-            <p class="sub-deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+            <p class="sub-deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore e Lorem ipsum dolor sit amet, consectetur adipiscing </p>
             <div id="button-kost">
                 <div id="button-populer">
                     <p>Populer</p>
@@ -215,28 +226,29 @@
                     foreach ($data['data_kost'] as $kost) {
                         if ($kost['status'] === 'AKTIF') {
                 ?>
-                            <a href="http://localhost/PHP-MVC/public/kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
-                                <div class="foto-kost">
-                                    <?php
+                <a href="<?php echo BASEURL; ?>kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
+                    <div class="foto-kost">
+                        <?php
                                     $data['data_kost']
                                     ?>
-                                    <img class="gambar-kost" src="<?php echo 'http://localhost/PHP-MVC/public/foto/' . $kost['main_foto']; ?>" alt="">
-                                </div>
-                                <div class="content-card-kost">
-                                    <div class="top-content-kost">
-                                        <p class="kategori-kost"><?php echo $kost['jenis_kost']; ?></p>
-                                        <p><i class="ri-star-fill"></i> 4.5</p>
-                                    </div>
-                                    <p class="nama-kost"><?php echo $kost['nama_kost']; ?></p>
-                                    <div class="location-kost">
-                                        <i class="ri-map-pin-2-fill"></i>
-                                        <p><?php echo $kost['alamat']; ?></p>
-                                    </div>
-                                    <div class="harga">
-                                        <p>Rp 300,000<span>/ Bulan</span></p>
-                                    </div>
-                                </div>
-                            </a>
+                        <img class="gambar-kost" src="<?php echo '<?php echo BASEURL; ?>foto/' . $kost['main_foto']; ?>"
+                            alt="">
+                    </div>
+                    <div class="content-card-kost">
+                        <div class="top-content-kost">
+                            <p class="kategori-kost"><?php echo $kost['jenis_kost']; ?></p>
+                            <p><i class="ri-star-fill"></i> 4.5</p>
+                        </div>
+                        <p class="nama-kost"><?php echo $kost['nama_kost']; ?></p>
+                        <div class="location-kost">
+                            <i class="ri-map-pin-2-fill"></i>
+                            <p><?php echo $kost['alamat']; ?></p>
+                        </div>
+                        <div class="harga">
+                            <p>Rp 300,000<span>/ Bulan</span></p>
+                        </div>
+                    </div>
+                </a>
                 <?php
                         }
                     }
@@ -247,7 +259,7 @@
 
             </div>
             <div id="bottom-card-kost">
-                <a href="http://localhost/PHP-MVC/public/jelajah_kost/jelajah">Jelajahi selengkapnya</a>
+                <a href="<?php echo BASEURL; ?>jelajah_kost/jelajah">Jelajahi selengkapnya</a>
             </div>
         </div>
     </section>
@@ -255,7 +267,7 @@
     <footer>
         <div class="top-footer">
             <div class="left-footer">
-                <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+                <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
                 <p>Our vision is to provide convenience and help increase your sales business.</p>
                 <div class="kumpulan-medsos">
                     <i class="ri-facebook-circle-fill"></i>

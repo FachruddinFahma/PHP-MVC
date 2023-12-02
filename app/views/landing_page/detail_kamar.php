@@ -6,17 +6,17 @@ ini_set('display_errors', 1);
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/detail_kamar.css">
+    <link rel="stylesheet" href="<?php echo BASEURL; ?>css/detail_kamar.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK ICON J-KOS -->
-    <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASEURL; ?>image/project logo j-kost white 1.png">
     <title>Halaman Kamar</title>
 </head>
 
 <body>
     <nav>
         <div class="title-navbar">
-            <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+            <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
         </div>
         <div class="link-navbar">
             <ul>
@@ -34,10 +34,10 @@ ini_set('display_errors', 1);
             <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Kamar 3</p>
         </div>
         <div id="kumpulan-foto-kamar">
-            <img class="main-foto" src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
+            <img class="main-foto" src="<?php echo BASEURL; ?>image/kamar/kamar-hotel.jpg" alt="">
             <div class="right-foto-kamar">
-                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
-                <img src="http://localhost/PHP-MVC/public/image/kamar/kamar-hotel.jpg" alt="">
+                <img src="<?php echo BASEURL; ?>image/kamar/kamar-hotel.jpg" alt="">
+                <img src="<?php echo BASEURL; ?>image/kamar/kamar-hotel.jpg" alt="">
             </div>
         </div>
         <div id="content-kamar">
@@ -82,7 +82,7 @@ ini_set('display_errors', 1);
                         <h2 id="harga-display"><?php echo "Rp " . $data['kamar']['harga_bulanan'] ?></h2>
                         <span id="span-harga-display">/bulan</span>
                     </div>
-                    
+
                     <div class="input-rentang-kost">
                         <select id="pilihan-harga">
                             <?php
@@ -91,13 +91,18 @@ ini_set('display_errors', 1);
                             $kategori_3bulanan = $data['kamar']['harga_3bulanan'];
                             $kategori_tahunan = $data['kamar']['harga_tahunan'];
                             ?>
-                            <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian</option>
-                            <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>Bulanan</option>
-                            <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3 Bulanan</option>
-                            <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan</option>
+                            <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian
+                            </option>
+                            <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>Bulanan
+                            </option>
+                            <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3
+                                Bulanan</option>
+                            <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan
+                            </option>
                         </select>
                     </div>
-                    <a href="http://localhost/PHP-MVC/public/pemesanan_kost/pemesanan/<?= $data['kamar']['id_kamar']; ?>">Pesan Sekarang</a>
+                    <a href="<?php echo BASEURL; ?>pemesanan_kost/pemesanan/<?= $data['kamar']['id_kamar']; ?>">Pesan
+                        Sekarang</a>
                 </div>
                 <!-- <div class="review-kost">
                     <p class="grand-review"><i class="ri-star-fill"></i> 4.5 (8 Review)</p>
@@ -148,10 +153,13 @@ ini_set('display_errors', 1);
                 </div> -->
                 <div class="maps-kost">
                     <?php if (!empty($data['kamar'])) : ?>
-                        <iframe src="https://maps.google.com/maps?q=<?= $data['kamar']['latitude'] ?>,<?= $data['kamar']['longitude'] ?>&hl=es;z=14&amp;output=embed" width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <iframe
+                        src="https://maps.google.com/maps?q=<?= $data['kamar']['latitude'] ?>,<?= $data['kamar']['longitude'] ?>&hl=es;z=14&amp;output=embed"
+                        width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                     <?php else : ?>
-                        <p>No kost data available.</p>
+                    <p>No kost data available.</p>
                     <?php endif; ?>
                 </div>
             </div>
@@ -161,7 +169,7 @@ ini_set('display_errors', 1);
     <footer>
         <div class="top-footer">
             <div class="left-footer">
-                <img src="http://localhost/PHP-MVC/public/image/logo-jkost.png" alt="">
+                <img src="<?php echo BASEURL; ?>image/logo-jkost.png" alt="">
                 <p>Our vision is to provide convenience and help increase your sales business.</p>
                 <div class="kumpulan-medsos">
                     <i class="ri-facebook-circle-fill"></i>
@@ -233,43 +241,47 @@ ini_set('display_errors', 1);
     </script> -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#pilihan-harga').on('change', function () {
-                var hargaBulanan = <?php echo isset($data['kamar']['harga_bulanan']) ? $data['kamar']['harga_bulanan'] : "null"; ?>;
-                var hargaHarian = <?php echo isset($data['kamar']['harga_harian']) ? $data['kamar']['harga_harian'] : "null"; ?>;
-                var harga3Bulanan = <?php echo isset($data['kamar']['harga_3bulanan']) ? $data['kamar']['harga_3bulanan'] : "null"; ?>;
-                var hargaTahunan = <?php echo isset($data['kamar']['harga_tahunan']) ? $data['kamar']['harga_tahunan'] : "null"; ?>;
-                var spanHarian = "/ hari";
-                var spanBulanan = "/ bulan";
-                var span3Bulan = "/ 3 bulan";
-                var spanTahunan = "/ tahun";
-                var harga = null;
+    $(document).ready(function() {
+        $('#pilihan-harga').on('change', function() {
+            var hargaBulanan =
+                <?php echo isset($data['kamar']['harga_bulanan']) ? $data['kamar']['harga_bulanan'] : "null"; ?>;
+            var hargaHarian =
+                <?php echo isset($data['kamar']['harga_harian']) ? $data['kamar']['harga_harian'] : "null"; ?>;
+            var harga3Bulanan =
+                <?php echo isset($data['kamar']['harga_3bulanan']) ? $data['kamar']['harga_3bulanan'] : "null"; ?>;
+            var hargaTahunan =
+                <?php echo isset($data['kamar']['harga_tahunan']) ? $data['kamar']['harga_tahunan'] : "null"; ?>;
+            var spanHarian = "/ hari";
+            var spanBulanan = "/ bulan";
+            var span3Bulan = "/ 3 bulan";
+            var spanTahunan = "/ tahun";
+            var harga = null;
 
-                var pilihanHarga = $('#pilihan-harga').val();
-                var hargaDisplay = $('#harga-display');
-                var spanDisplay = $('#span-harga-display');
+            var pilihanHarga = $('#pilihan-harga').val();
+            var hargaDisplay = $('#harga-display');
+            var spanDisplay = $('#span-harga-display');
 
-                if (pilihanHarga === 'harian') {
-                    harga = hargaHarian;
-                    hargaDisplay.text('Rp ' + harga );
-                    spanDisplay.text(spanHarian);
-                } else if (pilihanHarga === 'bulanan') {
-                    harga = hargaBulanan;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(spanBulanan);
-                } else if (pilihanHarga === '3bulanan') {
-                    harga = harga3Bulanan;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(span3Bulan);
-                } else if (pilihanHarga === 'tahunan') {
-                    harga = hargaTahunan;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(spanTahunan);
-                } else if(pilihanHarga === null){
-                    hargaDisplay.text('null');
-                }
-            });
+            if (pilihanHarga === 'harian') {
+                harga = hargaHarian;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(spanHarian);
+            } else if (pilihanHarga === 'bulanan') {
+                harga = hargaBulanan;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(spanBulanan);
+            } else if (pilihanHarga === '3bulanan') {
+                harga = harga3Bulanan;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(span3Bulan);
+            } else if (pilihanHarga === 'tahunan') {
+                harga = hargaTahunan;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(spanTahunan);
+            } else if (pilihanHarga === null) {
+                hargaDisplay.text('null');
+            }
         });
+    });
     </script>
 
 
