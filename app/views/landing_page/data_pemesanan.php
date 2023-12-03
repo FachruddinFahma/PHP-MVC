@@ -82,7 +82,7 @@
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">Harga Kost</label> -->
-                            <input type="hidden" name="id_pesanan" value="<?= $data['idRnamdom']; ?>">
+                            <input type="text" name="id_pemesanan" value="<?= $data['idRnamdom']; ?>">
                         </div>
                     </div>
                 </div>

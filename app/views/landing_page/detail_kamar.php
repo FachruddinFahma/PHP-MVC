@@ -62,7 +62,7 @@ ini_set('display_errors', 1);
                     <p><i class="ri-map-pin-2-fill"></i> <?php echo $data['kamar']['alamat']; ?></p>
                 </div>
                 <div class="pengelola-kost">
-                    <h5>Dikelola Oleh: <?php echo $data['penghuni']['nama_lengkap']; ?> </h5>
+                    <h5>Dikelola Oleh: <?php echo $data['kamar']['id_user']; ?> </h5>
                 </div>
                 <div class="fasilitas-kamar">
                     <p class="judul-fasilitas">Fasilitas Kamar</p>
