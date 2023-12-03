@@ -67,7 +67,7 @@
                 <?php foreach ($data['kamar'] as $kamar) : ?>
                 <a href="<?php echo BASEURL; ?>detail_kamar/<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
                     <div class="foto-kamar">
-                        <img class="gambar-kost" src="<?php echo BASEURL; ?>image/kamar/kamar1.jpg" alt="">
+                        <img class="gambar-kost" src="src="<?php echo '<?php echo BASEURL; ?>foto/' . $kamar['main_foto']; ?>" alt="">" alt="">
                     </div>
                     <div class="content-card-kamar">
                         <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
