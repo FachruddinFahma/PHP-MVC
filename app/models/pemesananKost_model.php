@@ -15,7 +15,7 @@
             return $pemesananID;
         }        
 
-        public function getAll($id_kamar, $id_pemesanan)
+        public function getAll($id_kamar)
         {
             $this->db->query("SELECT tb_kost.id_kost, tb_kamar.id_kamar, tb_kost.nama_kost, tb_kost.alamat, tb_kamar.nama_kamar, tb_kamar.fasilitas, tb_kamar.harga_bulanan, tb_kamar.harga_harian, tb_kamar.harga_3bulanan, tb_kamar.harga_tahunan
                             FROM tb_kamar 
