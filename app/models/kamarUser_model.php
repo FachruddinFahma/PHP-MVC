@@ -31,10 +31,10 @@ class kamarUser_model
         return $result;
     }
 
-    public function getAllFotoKamar($id)
+    public function getAllFotoKamar($id_kamar)
     {
-        $this->db->query("SELECT * FROM tb_foto_kamar WHERE id_kamar = :id");
-        $this->db->bind(':id', $id);
+        $this->db->query("SELECT * FROM tb_foto_kamar WHERE id_kamar = :id_kamar");
+        $this->db->bind(':id_kamar', $id_kamar);
         $result = $this->db->single();
 
         if (!isset($result['link_fotoKamar'])) {

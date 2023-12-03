@@ -40,8 +40,8 @@
                     $foto_1 = $data['foto_kost']['foto_kamar'][1];
                     $foto_2 = $data['foto_kost']['foto_kamar'][2];
                 ?>
-                <img src="<?php echo BASEURL; ?>foto/<?php echo $foto_1; ?>" alt="">
-                <img src="<?php echo BASEURL; ?>foto/<?php echo $foto_2; ?>" alt="">
+                    <img src="<?php echo BASEURL; ?>foto/<?php echo $foto_1; ?>" alt="">
+                    <img src="<?php echo BASEURL; ?>foto/<?php echo $foto_2; ?>" alt="">
                 <?php
                 } else {
                     echo "Tidak cukup foto untuk ditampilkan.";
@@ -51,13 +51,10 @@
         </div>
         <div id="maps-kost">
             <?php if (!empty($data['kost'])) : ?>
-            <iframe
-                src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed"
-                width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                <iframe src="https://maps.google.com/maps?q=<?= $data['kost']['latitude'] ?>,<?= $data['kost']['longitude'] ?>&hl=es;z=14&amp;output=embed" width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             <?php else : ?>
-            <p>No kost data available.</p>
+                <p>No kost data available.</p>
             <?php endif; ?>
         </div>
 
@@ -65,26 +62,25 @@
             <h1>Daftar Kamar</h1>
             <div id="kumpulan_kamar">
                 <?php foreach ($data['kamar'] as $kamar) : ?>
-                <a href="<?php echo BASEURL; ?>detail_kamar/<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
-                    <div class="foto-kamar">
-                        <img class="gambar-kost" src="
-                            <?php echo BASEURL. 'foto/' . $kamar['main_foto']; ?>" alt="">
-                    </div>
-                    <div class="content-card-kamar">
-                        <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
-                        <!-- Tambahkan info kamar lainnya sesuai kebutuhan -->
-                        <div class="fasilitas">
-                            <i class="ri-router-line"></i>
-                            <i class="ri-hotel-bed-fill"></i>
-                            <i class="ri-battery-2-charge-fill"></i>
-                            <i class="ri-router-line"></i>
-                            <i class="ri-router-line"></i>
+                    <a href="<?php echo BASEURL; ?>detail_kamar/<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
+                        <div class="foto-kamar">
+                            <img class="gambar-kost" src="<?= BASEURL . 'image/kamar/' . $kamar['main_foto']; ?>" alt="">
                         </div>
-                        <div class="harga">
-                            <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
+                        <div class="content-card-kamar">
+                            <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
+                            <!-- Tambahkan info kamar lainnya sesuai kebutuhan -->
+                            <div class="fasilitas">
+                                <i class="ri-router-line"></i>
+                                <i class="ri-hotel-bed-fill"></i>
+                                <i class="ri-battery-2-charge-fill"></i>
+                                <i class="ri-router-line"></i>
+                                <i class="ri-router-line"></i>
+                            </div>
+                            <div class="harga">
+                                <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
                 <?php endforeach; ?>
             </div>
         </div>
