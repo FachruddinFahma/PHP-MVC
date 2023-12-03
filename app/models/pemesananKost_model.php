@@ -15,7 +15,7 @@
             return $pemesananID;
         }        
 
-        public function getAll($id_kamar)
+        public function getAll($id_kamar, $id_pemesanan)
         {
             $this->db->query("SELECT tb_kost.id_kost, tb_kamar.id_kamar, tb_kost.nama_kost, tb_kost.alamat, tb_kamar.nama_kamar, tb_kamar.fasilitas, tb_kamar.harga_bulanan, tb_kamar.harga_harian, tb_kamar.harga_3bulanan, tb_kamar.harga_tahunan
                             FROM tb_kamar 
@@ -53,7 +53,7 @@
                     VALUES (:id_pemesanan, :id_kamar, :id_user, CURRENT_TIMESTAMP, :tggl_masuk, :tggl_keluar, :kategori, :harga, :metode_pembayaran, 'PROSES')";
 
             $this->db->query($query);
-            $this->db->bind(':id_pemesanan', $pemesanan['id_pesanan']);
+            $this->db->bind(':id_pemesanan', $pemesanan['id_pemesanan']);
             $this->db->bind(':id_kamar', $pemesanan['id_kamar']);
             $this->db->bind(':id_user', $id_user);
             $this->db->bind(':tggl_masuk', $pemesanan['tggl_masuk']);
