@@ -26,63 +26,65 @@
 
         <section id="jelajah">
             <div class="menu-jelajah">
-                <div class="container-kategori-kost">
-                    <p>Tipe Kost</p>
-                    <select name="option" id="kategori-kost">
-                        <option value="harian">Harian</option>
-                        <option value="bulanan">Bulanan</option>
-                        <option value="3bulanan">3 Bulanan</option>
-                        <option value="6bulanan">6 Bulanan</option>
-                        <option value="tahunan">Tahunan</option>
-                    </select>
-                </div>
-                <div class="container-lokasi-kost">
-                    <p>Pilih Lokasi</p>
-                    <select name="option" id="lokasi-kost">
-                        <option value="semua">Semua Daerah</option>
-                        <option value="Kaliwates">Kaliwates</option>
-                        <option value="Sumbersari">Sumbersari</option>
-                        <option value="Patrang">Patrang</option>
-                        <option value="Arjasa">Arjasa</option>
-                        <option value="Jelbuk">Jelbuk</option>
-                        <option value="Pakusari">Pakusari</option>
-                        <option value="Sukowono">Sukowono</option>
-                        <option value="Kalisat">Kalisat</option>
-                        <option value="Ledokombo">Ledokombo</option>
-                        <option value="Sumberjambe">Sumberjambe</option>
-                        <option value="Mayang">Mayang</option>
-                        <option value="Silo">Silo</option>
-                        <option value="Mumbulsari">Mumbulsari</option>
-                        <option value="Tempurejo">Tempurejo</option>
-                        <option value="Rambipuji">Rambipuji</option>
-                        <option value="Panti">Panti</option>
-                        <option value="Sukorambi">Sukorambi</option>
-                        <option value="Ajung">Ajung</option>
-                        <option value="Jenggawah">Jenggawah</option>
-                        <option value="Tanggul">Tanggul</option>
-                        <option value="Semboro">Semboro</option>
-                        <option value="Sumberbaru">Sumberbaru</option>
-                        <option value="Bangsalsari">Bangsalsari</option>
-                        <option value="Kencong">Kencong</option>
-                        <option value="Jombang">Jombang</option>
-                        <option value="Umbulsari">Umbulsari</option>
-                        <option value="Gumukmas">Gumukmas</option>
-                        <option value="Puger">Puger</option>
-                        <option value="Balung">Balung</option>
-                        <option value="Wuluhan">Wuluhan</option>
-                        <option value="Ambulu">Ambulu</option>
-                    </select>
-
-                </div>
-                <div class="container-rentang-kost">
-                    <p>Rentang Harga</p>
-                    <div class="input-rentang-kost">
-                        <input type="text" placeholder="Rp 0" name="harga-awal" id="input-harga-awal">
-                        <p> - </p>
-                        <input type="text" placeholder="Rp 3,000,000" name="harga-akhir" id="input-harga-akhir">
-                        <button>Cari</button>
+                <form id="form-jelajah" action="http://localhost/PHP-MVC/public/jelajah/searchKost" method="post">
+                    <div class="container-kategori-kost">
+                        <p>Tipe Kost</p>
+                        <select name="kategori-kost" id="kategori-kost">
+                            <option value="harian">Harian</option>
+                            <option value="bulanan">Bulanan</option>
+                            <option value="3bulanan">3 Bulanan</option>
+                            <option value="6bulanan">6 Bulanan</option>
+                            <option value="tahunan">Tahunan</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="container-lokasi-kost">
+                        <p>Pilih Lokasi</p>
+                        <select name="option" id="lokasi-kost">
+                            <option value="semua">Semua Daerah</option>
+                            <option value="Kaliwates">Kaliwates</option>
+                            <option value="Sumbersari">Sumbersari</option>
+                            <option value="Patrang">Patrang</option>
+                            <option value="Arjasa">Arjasa</option>
+                            <option value="Jelbuk">Jelbuk</option>
+                            <option value="Pakusari">Pakusari</option>
+                            <option value="Sukowono">Sukowono</option>
+                            <option value="Kalisat">Kalisat</option>
+                            <option value="Ledokombo">Ledokombo</option>
+                            <option value="Sumberjambe">Sumberjambe</option>
+                            <option value="Mayang">Mayang</option>
+                            <option value="Silo">Silo</option>
+                            <option value="Mumbulsari">Mumbulsari</option>
+                            <option value="Tempurejo">Tempurejo</option>
+                            <option value="Rambipuji">Rambipuji</option>
+                            <option value="Panti">Panti</option>
+                            <option value="Sukorambi">Sukorambi</option>
+                            <option value="Ajung">Ajung</option>
+                            <option value="Jenggawah">Jenggawah</option>
+                            <option value="Tanggul">Tanggul</option>
+                            <option value="Semboro">Semboro</option>
+                            <option value="Sumberbaru">Sumberbaru</option>
+                            <option value="Bangsalsari">Bangsalsari</option>
+                            <option value="Kencong">Kencong</option>
+                            <option value="Jombang">Jombang</option>
+                            <option value="Umbulsari">Umbulsari</option>
+                            <option value="Gumukmas">Gumukmas</option>
+                            <option value="Puger">Puger</option>
+                            <option value="Balung">Balung</option>
+                            <option value="Wuluhan">Wuluhan</option>
+                            <option value="Ambulu">Ambulu</option>
+                        </select>
+
+                    </div>
+                    <div class="container-rentang-kost">
+                        <p>Rentang Harga</p>
+                        <div class="input-rentang-kost">
+                            <input type="text" placeholder="Rp 0" name="harga-awal" id="input-harga-awal">
+                            <p> - </p>
+                            <input type="text" placeholder="Rp 3,000,000" name="harga-akhir" id="input-harga-akhir">
+                            <button>Cari</button>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="content-kost">
                 <div id="kumpulan-card-kost">
@@ -90,8 +92,7 @@
                     <?php if ($kost['status'] === 'AKTIF') : ?>
                     <a href="<?php echo BASEURL; ?>kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
                         <div class="foto-kost">
-                            <img class="gambar-kost"
-                                src="<?php echo '<?php echo BASEURL; ?>foto/' . $kost['main_foto']; ?>" alt="">
+                            <img class="gambar-kost" src="<?php echo BASEURL . 'foto/' . $kost['main_foto']; ?>" alt="">
                         </div>
                         <div class="content-card-kost">
                             <div class="top-content-kost">

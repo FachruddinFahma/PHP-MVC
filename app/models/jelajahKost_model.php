@@ -14,6 +14,12 @@ class jelajahKost_model
         return $this->db->resultSet();
     }
 
+    public function getKostBySearch()
+    {
+        $this->db->query('SELECT * FROM tb_kost');
+        return $this->db->resultSet();
+    }
+
     public function getAllFotoKostt($id)
     {
         $this->db->query("SELECT * FROM tb_foto_kost WHERE id_kost = :id");
