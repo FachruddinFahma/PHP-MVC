@@ -26,7 +26,7 @@
 
         <section id="jelajah">
             <div class="menu-jelajah">
-                <form id="form-jelajah" action="http://localhost/PHP-MVC/public/jelajah/searchKost" method="post">
+                <form id="form-jelajah" action="http://localhost/PHP-MVC/public/jelajah_kost/searchKost" method="post">
                     <div class="container-kategori-kost">
                         <p>Tipe Kost</p>
                         <select name="kategori-kost" id="kategori-kost">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="container-lokasi-kost">
                         <p>Pilih Lokasi</p>
-                        <select name="option" id="lokasi-kost">
+                        <select name="lokasi-kost" id="lokasi-kost">
                             <option value="semua">Semua Daerah</option>
                             <option value="Kaliwates">Kaliwates</option>
                             <option value="Sumbersari">Sumbersari</option>
@@ -81,7 +81,7 @@
                             <input type="text" placeholder="Rp 0" name="harga-awal" id="input-harga-awal">
                             <p> - </p>
                             <input type="text" placeholder="Rp 3,000,000" name="harga-akhir" id="input-harga-akhir">
-                            <button>Cari</button>
+                            <button type="submit">Cari</button>
                         </div>
                     </div>
                 </form>
