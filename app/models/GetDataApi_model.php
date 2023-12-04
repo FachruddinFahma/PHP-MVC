@@ -79,8 +79,7 @@ class GetDataApi_model
     {
         $this->db->query("SELECT tb_user.id_user,	
         tb_transaksi.id_transaksi,
-        tb_user.nama_lengkap, 
-            tb_transaksi.id_transaksi, 
+        tb_user.nama_lengkap,             
             tb_transaksi.metode_pembayaran,
             tb_transaksi.tggl_transaksi,
             tb_transaksi.foto_bukti_bayar,
