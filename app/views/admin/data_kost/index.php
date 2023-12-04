@@ -98,32 +98,5 @@
                 });
             });
         </script>
-
-<script>
-            new DataTable("#tableVerifikasi", {
-                info: false,
-                "columnDefs": [{
-                        "orderable": true,
-                        "targets": 0
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 1
-                    },
-                    {
-                        "orderable": true,
-                        "targets": 2
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 3
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 4
-                    },
-                ]
-            });
-        </script>
     </body>
     </html>
