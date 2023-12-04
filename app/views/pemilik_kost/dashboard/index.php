@@ -77,8 +77,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Total Pendapatan</h6>
-                                        <h6 class="font-extrabold mb-0">Rp. 6.000.000</h6>
+                                        <h6 class="text-muted font-semibold">Total Transaksi</h6>
+                                        <h6 class="font-extrabold mb-0">Rp. <?php echo $data['total_pendapatan']['total_harga']; ?></h6>
                                     </div>
                                 </div>
                             </div>
