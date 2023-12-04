@@ -6,6 +6,7 @@ class EditDataApi_model
     public function __construct()
     {
         $this->db = new Database;
+        date_default_timezone_set('Asia/Jakarta');
     }
 
     public function updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser)
@@ -70,9 +71,34 @@ class EditDataApi_model
 
             return ($storedUser) ? $storedUser : null;
         } catch (PDOException $e) {
-            // Tangani kesalahan query di sini
             echo "Error: " . $e->getMessage();
-            return null; // Atau return nilai default sesuai kebutuhan
+            return null;
         }
+    }
+
+    //done
+    public function transaction($id, $bayar, $metodeBayar, $fotoBukti, $tggl_transaksi)
+    {
+
+        if(empty($tggl_transaksi)) {
+            $tggl_transaksi = date('Y-m-d H:i:s'); 
+        }
+
+        $query = "UPDATE tb_transaksi SET bayar = :bayar, 
+        metode_pembayaran = :metode, 
+        foto_bukti_bayar = :foto, 
+        tggl_transaksi = :tgl_bayar,
+        status = 'Proses'
+        WHERE id_pemesanan = :idPesan";
+
+        $this->db->query($query);
+        $this->db->bind(':bayar', $bayar);
+        $this->db->bind(':metode', $metodeBayar);
+        $this->db->bind(':foto', $fotoBukti);
+        $this->db->bind(':tgl_bayar', $tggl_transaksi);
+        $this->db->bind(':idPesan', $id);
+
+        $this->db->execute();
+        return true;
     }
 }
