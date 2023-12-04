@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +8,8 @@
     <!-- LINK ICON J-KOS -->
     <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
     <!-- LINK BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- ICON -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- FONT -->
@@ -20,7 +20,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Halaman <?php echo $data['judul'] ?></title>
     <!-- Awesome Icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- DATATABLE-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <!--profile-->
@@ -39,7 +41,7 @@
                 <img src="http://localhost/PHP-MVC/public/foto/user1.jpg" alt="User Photo">
             </div>
             <div id="user-name">
-                <a href="http://localhost/PHP-MVC/public/profile"><?php echo "User" ?></a>
+                <a href="http://localhost/PHP-MVC/public/profile"><?php echo $_SESSION['nama_user'] ?></a>
             </div>
         </div>
     </header>
@@ -82,7 +84,8 @@
                                 <span></span>
                                 <img src="http://localhost/PHP-MVC/public/image/pemesanan.png" alt="pemesanan">
                                 <a href="http://localhost/PHP-MVC/public/pemesanan">Pemesanan</a>
-                                <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png" alt="detail">
+                                <img class="arrow-detail" src="http://localhost/PHP-MVC/public/image/previous.png"
+                                    alt="detail">
                             </summary>
                             <ul class="detail-ul">
                                 <li><a href="#">Pesanan Baru</a></li>
@@ -123,34 +126,34 @@
 
     </main>
     <script>
-        var judul = "<?php echo $judul; ?>";
-        console.log(judul);
+    var judul = "<?php echo $judul; ?>";
+    console.log(judul);
 
-        const itemDashboard = document.getElementById('link-dashboard');
-        const itemKost = document.getElementById('link-kost');
-        const itemKamar = document.getElementById('link-kamar');
-        const itemPenghuni = document.getElementById('link-penghuni');
-        const itemPemesanan = document.getElementById('link-pesanan');
-        const itemLaporan = document.getElementById('link-laporan');
-        const itemKomplain = document.getElementById('link-komplain');
+    const itemDashboard = document.getElementById('link-dashboard');
+    const itemKost = document.getElementById('link-kost');
+    const itemKamar = document.getElementById('link-kamar');
+    const itemPenghuni = document.getElementById('link-penghuni');
+    const itemPemesanan = document.getElementById('link-pesanan');
+    const itemLaporan = document.getElementById('link-laporan');
+    const itemKomplain = document.getElementById('link-komplain');
 
-        function addClickedClass(element) {
-            element.classList.add('clicked');
-        }
+    function addClickedClass(element) {
+        element.classList.add('clicked');
+    }
 
-        if (judul === "Dashboard") {
-            addClickedClass(itemDashboard);
-        } else if (judul === "Kost") {
-            addClickedClass(itemKost);
-        } else if (judul === "Kamar") {
-            addClickedClass(itemKamar);
-        } else if (judul === "Penghuni") {
-            addClickedClass(itemPenghuni);
-        } else if (judul === "Pemesanan") {
-            addClickedClass(itemPemesanan);
-        } else if (judul === "Laporan") {
-            addClickedClass(itemLaporan);
-        } else if (judul === "Komplain") {
-            addClickedClass(itemKomplain);
-        }
+    if (judul === "Dashboard") {
+        addClickedClass(itemDashboard);
+    } else if (judul === "Kost") {
+        addClickedClass(itemKost);
+    } else if (judul === "Kamar") {
+        addClickedClass(itemKamar);
+    } else if (judul === "Penghuni") {
+        addClickedClass(itemPenghuni);
+    } else if (judul === "Pemesanan") {
+        addClickedClass(itemPemesanan);
+    } else if (judul === "Laporan") {
+        addClickedClass(itemLaporan);
+    } else if (judul === "Komplain") {
+        addClickedClass(itemKomplain);
+    }
     </script>
