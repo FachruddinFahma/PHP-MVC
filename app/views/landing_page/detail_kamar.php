@@ -99,34 +99,73 @@ ini_set('display_errors', 1);
                 </div>
             </div>
             <div class="left-content-kamar">
-                <div class="harga-kost">
-                    <p style="font-size: 16px;color:#404040 ">Harga Kamar: </p>
-                    <div id="container-harga" style="margin-top: -20px;">
-                        <h2 id="harga-display"><?php echo "Rp " . $data['kamar']['harga_bulanan'] ?></h2>
-                        <span id="span-harga-display">/bulan</span>
+                <form action="<?php echo BASEURL; ?>detail_kamar/toPemesanan" method="post">
+                    <div class="harga-kost">
+                        <p style="font-size: 16px;color:#404040 ">Harga Kamar: </p>
+                        <div id="container-harga" style="margin-top: -20px;">
+                            <h2 id="harga-display"><?php echo "Rp " . $data['kamar']['harga_bulanan'] ?></h2>
+                            <span id="span-harga-display">/bulan</span>
+                        </div>
+                        <div class="input-rentang-kost">
+                            <select id="pilihan-harga" name="pilihan-harga">
+                                <?php
+                                $kategori_harian = $data['kamar']['harga_harian'];
+                                $kategori_bulanan = $data['kamar']['harga_bulanan'];
+                                $kategori_3bulanan = $data['kamar']['harga_3bulanan'];
+                                $kategori_tahunan = $data['kamar']['harga_tahunan'];
+                                ?>
+                                <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian
+                                </option>
+                                <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>
+                                    Bulanan</option>
+                                <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3
+                                    Bulanan</option>
+                                <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>
+                                    Tahunan</option>
+                            </select>
+                        </div>
+                        <!-- Hidden input untuk menyimpan nilai harga -->
+                        <input type="hidden" id="input-id-kamar" name="input-id-kamar"
+                            value="<?php echo $data['kamar']['id_kamar']; ?>">
+                        <input type="hidden" id="harga-input" name="harga-input"
+                            value="<?php echo $data['kamar']['harga_bulanan']; ?>">
+                        <button id="button-pesan-sekarang" type="submit">Pesan</button>
                     </div>
+                </form>
 
-                    <div class="input-rentang-kost">
-                        <select id="pilihan-harga">
-                            <?php
-                            $kategori_harian = $data['kamar']['harga_harian'];
-                            $kategori_bulanan = $data['kamar']['harga_bulanan'];
-                            $kategori_3bulanan = $data['kamar']['harga_3bulanan'];
-                            $kategori_tahunan = $data['kamar']['harga_tahunan'];
-                            ?>
-                            <option value="harian" <?php echo $kategori_harian === null ? 'hidden' : ''; ?>>Harian
-                            </option>
-                            <option value="bulanan" <?php echo $kategori_bulanan === null ? 'hidden' : ''; ?>>Bulanan
-                            </option>
-                            <option value="3bulanan" <?php echo $kategori_3bulanan === null ? 'hidden' : ''; ?>>3
-                                Bulanan</option>
-                            <option value="tahunan" <?php echo $kategori_tahunan === null ? 'hidden' : ''; ?>>Tahunan
-                            </option>
-                        </select>
-                    </div>
-                    <a href="<?php echo BASEURL; ?>pemesanan_kost/pemesanan/<?= $data['kamar']['id_kamar']; ?>">Pesan
-                        Sekarang</a>
-                </div>
+                <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                <script>
+                $(document).ready(function() {
+                    $('#pilihan-harga').on('change', function() {
+                        var hargaBulanan =
+                            <?php echo isset($data['kamar']['harga_bulanan']) ? $data['kamar']['harga_bulanan'] : "null"; ?>;
+                        var pilihanHarga = $(this).val();
+
+                        if (pilihanHarga === 'harian') {
+                            $('#harga-display').text('Rp ' + hargaBulanan + ' (Per Hari)');
+                        } else if (pilihanHarga === 'bulanan') {
+                            $('#harga-display').text('Rp ' + hargaBulanan + ' (Per Bulan)');
+                        } else if (pilihanHarga === '3bulanan') {
+                            $('#harga-display').text('Rp ' + hargaBulanan + ' (Untuk 3 Bulan)');
+                        } else if (pilihanHarga === 'tahunan') {
+                            $('#harga-display').text('Rp ' + hargaBulanan + ' (Per Tahun)');
+                        } else if (pilihanHarga === null) {
+                            $('#harga-display').text('null');
+                        }
+
+                        // Update nilai input tersembunyi
+                        $('#harga-input').val(hargaBulanan);
+                    });
+
+                    // Contoh implementasi klik pada tombol "Pesan Sekarang"
+                    $('#pesan-sekarang').click(function() {
+                        // Dapatkan nilai harga dari input tersembunyi
+                        var hargaInput = $('#harga-input').val();
+                        alert('Harga yang akan diproses: ' + hargaInput);
+                    });
+                });
+                </script>
+
                 <!-- <div class="review-kost">
                     <p class="grand-review"><i class="ri-star-fill"></i> 4.5 (8 Review)</p>
                     <div class="sub-review">
@@ -288,22 +327,28 @@ ini_set('display_errors', 1);
                 harga = hargaHarian;
                 hargaDisplay.text('Rp ' + harga);
                 spanDisplay.text(spanHarian);
+                $('#harga-input').val(harga);
+
             } else if (pilihanHarga === 'bulanan') {
                 harga = hargaBulanan;
                 hargaDisplay.text('Rp ' + harga);
                 spanDisplay.text(spanBulanan);
+                $('#harga-input').val(harga);
             } else if (pilihanHarga === '3bulanan') {
                 harga = harga3Bulanan;
                 hargaDisplay.text('Rp ' + harga);
                 spanDisplay.text(span3Bulan);
+                $('#harga-input').val(harga);
             } else if (pilihanHarga === 'tahunan') {
                 harga = hargaTahunan;
                 hargaDisplay.text('Rp ' + harga);
                 spanDisplay.text(spanTahunan);
+                $('#harga-input').val(harga);
             } else if (pilihanHarga === null) {
                 hargaDisplay.text('null');
             }
         });
+
     });
     </script>
 

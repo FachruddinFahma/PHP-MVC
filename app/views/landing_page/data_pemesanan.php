@@ -37,7 +37,6 @@
     <div class="halaman">
         <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Kamar 3</p>
     </div>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     <section id="pemesanan">
         <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
             <div class="left-pemesanan">
@@ -131,16 +130,16 @@
                         <p><?= $data['pemesanan']['nama_kost']; ?></p>
                         <div class="sub-detail-pemesanan">
                             <p>Kategori Pembayaran : </p>
-                            <p id="kategori-pembayaran" name="kategori">Bulanan</p>
+                            <p id="kategori-pembayaran" name="kategori"><?php echo $_SESSION['pilihan_harga'] ?></p>
                         </div>
                         <div class="sub-detail-pemesanan">
                             <p>Harga Kost :</p>
-                            <p name="harga">Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
+                            <p name="harga">Rp <?php echo $_SESSION['harga'] ?></p>
                         </div>
                     </div>
                     <div class="total-pembayaran">
                         <p>Total Pembayaran : </p>
-                        <p>Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
+                        <p>Rp <?php echo $_SESSION['harga'] ?></p>
                     </div>
                     <div class="title-pembayaran">
                         <p>Pembayaran Via :</p>
@@ -191,7 +190,6 @@
                     <input type="file" id="input-bukti" name="bukti_tf">
                 </div>
                 <button type="submit" id="btn-pesan-sekarang">Bayar Sekarang</button>
-                <!-- <a href="<?php echo BASEURL; ?>pemesanan_kost/" id="btn-pesan-sekarang" type="submit">Bayar Sekarang</a> -->
             </div>
         </form>
     </section>

@@ -8,5 +8,17 @@
             $data['foto_kamar'] = $this->model('detailKamar_model')->getAllFotoKamar($id_kamar);
             $this->view('landing_page/detail_kamar', $data);
         }
+
+        public function toPemesanan(){
+            $id_kamar = $_POST['input-id-kamar'];
+            $pilihan_harga = $_POST['pilihan-harga'];
+            $harga = $_POST['harga-input'];
+            $_SESSION['id_user'] = $id_kamar;
+            $_SESSION['pilihan_harga'] = $pilihan_harga;
+            $_SESSION['harga'] = $harga;
+            $base_url = BASEURL . 'pemesanan_kost/pemesanan/'. $id_kamar;
+            header("Location: $base_url");
+        }
+
     }
 ?>
