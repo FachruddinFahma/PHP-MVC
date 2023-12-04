@@ -20,14 +20,16 @@ class Jelajah_Kost extends Controller
             'harga-awal' => $_POST['harga-awal'],
             'harga-akhir' => $_POST['harga-akhir'],
         ];
-        
+    
         $data['jelajah'] = $this->model('jelajahKost_model')->getKostBySearchByKategori($dataKost);
-        foreach ($data['jelajah'] as $kost) {
+    
+        foreach ($data['jelajah'] as &$kost) {
             $foto_kost = $this->model('jelajahKost_model')->getAllFotoKostt($kost['id_kost']);
-            $kost['main_foto'] = $foto_kost['foto_kamar'][0] ?? ''; 
+            $kost['main_foto'] = $foto_kost['foto_kamar'][0] ?? '';
         }
-        unset($kost); 
-
+        unset($kost);
+    
         $this->view('landing_page/jelajah', $data);
     }
+    
 }

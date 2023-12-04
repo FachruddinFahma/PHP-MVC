@@ -1,56 +1,56 @@
-#content-kamar{
-    display: flex;
-    flex-direction: column;
+#content-kamar {
+  display: flex;
+  flex-direction: column;
 }
 
-#kumpulan_kamar{
-    display: flex;
-    gap: 30px;
-    /* justify-content: space-between; */
-    flex-wrap: wrap;
+#kumpulan_kamar {
+  display: flex;
+  gap: 30px;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
 }
 
-#kumpulan_kamar a.card-kamar{
-    width: 220px;
-    background-color: white;
-    box-shadow:  0 3px 10px rgb(0 0 0 / 0.1);
-    border-radius: 10px;
-    text-decoration: none;
+#kumpulan_kamar a.card-kamar {
+  width: 220px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
+  text-decoration: none;
 }
 
-#kumpulan_kamar a.card-kamar .foto-kamar img{
-    width: 100%;
-    border-radius: 10px 10px 0 0;
+#kumpulan_kamar a.card-kamar .foto-kamar img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
-#kumpulan_kamar a.card-kamar .content-card-kamar{
-    padding: 5px 10px;
+#kumpulan_kamar a.card-kamar .content-card-kamar {
+  padding: 5px 10px;
 }
 
-#content-kamar h1{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
+#content-kamar h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
 }
 
-#kumpulan_kamar a.card-kamar .content-card-kamar p.nama-kost{
-    text-align: center;
-    color: var(--brown);
-    font-size: 20px;
-    font-weight: 400;
+#kumpulan_kamar a.card-kamar .content-card-kamar p.nama-kost {
+  text-align: center;
+  color: var(--brown);
+  font-size: 20px;
+  font-weight: 400;
 }
 
-#kumpulan_kamar a.card-kamar .content-card-kamar .harga p{
-    text-align: center;
-    font-weight: 500;
-    color: var(--brown);
+#kumpulan_kamar a.card-kamar .content-card-kamar .harga p {
+  text-align: center;
+  font-weight: 500;
+  color: var(--brown);
 }
 
-#kumpulan_kamar a.card-kamar .content-card-kamar .fasilitas{
-    text-align: center;
-    font-weight: 500;
-    color: var(--brown);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+#kumpulan_kamar a.card-kamar .content-card-kamar .fasilitas {
+  text-align: center;
+  font-weight: 500;
+  color: var(--brown);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
