@@ -43,21 +43,19 @@
                             <th scope="col">Tanggal Bayar</th>
                             <th scope="col">Bukti TF</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Keterangan</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($data['laporan'] as $d) : ?>
+                        <?php foreach ($data['laporan'] as $lprn) : ?>
                         <tr>
-                            <td><?= $d['id_transaksi'] ?></td>
-                            <td><?= $d['nama_lengkap'] ?></td>
-                            <td><?= $d['harga'] ?></td>
-                            <td><?= $d['bayar'] ?></td>
-                            <td><?= $d['tggl_transaksi'] ?></td>
-                            <td><?= $d['foto_bukti_bayar'] ?></td>
-                            <td><?= $d['status'] ?></td>
-                            <td>Bayar Bulan November</td>
+                            <td><?= $lprn['id_transaksi'] ?></td>
+                            <td><?= $lprn['nama_lengkap'] ?></td>
+                            <td><?= $lprn['harga'] ?></td>
+                            <td><?= $lprn['bayar'] ?></td>
+                            <td><?= $lprn['tggl_transaksi'] ?></td>
+                            <td><?= $lprn['foto_bukti_bayar'] ?></td>
+                            <td><?= $lprn['status'] ?></td>
                             <td>
                                 <button type="button" class="btn btn-primary m-0" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdrop">

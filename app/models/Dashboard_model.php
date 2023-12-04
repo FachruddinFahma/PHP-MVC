@@ -12,7 +12,7 @@
         {
             $query = "SELECT COUNT(*) AS total_komplain
                     FROM tb_komplain
-                    INNER JOIN tb_kost ON tb_kost.id_kost = tb_komplain.id_kost
+                    INNER JOIN tb_kost ON tb_kost.id_kost = tb_komplain.id_kamar
                     WHERE tb_kost.id_user = :id_user";
 
             $this->db->query($query);
