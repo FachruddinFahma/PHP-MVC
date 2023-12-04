@@ -202,9 +202,12 @@ new DataTable("#dataKomplain", {
             "orderable": false,
             "targets": 6
         },
-    ]
+   ]
 });
 </script>
-</body>
 
+
+
+
+</body>
 </html>
