@@ -22,7 +22,6 @@ class Jelajah_Kost extends Controller
         ];
     
         $data['jelajah'] = $this->model('jelajahKost_model')->getKostBySearchByKategori($dataKost);
-    
         foreach ($data['jelajah'] as &$kost) {
             $foto_kost = $this->model('jelajahKost_model')->getAllFotoKostt($kost['id_kost']);
             $kost['main_foto'] = $foto_kost['foto_kamar'][0] ?? '';

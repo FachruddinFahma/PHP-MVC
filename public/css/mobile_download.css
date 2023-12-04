@@ -1,0 +1,60 @@
+#download {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+}
+.left-download {
+  flex: 1;
+}
+
+.left-download h1 {
+  font-size: 30px;
+}
+
+.left-download h1 {
+  font-size: 30px;
+}
+
+.left-download .card-download {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: black;
+  width: 200px;
+  border-radius: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.left-download .card-download .text-download {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.left-download .card-download .text-download p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.left-download .card-download .text-download h3 {
+  font-size: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.left-download img {
+  width: 40px;
+}
+
+.right-download {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.right-download img {
+  width: 400px;
+}
