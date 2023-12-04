@@ -65,6 +65,7 @@ nav .link-navbar ul {
 
 nav .link-navbar ul a {
   text-decoration: none;
+  color: var(--navy);
 }
 
 nav .link-navbar ul a.link-login {

@@ -14,11 +14,19 @@
         </div>
         <div class="link-navbar">
             <ul>
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Testimoni</a>
-                <a href="">Cari Kost</a>
-                <a href="" class="link-login">Masuk</a>
+                <a href="<?php echo BASEURL; ?>landing_page#order">Home</a>
+                <a href="<?php echo BASEURL; ?>landing_page#why-jkost">About</a>
+                <a href="<?php echo BASEURL; ?>landing_page#order">Order</a>
+                <a href="<?php echo BASEURL; ?>landing_page#testimoni">Testimoni</a>
+                <a href="<?php echo BASEURL; ?>landing_page#kost">Kost</a>
+                <a href="<?php echo BASEURL . 'login1' ?>" class="link-login"
+                    <?php echo isset($_SESSION['id_user']) ? 'style="display: none;"' : ''; ?>>Masuk</a>
+
+                <?php if (isset($_SESSION['id_user'])) : ?>
+                <img src="<?php echo BASEURL . 'foto/' . $_SESSION['foto_user'] ?>" alt=""
+                    style="width: 45px; border-radius:50px">
+                <?php endif; ?>
+
             </ul>
         </div>
     </nav>
@@ -68,7 +76,7 @@
                 <a href="<?php echo BASEURL . 'detail_kamar/' . $kamar['id_kamar']; ?>" class="card-kamar">
                     <div class="foto-kamar">
                         <img class="gambar-kost" src="
-                                <?php echo BASEURL . 'foto/' . $kamar['main_foto']; ?>" alt="">
+                        <?php echo BASEURL . 'image/kamar/' . $kamar['main_foto']; ?>" alt="">
                     </div>
                     <div class="content-card-kamar">
                         <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>

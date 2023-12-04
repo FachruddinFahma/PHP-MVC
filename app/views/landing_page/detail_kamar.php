@@ -20,11 +20,19 @@ ini_set('display_errors', 1);
         </div>
         <div class="link-navbar">
             <ul>
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Testimoni</a>
-                <a href="">Cari Kost</a>
-                <a href="" class="link-login">Masuk</a>
+                <a href="<?php echo BASEURL; ?>landing_page#order">Home</a>
+                <a href="<?php echo BASEURL; ?>landing_page#why-jkost">About</a>
+                <a href="<?php echo BASEURL; ?>landing_page#order">Order</a>
+                <a href="<?php echo BASEURL; ?>landing_page#testimoni">Testimoni</a>
+                <a href="<?php echo BASEURL; ?>landing_page#kost">Kost</a>
+                <a href="<?php echo BASEURL . 'login1' ?>" class="link-login"
+                    <?php echo isset($_SESSION['id_user']) ? 'style="display: none;"' : ''; ?>>Masuk</a>
+
+                <?php if (isset($_SESSION['id_user'])) : ?>
+                <img src="<?php echo BASEURL . 'foto/' . $_SESSION['foto_user'] ?>" alt=""
+                    style="width: 45px; border-radius:50px">
+                <?php endif; ?>
+
             </ul>
         </div>
     </nav>
@@ -92,8 +100,8 @@ ini_set('display_errors', 1);
             </div>
             <div class="left-content-kamar">
                 <div class="harga-kost">
-                    <p>Diskon 100rb <span>Rp 1.350.000</span></p>
-                    <div id="container-harga">
+                    <p style="font-size: 16px;color:#404040 ">Harga Kamar: </p>
+                    <div id="container-harga" style="margin-top: -20px;">
                         <h2 id="harga-display"><?php echo "Rp " . $data['kamar']['harga_bulanan'] ?></h2>
                         <span id="span-harga-display">/bulan</span>
                     </div>
@@ -168,10 +176,13 @@ ini_set('display_errors', 1);
                 </div> -->
                 <div class="maps-kost">
                     <?php if (!empty($data['kamar'])) : ?>
-                        <iframe src="https://maps.google.com/maps?q=<?= $data['kamar']['latitude'] ?>,<?= $data['kamar']['longitude'] ?>&hl=es;z=14&amp;output=embed" width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <iframe
+                        src="https://maps.google.com/maps?q=<?= $data['kamar']['latitude'] ?>,<?= $data['kamar']['longitude'] ?>&hl=es;z=14&amp;output=embed"
+                        width="100%" height="350" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                     <?php else : ?>
-                        <p>No kost data available.</p>
+                    <p>No kost data available.</p>
                     <?php endif; ?>
                 </div>
             </div>
@@ -253,47 +264,47 @@ ini_set('display_errors', 1);
     </script> -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#pilihan-harga').on('change', function() {
-                var hargaBulanan =
-                    <?php echo isset($data['kamar']['harga_bulanan']) ? $data['kamar']['harga_bulanan'] : "null"; ?>;
-                var hargaHarian =
-                    <?php echo isset($data['kamar']['harga_harian']) ? $data['kamar']['harga_harian'] : "null"; ?>;
-                var harga3Bulanan =
-                    <?php echo isset($data['kamar']['harga_3bulanan']) ? $data['kamar']['harga_3bulanan'] : "null"; ?>;
-                var hargaTahunan =
-                    <?php echo isset($data['kamar']['harga_tahunan']) ? $data['kamar']['harga_tahunan'] : "null"; ?>;
-                var spanHarian = "/ hari";
-                var spanBulanan = "/ bulan";
-                var span3Bulan = "/ 3 bulan";
-                var spanTahunan = "/ tahun";
-                var harga = null;
+    $(document).ready(function() {
+        $('#pilihan-harga').on('change', function() {
+            var hargaBulanan =
+                <?php echo isset($data['kamar']['harga_bulanan']) ? $data['kamar']['harga_bulanan'] : "null"; ?>;
+            var hargaHarian =
+                <?php echo isset($data['kamar']['harga_harian']) ? $data['kamar']['harga_harian'] : "null"; ?>;
+            var harga3Bulanan =
+                <?php echo isset($data['kamar']['harga_3bulanan']) ? $data['kamar']['harga_3bulanan'] : "null"; ?>;
+            var hargaTahunan =
+                <?php echo isset($data['kamar']['harga_tahunan']) ? $data['kamar']['harga_tahunan'] : "null"; ?>;
+            var spanHarian = "/ hari";
+            var spanBulanan = "/ bulan";
+            var span3Bulan = "/ 3 bulan";
+            var spanTahunan = "/ tahun";
+            var harga = null;
 
-                var pilihanHarga = $('#pilihan-harga').val();
-                var hargaDisplay = $('#harga-display');
-                var spanDisplay = $('#span-harga-display');
+            var pilihanHarga = $('#pilihan-harga').val();
+            var hargaDisplay = $('#harga-display');
+            var spanDisplay = $('#span-harga-display');
 
-                if (pilihanHarga === 'harian') {
-                    harga = hargaHarian;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(spanHarian);
-                } else if (pilihanHarga === 'bulanan') {
-                    harga = hargaBulanan;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(spanBulanan);
-                } else if (pilihanHarga === '3bulanan') {
-                    harga = harga3Bulanan;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(span3Bulan);
-                } else if (pilihanHarga === 'tahunan') {
-                    harga = hargaTahunan;
-                    hargaDisplay.text('Rp ' + harga);
-                    spanDisplay.text(spanTahunan);
-                } else if (pilihanHarga === null) {
-                    hargaDisplay.text('null');
-                }
-            });
+            if (pilihanHarga === 'harian') {
+                harga = hargaHarian;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(spanHarian);
+            } else if (pilihanHarga === 'bulanan') {
+                harga = hargaBulanan;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(spanBulanan);
+            } else if (pilihanHarga === '3bulanan') {
+                harga = harga3Bulanan;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(span3Bulan);
+            } else if (pilihanHarga === 'tahunan') {
+                harga = hargaTahunan;
+                hargaDisplay.text('Rp ' + harga);
+                spanDisplay.text(spanTahunan);
+            } else if (pilihanHarga === null) {
+                hargaDisplay.text('null');
+            }
         });
+    });
     </script>
 
 
