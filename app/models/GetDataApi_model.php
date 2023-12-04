@@ -52,6 +52,29 @@ class GetDataApi_model
         return $this->db->single();
     }
 
+    public function getPembayaranUser($id)
+    {
+        $this->db->query("SELECT 
+        tb_user.id_user,
+        tb_user.nama_lengkap, 
+        tb_transaksi.id_transaksi, 
+        tb_transaksi.metode_pembayaran,
+        tb_transaksi.tggl_transaksi,
+        tb_transaksi.foto_bukti_bayar,
+        tb_pemesanan.harga,
+        tb_transaksi.bayar,
+        tb_transaksi.status
+            
+        FROM tb_pemesanan
+        JOIN tb_user ON tb_user.`id_user` = tb_pemesanan.`id_user`
+        JOIN tb_transaksi ON tb_transaksi.`id_pemesanan` = tb_pemesanan.`id_pemesanan`
+        WHERE tb_user.`id_user` = :idUser AND NOT tb_transaksi.`status` = 'Lunas'
+        ORDER BY `tb_transaksi`.`tggl_transaksi` DESC");
+
+        $this->db->bind(':idUser', $id);
+        return $this->db->resultSet();
+    }
+
     public function getTransactionHistory($id)
     {
         $this->db->query("SELECT tb_user.id_user,	
@@ -68,8 +91,8 @@ class GetDataApi_model
             FROM tb_pemesanan
             JOIN tb_user ON tb_user.id_user = tb_pemesanan.id_user
             JOIN tb_transaksi ON tb_transaksi.id_pemesanan = tb_pemesanan.id_pemesanan
-        WHERE tb_user.id_user = :idUser AND tb_transaksi.status = 'Lunas'
-        ORDER BY tb_transaksi.`id_transaksi` DESC");
+            WHERE tb_user.id_user = :idUser AND tb_transaksi.status = 'Lunas'
+            ORDER BY `tb_transaksi`.`tggl_transaksi` DESC");
 
         $this->db->bind(':idUser', $id);
         return $this->db->resultSet();
