@@ -58,3 +58,43 @@
 .right-download img {
   width: 400px;
 }
+
+#modal-testimoni .modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-testimoni .modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-testimoni .modal-body label {
+  margin-bottom: 10px;
+}
+
+#modal-testimoni .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+#modal-testimoni .modal-header {
+  border: none;
+}
+
+#modal-testimoni .modal-header h5 {
+  margin-left: 180px;
+}
+#modal-testimoni .modal-header h5 i {
+  margin-right: 10px;
+  color: gold;
+}
+
+#back1,
+#next1 {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+}

@@ -33,6 +33,7 @@ class Login1 extends Controller
             $_SESSION['id_user'] = $ambil_id_user;
             $_SESSION['nama_user'] = $ambil_nama_user;
             $_SESSION['foto_user'] = $ambil_foto_user;
+            $_SESSION['showModal'] = true;
 
             $data2['login1'] = $this->model('Login_model')->getKost($ambil_id_user);
 

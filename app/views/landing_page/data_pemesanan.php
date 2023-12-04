@@ -1,4 +1,8 @@
 <head>
+    <!-- LINK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="<?php echo BASEURL; ?>css/landing_page.css">
     <link rel="stylesheet" href="<?php echo BASEURL; ?>css/data_pemesanan.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -33,7 +37,7 @@
     <div class="halaman">
         <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Kamar 3</p>
     </div>
-
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     <section id="pemesanan">
         <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
             <div class="left-pemesanan">
@@ -191,7 +195,6 @@
             </div>
         </form>
     </section>
-
     <footer>
         <div class="top-footer">
             <div class="left-footer">
@@ -274,6 +277,7 @@
         });
     });
     </script>
+
 </body>
 
 </html>
