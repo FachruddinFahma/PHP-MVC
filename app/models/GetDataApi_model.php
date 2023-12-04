@@ -119,4 +119,21 @@ class GetDataApi_model
         $this->db->bind(':idTransaksi', $idTransaksi);
         return $this->db->single();
     }
+
+    public function getStatusBayarUser($idUser)
+    {
+        $this->db->query("SELECT 
+       
+        tb_user.nama_lengkap,         
+        tb_transaksi.status
+            
+        FROM tb_pemesanan
+        JOIN tb_user ON tb_user.`id_user` = tb_pemesanan.`id_user`
+        JOIN tb_transaksi ON tb_transaksi.`id_pemesanan` = tb_pemesanan.`id_pemesanan`
+        WHERE tb_user.`id_user` = :idUser     
+        ORDER BY `tb_transaksi`.`tggl_transaksi` DESC LIMIT 1");
+
+        $this->db->bind(':idUser', $idUser);
+        return $this->db->single();
+    }
 }

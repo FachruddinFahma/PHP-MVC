@@ -144,4 +144,31 @@ class GetDataMobile extends Controller
         }
         echo json_encode($response);
     }
+
+    public function getStatus($idUser){
+        try {
+            $user = $this->model('GetDataApi_model')->getStatusBayarUser($idUser);
+
+            if ($user) {
+                $response = [
+                    'code' => 200,
+                    'status' => 'Success',
+                    'data' => $user
+                ];
+            } else {
+                $response = [
+                    'code' => 404,
+                    'status' => 'error',
+                    'message' => 'Data tidak ditemukan'
+                ];
+            }
+        } catch (Exception $e) {
+            $response = [
+                'code' => 500,
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
+        echo json_encode($response);
+    }
 }
