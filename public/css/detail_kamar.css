@@ -264,7 +264,7 @@ nav .title-navbar img {
   font-weight: 400;
 }
 
-#detail_kamar #content-kamar .left-content-kamar .harga-kost a {
+#detail_kamar #content-kamar .left-content-kamar .harga-kost button {
   width: 85%;
   padding: 10px 15px;
   background-color: var(--blue);
