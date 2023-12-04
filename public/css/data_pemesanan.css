@@ -150,10 +150,33 @@
   text-align: center;
   padding: 20px 50px 50px;
   color: var(--brown);
-  height: 600px;
+  height: 850px;
 }
 
-.right-pemesanan > p {
+.right-pemesanan button {
+  width: 100%;
+}
+
+.right-pemesanan .informasi-pembayaran {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px dashed var(--brown);
+  margin-top: 10px;
+}
+
+.right-pemesanan .informasi-pembayaran > p {
+  font-weight: 600;
+}
+
+.right-pemesanan .informasi-pembayaran #input-bukti {
+  background-color: var(--lightblueclick);
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.right-pemesanan .informasi-booking > p {
   font-size: 18px;
   font-weight: 600;
 }

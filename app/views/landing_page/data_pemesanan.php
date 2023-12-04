@@ -121,62 +121,70 @@
                 </div>
             </div>
             <div class="right-pemesanan">
-                <p>Informasi Booking</p>
-                <div class="detail-pemesanan">
-                    <p><?= $data['pemesanan']['nama_kost']; ?></p>
-                    <div class="sub-detail-pemesanan">
-                        <p>Kategori Pembayaran : </p>
-                        <p id="kategori-pembayaran" name="kategori">Bulanan</p>
+                <div class="informasi-booking">
+                    <p>Informasi Booking</p>
+                    <div class="detail-pemesanan">
+                        <p><?= $data['pemesanan']['nama_kost']; ?></p>
+                        <div class="sub-detail-pemesanan">
+                            <p>Kategori Pembayaran : </p>
+                            <p id="kategori-pembayaran" name="kategori">Bulanan</p>
+                        </div>
+                        <div class="sub-detail-pemesanan">
+                            <p>Harga Kost :</p>
+                            <p name="harga">Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
+                        </div>
                     </div>
-                    <div class="sub-detail-pemesanan">
-                        <p>Harga Kost :</p>
-                        <p name="harga">Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
+                    <div class="total-pembayaran">
+                        <p>Total Pembayaran : </p>
+                        <p>Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
+                    </div>
+                    <div class="title-pembayaran">
+                        <p>Pembayaran Via :</p>
+                    </div>
+                    <div class="via-pembayaran">
+                        <div class="row-pembayaran">
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="BCA">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/BCA.png" alt="">
+                            </div>
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="BRI">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/BRI.png" alt="">
+                            </div>
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="BNI">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/bni.png" alt="">
+                            </div>
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="Mandiri">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/MANDIRI.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row-pembayaran">
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="Dana">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/DANA.png" alt="">
+                            </div>
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="Gopay">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/gopay.png" alt="">
+                            </div>
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="Shoope Pay">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/shopeepay.png" alt="">
+                            </div>
+                            <div class="opsi-pembayaran">
+                                <input type="radio" name="metode_pembayaran" id="" value="OVO">
+                                <img src="<?php echo BASEURL; ?>image/pembayaran/ovo.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="total-pembayaran">
-                    <p>Total Pembayaran : </p>
-                    <p>Rp <?= $data['detail_kamar']['harga_bulanan']; ?></p>
-                </div>
-                <div class="title-pembayaran">
-                    <p>Pembayaran Via :</p>
-                </div>
-                <div class="via-pembayaran">
-                    <div class="row-pembayaran">
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="BCA">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/BCA.png" alt="">
-                        </div>
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="BRI">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/BRI.png" alt="">
-                        </div>
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="BNI">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/bni.png" alt="">
-                        </div>
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="Mandiri">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/MANDIRI.png" alt="">
-                        </div>
-                    </div>
-                    <div class="row-pembayaran">
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="Dana">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/DANA.png" alt="">
-                        </div>
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="Gopay">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/gopay.png" alt="">
-                        </div>
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="Shoope Pay">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/shopeepay.png" alt="">
-                        </div>
-                        <div class="opsi-pembayaran">
-                            <input type="radio" name="metode_pembayaran" id="" value="OVO">
-                            <img src="<?php echo BASEURL; ?>image/pembayaran/ovo.png" alt="">
-                        </div>
-                    </div>
+                <div class="informasi-pembayaran">
+                    <p>Bukti Pembayaran</p>
+                    <img src="<?php echo BASEURL; ?>image/pembayaran/qris.png" alt="" id="logo-qris">
+                    <img src="<?php echo BASEURL; ?>image/pembayaran/qrcode.png" alt="" style="width: 50%;">
+                    <input type="file" id="input-bukti" name="bukti_tf">
                 </div>
                 <button type="submit" id="btn-pesan-sekarang">Bayar Sekarang</button>
                 <!-- <a href="<?php echo BASEURL; ?>pemesanan_kost/" id="btn-pesan-sekarang" type="submit">Bayar Sekarang</a> -->

@@ -100,8 +100,8 @@ ini_set('display_errors', 1);
             </div>
             <div class="left-content-kamar">
                 <div class="harga-kost">
-                    <p>Diskon 100rb <span>Rp 1.350.000</span></p>
-                    <div id="container-harga">
+                    <p style="font-size: 16px;color:#404040 ">Harga Kamar: </p>
+                    <div id="container-harga" style="margin-top: -20px;">
                         <h2 id="harga-display"><?php echo "Rp " . $data['kamar']['harga_bulanan'] ?></h2>
                         <span id="span-harga-display">/bulan</span>
                     </div>
