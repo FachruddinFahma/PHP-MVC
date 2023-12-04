@@ -77,25 +77,23 @@ class EditDataApi_model
     }
 
     //done
-    public function transaction($id, $bayar, $metodeBayar, $fotoBukti, $tggl_transaksi)
+    public function transaction($id, $bayar, $metodeBayar)
     {
-
-        if(empty($tggl_transaksi)) {
-            $tggl_transaksi = date('Y-m-d H:i:s'); 
-        }
-
         $query = "UPDATE tb_transaksi SET bayar = :bayar, 
-        metode_pembayaran = :metode, 
-        foto_bukti_bayar = :foto, 
-        tggl_transaksi = :tgl_bayar,
-        status = 'Proses'
-        WHERE id_pemesanan = :idPesan";
+    metode_pembayaran = :metode, 
+    -- foto_bukti_bayar = :foto,
+    tggl_transaksi = :tgl_bayar, 
+    status = 'Proses'
+    WHERE id_transaksi = :idPesan";
+
+        // Menggunakan date('Y-m-d H:i:s') untuk mendapatkan current timestamp
+        $tgl_transaksi = date('Y-m-d H:i:s');
 
         $this->db->query($query);
         $this->db->bind(':bayar', $bayar);
         $this->db->bind(':metode', $metodeBayar);
-        $this->db->bind(':foto', $fotoBukti);
-        $this->db->bind(':tgl_bayar', $tggl_transaksi);
+        // $this->db->bind(':foto', $fotoBukti);
+        $this->db->bind(':tgl_bayar', $tgl_transaksi);
         $this->db->bind(':idPesan', $id);
 
         $this->db->execute();
