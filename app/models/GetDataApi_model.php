@@ -30,7 +30,8 @@ class GetDataApi_model
         return $this->db->single();
     }
 
-    public function getDataKost($id){
+    public function getDataKost($id)
+    {
         $this->db->query("SELECT tb_kost.nama_kost, 
         tb_kost.alamat,
         tb_user.nama_lengkap AS 'nama_pemilik',
@@ -48,6 +49,52 @@ class GetDataApi_model
         JOIN tb_user ON tb_user.id_user = tb_kost.id_user
         WHERE tb_kamar.id_kamar = :id_kamar");
         $this->db->bind(':id_kamar', $id);
+        return $this->db->single();
+    }
+
+    public function getTransactionHistory($id)
+    {
+        $this->db->query("SELECT tb_user.id_user,	
+        tb_transaksi.id_transaksi,
+        tb_user.nama_lengkap, 
+            tb_transaksi.id_transaksi, 
+            tb_transaksi.metode_pembayaran,
+            tb_transaksi.tggl_transaksi,
+            tb_transaksi.foto_bukti_bayar,
+            tb_pemesanan.harga,
+            tb_transaksi.bayar,
+            tb_transaksi.status
+            
+            FROM tb_pemesanan
+            JOIN tb_user ON tb_user.id_user = tb_pemesanan.id_user
+            JOIN tb_transaksi ON tb_transaksi.id_pemesanan = tb_pemesanan.id_pemesanan
+        WHERE tb_user.id_user = :idUser AND tb_transaksi.status = 'Lunas'
+        ORDER BY tb_transaksi.`id_transaksi` DESC");
+
+        $this->db->bind(':idUser', $id);
+        return $this->db->resultSet();
+    }
+
+    public function getTransactionHistoryDetail($idUser, $idTransaksi)
+    {
+        $this->db->query("SELECT tb_user.id_user,	
+        tb_transaksi.id_transaksi,
+        tb_user.nama_lengkap, 
+            tb_transaksi.id_transaksi, 
+            tb_transaksi.metode_pembayaran,
+            tb_transaksi.tggl_transaksi,
+            tb_transaksi.foto_bukti_bayar,
+            tb_pemesanan.harga,
+            tb_transaksi.bayar,
+            tb_transaksi.status
+            
+            FROM tb_pemesanan
+            JOIN tb_user ON tb_user.id_user = tb_pemesanan.id_user
+            JOIN tb_transaksi ON tb_transaksi.id_pemesanan = tb_pemesanan.id_pemesanan
+            WHERE tb_user.id_user = :idUser AND tb_transaksi.id_transaksi = :idTransaksi AND tb_transaksi.status = 'Lunas'");
+
+        $this->db->bind(':idUser', $idUser);
+        $this->db->bind(':idTransaksi', $idTransaksi);
         return $this->db->single();
     }
 }

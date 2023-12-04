@@ -60,4 +60,60 @@ class GetDataMobile extends Controller
 
         echo json_encode($response);
     }
+
+    public function getHistory($idUser)
+    {
+        try {
+            $user = $this->model('GetDataApi_model')->getTransactionHistory($idUser);
+
+            if ($user) {
+                $response = [
+                    'code' => 200,
+                    'status' => 'Success',
+                    'data' => $user
+                ];
+            } else {
+                $response = [
+                    'code' => 404,
+                    'status' => 'error',
+                    'message' => 'Data tidak ditemukan'
+                ];
+            }
+        } catch (Exception $e) {
+            $response = [
+                'code' => 500,
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
+        echo json_encode($response);
+    }
+
+    public function getHistoryDetail($idUser, $idTransaksi)
+    {
+        try {
+            $user = $this->model('GetDataApi_model')->getTransactionHistoryDetail($idUser, $idTransaksi);
+
+            if ($user) {
+                $response = [
+                    'code' => 200,
+                    'status' => 'Success',
+                    'data' => $user
+                ];
+            } else {
+                $response = [
+                    'code' => 404,
+                    'status' => 'error',
+                    'message' => 'Data tidak ditemukan'
+                ];
+            }
+        } catch (Exception $e) {
+            $response = [
+                'code' => 500,
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ];
+        }
+        echo json_encode($response);
+    }
 }
