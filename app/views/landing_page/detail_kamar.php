@@ -125,11 +125,10 @@ ini_set('display_errors', 1);
                             </select>
                         </div>
                         <!-- Hidden input untuk menyimpan nilai harga -->
-                        <input id="input-id-kamar" name="input-id-kamar"
+                        <input type="hidden" id="input-id-kamar" name="input-id-kamar"
                             value="<?php echo $data['kamar']['id_kamar']; ?>">
                         <input type="hidden" id="harga-input" name="harga-input"
                             value="<?php echo $data['kamar']['harga_bulanan']; ?>">
-                        <a id="pesan-sekarang" href="#">Pesan Sekarang</a>
                         <button id="button-pesan-sekarang" type="submit">Pesan</button>
                     </div>
                 </form>

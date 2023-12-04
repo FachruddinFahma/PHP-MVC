@@ -190,7 +190,6 @@
                     <input type="file" id="input-bukti" name="bukti_tf">
                 </div>
                 <button type="submit" id="btn-pesan-sekarang">Bayar Sekarang</button>
-                <!-- <a href="<?php echo BASEURL; ?>pemesanan_kost/" id="btn-pesan-sekarang" type="submit">Bayar Sekarang</a> -->
             </div>
         </form>
     </section>
