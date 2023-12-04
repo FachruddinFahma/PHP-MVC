@@ -47,9 +47,17 @@ class kamarUser_model
     }
 
     public function getAllKamar($id_kost)
-    {
-        $this->db->query("SELECT * FROM tb_kamar WHERE id_kost = :id_kost");
-        $this->db->bind(':id_kost', $id_kost);
-        return $this->db->resultSet();
+{
+    $this->db->query("SELECT * FROM tb_kamar WHERE id_kost = :id_kost");
+    $this->db->bind(':id_kost', $id_kost);
+    $result = $this->db->resultSet();
+
+    foreach ($result as &$kamar) {
+        $foto_kamar = $this->getAllFotoKamar($kamar['id_kamar']);
+        $kamar['main_foto'] = $foto_kamar['foto_kamar'][0] ?? ''; 
     }
+
+    return $result;
+}
+
 }

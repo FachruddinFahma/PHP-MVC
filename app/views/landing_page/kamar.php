@@ -76,7 +76,7 @@
                 <a href="<?php echo BASEURL . 'detail_kamar/' . $kamar['id_kamar']; ?>" class="card-kamar">
                     <div class="foto-kamar">
                         <img class="gambar-kost" src="
-                                <?php echo BASEURL . 'foto/' . $kamar['main_foto']; ?>" alt="">
+                        <?php echo BASEURL . 'image/kamar/' . $kamar['main_foto']; ?>" alt="">
                     </div>
                     <div class="content-card-kamar">
                         <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
