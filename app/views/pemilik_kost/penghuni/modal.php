@@ -12,7 +12,7 @@
         <div class="modal-body">
             
 
-        <img class="rounded-circle mt-5 img-fluid mx-auto d-block " style="object-fit: cover; height:260px; width:260px; margin-bottom: 40px;"  src="http://localhost/PHP-MVC/public/image/<?= $d['foto_user'] ?>" alt="">
+        <img class="rounded-circle mt-5 img-fluid mx-auto d-block " style="object-fit: cover; height:260px; width:260px; margin-bottom: 40px;"  src="<?php echo BASEURL . 'foto/' . $png['foto_user']; ?>" alt="">
         <div class="container">
             <p><B>Nama: </B><?= $d['nama_lengkap'] ?></p>
             <p><b>Kamar: </b><?= $d['id_kamar'] ?></p>

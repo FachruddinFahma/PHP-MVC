@@ -119,27 +119,20 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            <?php
+                                            $i = 1;
+                                            foreach ($data['transaksi'] as $trank) :
+                                            ?>
                                                 <tr>
                                                     <th scope="row">1</th>
-                                                    <td>Hakim</td>
-                                                    <td>15 November 2023</td>
-                                                    <td>Kamar 5</td>
-                                                    <td>Rp.300.000</td>
+                                                    <td><?php echo $trank['nama_lengkap']; ?></td>
+                                                    <td><?php echo $trank['tggl_transaksi']; ?></td>
+                                                    <td><?php echo $trank['nama_kamar']; ?></td>
+                                                    <td><?php echo $trank['harga']; ?></td>
                                                 </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Farhan</td>
-                                                    <td>10 November 2023</td>
-                                                    <td>Kamar 10</td>
-                                                    <td>Rp.300.000</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Nico</td>
-                                                    <td>3 November 2023</td>
-                                                    <td>Kamar 2</td>
-                                                    <td>Rp.300.000</td>
-                                                </tr>
+                                            <?php
+                                            endforeach;
+                                            ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -156,37 +149,23 @@
                                     <div class="col">
                                         <h5>Daftar Penghuni</h5>
                                     </div>
+                                    <?php
+                                    $limaData_penghuni = array_slice($data['penghuni'], 0, 5);
 
+                                    foreach ($data['penghuni'] as $png) :
+                                    ?>
                                     <div class="card-content">
                                         <div class="recent-message d-flex px-4 py-3">
                                             <div class="avatar avatar-lg">
-                                                <img src="http://localhost/PHP-MVC/public/image/user.png" />
+                                            <img src="<?php echo BASEURL . 'foto/' . $png['foto_user']; ?>" style="width: 60px;" />
                                             </div>
                                             <div class="name ms-4">
-                                                <p class="mb-1">Nico Flassy</p>
-                                                <p class="text-muted mb-0">+6281667584766</p>
-                                            </div>
-                                        </div>
-                                        <div class="recent-message d-flex px-4 py-3">
-                                            <div class="avatar avatar-lg">
-                                                <img src="http://localhost/PHP-MVC/public/image/user.png" />
-                                            </div>
-                                            <div class="name ms-4">
-                                                <p class="mb-1">Lutfi Hakim</p>
-                                                <p class="text-muted mb-0">+6281334394400</p>
-                                            </div>
-                                        </div>
-                                        <div class="recent-message d-flex px-4 py-3">
-                                            <div class="avatar avatar-lg">
-                                                <img src="http://localhost/PHP-MVC/public/image/user.png" />
-                                            </div>
-                                            <div class="name ms-4">
-                                                <p class="mb-1">Farhan Aryanto</p>
-                                                <p class="text-muted mb-0">+6281467387527</p>
+                                                <p class="mb-1"><?php echo $png['nama_lengkap']; ?></p>
+                                                <p class="text-muted mb-0"><?php echo $png['no_hp']; ?></p>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
