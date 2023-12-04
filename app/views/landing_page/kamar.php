@@ -65,9 +65,10 @@
             <h1>Daftar Kamar</h1>
             <div id="kumpulan_kamar">
                 <?php foreach ($data['kamar'] as $kamar) : ?>
-                <a href="<?php echo BASEURL; ?>detail_kamar/<?php echo $kamar['id_kamar']; ?>" class="card-kamar">
+                <<<<<<< HEAD <a href="<?php echo BASEURL . 'detail_kamar/' . $kamar['id_kamar']; ?>" class="card-kamar">
                     <div class="foto-kamar">
-                        <img class="gambar-kost" src="<?php echo BASEURL; ?>image/kamar/kamar1.jpg" alt="">
+                        <img class="gambar-kost" src="
+                            <?php echo BASEURL . 'foto/' . $kamar['main_foto']; ?>" alt="">
                     </div>
                     <div class="content-card-kamar">
                         <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
@@ -79,14 +80,24 @@
                             <i class="ri-router-line"></i>
                             <i class="ri-router-line"></i>
                         </div>
-                        <div class="harga">
-                            <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
+                        <div class="content-card-kamar">
+                            <p class="nama-kost"><?php echo $kamar['nama_kamar']; ?></p>
+                            <!-- Tambahkan info kamar lainnya sesuai kebutuhan -->
+                            <div class="fasilitas">
+                                <i class="ri-router-line"></i>
+                                <i class="ri-hotel-bed-fill"></i>
+                                <i class="ri-battery-2-charge-fill"></i>
+                                <i class="ri-router-line"></i>
+                                <i class="ri-router-line"></i>
+                            </div>
+                            <div class="harga">
+                                <p>Rp <?php echo $kamar['harga_bulanan']; ?><span>/ Bulan</span></p>
+                            </div>
                         </div>
+                        </a>
+                        <?php endforeach; ?>
                     </div>
-                </a>
-                <?php endforeach; ?>
             </div>
-        </div>
     </section>
 
     <footer>

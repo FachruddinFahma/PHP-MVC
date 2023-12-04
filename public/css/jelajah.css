@@ -1,334 +1,357 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-    --navy: #1B3359;
-    --middleblue: #134BA4;
-    --lightblue: #F3F7FD; 
-    --darkblue: #061072;
-    --lightblueclick: #c9d8eb; 
-    --green:#1F9254;
-    --blue: #295EF4;
-    --lightgrey: #AEAEAE;
-    --brown: #404040;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
+  --blue: #295ef4;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
 }
 
 /* circle pemanis untuk effect effecttttt */
-.circle-pemanis{
-    width: 1000px;
-    height: 1000px;
-    background-color: #EAEFF6;
-    position: absolute;
-    border-radius: 1000px;
-    z-index: -99;
-    right: -300;
-    top: 800;
+.circle-pemanis {
+  width: 1000px;
+  height: 1000px;
+  background-color: #eaeff6;
+  position: absolute;
+  border-radius: 1000px;
+  z-index: -99;
+  right: -300;
+  top: 800;
 }
 
-.circle-pemanis2{
-    width: 1100px;
-    height: 1100px;
-    background-color: #EAEFF6;
-    position: absolute;
-    border-radius: 4000px;
-    z-index: -99;
-    left: -400;
-    top: 2900;
+.circle-pemanis2 {
+  width: 1100px;
+  height: 1100px;
+  background-color: #eaeff6;
+  position: absolute;
+  border-radius: 4000px;
+  z-index: -99;
+  left: -400;
+  top: 2900;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--lightblue);overflow-x: hidden;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--lightblue);
+  overflow-x: hidden;
 }
 
 /* navbarrr  */
-nav{
-    padding: 0 60px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+nav {
+  padding: 0 60px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-nav .link-navbar ul{
-    display: flex;
-    gap: 40px;
-    align-items: center;
+nav .link-navbar ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-nav .link-navbar ul a{
-    text-decoration: none;
+nav .link-navbar ul a {
+  text-decoration: none;
 }
 
-nav .link-navbar ul a.link-login{
-    padding: 10px 20px;
-    background-color: var(--middleblue);
-    color: white;
-    border-radius: 10px;
+nav .link-navbar ul a.link-login {
+  padding: 10px 20px;
+  background-color: var(--middleblue);
+  color: white;
+  border-radius: 10px;
 }
 
-nav .title-navbar{
-    display: flex;
-    align-items: center;
+nav .title-navbar {
+  display: flex;
+  align-items: center;
 }
 
-nav .title-navbar img{
-    width: 200px;
+nav .title-navbar img {
+  width: 200px;
 }
 
 /*   menu jelajah   */
 
 #jelajah {
-    padding-top: 220px;
+  padding-top: 220px;
 }
 
-#jelajah .menu-jelajah{
-    background-color: white ;
-    margin: 50px 100px 0px;
-    padding: 0 30px 30px;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    border-radius: 20px;
-    align-items: center;
+#jelajah .menu-jelajah {
+  background-color: white;
+  margin: 50px 100px 0px;
+  padding: 0 30px 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
 }
 
-#jelajah .menu-jelajah .container-kategori-kost, .container-lokasi-kost, .container-kategori-kost, .container-rentang-kost{
-    text-align: start;
+#form-jelajah {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-#jelajah .menu-jelajah select{
-    padding: 10px 12px;
-    width: 200px;
-    border: 1px solid var(--lightgrey);
-    border-radius: 10px;
+#jelajah .menu-jelajah .container-kategori-kost,
+.container-lokasi-kost,
+.container-kategori-kost,
+.container-rentang-kost {
+  text-align: start;
 }
 
-#jelajah .menu-jelajah .container-rentang-kost .input-rentang-kost{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+#jelajah .menu-jelajah select {
+  padding: 10px 12px;
+  width: 200px;
+  border: 1px solid var(--lightgrey);
+  border-radius: 10px;
 }
 
-#jelajah .menu-jelajah .container-rentang-kost input{
-    padding: 10px 12px;
-    width: 150px;
-    border: 1px solid var(--lightgrey);
-    border-radius: 10px;
+#jelajah .menu-jelajah .container-rentang-kost .input-rentang-kost {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-#jelajah .menu-jelajah .container-rentang-kost button{
-    padding: 10px 40px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: 400;
-    background-color: var(--middleblue);
+#jelajah .menu-jelajah .container-rentang-kost input {
+  padding: 10px 12px;
+  width: 150px;
+  border: 1px solid var(--lightgrey);
+  border-radius: 10px;
+}
+
+#jelajah .menu-jelajah .container-rentang-kost button {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  background-color: var(--middleblue);
 }
 
 /* css kosttt */
-#jelajah{
-    padding: 0 100px;
-    padding-bottom: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding-top:100px;
+#jelajah {
+  padding: 0 100px;
+  padding-bottom: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
 }
 
-#jelajah .title-section-kost{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#jelajah .title-section-kost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#jelajah .title-section-kost h2{
-    font-size: 40px;
-    font-weight: 500;
-    color: var(--navy);
+#jelajah .title-section-kost h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--navy);
 }
 
-#jelajah .title-section-kost .sub-deskripsi{
-    width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -25px;
+#jelajah .title-section-kost .sub-deskripsi {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
 }
 
-#jelajah .title-section-kost #button-kost{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    border: 1px solid gray;
-    width: 260px;
-    padding: 3px 0;
-    gap: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
+#jelajah .title-section-kost #button-kost {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  width: 260px;
+  padding: 3px 0;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
 }
 
-#jelajah .title-section-kost #button-kost #button-populer{
-    background-color: var(--blue);
-    color: white;
-    padding: 0 30px;
-    border-radius: 8px;
+#jelajah .title-section-kost #button-kost #button-populer {
+  background-color: var(--blue);
+  color: white;
+  padding: 0 30px;
+  border-radius: 8px;
 }
 
-#jelajah .title-section-kost #button-kost #button-terbaru{
-    color: var(--blue);
-    padding: 0 30px;
+#jelajah .title-section-kost #button-kost #button-terbaru {
+  color: var(--blue);
+  padding: 0 30px;
 }
 
-#jelajah .content-kost #kumpulan-card-kost{
-    margin-top: 20px;
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
+#jelajah .content-kost #kumpulan-card-kost {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .card-kost{
-    background-color: white;
-    width: 220px;
-    margin: 10px 20px;
-    border-radius: 10px;
-    box-shadow:  0 3px 10px rgb(0 0 0 / 0.1);
-    text-decoration: none;
+#jelajah .content-kost #kumpulan-card-kost .card-kost {
+  background-color: white;
+  width: 220px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  text-decoration: none;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .card-kost p{
-    text-decoration: none;
-    color: var(--brown);
+#jelajah .content-kost #kumpulan-card-kost .card-kost p {
+  text-decoration: none;
+  color: var(--brown);
 }
 
-#jelajah .content-kost #kumpulan-card-kost .card-kost img{
-    width: 220px;
-    border-radius: 10px 10px 0 0;
+#jelajah .content-kost #kumpulan-card-kost .card-kost img {
+  width: 220px;
+  border-radius: 10px 10px 0 0;
 }
 
 #jelajah .content-kost #kumpulan-card-kost .content-card-kost {
-   padding: 2px 15px;
+  padding: 2px 15px;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
+#jelajah
+  .content-kost
+  #kumpulan-card-kost
+  .content-card-kost
+  .top-content-kost {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost .kategori-kost{
-    border: 1px solid var(--lightgrey);
-    padding: 0 15px;
-    border-radius: 10px;
-    font-size: 13px;
-   display: flex;
-   align-items: center;
+#jelajah
+  .content-kost
+  #kumpulan-card-kost
+  .content-card-kost
+  .top-content-kost
+  .kategori-kost {
+  border: 1px solid var(--lightgrey);
+  padding: 0 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .top-content-kost i{
-    color: #E7D000;
+#jelajah
+  .content-kost
+  #kumpulan-card-kost
+  .content-card-kost
+  .top-content-kost
+  i {
+  color: #e7d000;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .nama-kost{
-    text-align: start;
-    margin-top: -10px;
-    font-size: 20px;
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .nama-kost {
+  text-align: start;
+  margin-top: -10px;
+  font-size: 20px;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .location-kost{
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    align-items: center ;
-    margin: 0;
-    font-size: 13px;
-    margin-top: -20px;
-    font-weight: 300;
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .location-kost {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  font-size: 13px;
+  margin-top: -20px;
+  font-weight: 300;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .location-kost i{
-    color: #4B4B4B;
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .location-kost i {
+  color: #4b4b4b;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga{
-    text-align: start;
-    margin-top: -15px;
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga {
+  text-align: start;
+  margin-top: -15px;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga p{
-    font-weight: 550;
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga p {
+  font-weight: 550;
 }
 
-#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga span{
-    font-weight: 400;
+#jelajah .content-kost #kumpulan-card-kost .content-card-kost .harga span {
+  font-weight: 400;
 }
 
-#jelajah .content-kost #bottom-card-kost{
-    text-align: end;
-    margin: 50px 100px;
+#jelajah .content-kost #bottom-card-kost {
+  text-align: end;
+  margin: 50px 100px;
 }
 
-#jelajah .content-kost #bottom-card-kost a{
-    color: var(--blue);
-    text-decoration: none;
+#jelajah .content-kost #bottom-card-kost a {
+  color: var(--blue);
+  text-decoration: none;
 }
 
 /* footer */
-footer{
-    background-color: #D3DCE7;
-    padding: 60px 60px;
-    color: #1A202C;
+footer {
+  background-color: #d3dce7;
+  padding: 60px 60px;
+  color: #1a202c;
 }
 
-footer .top-footer{
-    display: flex;
-    justify-content: space-between;
+footer .top-footer {
+  display: flex;
+  justify-content: space-between;
 }
-footer .top-footer .left-footer{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-footer .top-footer .left-footer img{
-    width: 250px;
-    margin-left: -38px;
+footer .top-footer .left-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-footer .top-footer .left-footer p{
-    width: 400px;
+footer .top-footer .left-footer img {
+  width: 250px;
+  margin-left: -38px;
 }
 
-footer .top-footer .left-footer .kumpulan-medsos i{
-    margin: 0 8px;
-    font-size: 35px;
+footer .top-footer .left-footer p {
+  width: 400px;
 }
 
-footer .top-footer .right-footer{
-    display: flex;
-    gap: 150px;
+footer .top-footer .left-footer .kumpulan-medsos i {
+  margin: 0 8px;
+  font-size: 35px;
 }
 
-footer .bottom-footer{
-    display: flex;
-    gap: 150px;
-    margin-top: 60px;
-    justify-content: space-between;
+footer .top-footer .right-footer {
+  display: flex;
+  gap: 150px;
 }
 
-footer .bottom-footer::after{
-    position: absolute;
-    content: "";
-    height: 1px;
-    background-color: var(--lightgrey);
-    width: 92%;
-    margin-top:-10px;
+footer .bottom-footer {
+  display: flex;
+  gap: 150px;
+  margin-top: 60px;
+  justify-content: space-between;
 }
 
-footer .bottom-footer .right-bottom-footer{
-    display: flex;
-    gap: 40px;
+footer .bottom-footer::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: var(--lightgrey);
+  width: 92%;
+  margin-top: -10px;
 }
 
+footer .bottom-footer .right-bottom-footer {
+  display: flex;
+  gap: 40px;
+}

@@ -23,8 +23,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Rating Kost</h6>
-                                        <h6 class="font-extrabold mb-0">4,5</h6>
+                                        <h6 class="text-muted font-semibold">Total Komplain</h6>
+                                        <h6 class="font-extrabold mb-0"><?php echo $data['total_komplain']; ?></h6>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <h6 class="text-muted font-semibold">Jumlah Penghuni</h6>
-                                        <h6 class="font-extrabold mb-0">64</h6>
+                                        <h6 class="font-extrabold mb-0"><?php echo $data['total_penghuni']; ?></h6>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <h6 class="text-muted font-semibold">Jumlah Kamar</h6>
-                                        <h6 class="font-extrabold mb-0">20</h6>
+                                        <h6 class="font-extrabold mb-0"><?php echo $data['total_kamar']; ?></h6>
                                     </div>
                                 </div>
                             </div>
