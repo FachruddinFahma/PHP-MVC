@@ -33,7 +33,7 @@
             return $this->db->single()['total_penghuni'];
         }
 
-        public function totalKamarForUser($idUser)
+        public function totalKamarByIdUser($idUser)
         {
             $query = "SELECT COUNT(*) AS total_kamar 
                     FROM tb_kamar
@@ -44,6 +44,22 @@
             $this->db->bind(':id_user', $idUser);
             
             return $this->db->single()['total_kamar'];
+        }
+
+        public function totalPendapatanByIdUser($idUser)
+        {
+            $query = "SELECT SUM(tb_transaksi.bayar) AS total_harga
+                    FROM tb_transaksi
+                    JOIN tb_pemesanan ON tb_transaksi.id_pemesanan = tb_pemesanan.id_pemesanan
+                    JOIN tb_user ON tb_pemesanan.id_user = tb_user.id_user
+                    JOIN tb_kamar ON tb_pemesanan.id_kamar = tb_kamar.id_kamar
+                    JOIN tb_kost ON tb_kost.id_kost = tb_kamar.id_kost
+                    WHERE tb_kost.id_user = :id_user";
+
+            $this->db->query($query);
+            $this->db->bind(':id_user', $idUser);
+
+            return $this->db->single();
         }
 
         public function getAllPenghuni($id_user)
@@ -67,9 +83,10 @@
             JOIN tb_user ON tb_pemesanan.id_user = tb_user.id_user
             JOIN  tb_kamar ON tb_pemesanan.id_kamar = tb_kamar.id_kamar
             JOIN tb_kost ON tb_kost.id_kost = tb_kamar.id_kost
-            WHERE tb_user.id_role = '3' AND tb_kost.id_user = :id_user");
+            WHERE tb_kost.id_user = :id_user");
 
             $this->db->bind(':id_user', $id_user);
+            return $this->db->resultSet();
         }
     }
 ?>
