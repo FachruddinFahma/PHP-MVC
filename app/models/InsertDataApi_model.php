@@ -1,5 +1,6 @@
 <?php
-class InsertDataApi_model{
+class InsertDataApi_model
+{
     private $db;
 
     public function __construct()
@@ -8,17 +9,19 @@ class InsertDataApi_model{
         date_default_timezone_set('Asia/Jakarta');
     }
 
-    public function addKomplain($id_komplain, $id_user, $jenis_komplain, $tipe_komplain, $deskripsi_komplain, $tggl_komplain){
-        
-        if(empty($tggl_komplain)) {
-            $tggl_komplain = date('Y-m-d H:i:s'); 
+    public function addKomplain($id_komplain, $id_user, $id_kost, $jenis_komplain, $tipe_komplain, $deskripsi_komplain, $tggl_komplain)
+    {
+
+        if (empty($tggl_komplain)) {
+            $tggl_komplain = date('Y-m-d H:i:s');
         }
 
-        $this->db->query('INSERT INTO tb_komplain (id_komplain, id_user, jenis_komplain, tipe_komplain, deskripsi_komplain, tggl_komplain) 
-        VALUES (:id_komplain, :id_user, :jenis_komplain, :tipe_komplain, :deskripsi_komplain, :tggl_komplain)');
-        
+        $this->db->query('INSERT INTO tb_komplain (id_komplain, id_user, id_kost, jenis_komplain, tipe_komplain, deskripsi_komplain, tggl_komplain) 
+        VALUES (:id_komplain, :id_user, :id_kost, :jenis_komplain, :tipe_komplain, :deskripsi_komplain, :tggl_komplain)');
+
         $this->db->bind(':id_komplain', $id_komplain);
         $this->db->bind(':id_user', $id_user);
+        $this->db->bind(':id_kost', $id_kost);
         $this->db->bind(':jenis_komplain', $jenis_komplain);
         $this->db->bind(':tipe_komplain', $tipe_komplain);
         $this->db->bind(':deskripsi_komplain', $deskripsi_komplain);
@@ -28,4 +31,3 @@ class InsertDataApi_model{
         return true;
     }
 }
-
