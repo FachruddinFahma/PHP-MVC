@@ -49,7 +49,7 @@
 
         public function getAllKost()
         {
-            $this->db->query("SELECT tb_kost.nama_kost, COUNT(tb_kamar.id_kamar) as jumlah_kamar, tb_user.nama_lengkap, tb_user.no_hp, tb_user.alamat
+            $this->db->query("SELECT tb_kost.nama_kost, tb_user.no_hp, tb_user.nama_lengkap, tb_user.no_hp, tb_user.alamat
             FROM tb_kost
             JOIN tb_user ON tb_user.id_user = tb_kost.id_user
             JOIN tb_kamar ON tb_kamar.id_kost = tb_kost.id_kost

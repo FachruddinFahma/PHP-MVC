@@ -124,7 +124,7 @@
                                                 <tr>
                                                     <th scope="row"><?php echo $i++; ?></th>
                                                     <td><?php echo $kost['nama_kost']; ?></td>
-                                                    <td><?php echo $kost['jumlah_kamar']; ?></td>
+                                                    <td><?php echo $kost['no_hp']; ?></td>
                                                     <td><?php echo $kost['nama_lengkap']; ?></td>
                                                     <td><?php echo $kost['no_hp']; ?></td>
                                                     <td><?php echo $kost['alamat']; ?></td>
