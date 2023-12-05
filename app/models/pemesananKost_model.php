@@ -48,9 +48,14 @@
         {
             $id_user = $_SESSION['id_user'];
             //$id_pemesanan = $this->generateRandomID();
+            $fotoQris = $_FILES['bukti_tf']['tmp_name'];
+            $uploadDir = '../public/bukti_transfer/'; 
+            $fotoQrisName = basename($_FILES['bukti_tf']['name']);
+            move_uploaded_file($fotoQris, $uploadDir . $fotoQrisName);
 
-            $query = "INSERT INTO tb_pemesanan (id_pemesanan, id_kamar, id_user, tggl_pemesaan, tggl_masuk, tggl_keluar, kategori, harga, metode_pembayaran, status) 
-                    VALUES (:id_pemesanan, :id_kamar, :id_user, CURRENT_TIMESTAMP, :tggl_masuk, :tggl_keluar, :kategori, :harga, :metode_pembayaran, 'PROSES')";
+
+            $query = "INSERT INTO tb_pemesanan (id_pemesanan, id_kamar, id_user, tggl_pemesaan, tggl_masuk, tggl_keluar, kategori, harga, metode_pembayaran, bukti_tf, status) 
+                    VALUES (:id_pemesanan, :id_kamar, :id_user, CURRENT_TIMESTAMP, :tggl_masuk, :tggl_keluar, :kategori, :harga, :metode_pembayaran, :bukti_tf, 'masuk')";
 
             $this->db->query($query);
             $this->db->bind(':id_pemesanan', $pemesanan['id_pemesanan']);
@@ -61,6 +66,7 @@
             $this->db->bind(':kategori', $pemesanan['kategori']);
             $this->db->bind(':harga', $pemesanan['harga']);
             $this->db->bind(':metode_pembayaran', $pemesanan['metode_pembayaran']);
+            $this->db->bind(':bukti_tf', $fotoQrisName);
             $this->db->execute();
         }
     }

@@ -14,11 +14,11 @@
         public function addPemesanan()
         {
             $id_kamar = $_POST['id_kamar'];
-            $id_pemesanan = $_POST['id_pemesanan']; // Perbarui ini untuk mendapatkan id_pemesanan dari formulir atau tempat lain
+            $id_pemesanan = $_POST['id_pemesanan'];
             if ($this->model('pemesananKost_model')->addPemesanan($_POST, $id_pemesanan) > 0) {
                 header('Location: http://localhost/PHP-MVC/public/landing_page/detail_kamar');
             } else {
-                header("Location: http://localhost/PHP-MVC/public/pembayaran/pembayaran?id_pemesanan=$id_pemesanan&id_kamar=$id_kamar");
+                header("Location: http://localhost/PHP-MVC/public/landing_page/index");
             }
         }
     }    

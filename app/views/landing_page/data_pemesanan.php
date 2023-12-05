@@ -38,7 +38,7 @@
         <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Kamar 3</p>
     </div>
     <section id="pemesanan">
-        <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
+        <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan" enctype="multipart/form-data">
             <div class="left-pemesanan">
                 <h1>Data Pemesanan</h1>
                 <p name="id_pemesanan"><?php echo $data['idRnamdom']; ?></p>
@@ -103,7 +103,7 @@
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Penghuni</label>
                             <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#"
-                                value="<?= $data['penghuni']['nama_lengkap']; ?>" readonly>
+                                value="<?= $data['penghuni']['nama_lengkap']; ?>" >
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Jenis Kelamin</label>
