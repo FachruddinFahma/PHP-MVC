@@ -16,7 +16,7 @@
             $model = $this->model('dataKostAdmin_Model');
             $model->terimaKost($id_kost);
 
-            header("Location: /PHP-MVC/public//index");
+            header("Location: /PHP-MVC/public/dataKost_admin/index");
             exit();
         }
 
@@ -25,7 +25,7 @@
             $model = $this->model('dataKostAdmin_Model');
             $model->tolakKost($id_kost);
 
-            header("Location: /PHP-MVC/public/pemesanan/index");
+            header("Location: /PHP-MVC/public/dataKost_admin/index");
             exit();
         }
     }    

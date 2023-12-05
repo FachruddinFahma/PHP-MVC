@@ -204,6 +204,22 @@
         ]
     });
 </script>
+
+<script>
+    new DataTable("#dataTestimoni", {
+        info: false,
+        "columnDefs": [{
+                "orderable": true,
+                "targets": 0
+            },
+            {
+                "orderable": false,
+                "targets": 1
+            },
+
+        ]
+    });
+</script>
 </body>
 
 </html>

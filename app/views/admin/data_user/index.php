@@ -12,11 +12,11 @@
         <section id="home" class="content">
             <div id="container-button" class="w-full">
                 <div id="container-button-pemilik">
-                    <h4 id="button-pemilik">Pesanan Masuk</h4>
+                    <h4 id="button-pemilik">Data Pemilik Kost</h4>
                     <span class="line-active"></span>
                 </div>
                 <div id="container-button-penyewa">
-                    <h4 id="button-penyewa">Pesanan Terkonfirmasi</h4>
+                    <h4 id="button-penyewa">Data Penyewa Kost</h4>
                     <!-- <span class="line-active"></span> -->
                 </div>
             </div>

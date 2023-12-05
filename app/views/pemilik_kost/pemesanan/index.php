@@ -35,26 +35,23 @@
                 <?php
                 foreach ($data['pemesananMasuk'] as $pesananMasuk) {
                 ?>
-                <tr>
-                    <td><?php echo $pesananMasuk['id_pemesanan'] ?></td>
-                    <td><?php echo $pesananMasuk['id_kamar'] ?></td>
-                    <td><?php echo $pesananMasuk['id_user'] ?></td>
-                    <td>22 Oktober 2003</td>
-                    <td><?php echo $pesananMasuk['tggl_masuk'] ?></td>
-                    <td><?php echo $pesananMasuk['harga'] ?></td>
-                    <td>
-                        <a class="btn_terima"
-                            href="http://localhost/PHP-MVC/public/pemesanan/terima/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i
-                                class="ri-check-line"></i></a>
-                        <a class="btn_tolak"
-                            href="http://localhost/PHP-MVC/public/pemesanan/tolak/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i
-                                class="ri-close-line"></i></a>
-                        <a class="btn_detail"
-                            href="http://localhost/PHP-MVC/public/pemesanan/detail/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i
-                                class="ri-more-fill"></i></a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td><?php echo $pesananMasuk['id_pemesanan'] ?></td>
+                        <td><?php echo $pesananMasuk['id_kamar'] ?></td>
+                        <td><?php echo $pesananMasuk['id_user'] ?></td>
+                        <td>22 Oktober 2003</td>
+                        <td><?php echo $pesananMasuk['tggl_masuk'] ?></td>
+                        <td><?php echo $pesananMasuk['harga'] ?></td>
+                        <td>
+                            <a class="btn_terima" href="http://localhost/PHP-MVC/public/pemesanan/terima/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i class="ri-check-line"></i></a>
+                            <a class="btn_tolak" href="http://localhost/PHP-MVC/public/pemesanan/tolak/<?php echo $pesananMasuk['id_pemesanan'] ?>"><i class="ri-close-line"></i></a>
+                            <a class="btn_detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $pesananMasuk['id_pemesanan'] ?>">
+                                <i class="ri-more-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
                 <?php
+                    include "modal.php";
                 }
                 ?>
             </tbody>
@@ -77,14 +74,14 @@
                 <?php
                 foreach ($data['pemesananTerkonfirmasi'] as $pesananTerkonfirmasi) {
                 ?>
-                <tr>
-                    <td><?php echo $pesananTerkonfirmasi['id_pemesanan'] ?></td>
-                    <td><?php echo $pesananTerkonfirmasi['id_kamar'] ?></td>
-                    <td><?php echo $pesananTerkonfirmasi['id_user'] ?></td>
-                    <td>17 Agustus 1945</td>
-                    <td><?php echo $pesananTerkonfirmasi['tggl_masuk'] ?></td>
-                    <td><?php echo $pesananTerkonfirmasi['harga'] ?></td>
-                </tr>
+                    <tr>
+                        <td><?php echo $pesananTerkonfirmasi['id_pemesanan'] ?></td>
+                        <td><?php echo $pesananTerkonfirmasi['id_kamar'] ?></td>
+                        <td><?php echo $pesananTerkonfirmasi['id_user'] ?></td>
+                        <td>17 Agustus 1945</td>
+                        <td><?php echo $pesananTerkonfirmasi['tggl_masuk'] ?></td>
+                        <td><?php echo $pesananTerkonfirmasi['harga'] ?></td>
+                    </tr>
                 <?php
                 }
                 ?>
@@ -94,29 +91,29 @@
 </section>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-$(document).ready(function() {
-    $("#pemesanan_content_terkonfirmasi").hide();
-
-    var initialPosition = $(".line-active").position().left;
-
-    $("#pesanan_masuk").click(function() {
-        $("#pemesanan_content_masuk").show();
+    $(document).ready(function() {
         $("#pemesanan_content_terkonfirmasi").hide();
 
-        $(this).addClass("active");
-        $("#pesanan_terkonfirmasi").removeClass("active");
+        var initialPosition = $(".line-active").position().left;
 
-        $(".line-active").css("left", initialPosition);
+        $("#pesanan_masuk").click(function() {
+            $("#pemesanan_content_masuk").show();
+            $("#pemesanan_content_terkonfirmasi").hide();
+
+            $(this).addClass("active");
+            $("#pesanan_terkonfirmasi").removeClass("active");
+
+            $(".line-active").css("left", initialPosition);
+        });
+
+        $("#pesanan_terkonfirmasi").click(function() {
+            $("#pemesanan_content_terkonfirmasi").show();
+            $("#pemesanan_content_masuk").hide();
+
+            $(".line-active").css("left", "650px");
+
+            $(this).addClass("active");
+            $("#pesanan_masuk").removeClass("active");
+        });
     });
-
-    $("#pesanan_terkonfirmasi").click(function() {
-        $("#pemesanan_content_terkonfirmasi").show();
-        $("#pemesanan_content_masuk").hide();
-
-        $(".line-active").css("left", "650px");
-
-        $(this).addClass("active");
-        $("#pesanan_masuk").removeClass("active");
-    });
-});
 </script>
