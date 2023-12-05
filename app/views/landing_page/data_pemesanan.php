@@ -1,7 +1,6 @@
 <head>
     <!-- LINK BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="<?php echo BASEURL; ?>css/landing_page.css">
     <link rel="stylesheet" href="<?php echo BASEURL; ?>css/data_pemesanan.css">
@@ -23,12 +22,10 @@
                 <a href="<?php echo BASEURL; ?>landing_page#order">Order</a>
                 <a href="<?php echo BASEURL; ?>landing_page#testimoni">Testimoni</a>
                 <a href="<?php echo BASEURL; ?>landing_page#kost">Kost</a>
-                <a href="<?php echo BASEURL . 'login1' ?>" class="link-login"
-                    <?php echo isset($_SESSION['id_user']) ? 'style="display: none;"' : ''; ?>>Masuk</a>
+                <a href="<?php echo BASEURL . 'login1' ?>" class="link-login" <?php echo isset($_SESSION['id_user']) ? 'style="display: none;"' : ''; ?>>Masuk</a>
 
                 <?php if (isset($_SESSION['id_user'])) : ?>
-                <img src="<?php echo BASEURL . 'foto/' . $_SESSION['foto_user'] ?>" alt=""
-                    style="width: 45px; border-radius:50px">
+                    <img src="<?php echo BASEURL . 'foto/' . $_SESSION['foto_user'] ?>" alt="" style="width: 45px; border-radius:50px">
                 <?php endif; ?>
 
             </ul>
@@ -39,7 +36,7 @@
     </div>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     <section id="pemesanan">
-        <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan">
+        <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan" enctype="multipart/form-data">
             <div class="left-pemesanan">
                 <h1>Data Pemesanan</h1>
                 <p name="id_pemesanan"><?php echo $data['idRnamdom']; ?></p>
@@ -48,23 +45,19 @@
                     <div class="kumpulan-input-pemesanan">
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Kost</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost"
-                                value="<?= $data['pemesanan']['nama_kost']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" value="<?= $data['pemesanan']['nama_kost']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Kamar</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost"
-                                value="<?= $data['pemesanan']['nama_kamar']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="nama_kost" id="id_kost" value="<?= $data['pemesanan']['nama_kamar']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Fasilitas</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost"
-                                value="<?= $data['pemesanan']['fasilitas']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="fasilitas_kost" id="id_kost" value="<?= $data['pemesanan']['fasilitas']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Alamat Kost</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost"
-                                value="<?= $data['pemesanan']['alamat']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_kost" id="id_kost" value="<?= $data['pemesanan']['alamat']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="tanggal_masuk">Tanggal Masuk</label>
@@ -76,13 +69,11 @@
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">ID Kost</label> -->
-                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost"
-                                value="<?= $data['pemesanan']['id_kost']; ?>" readonly>
+                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kost" id="id_kost" value="<?= $data['pemesanan']['id_kost']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">ID Kamar</label> -->
-                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kamar" id="id_kost"
-                                value="<?= $data['pemesanan']['id_kamar']; ?>" readonly>
+                            <input type="hidden" placeholder="Masukkan ID Kost" name="id_kamar" id="id_kost" value="<?= $data['pemesanan']['id_kamar']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <!-- <label for="id_kost">Kategori</label> -->
@@ -103,23 +94,19 @@
                     <div class="kumpulan-input-pemesanan">
                         <div class="input-pemesanan">
                             <label for="id_kost">Nama Penghuni</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#"
-                                value="<?= $data['penghuni']['nama_lengkap']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="nama_penghuni" id="#" value="<?= $data['penghuni']['nama_lengkap']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Jenis Kelamin</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#"
-                                value="<?= $data['penghuni']['jenis_kelamin']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="jenis_kelamin" id="#" value="<?= $data['penghuni']['jenis_kelamin']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Alamat Penghuni</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#"
-                                value="<?= $data['penghuni']['alamat']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="alamat_penghuni" id="#" value="<?= $data['penghuni']['alamat']; ?>" readonly>
                         </div>
                         <div class="input-pemesanan">
                             <label for="id_kost">Nomor HP Aktif</label>
-                            <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#"
-                                value="<?= $data['penghuni']['no_hp']; ?>" readonly>
+                            <input type="text" placeholder="Masukkan ID Kost" name="no_hp" id="#" value="<?= $data['penghuni']['no_hp']; ?>" readonly>
                         </div>
                     </div>
                 </div>
@@ -240,42 +227,42 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('#pilihan-harga').on('change', function() {
-            // Mendapatkan harga berdasarkan kategori yang dipilih
-            var hargaBulanan = <?= json_encode($data['kamar']['harga_bulanan']); ?>;
-            var hargaHarian = <?= json_encode($data['kamar']['harga_harian']); ?>;
-            var harga3Bulanan = <?= json_encode($data['kamar']['harga_3bulanan']); ?>;
-            var hargaTahunan = <?= json_encode($data['kamar']['harga_tahunan']); ?>;
+        $(document).ready(function() {
+            $('#pilihan-harga').on('change', function() {
+                // Mendapatkan harga berdasarkan kategori yang dipilih
+                var hargaBulanan = <?= json_encode($data['kamar']['harga_bulanan']); ?>;
+                var hargaHarian = <?= json_encode($data['kamar']['harga_harian']); ?>;
+                var harga3Bulanan = <?= json_encode($data['kamar']['harga_3bulanan']); ?>;
+                var hargaTahunan = <?= json_encode($data['kamar']['harga_tahunan']); ?>;
 
-            var pilihanHarga = $(this).val();
-            var hargaDisplay = $('#harga-display');
-            var spanDisplay = $('#span-harga-display');
+                var pilihanHarga = $(this).val();
+                var hargaDisplay = $('#harga-display');
+                var spanDisplay = $('#span-harga-display');
 
-            // Menampilkan harga berdasarkan kategori yang dipilih
-            switch (pilihanHarga) {
-                case 'harian':
-                    hargaDisplay.text('Rp ' + hargaHarian);
-                    spanDisplay.text('/ hari');
-                    break;
-                case 'bulanan':
-                    hargaDisplay.text('Rp ' + hargaBulanan);
-                    spanDisplay.text('/ bulan');
-                    break;
-                case '3bulanan':
-                    hargaDisplay.text('Rp ' + harga3Bulanan);
-                    spanDisplay.text('/ 3 bulan');
-                    break;
-                case 'tahunan':
-                    hargaDisplay.text('Rp ' + hargaTahunan);
-                    spanDisplay.text('/ tahun');
-                    break;
-                default:
-                    hargaDisplay.text('Invalid');
-                    spanDisplay.text('');
-            }
+                // Menampilkan harga berdasarkan kategori yang dipilih
+                switch (pilihanHarga) {
+                    case 'harian':
+                        hargaDisplay.text('Rp ' + hargaHarian);
+                        spanDisplay.text('/ hari');
+                        break;
+                    case 'bulanan':
+                        hargaDisplay.text('Rp ' + hargaBulanan);
+                        spanDisplay.text('/ bulan');
+                        break;
+                    case '3bulanan':
+                        hargaDisplay.text('Rp ' + harga3Bulanan);
+                        spanDisplay.text('/ 3 bulan');
+                        break;
+                    case 'tahunan':
+                        hargaDisplay.text('Rp ' + hargaTahunan);
+                        spanDisplay.text('/ tahun');
+                        break;
+                    default:
+                        hargaDisplay.text('Invalid');
+                        spanDisplay.text('');
+                }
+            });
         });
-    });
     </script>
 
 </body>

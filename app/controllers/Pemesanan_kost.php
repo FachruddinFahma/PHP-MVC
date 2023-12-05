@@ -13,7 +13,7 @@
 
         public function addPemesanan()
         {
-            $id_kamar = $_POST['id_kamar'];
+            // $id_kamar = $_POST['id_kamar'];
             $id_pemesanan = $_POST['id_pemesanan'];
             if ($this->model('pemesananKost_model')->addPemesanan($_POST, $id_pemesanan) > 0) {
                 header('Location: http://localhost/PHP-MVC/public/landing_page/detail_kamar');
