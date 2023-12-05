@@ -18,7 +18,7 @@
             if ($this->model('pemesananKost_model')->addPemesanan($_POST, $id_pemesanan) > 0) {
                 header('Location: http://localhost/PHP-MVC/public/landing_page/detail_kamar');
             } else {
-                header("Location: http://localhost/PHP-MVC/public/landing_page/index");
+                header("Location: http://localhost/PHP-MVC/public/Download/mobile_download");
             }
         }
     }    

@@ -87,6 +87,9 @@
                             <!-- <label for="id_kost">Harga Kost</label> -->
                             <input type="hidden" name="id_pemesanan" value="<?= $data['idRnamdom']; ?>">
                         </div>
+                        <!-- <?php if (isset($_SESSION['id_user'])) : ?>
+                            <input type="hidden " name="id_user" id="id_user" value="<?php echo isset($_SESSION['id_user']) ? $_SESSION['id_user'] : ''; ?>" readonly>
+                        <?php endif; ?> -->
                     </div>
                 </div>
                 <div id="informasi-pemesanan-kost">
@@ -174,7 +177,7 @@
                 <div class="informasi-pembayaran">
                     <p>Bukti Pembayaran</p>
                     <img src="<?php echo BASEURL; ?>image/pembayaran/qris.png" alt="" id="logo-qris">
-                    <img src="<?php echo BASEURL; ?>image/pembayaran/qrcode.png" alt="" style="width: 50%;">
+                    <img src="<?php echo BASEURL . 'qris/' . $data['pemesanan']['foto_qris']; ?>" alt="" style="width: 50%;">
                     <input type="file" id="input-bukti" name="bukti_tf">
                 </div>
                 <button type="submit" id="btn-pesan-sekarang">Bayar Sekarang</button>

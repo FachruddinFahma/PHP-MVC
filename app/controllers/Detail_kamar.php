@@ -13,7 +13,7 @@
             $id_kamar = $_POST['input-id-kamar'];
             $pilihan_harga = $_POST['pilihan-harga'];
             $harga = $_POST['harga-input'];
-            $_SESSION['id_user'] = $id_kamar;
+            $_SESSION['id_kamar'] = $id_kamar;
             $_SESSION['pilihan_harga'] = $pilihan_harga;
             $_SESSION['harga'] = $harga;
             $base_url = BASEURL . 'pemesanan_kost/pemesanan/'. $id_kamar;
