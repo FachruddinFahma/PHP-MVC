@@ -48,7 +48,7 @@ class Kamar_model
             move_uploaded_file($foto3, $uploadDir . '/' . $fotoName3);
 
             
-            $query = "INSERT INTO tb_kamar VALUES (:id_kamar, :nama_kamar, :fasilitas, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahunan, :id_kost)";
+            $query = "INSERT INTO tb_kamar VALUES (:id_kamar, :nama_kamar, :fasilitas, :ukuran, :harga_harian, :harga_bulanan, :harga_3bulan, :harga_tahunan, :id_kost, :status)";
             $this->db->query($query);
             $this->db->bind(':id_kamar', $kamar['id_kamar']);
             $this->db->bind(':nama_kamar', $kamar['nama_kamar']);
@@ -59,6 +59,7 @@ class Kamar_model
             $this->db->bind(':harga_3bulan', $kamar['harga_3bulan']);
             $this->db->bind(':harga_tahunan', $kamar['harga_tahunan']);
             $this->db->bind(':id_kost', $id_kost);
+            $this->db->bind(':status', "kosong");
             $this->db->execute();
 
             $combinedFilenames = $fotoName1 . ',' . $fotoName2 . ',' . $fotoName3;

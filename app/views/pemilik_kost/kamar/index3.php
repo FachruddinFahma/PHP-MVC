@@ -4,8 +4,8 @@
 </header>
 <section id="kamar" class="content">
     <div id="kamar_content" class="pt-4 px-4">
-        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-tambah-kamar">Tambah
-            (3)</a>
+        <a href="" class="add" data-bs-toggle="modal" data-bs-target="#modal-identitas" id="btn-tambah-kamar">Tambah</a>
+        </button>
         <table id="dataKamar" class="display" style="width:100%">
             <thead>
                 <tr>
@@ -304,245 +304,352 @@
         </div>
     </div>
 </div>
+<!-- modal edit -->
+<div class="modal" tabindex="-1" id="modal-edit-identitas">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Edit Data Kamar bos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="http://localhost/PHP-MVC/public/kamar/updateKamar" method="post">
+                <div class="container-group">
+                    <div class="input-group">
+                        <label for="">ID Kamar Kamar</label>
+                        <input type="text" name="id_kamar_edit" id="id_kamar_edit"
+                                        placeholder="masukan ID kamar" >
+                    </div>
+                    <div class="input-group">
+                        <label for="">Nama Kamar</label>
+                        <input type="text" name="nama_kamar_edit" id="nama_kamar_edit"
+                                        placeholder="masukan nama kamar" >
+                    </div>
+                </div>
+                <div class="input-group">
+                                <label for="">Kategori</label>
+                                <div id="group-kategori">
+                                    <div class="kategori-group">
+                                        <p>harian</p>
+                                        <input type="checkbox" name="check_harian_edit" id="check_harian_edit" disabled>
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>bulanan</p>
+                                        <input type="checkbox" checked disabled name="check_bulanan_edit"
+                                            id="check_bulanan_edit">
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>3 bulan</p>
+                                        <input type="checkbox" name="check_3bulan_edit" id="check_3bulan_edit" disabled>
+                                    </div>
+                                    <div class="kategori-group">
+                                        <p>tahunan</p>
+                                        <input type="checkbox" name="check_tahunan_edit" id="check_tahunan_edit" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-group">
+                                <div class="input-group">
+                                    <label for="">Ukuran</label>
+                                    <div class="input-group-double">
+                                        <input type="text" name="ukuran_kamar_panjang_edit" id="ukuran_kamar_panjang_edit"
+                                            placeholder="panjang" >
+                                        <p>x</p>
+                                        <input type="text" name="ukuran_kamar_lebar_edit" id="ukuran_kamar_lebar_edit"
+                                            placeholder="lebar" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="">Fasilitas</label>
+                                <textarea name="fasilitas_kamar_edit" id="fasilitas_kamar_edit" cols="30" rows="10"
+                                    placeholder="masukan fasilitas"></textarea>
+                            </div>
+                            <div class="container-group">
+                                <div class="input-group" id="grup-input-bulanan">
+                                    <label for="harga_bulanan_edit" id="lbl_harga_bulanan_edit">Harga Bulanan</label>
+                                    <input type="text" name="harga_bulanan_edit" id="harga_bulanan_edit"
+                                        placeholder="masukan harga bulanan">
+                                </div>
+                                <div class="input-group" id="grup-input-harian">
+                                    <label for="harga_harian_edit" id="lbl_harga_harian_edit">Harga Harian</label>
+                                    <input type="text" name="harga_harian_edit" id="harga_harian_edit"
+                                        placeholder="masukan harga harian">
+                                </div>
+                            </div>
+                            <div class="container-group">
+                                <div class="input-group" id="grup-input-3bulanan">
+                                    <label for="harga_3bulanan_edit" id="lbl_harga_3bulanan_edit">Harga 3
+                                        Bulanan</label>
+                                    <input type="text" name="harga_3bulanan_edit" id="harga_3bulanan_edit"
+                                        placeholder="masukan harga 3 bulan">
+                                </div>
+                                <div class="input-group" id="grup-input-tahunan">
+                                    <label for="harga_tahunan_edit" id="lbl_harga_tahunan_edit">Harga Tahunan</label>
+                                    <input type="text" name="harga_tahunan_edit" id="harga_tahunan_edit"
+                                        placeholder="masukan harga tahunan">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-back" id="back1">Kembali</button>
+                            <button type="submit" class="btn-next" id="next1">Update</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
 
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<script>
-$(document).ready(function() {
-    $("#btn-tambah-kamar").click(function() {
-        $("#content1").show();
-        $("#content2").hide();
-        $("#content_edit").hide();
-        $("#content3").hide();
-    });
+            <script>
+            $(document).ready(function() {
+                $("#btn-tambah-kamar").click(function() {
+                    $("#content1").show();
+                    $("#content2").hide();
+                    $("#content_edit").hide();
+                    $("#content3").hide();
+                });
 
-    var visibleContent = 1;
+                var visibleContent = 1;
 
-    function nextContent() {
-        if (visibleContent == 4) {
-            $('#form-tambah-kamar').submit();
-        } else {
-            $("#content" + (visibleContent - 1)).hide();
-            $("#content" + visibleContent).show();
-        }
-    }
-
-    function backContent() {
-        if (visibleContent == 0) {
-            $("#modal-identitas .btn-close").click();
-        } else {
-            $("#content" + (visibleContent + 1)).hide();
-            $("#content" + visibleContent).show();
-        }
-    }
-
-    nextContent();
-
-    $("#next1").click(function() {
-        if (visibleContent <= 3) {
-            visibleContent++;
-        }
-        nextContent();
-    });
-
-    $("#back1").click(function() {
-        if (visibleContent >= 1) {
-            visibleContent--;
-        }
-        backContent();
-    });
-    //tombol next backk
-    // $("#content2").hide();
-
-    // $("#next1").click(function() {
-    //     $("#content1").hide();
-    //     $("#content2").hide();
-    //     $("#content_foto").show();
-    // });
-
-    // $("#btn-next-foto").click(function() {
-    //     $("#content1").hide();
-    //     $("#content_foto").hide();
-    //     $("#content2").show();
-    // });
-
-    // $("#btn-back-foto").click(function() {
-    //     $("#content1").show();
-    //     $("#content_foto").hide();
-    //     $("#content2").hide();
-    // });
-
-    // $("#back2").click(function() {
-    //     $("#content1").hide();
-    //     $("#content2").hide();
-    //     $("#content_foto").show();
-    // });
-
-    //validasi check inputt
-    $('#grup-input-harian').hide();
-    $('#grup-input-3bulanan').hide();
-    $('#grup-input-tahunan').hide();
-
-    $('#check_harian').change(function() {
-        $('#grup-input-harian').toggle(this.checked);
-    });
-
-    $('#check_3bulan').change(function() {
-        $('#grup-input-3bulanan').toggle(this.checked);
-    });
-
-    $('#check_tahunan').change(function() {
-        $('#grup-input-tahunan').toggle(this.checked);
-    });
-
-    //submit ketika klik tambah
-    // $("#next2").click(function() {
-    //     $("#form-input").submit();
-    // });
-
-    $("#btn-update").click(function() {
-        $("#form-input-update").submit();
-    });
-
-
-    $('#btn-edit').click(function() {
-        $("#content1").hide();
-        $("#content2").hide();
-        $("#content_edit").show();
-
-        const id = $(this).data('id');
-
-        $.ajax({
-            url: 'http://localhost/PHP-MVC/public/kamar/editKamar/' + id,
-            method: 'GET',
-            dataType: 'json',
-            success: function(data) {
-                $('#id_kamar_edit').val(data.id_kamar);
-                $('#nama_kamar_edit').val(data.nama_kamar);
-                var ukuran = data.ukuran;
-                var result = ukuran.split(" X ");
-                var panjang = result[0];
-                var lebar = result[1];
-
-                $('#panjang_kamar_edit').val(panjang);
-                $('#lebar_kamar_edit').val(lebar);
-                $('#fasilitas_kamar_edit').val(data.fasilitas);
-                $('#harga_harian_edit').val(data.harga_harian);
-                $('#harga_bulanan_edit').val(data.harga_bulanan);
-                $('#harga_3bulanan_edit').val(data.harga_3bulanan);
-                $('#harga_tahunan_edit').val(data.harga_tahunan);
-
-                $('#check_harian_edit').prop('checked', data.harga_harian_edit !== null &&
-                    data.harga_harian_edit !== '');
-                $('#check_3bulan_edit').prop('checked', data.harga_3bulanan_edit !== null &&
-                    data.harga_3bulanan_edit !== '');
-                $('#check_tahunan_edit').prop('checked', data.harga_tahunan_edit !== null &&
-                    data.harga_tahunan_edit !== '');
-
-                if (data.harga_harian_edit === null || data.harga_harian_edit === '') {
-                    $('#check_harian_edit').prop('checked', false);
+                function nextContent() {
+                    if (visibleContent == 4) {
+                        $('#form-tambah-kamar').submit();
+                    } else {
+                        $("#content" + (visibleContent - 1)).hide();
+                        $("#content" + visibleContent).show();
+                    }
                 }
 
-                if (data.harga_3bulanan_edit === null || data.harga_3bulanan_edit === '') {
-                    $('#check_3bulan_edit').prop('checked', false);
+                function backContent() {
+                    if (visibleContent == 0) {
+                        $("#modal-identitas .btn-close").click();
+                    } else {
+                        $("#content" + (visibleContent + 1)).hide();
+                        $("#content" + visibleContent).show();
+                    }
                 }
 
-                if (data.harga_tahunan_edit === null || data.harga_tahunan_edit === '') {
-                    $('#check_tahunan_edit').prop('checked', false);
-                }
+                nextContent();
 
-            },
-            error: function(error) {
-                console.error('Error:', error);
+                $("#next1").click(function() {
+                    if (visibleContent <= 3) {
+                        visibleContent++;
+                    }
+                    nextContent();
+                });
+
+                $("#back1").click(function() {
+                    if (visibleContent >= 1) {
+                        visibleContent--;
+                    }
+                    backContent();
+                });
+                //tombol next backk
+                // $("#content2").hide();
+
+                // $("#next1").click(function() {
+                //     $("#content1").hide();
+                //     $("#content2").hide();
+                //     $("#content_foto").show();
+                // });
+
+                // $("#btn-next-foto").click(function() {
+                //     $("#content1").hide();
+                //     $("#content_foto").hide();
+                //     $("#content2").show();
+                // });
+
+                // $("#btn-back-foto").click(function() {
+                //     $("#content1").show();
+                //     $("#content_foto").hide();
+                //     $("#content2").hide();
+                // });
+
+                // $("#back2").click(function() {
+                //     $("#content1").hide();
+                //     $("#content2").hide();
+                //     $("#content_foto").show();
+                // });
+
+                //validasi check inputt
+                $('#grup-input-harian').hide();
+                $('#grup-input-3bulanan').hide();
+                $('#grup-input-tahunan').hide();
+
+                $('#check_harian').change(function() {
+                    $('#grup-input-harian').toggle(this.checked);
+                });
+
+                $('#check_3bulan').change(function() {
+                    $('#grup-input-3bulanan').toggle(this.checked);
+                });
+
+                $('#check_tahunan').change(function() {
+                    $('#grup-input-tahunan').toggle(this.checked);
+                });
+
+                //submit ketika klik tambah
+                // $("#next2").click(function() {
+                //     $("#form-input").submit();
+                // });
+
+                $("#btn-update").click(function() {
+                    $("#form-input-update").submit();
+                });
+
+
+                $('#btn-edit').click(function() {
+                    const id = $(this).data('id');
+                    $("#content1").hide();
+                    $("#content2").hide();
+                    $("#content_edit").show();
+                    $("#content3").hide();
+
+                    $.ajax({
+                        url: 'http://localhost/PHP-MVC/public/kamar/editKamar/' + id,
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            $('#id_kamar_edit').val(data.id_kamar);
+                            $('#nama_kamar_edit').val(data.nama_kamar);
+                            var ukuran = data.ukuran;
+                            var result = ukuran.split(" X ");
+                            var panjang = result[0];
+                            var lebar = result[1];
+
+                            $('#panjang_kamar_edit').val(panjang);
+                            $('#lebar_kamar_edit').val(lebar);
+                            $('#fasilitas_kamar_edit').val(data.fasilitas);
+                            $('#harga_harian_edit').val(data.harga_harian);
+                            $('#harga_bulanan_edit').val(data.harga_bulanan);
+                            $('#harga_3bulanan_edit').val(data.harga_3bulanan);
+                            $('#harga_tahunan_edit').val(data.harga_tahunan);
+
+                            $('#check_harian_edit').prop('checked', data
+                                .harga_harian_edit !==
+                                null &&
+                                data.harga_harian_edit !== '');
+                            $('#check_3bulan_edit').prop('checked', data
+                                .harga_3bulanan_edit !==
+                                null &&
+                                data.harga_3bulanan_edit !== '');
+                            $('#check_tahunan_edit').prop('checked', data
+                                .harga_tahunan_edit !==
+                                null &&
+                                data.harga_tahunan_edit !== '');
+
+                            if (data.harga_harian_edit === null || data
+                                .harga_harian_edit ===
+                                '') {
+                                $('#check_harian_edit').prop('checked', false);
+                            }
+
+                            if (data.harga_3bulanan_edit === null || data
+                                .harga_3bulanan_edit ===
+                                '') {
+                                $('#check_3bulan_edit').prop('checked', false);
+                            }
+
+                            if (data.harga_tahunan_edit === null || data
+                                .harga_tahunan_edit ===
+                                '') {
+                                $('#check_tahunan_edit').prop('checked', false);
+                            }
+
+                        },
+                        error: function(error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                    $('#modal-edit-identitas').modal('show');
+                });
+            });
+
+            function saveDataSession() {
+                var idKamar = $('#id_kamar').val();
+                var namaKamar = $('#nama_kamar').val();
+                var fasilitasKamar = $('#fasilitas_kamar').val();
+                var ukuranPanjang = $('#panjang_kamar').val();
+                var ukuranLebar = $('#lebar_kamar').val();
+                var hargaHarian = $('#harga_harian').val();
+                var hargaBulanan = $('#harga_bulanan').val();
+                var harga3Bulanan = $('#harga_3bulanan').val();
+                var hargaTahunan = $('#harga_tahunan').val();
+
+                //checkbox ni boss
+                var checkHarian = $('#check_harian').prop('checked');
+                var check3Bulan = $('#check_3bulan').prop('checked');
+                var checkTahunan = $('#check_tahunan').prop('checked');
+
+                sessionStorage.setItem('idKamar', idKamar);
+                sessionStorage.setItem('namaKamar', namaKamar);
+                sessionStorage.setItem('fasilitasKamar', fasilitasKamar);
+                sessionStorage.setItem('ukuranPanjang', ukuranPanjang);
+                sessionStorage.setItem('ukuranLebar', ukuranLebar);
+                sessionStorage.setItem('hargaHarian', hargaHarian);
+                sessionStorage.setItem('hargaBulanan', hargaBulanan);
+                sessionStorage.setItem('harga3Bulanan', harga3Bulanan);
+                sessionStorage.setItem('hargaTahunan', hargaTahunan);
+
+                //checked masuk session
+                sessionStorage.setItem('checkHarian', checkHarian);
+                sessionStorage.setItem('check3Bulan', check3Bulan);
+                sessionStorage.setItem('checkTahunan', checkTahunan);
+
+                showDataSession();
             }
-        });
 
-    });
-});
+            function showDataSession() {
+                $('#id_kamar_fix').val(sessionStorage.getItem('idKamar'));
+                $('#nama_kamar_fix').val(sessionStorage.getItem('namaKamar'));
+                $('#fasilitas_kamar_fix').val(sessionStorage.getItem('fasilitasKamar'));
+                $('#ukuran_kamar_panjang_fix').val(sessionStorage.getItem('ukuranPanjang'));
+                $('#ukuran_kamar_lebar_fix').val(sessionStorage.getItem('ukuranLebar'));
+                $('#harga_harian_fix').val(sessionStorage.getItem('hargaHarian'));
+                $('#harga_bulanan_fix').val(sessionStorage.getItem('hargaBulanan'));
+                $('#harga_3bulanan_fix').val(sessionStorage.getItem('harga3Bulanan'));
+                $('#harga_tahunan_fix').val(sessionStorage.getItem('hargaTahunan'));
 
-function saveDataSession() {
-    var idKamar = $('#id_kamar').val();
-    var namaKamar = $('#nama_kamar').val();
-    var fasilitasKamar = $('#fasilitas_kamar').val();
-    var ukuranPanjang = $('#panjang_kamar').val();
-    var ukuranLebar = $('#lebar_kamar').val();
-    var hargaHarian = $('#harga_harian').val();
-    var hargaBulanan = $('#harga_bulanan').val();
-    var harga3Bulanan = $('#harga_3bulanan').val();
-    var hargaTahunan = $('#harga_tahunan').val();
+                $('#check_harian_fix').prop('checked', sessionStorage.getItem('checkHarian') === 'true');
+                $('#check_3bulan_fix').prop('checked', sessionStorage.getItem('check3Bulan') === 'true');
+                $('#check_tahunan_fix').prop('checked', sessionStorage.getItem('checkTahunan') === 'true');
+            }
 
-    //checkbox ni boss
-    var checkHarian = $('#check_harian').prop('checked');
-    var check3Bulan = $('#check_3bulan').prop('checked');
-    var checkTahunan = $('#check_tahunan').prop('checked');
+            //image kamarrrr
+            const fileInputs = document.querySelectorAll('.foto-group input[type="file"]');
+            const previewContainers = document.querySelectorAll('.foto-group');
 
-    sessionStorage.setItem('idKamar', idKamar);
-    sessionStorage.setItem('namaKamar', namaKamar);
-    sessionStorage.setItem('fasilitasKamar', fasilitasKamar);
-    sessionStorage.setItem('ukuranPanjang', ukuranPanjang);
-    sessionStorage.setItem('ukuranLebar', ukuranLebar);
-    sessionStorage.setItem('hargaHarian', hargaHarian);
-    sessionStorage.setItem('hargaBulanan', hargaBulanan);
-    sessionStorage.setItem('harga3Bulanan', harga3Bulanan);
-    sessionStorage.setItem('hargaTahunan', hargaTahunan);
+            fileInputs.forEach((input, index) => {
+                input.addEventListener('change', function() {
+                    const files = this.files;
+                    const previewContainer = previewContainers[index];
+                    const existingImage = previewContainer.querySelector('img');
 
-    //checked masuk session
-    sessionStorage.setItem('checkHarian', checkHarian);
-    sessionStorage.setItem('check3Bulan', check3Bulan);
-    sessionStorage.setItem('checkTahunan', checkTahunan);
+                    // Remove existing image
+                    if (existingImage) {
+                        existingImage.remove();
+                    }
 
-    showDataSession();
-}
+                    for (const file of files) {
+                        const reader = new FileReader();
 
-function showDataSession() {
-    $('#id_kamar_fix').val(sessionStorage.getItem('idKamar'));
-    $('#nama_kamar_fix').val(sessionStorage.getItem('namaKamar'));
-    $('#fasilitas_kamar_fix').val(sessionStorage.getItem('fasilitasKamar'));
-    $('#ukuran_kamar_panjang_fix').val(sessionStorage.getItem('ukuranPanjang'));
-    $('#ukuran_kamar_lebar_fix').val(sessionStorage.getItem('ukuranLebar'));
-    $('#harga_harian_fix').val(sessionStorage.getItem('hargaHarian'));
-    $('#harga_bulanan_fix').val(sessionStorage.getItem('hargaBulanan'));
-    $('#harga_3bulanan_fix').val(sessionStorage.getItem('harga3Bulanan'));
-    $('#harga_tahunan_fix').val(sessionStorage.getItem('hargaTahunan'));
+                        reader.onload = function(event) {
+                            const imageUrl = event.target.result;
+                            const imgElement = document.createElement('img');
+                            imgElement.src = imageUrl;
+                            imgElement.alt = 'Uploaded Image';
+                            previewContainer.appendChild(imgElement);
+                        };
 
-    $('#check_harian_fix').prop('checked', sessionStorage.getItem('checkHarian') === 'true');
-    $('#check_3bulan_fix').prop('checked', sessionStorage.getItem('check3Bulan') === 'true');
-    $('#check_tahunan_fix').prop('checked', sessionStorage.getItem('checkTahunan') === 'true');
-}
-
-//image kamarrrr
-const fileInputs = document.querySelectorAll('.foto-group input[type="file"]');
-const previewContainers = document.querySelectorAll('.foto-group');
-
-fileInputs.forEach((input, index) => {
-    input.addEventListener('change', function() {
-        const files = this.files;
-        const previewContainer = previewContainers[index];
-        const existingImage = previewContainer.querySelector('img');
-
-        // Remove existing image
-        if (existingImage) {
-            existingImage.remove();
-        }
-
-        for (const file of files) {
-            const reader = new FileReader();
-
-            reader.onload = function(event) {
-                const imageUrl = event.target.result;
-                const imgElement = document.createElement('img');
-                imgElement.src = imageUrl;
-                imgElement.alt = 'Uploaded Image';
-                previewContainer.appendChild(imgElement);
-            };
-
-            reader.readAsDataURL(file);
-        }
-    });
-});
-</script>
-<!-- <script>
+                        reader.readAsDataURL(file);
+                    }
+                });
+            });
+            </script>
+            <!-- <script>
     $(document).ready(function () {
         $("#content_edit").hide();
         window.toggleEditForm = function (id_kamar) {
