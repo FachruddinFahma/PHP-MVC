@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Halaman Testimoni</title>
 </head>
 
 <body>
@@ -14,14 +14,19 @@
                 <table class="table table-hover small" id="dataTestimoni">
                     <thead>
                         <tr>
+                            <th scope="col">No</th>
                             <th scope="col">Id User</th>
                             <th style="width:650px" scope="col">Deskripsi Testimoni</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($data['Testimoni'] as $d) : ?>
+                        <?php 
+                        $i = 0;
+                        foreach ($data['Testimoni'] as $d) : 
+                            $i++;?>
                             <tr>
-                                <td><?= $d['id_user'] ?></td>
+                                <td><?= $i; ?></td>
+                                <td><?= $d['nama_lengkap'] ?></td>
                                 <td><?= $d['deskripsi_testi'] ?></td>
                             </tr>
                         <?php endforeach; ?>
@@ -31,5 +36,4 @@
         </div>
     </section>
 </body>
-
 </html>
