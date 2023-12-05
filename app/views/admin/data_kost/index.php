@@ -31,7 +31,7 @@
                             <tr>
                                 <th scope="col">Nama Kost</th>
                                 <th scope="col">Pemilik</th>
-                                <th scope="col">Jumlah Kamar</th>
+                                <th scope="col">No Hp</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Aksi</th>
                             </tr>
@@ -41,15 +41,15 @@
                                 <tr>
                                     <td><?= $kost['nama_kost']; ?></td>
                                     <td><?= $kost['nama_lengkap']; ?></td>
-                                    <td><?= $kost['jumlah_kamar']; ?></td>
+                                    <td><?= $kost['no_hp']; ?></td>
                                     <td><?= $kost['status']; ?></td>
                                     <td>
-                                        <a class="btn_terima" href="http://localhost/PHP-MVC/public/dataKost_Admin/terima/<?php echo $kost['id_kost'] ?>"><i class="ri-check-line"></i></a>
-                                        <a class="btn_tolak" href="http://localhost/PHP-MVC/public/dataKost_Admin/tolak/<?php echo $kost['id_kost'] ?>"><i class="ri-close-line"></i></a>
-                                        <a class="btn_detail" href="http://localhost/PHP-MVC/public/dataKost_Admin/detail/<?php echo $kost['id_kost'] ?>"><i class="ri-more-fill"></i></a>
+                                        <a class="btn_terima btn btn-success" href="http://localhost/PHP-MVC/public/dataKost_Admin/terima/<?php echo $kost['id_kost'] ?>"><i class="ri-check-line"></i></a>
+                                        <a class="btn_tolak btn btn-danger" href="http://localhost/PHP-MVC/public/dataKost_Admin/tolak/<?php echo $kost['id_kost'] ?>"><i class="ri-close-line"></i></a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $kost['id_kost'] ?>"><i class="fa-solid fa-circle-info"></i></button>
                                     </td>
                                 </tr>
-                            <?php endforeach; ?>
+                            <?php include "modal.php"; endforeach; ?>
                         </tbody>
                     </table>
 
@@ -59,8 +59,7 @@
                                 <th scope="col">Nama Kost</th>
                                 <th scope="col">Pemilik</th>
                                 <th scope="col">Jumlah Kamar</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Aksi</th>
+                                <th scope="col">No Hp</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,7 +67,7 @@
                                 <tr>
                                     <td><?= $kost['nama_kost']; ?></td>
                                     <td><?= $kost['nama_lengkap']; ?></td>
-                                    <td><?= $kost['jumlah_kamar']; ?></td>
+                                    <td><?= $kost['no_hp']; ?></td>
                                     <td><?= $kost['status']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
