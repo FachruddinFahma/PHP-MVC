@@ -16,7 +16,7 @@ class jelajahKost_model
 
     public function getKostBySearchByKecamatan($kost)
     {
-        $this->db->query('SELECT * FROM tb_kost WHERE kecamatan = :kecamatan');
+        $this->db->query('SELECT * FROM tb_kost WHERE alamat = :kecamatan');
         $this->db->bind(':kecamatan', $kost['lokasi-kost']);
         return $this->db->resultSet();
     }
@@ -31,35 +31,35 @@ class jelajahKost_model
             case 'harian':
                 $query = "SELECT * FROM tb_kost 
                         JOIN tb_kamar ON tb_kost.id_kost = tb_kamar.id_kost 
-                        WHERE tb_kost.kecamatan = :kecamatan 
+                        WHERE tb_kost.alamat LIKE :alamat 
                         AND tb_kamar.harga_harian IS NOT NULL
                         AND tb_kamar.harga_harian BETWEEN :harga_awal AND :harga_akhir";
                 break;
             case 'bulanan':
                 $query = "SELECT * FROM tb_kost 
                         JOIN tb_kamar ON tb_kost.id_kost = tb_kamar.id_kost 
-                        WHERE tb_kost.kecamatan = :kecamatan 
+                        WHERE tb_kost.alamat LIKE :alamat 
                         AND tb_kamar.harga_bulanan IS NOT NULL
                         AND tb_kamar.harga_bulanan BETWEEN :harga_awal AND :harga_akhir";
                 break;
             case '3bulanan':
                 $query = "SELECT * FROM tb_kost 
                         JOIN tb_kamar ON tb_kost.id_kost = tb_kamar.id_kost 
-                        WHERE tb_kost.kecamatan = :kecamatan 
+                        WHERE tb_kost.alamat LIKE :alamat 
                         AND tb_kamar.harga_3bulanan IS NOT NULL
                         AND tb_kamar.harga_3bulanan BETWEEN :harga_awal AND :harga_akhir";
                 break;
             case '6bulanan':
                 $query = "SELECT * FROM tb_kost 
                         JOIN tb_kamar ON tb_kost.id_kost = tb_kamar.id_kost 
-                        WHERE tb_kost.kecamatan = :kecamatan 
+                        WHERE tb_kost.alamat LIKE :alamat 
                         AND tb_kamar.harga_6bulanan IS NOT NULL
                         AND tb_kamar.harga_6bulanan BETWEEN :harga_awal AND :harga_akhir";
                 break;
             case 'tahunan':
                 $query = "SELECT * FROM tb_kost 
                         JOIN tb_kamar ON tb_kost.id_kost = tb_kamar.id_kost 
-                        WHERE tb_kost.kecamatan = :kecamatan 
+                        WHERE tb_kost.alamat LIKE :alamat 
                         AND tb_kamar.harga_tahunan IS NOT NULL
                         AND tb_kamar.harga_tahunan BETWEEN :harga_awal AND :harga_akhir";
                 break;
@@ -69,12 +69,13 @@ class jelajahKost_model
         }
 
         $this->db->query($query);
-        $this->db->bind(':kecamatan', $kost['lokasi-kost']);
+        $this->db->bind(':alamat', '%' . $kost['lokasi-kost'] . '%'); // Menambahkan % untuk pencarian substring
         $this->db->bind(':harga_awal', $hargaAwal);
         $this->db->bind(':harga_akhir', $hargaAkhir);
         
         return $this->db->resultSet();
     }
+
 
 
     
