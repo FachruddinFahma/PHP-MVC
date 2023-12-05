@@ -99,9 +99,6 @@
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
                         <p>Laporan</p>
-                        <div class="count-notif">
-                            <p>3</p>
-                        </div>
                     </a>
                 </li>
                 <li id="link-komplain">
@@ -109,9 +106,6 @@
                         <span></span>
                         <img src="http://localhost/PHP-MVC/public/image/laporan.png" alt="laporan">
                         <p>Komplain</p>
-                        <div class="count-notif">
-                            <p>3</p>
-                        </div>
                     </a>
                 </li>
                 <li id="link-keluar">
