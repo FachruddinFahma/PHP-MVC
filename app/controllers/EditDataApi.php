@@ -148,32 +148,32 @@ class EditDataApi extends Controller
     }
 
     public function editTransaction($id)
-{
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $bayar = $_POST['bayar'];
-        $metode = $_POST['metode_pembayaran'];
-        // $foto = $_POST['foto_bukti_bayar'];
-        $transaction_model = $this->model('EditDataApi_model');
-        $success = $transaction_model->transaction($id, $bayar, $metode);
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $bayar = $_POST['bayar'];
+            $metode = $_POST['metode_pembayaran'];
+            $foto = $_POST['foto_bukti_bayar'];
+            $transaction_model = $this->model('EditDataApi_model');
+            $success = $transaction_model->transaction($id, $bayar, $metode, $foto);
 
-        if ($success) {
-            $response = array(
-                'code' => 200,
-                'status' => 'Update User Sukses',
-            );
+
+            if ($success) {
+                $response = array(
+                    'code' => 200,
+                    'status' => 'Update User Sukses',
+                );
+            } else {
+                $response = array(
+                    'code' => 400,
+                    'status' => 'Gagal mengubah data user',
+                );
+            }
         } else {
             $response = array(
-                'code' => 400,
-                'status' => 'Gagal mengubah data user',
+                'code' => 404,
+                'status' => 'Data tidak ditemukan',
             );
         }
-    } else {
-        $response = array(
-            'code' => 404,
-            'status' => 'Data tidak ditemukan',
-        );
+        echo json_encode($response);
     }
-    echo json_encode($response);
-}
-
 }
