@@ -23,6 +23,17 @@
             $this->view('pemilik_kost/laporan/index', $data);
             $this->view('templates/footer');
         }
+
+        // Laporan Controller
+        public function terima($id_transaksi)
+        {
+            $this->model('Laporan_Model')->terimaPemesanan($id_transaksi);
+
+            // Redirect kembali ke halaman laporan setelah tindakan selesai
+            header("Location: " . BASEURL . "Laporan/index");
+            exit();
+        }
+
         
     }
 ?>

@@ -48,21 +48,19 @@
                     </thead>
                     <tbody>
                         <?php foreach ($data['laporan'] as $lprn) : ?>
-                        <tr>
-                            <td><?= $lprn['id_transaksi'] ?></td>
-                            <td><?= $lprn['nama_lengkap'] ?></td>
-                            <td><?= $lprn['harga'] ?></td>
-                            <td><?= $lprn['bayar'] ?></td>
-                            <td><?= $lprn['tggl_transaksi'] ?></td>
-                            <td><?= $lprn['foto_bukti_bayar'] ?></td>
-                            <td><?= $lprn['status'] ?></td>
-                            <td>
-                                <button type="button" class="btn btn-primary m-0" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </button>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?= $lprn['id_transaksi'] ?></td>
+                                <td><?= $lprn['nama_lengkap'] ?></td>
+                                <td><?= $lprn['harga'] ?></td>
+                                <td><?= $lprn['bayar'] ?></td>
+                                <td><?= $lprn['tggl_transaksi'] ?></td>
+                                <td><?= $lprn['foto_bukti_bayar'] ?></td>
+                                <td><?= $lprn['status'] ?></td>
+                                <td>
+                                    <a class="btn_terima btn btn-success" href="<?php echo BASEURL; ?>Laporan/terima/<?php echo $lprn['id_transaksi']; ?>">
+                                        <i class="ri-check-line"></i>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>

@@ -24,7 +24,7 @@
             JOIN tb_transaksi ON tb_transaksi.id_pemesanan = tb_pemesanan.id_pemesanan
             JOIN tb_kamar ON tb_kamar.id_kamar = tb_pemesanan.id_kamar
             JOIN tb_kost on tb_kamar.id_kost = tb_kost.id_kost
-            WHERE tb_user.id_role = '3' AND tb_kost.id_user = :id_user AND tb_transaksi.status = 'Lunas'
+            WHERE tb_user.id_role = '3' AND tb_kost.id_user = :id_user AND NOT tb_transaksi.status = 'Belum Bayar'
             ORDER BY tb_transaksi.tggl_transaksi DESC");
         
             $this->db->bind(':id_user', $id_user);
@@ -49,6 +49,13 @@
             $this->db->bind(':end_date', $tanggal_akhir . ' 23:59:59');
 
             return $this->db->resultSet();
+        }
+
+        public function terimaPemesanan($id_transaksi)
+        {
+            $this->db->query("UPDATE tb_transaksi SET status = 'Lunas' WHERE id_transaksi = :id_transaksi");
+            $this->db->bind(':id_transaksi', $id_transaksi);
+            $this->db->execute();
         }
     }
 ?>
