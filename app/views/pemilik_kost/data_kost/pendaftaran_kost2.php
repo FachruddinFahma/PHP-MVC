@@ -137,7 +137,6 @@
                             <div class="card-content">
                                 <h2 class="card-title">Silahkan simpan data </h2>
                                 <p class="card-description">Jika sudah mengisi data kost dengan lengkap.</p>
-                                <i class="ri-checkbox-circle-fill"></i>
                                 <button type="submit" class="button">SIMPAN</button>
                             </div>
                         </div>
@@ -176,6 +175,13 @@
     function showDiv() {
         $(".input").hide();
         $(".input:eq(" + visibleDiv + ")").show();
+        if (visibleDiv >= 4) {
+            $(".top h1").text("Verifikasi");
+            $(".btn2").hide();
+        } else {
+            $(".top h1").text("Silahkan Lengkapi Data Kost anda");
+            $(".btn2").show();
+        }
     }
 
     function kembali() {

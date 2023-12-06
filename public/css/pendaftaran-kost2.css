@@ -102,11 +102,25 @@ textarea {
 .full-side .file-upload .preview-container {
   display: flex;
   justify-content: center;
-  padding: 10px 0;
   border: 2px dashed #becdc2;
   border-radius: 10px;
 }
 
 .full-side .file-upload .preview-container img {
-  width: 100px;
+  width: 150px;
+}
+
+.input .card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.input .card button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #134ba4;
+  color: white;
 }
