@@ -29,17 +29,17 @@
                             <input type="text" class="form-control" id="" name="nama_kost">
                             <label for="staticEmail" class="col-sm-3 col-form-label">Jenis Kost</label>
                             <select class="form-select" aria-label="Default select example" name="jenis_kost">
-                                <option selected>Open this select menu</option>å
+                                <option selected>Pilih Jenis Kost</option>å
                                 <option value="Laki - Laki">Laki - Laki</option>
                                 <option value="Perempuan">Perempuan</option>
                                 <option value="Campuran">Campuran</option>
                             </select>
                             <label for="staticEmail" class="col-sm-3 col-form-label">Fasilitas Kost</label>
-                            <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea"
-                                name="fasilitas_kost" required></textarea>
+                            <textarea class="form-control" id="exampleTextarea"
+                                placeholder="Masukan list fasilitas kost" name="fasilitas_kost" required></textarea>
                             <label for="staticEmail" class="col-sm-3 col-form-label">Peraturan Kost Kost</label>
-                            <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea"
-                                name="peraturan_kost" required></textarea>
+                            <textarea class="form-control" id="exampleTextarea"
+                                placeholder="Masukan list peraturan kost" name="peraturan_kost" required></textarea>
                         </div>
                         <div class="right-side">
                             <img src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/mobile.png" alt="">
@@ -56,12 +56,14 @@
                             <label for="staticEmail" class="col-sm-3 col-form-label">Alamat Lengkap</label>
                             <textarea class="form-control" id="exampleTextarea" placeholder="Required example textarea"
                                 name="alamat" required></textarea>
-                            <p>*keteranggan :</p>
-                            <p>- Isi latitude dan longitude kost anda berada saat ini</p>
-                            <p>- Isi alamat lengkap kost anda saat ini</p>
+                            <div class="keterangan">
+                                <p>*keteranggan :</p>
+                                <p>- Isi latitude dan longitude kost anda berada saat ini</p>
+                                <p>- Isi alamat lengkap kost anda saat ini</p>
+                            </div>
                         </div>
                         <div class="right-side">
-                            <img src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/mobile.png" alt="">
+                            <img src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/maps.png" alt="">
                         </div>
                     </div>
                     <div class="input">
@@ -96,36 +98,38 @@
                             </div>
                         </div>
                         <div class="right-side">
-                            <img src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/mobile.png" alt="">
+                            <img src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/pay.png" alt="">
                         </div>
                     </div>
                     <div class="input">
-                        <div class="left-side">
-
+                        <div class="full-side">
                             <div class="file-upload">
                                 <label for="frontImage" class="custom-file-upload">Foto kost tampak depan</label>
-                                <input type="file" id="frontImage" class="file-input" name="fotokost1">
                                 <div class="preview-container">
-                                    <img class="preview-image" src="#" alt="Preview">
+                                    <img class="preview-image"
+                                        src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/input-gambar.png"
+                                        alt="Preview">
                                 </div>
+                                <input type="file" id="frontImage" class="file-input" name="fotokost1">
                             </div>
                             <div class="file-upload">
                                 <label for="sideImage" class="custom-file-upload">Foto kost tampak tengah</label>
-                                <input type="file" id="sideImage" class="file-input" name="fotokost2">
                                 <div class="preview-container">
-                                    <img class="preview-image" src="#" alt="Preview">
+                                    <img class="preview-image"
+                                        src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/input-gambar.png"
+                                        alt="Preview">
                                 </div>
+                                <input type="file" id="sideImage" class="file-input" name="fotokost2">
                             </div>
                             <div class="file-upload">
                                 <label for="backImage" class="custom-file-upload">Foto kost tampak belakang</label>
-                                <input type="file" id="backImage" class="file-input" name="fotokost3">
                                 <div class="preview-container">
-                                    <img class="preview-image" src="#" alt="Preview">
+                                    <img class="preview-image"
+                                        src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/input-gambar.png"
+                                        alt="Preview">
                                 </div>
+                                <input type="file" id="backImage" class="file-input" name="fotokost3">
                             </div>
-                        </div>
-                        <div class="right-side">
-                            <img src="http://localhost/PHP-MVC/public/image/pendaftaran_kost/mobile.png" alt="">
                         </div>
                     </div>
                     <div class="input">
