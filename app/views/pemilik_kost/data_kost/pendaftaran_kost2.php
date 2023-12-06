@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white.png">
     <!-- LINK CSS -->
-    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/pendaftaran_kost.css">
+    <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/pendaftaran-kost2.css">
     <!-- LINK ICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK ICON J-KOS -->
@@ -19,7 +19,9 @@
         <div class="box-content">
             <form action="http://localhost/PHP-MVC/public/pendaftaran_kost/addKost" method="post"
                 enctype="multipart/form-data">
-                <h1>Silahkan Lengkapi Data Kost anda</h1>
+                <div class="top">
+                    <h1>Silahkan Lengkapi Data Kost anda</h1>
+                </div>
                 <div class="form-group">
                     <div class="input">
                         <div class="left-side">
@@ -136,9 +138,11 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <class class="bottom">
                     <button type="button" class="btn1" onclick="kembali()">Kembali</button>
                     <button type="button" class="btn2" onclick="selanjutnya()">Selanjutnya</button>
-                </div>
+                </class>
             </form>
         </div>
     </div>

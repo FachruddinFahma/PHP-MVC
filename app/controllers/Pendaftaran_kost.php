@@ -4,7 +4,7 @@
         public function index(){
             $data['judul'] = 'Pendataran Kost';
             //$data['dashboard'] = $this->model('Dashboard_model')->getAllPenghuni();
-            $this->view('pemilik_kost/data_kost/pendaftaran_kost', $data);
+            $this->view('pemilik_kost/data_kost/pendaftaran_kost2', $data);
         }
 
         public function addKost()

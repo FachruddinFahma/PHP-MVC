@@ -1,247 +1,245 @@
-.box {
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 10px;
-    max-width: 900px; 
-    height: 600px;
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
-    font-family: 'Poppins', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
 }
 
+.box {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25),
+    0px 10px 10px rgba(0, 0, 0, 0.22);
+  font-family: "Poppins", sans-serif;
+  display: flex; /* Make the box a flex container */
+}
 
 .box-content {
-    margin: 10px;
+  margin: 10px;
+  flex: 1; /* Distribute remaining space equally */
 }
 
-h1{
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    margin: 10px;
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  margin: 10px;
 }
 
 .form-group {
-    margin-top: 20%; 
-    margin-left: 1%; 
+  margin-top: 20%;
+  margin-left: 1%;
+  justify-content: space-between;
 }
 
 .form-group .col-sm-input {
-    margin-bottom: 10px; 
-    font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .form-group input[type="text"] {
-    margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .form-group .input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .form-group input[type="text"] {
-    width: 50%;
-    padding: 8px;
-    border-radius: 5px;
-    padding-right: 20px;
-    text-align: left;
-    background-color: #ffffff;
-    border: 2px solid #bdbcbc; 
-    box-sizing: border-box; 
-    margin-bottom: 20px; 
+  width: 50%;
+  padding: 8px;
+  border-radius: 5px;
+  padding-right: 20px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 2px solid #bdbcbc;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .form-group .input select {
-    width: 50%;
-    padding: 8px;
-    border-radius: 5px;
-    text-align: left;
-    background-color: #ffffff;
-    border: 2px solid #bdbcbc;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+  width: 50%;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 2px solid #bdbcbc;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .form-group .input .form-check {
-    width: 15%;
-    padding: 8px;
-    border-radius: 5px;
-    text-align: left;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    margin-top: 10px;
+  width: 15%;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin-top: 10px;
 }
-
 
 .form-group .input textarea.form-control {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px; 
-    width: calc(50%);
-    height: 70px;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
-    background-color: #ffffff;
-    border: 2px solid #bdbcbc; 
-    box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: calc(50%);
+  height: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 2px solid #bdbcbc;
+  box-sizing: border-box;
 }
 
-.form-group .btn1{
-    background-color: #1B3359;
-    border: #1B3359;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 10px;
+.form-group .btn1 {
+  background-color: #1b3359;
+  border: #1b3359;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 10px;
 }
 
-.form-group .btn2{
-    background-color: #1B3359;
-    border: #1B3359;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 10px;
-    left: 100px;
-    margin-right: 1%;
-    float: right;
+.form-group .btn2 {
+  background-color: #1b3359;
+  border: #1b3359;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 10px;
+  left: 100px;
+  margin-right: 1%;
+  float: right;
 }
 
-.form-group .input p{
-    font-size: 12px;
-    margin-bottom: 3px;
-    color: #848484;
+.form-group .input p {
+  font-size: 12px;
+  margin-bottom: 3px;
+  color: #848484;
 }
 
 .input .custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: #4caf50;
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    width: 25%;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 25%;
 }
 
 .input .custom-file-upload:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 #imageUpload {
-    display: none;
+  display: none;
 }
 
 .input .preview-container {
-    margin-top: 20px;
-    display: none;
-    width: 100%; 
+  margin-top: 20px;
+  display: none;
+  width: 100%;
 }
 
 .input .preview-image {
-    width: 100%; /* Menetapkan lebar gambar pratinjau ke 100% */
-    max-width: 300px; /* Menetapkan lebar maksimum gambar pratinjau */
-    height: auto; /* Menggunakan tinggi otomatis untuk mempertahankan aspek rasio */
+  width: 100%; /* Menetapkan lebar gambar pratinjau ke 100% */
+  max-width: 300px; /* Menetapkan lebar maksimum gambar pratinjau */
+  height: auto; /* Menggunakan tinggi otomatis untuk mempertahankan aspek rasio */
 }
 
 .form-group .input:nth-child(4) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .form-group .input:nth-child(4) .custom-file-upload {
-    border: 1px solid #ccc;
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: #4caf50;
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    width: auto; 
-    margin-right: 70px; 
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: auto;
+  margin-right: 70px;
 }
 
 .form-group .input:nth-child(4) .custom-file-upload:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .form-group .input:nth-child(4) .file-input {
-    display: none;
+  display: inline-block;
 }
 
 .form-group .input:nth-child(4) .preview-container {
-    margin-top: 10px;
-    width: 250%;
+  margin-top: 10px;
+  width: auto;
 }
 
 .form-group .input:nth-child(4) .preview-image {
-    width: 210px;
-    height: 35vh;
+  width: 210px;
+  height: 35vh;
 }
 
-.form-group .input:nth-child(5){
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.form-group .input:nth-child(5) {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .form-group .input .card {
-    width: 400px;
-    height: 40vh;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 40vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group .input .card-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .form-group .input .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .form-group .input .card-description {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.form-group .input .ri-checkbox-circle-fill{
-    color: #4caf50;
-    font-size: 100px;
+.form-group .input .ri-checkbox-circle-fill {
+  color: #4caf50;
+  font-size: 100px;
 }
 
 .form-group .input .card-content button {
-    display: inline-block;
-    width: 100%;
-    padding: 12px 24px;
-    margin-top: 30px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
-.form-group .input .card-content button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+  display: inline-block;
+  width: 100%;
+  padding: 12px 24px;
+  margin-top: 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
