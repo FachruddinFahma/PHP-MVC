@@ -9,21 +9,29 @@ class EditDataApi_model
         date_default_timezone_set('Asia/Jakarta');
     }
 
-    public function updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser)
+    public function updateUser($nama, $fotoBase64, $noHp, $alamat, $jk, $tglLahir, $idUser)
     {
+        // Decode Base64 to image file
+        $foto = base64_decode($fotoBase64);
+
+        // Save the image file
+        $filename = "IMG" . rand() . ".jpg";
+        file_put_contents("foto/" . $filename, $foto);
+        // $imagePath = "http://localhost/PHP-MVC/public/foto/" . $filename;
+
         $query = "UPDATE tb_user SET 
-        nama_lengkap = :nama, 
-        foto_user = :foto, 
-        no_hp = :noHp, 
-        alamat = :alamat, 
-        jenis_kelamin = :jk, 
-        tggl_lahir = :tglLahir 
-        WHERE id_user = :idUser";
+    nama_lengkap = :nama, 
+    foto_user = :foto, 
+    no_hp = :noHp, 
+    alamat = :alamat, 
+    jenis_kelamin = :jk, 
+    tggl_lahir = :tglLahir 
+    WHERE id_user = :idUser";
 
         $this->db->query($query);
         $this->db->bind(':nama', $nama);
         $this->db->bind(':noHp', $noHp);
-        $this->db->bind(':foto', $foto);
+        $this->db->bind(':foto', $filename); // Simpan hanya nama file tanpa path
         $this->db->bind(':alamat', $alamat);
         $this->db->bind(':jk', $jk);
         $this->db->bind(':tglLahir', $tglLahir);
@@ -32,6 +40,8 @@ class EditDataApi_model
         $this->db->execute();
         return true;
     }
+
+
 
     public function updatePassword($password, $idUser)
     {
@@ -76,8 +86,15 @@ class EditDataApi_model
         }
     }
 
-    public function transaction($id, $bayar, $metodeBayar, $fotoBukti)
+    public function transaction($id, $bayar, $metodeBayar, $fotoBuktiBase64)
     {
+        // Decode Base64 to image file
+        $fotoBukti = base64_decode($fotoBuktiBase64);
+
+        // Save the image file
+        $filename = "IMG" . rand() . ".jpg";
+        file_put_contents("bukti_transfer/" . $filename, $fotoBukti);
+        // $imagePath = "http://localhost/PHP-MVC/public/bukti_transfer/" . $filename;
 
         $query = "UPDATE tb_transaksi SET bayar = :bayar, 
     metode_pembayaran = :metode, 
@@ -91,7 +108,7 @@ class EditDataApi_model
         $this->db->query($query);
         $this->db->bind(':bayar', $bayar);
         $this->db->bind(':metode', $metodeBayar);
-        $this->db->bind(':foto', $fotoBukti);
+        $this->db->bind(':foto', $filename); // Simpan URL gambar bukan base64-nya
         $this->db->bind(':tgl_bayar', $tgl_transaksi);
         $this->db->bind(':idPesan', $id);
 

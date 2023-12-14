@@ -6,13 +6,15 @@ class EditDataApi extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $nama = $_POST['nama_lengkap'];
-            $foto = $_POST['foto_user'];
+            $fotoBase64 = $_POST['foto_user']; // Terima gambar dalam bentuk base64
             $noHp = $_POST['no_hp'];
             $alamat = $_POST['alamat'];
             $jk = $_POST['jenis_kelamin'];
             $tglLahir = $_POST['tggl_lahir'];
             $edit_user_model = $this->model('EditDataApi_model');
-            $success = $edit_user_model->updateUser($nama, $foto, $noHp, $alamat, $jk, $tglLahir, $idUser);
+
+            // Panggil fungsi updateUser dengan data yang diterima
+            $success = $edit_user_model->updateUser($nama, $fotoBase64, $noHp, $alamat, $jk, $tglLahir, $idUser);
 
             if ($success) {
                 $response = array(
@@ -33,6 +35,7 @@ class EditDataApi extends Controller
         }
         echo json_encode($response);
     }
+
 
     public function checkEmail()
     {
@@ -152,10 +155,10 @@ class EditDataApi extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $bayar = $_POST['bayar'];
             $metode = $_POST['metode_pembayaran'];
-            $foto = $_POST['foto_bukti_bayar'];
-            $transaction_model = $this->model('EditDataApi_model');
-            $success = $transaction_model->transaction($id, $bayar, $metode, $foto);
+            $fotoBase64 = $_POST['foto_bukti_bayar']; // Ini harus berisi base64 gambar
 
+            $transaction_model = $this->model('EditDataApi_model');
+            $success = $transaction_model->transaction($id, $bayar, $metode, $fotoBase64);
 
             if ($success) {
                 $response = array(
