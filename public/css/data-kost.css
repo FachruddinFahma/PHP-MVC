@@ -1,0 +1,76 @@
+:root {
+  --gray: #c7c7c7;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
+  --blue: #295ef4;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
+}
+
+#container-button {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 60px 60px;
+}
+
+#container-button h4 {
+  font-size: 18px;
+}
+
+#line {
+  margin-top: -60px;
+  margin-left: 0px;
+}
+
+#line .line-border {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: var(--gray);
+  width: 80.5%;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+#line .line-bold {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: var(--brown);
+  width: 45%;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+#container-button .line-active {
+  z-index: 99;
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: var(--blue);
+  width: 22%;
+  margin-left: -70px;
+  margin-top: 10px;
+}
+
+#container-button-belumVerifikasi.active,
+#container-button-sudahVerifikasi.active {
+  color: var(--blue);
+}
+
+#button-belumVerifikasi.active {
+  color: blue;
+}
+
+#button-sudahVerifikasi.active {
+  color: blue;
+}
+
+#container-button h4 {
+  cursor: pointer;
+}

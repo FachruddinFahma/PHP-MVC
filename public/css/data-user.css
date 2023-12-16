@@ -1,3 +1,15 @@
+:root {
+  --gray: #c7c7c7;
+  --navy: #1b3359;
+  --middleblue: #134ba4;
+  --lightblue: #f3f7fd;
+  --darkblue: #061072;
+  --lightblueclick: #c9d8eb;
+  --green: #1f9254;
+  --blue: #295ef4;
+  --lightgrey: #aeaeae;
+  --brown: #404040;
+}
 #container-button {
   display: flex;
   align-items: flex-start;
@@ -18,9 +30,7 @@
   position: absolute;
   content: "";
   height: 2px;
-  background-color: var(
-    --gray
-  ); /* menggunakan variabel warna yang sudah didefinisikan sebelumnya */
+  background-color: var(--gray);
   width: 80.5%;
   margin-left: -60px;
   margin-top: 10px;
@@ -30,11 +40,9 @@
   position: absolute;
   content: "";
   height: 4px;
-  background-color: var(
-    --brown
-  ); /* menggunakan variabel warna yang sudah didefinisikan sebelumnya */
-  width: 45%;
-  margin-left: -60px;
+  background-color: var(--brown);
+  width: 37%;
+  margin-left: 0px;
   margin-top: 10px;
 }
 
@@ -43,17 +51,25 @@
   position: absolute;
   content: "";
   height: 4px;
-  background-color: var(
-    --blue
-  ); /* menggunakan variabel warna yang sudah didefinisikan sebelumnya */
-  width: 22%;
-  margin-left: -70px;
+  background-color: var(--blue);
+  width: 18%;
+  margin-left: -68px;
   margin-top: 10px;
 }
 
 #container-button-belumVerifikasi.active,
 #container-button-sudahVerifikasi.active {
-  color: var(
-    --blue
-  ); /* menggunakan variabel warna yang sudah didefinisikan sebelumnya */
+  color: var(--blue);
+}
+
+#button-pemilik.active {
+  color: blue;
+}
+
+#button-penyewa.active {
+  color: blue;
+}
+
+#container-button h4 {
+  cursor: pointer;
 }

@@ -26,9 +26,6 @@
             </div>
             <div class="col-md-8e p-5">
                 <div class="card-body bg-white p-4" style="border-radius: 18px;">
-
-
-
                     <table class="table table-hover small" class="dataPenyewa" id="tablePemilik">
                         <thead>
                             <tr>
@@ -44,14 +41,14 @@
                             <?php
                             foreach ($data['DataPemilik_Admin'] as $d) {
                             ?>
-                                <tr>
-                                    <td><?= $d['id_user'] ?></td>
-                                    <td><?= $d['nama_lengkap'] ?></td>
-                                    <td><?= $d['nama_kost'] ?></td>
-                                    <td><?= $d['jenis_kelamin'] ?></td>
-                                    <td><?= $d['no_hp'] ?></td>
-                                    <td><?= $d['alamat'] ?></td>
-                                </tr>
+                            <tr>
+                                <td><?= $d['id_user'] ?></td>
+                                <td><?= $d['nama_lengkap'] ?></td>
+                                <td><?= $d['nama_kost'] ?></td>
+                                <td><?= $d['jenis_kelamin'] ?></td>
+                                <td><?= $d['no_hp'] ?></td>
+                                <td><?= $d['alamat'] ?></td>
+                            </tr>
                             <?php
                             }
                             ?>
@@ -72,70 +69,80 @@
                             <?php
                             foreach ($data['DataPenyewa_Admin'] as $d) {
                             ?>
-                                <tr>
-                                    <td><?= $d['id_user'] ?></td>
-                                    <td><?= $d['nama_lengkap'] ?></td>
-                                    <td><?= $d['nama_kost'] ?></td>
-                                    <td><?= $d['jenis_kelamin'] ?></td>
-                                    <td><?= $d['no_hp'] ?></td>
-                                    <td><?= $d['alamat'] ?></td>
-                                </tr>
+                            <tr>
+                                <td><?= $d['id_user'] ?></td>
+                                <td><?= $d['nama_lengkap'] ?></td>
+                                <td><?= $d['nama_kost'] ?></td>
+                                <td><?= $d['jenis_kelamin'] ?></td>
+                                <td><?= $d['no_hp'] ?></td>
+                                <td><?= $d['alamat'] ?></td>
+                            </tr>
                             <?php
                             }
                             ?>
                         </tbody>
                     </table>
         </section>
-        
+
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script>
-            $(document).ready(function() {
+        $(document).ready(function() {
+            $("#tablePenyewa").hide();
+            $("#button-pemilik").addClass("active");
+
+            var initialPosition = $(".line-active").position().left;
+
+            $("#button-pemilik").click(function() {
                 $("#tablePemilik").show();
                 $("#tablePenyewa").hide();
-                $("#pemesanan_content_terkonfirmasi").hide();
 
-                var initialPosition = $(".line-active").position().left;
+                $(this).addClass("active");
+                $("#button-penyewa").removeClass("active");
 
-                $("#button-pemilik").click(function() {
-                    $("#tablePemilik").show();
-                    $("#tablePenyewa").hide();
-                });
-
-                $("#button-penyewa").click(function() {
-                    $("#tablePenyewa").show();
-                    $("#tablePemilik").hide();
-                });
+                $(".line-active").css("left", initialPosition);
             });
+
+            $("#button-penyewa").click(function() {
+                $("#tablePemilik").hide();
+                $("#tablePenyewa").show();
+
+                $(".line-active").css("left", "650px");
+
+                $(this).addClass("active");
+                $("#button-pemilik").removeClass("active");
+            });
+        });
         </script>
         <script>
-            new DataTable("#tablePenyewa", {
-                info: false,
-                "columnDefs": [{
-                        "orderable": true,
-                        "targets": 0
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 1
-                    },
-                    {
-                        "orderable": true,
-                        "targets": 2
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 3
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 4
-                    },
-                    {
-                        "orderable": false,
-                        "targets": 5
-                    },
-                ]
-            });
+        new DataTable("#tablePenyewa", {
+            info: false,
+            "columnDefs": [{
+                    "orderable": true,
+                    "targets": 0
+                },
+                {
+                    "orderable": false,
+                    "targets": 1
+                },
+                {
+                    "orderable": true,
+                    "targets": 2
+                },
+                {
+                    "orderable": false,
+                    "targets": 3
+                },
+                {
+                    "orderable": false,
+                    "targets": 4
+                },
+                {
+                    "orderable": false,
+                    "targets": 5
+                },
+            ]
+        });
         </script>
     </body>
+
     </html>

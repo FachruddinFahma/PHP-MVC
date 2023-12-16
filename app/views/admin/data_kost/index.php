@@ -2,7 +2,7 @@
     <html lang="en">
 
     <head>
-        <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/data-user.css">
+        <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/data-kost.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
@@ -87,6 +87,7 @@
         $(document).ready(function() {
             // Adjust the selectors based on your HTML structure
             $("#tableVerifikasi").hide();
+            $("#button-belumVerifikasi").addClass("active");
 
             var initialPosition = $(".line-active").position().left;
 
