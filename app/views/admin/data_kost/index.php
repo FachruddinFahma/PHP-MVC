@@ -38,17 +38,23 @@
                         </thead>
                         <tbody>
                             <?php foreach ($data['kostMasuk'] as $kost) : ?>
-                                <tr>
-                                    <td><?= $kost['nama_kost']; ?></td>
-                                    <td><?= $kost['nama_lengkap']; ?></td>
-                                    <td><?= $kost['no_hp']; ?></td>
-                                    <td><?= $kost['status']; ?></td>
-                                    <td>
-                                        <a class="btn_terima btn btn-success" href="http://localhost/PHP-MVC/public/dataKost_Admin/terima/<?php echo $kost['id_kost'] ?>"><i class="ri-check-line"></i></a>
-                                        <a class="btn_tolak btn btn-danger" href="http://localhost/PHP-MVC/public/dataKost_Admin/tolak/<?php echo $kost['id_kost'] ?>"><i class="ri-close-line"></i></a>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?= $kost['id_kost'] ?>"><i class="fa-solid fa-circle-info"></i></button>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td><?= $kost['nama_kost']; ?></td>
+                                <td><?= $kost['nama_lengkap']; ?></td>
+                                <td><?= $kost['no_hp']; ?></td>
+                                <td><?= $kost['status']; ?></td>
+                                <td>
+                                    <a class="btn_terima btn btn-success"
+                                        href="http://localhost/PHP-MVC/public/dataKost_Admin/terima/<?php echo $kost['id_kost'] ?>"><i
+                                            class="ri-check-line"></i></a>
+                                    <a class="btn_tolak btn btn-danger"
+                                        href="http://localhost/PHP-MVC/public/dataKost_Admin/tolak/<?php echo $kost['id_kost'] ?>"><i
+                                            class="ri-close-line"></i></a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop<?= $kost['id_kost'] ?>"><i
+                                            class="fa-solid fa-circle-info"></i></button>
+                                </td>
+                            </tr>
                             <?php include "modal.php"; endforeach; ?>
                         </tbody>
                     </table>
@@ -64,38 +70,47 @@
                         </thead>
                         <tbody>
                             <?php foreach ($data['kostTerkonfirmasi'] as $kost) : ?>
-                                <tr>
-                                    <td><?= $kost['nama_kost']; ?></td>
-                                    <td><?= $kost['nama_lengkap']; ?></td>
-                                    <td><?= $kost['no_hp']; ?></td>
-                                    <td><?= $kost['status']; ?></td>
-                                </tr>
+                            <tr>
+                                <td><?= $kost['nama_kost']; ?></td>
+                                <td><?= $kost['nama_lengkap']; ?></td>
+                                <td><?= $kost['no_hp']; ?></td>
+                                <td><?= $kost['status']; ?></td>
+                            </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </section>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script>
-            $(document).ready(function() {
+        $(document).ready(function() {
+            // Adjust the selectors based on your HTML structure
+            $("#tableVerifikasi").hide();
+
+            var initialPosition = $(".line-active").position().left;
+
+            $("#button-belumVerifikasi").click(function() {
                 $("#tableBelumVerifikasi").show();
                 $("#tableVerifikasi").hide();
-                $("#pemesanan_content_terkonfirmasi").hide();
 
-                var initialPosition = $(".line-active").position().left;
+                $(this).addClass("active");
+                $("#button-sudahVerifikasi").removeClass("active");
 
-                $("#button-belumVerifikasi").click(function() {
-                    $("#tableBelumVerifikasi").show();
-                    $("#tableVerifikasi").hide();
-                });
-
-                $("#button-sudahVerifikasi").click(function() {
-                    $("#tableVerifikasi").show();
-                    $("#tableBelumVerifikasi").hide();
-                });
+                $(".line-active").css("left", initialPosition);
             });
+
+            $("#button-sudahVerifikasi").click(function() {
+                $("#tableVerifikasi").show();
+                $("#tableBelumVerifikasi").hide();
+
+                $(".line-active").css("left", "650px");
+
+                $(this).addClass("active");
+                $("#button-belumVerifikasi").removeClass("active");
+            });
+        });
         </script>
     </body>
+
     </html>
