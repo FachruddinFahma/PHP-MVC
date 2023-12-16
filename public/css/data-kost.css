@@ -11,6 +11,11 @@
   --brown: #404040;
 }
 
+.content {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 #container-button {
   display: flex;
   align-items: flex-start;
