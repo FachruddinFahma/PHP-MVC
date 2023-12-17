@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC/public/css/laporan.css">
     <!-- LINK ICON J-KOS -->
     <link rel="icon" type="image/x-icon" href="http://localhost/PHP-MVC/public/image/project logo j-kost white 1.png">
+    <style>
+        .lunas-text {
+            border: 1px solid #28a745;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
     <title><?php echo $data['judul']; ?></title>
 </head>
 
@@ -42,7 +52,7 @@
                             <th scope="col">Bayar</th>
                             <th scope="col">Tanggal Bayar</th>
                             <th scope="col">Bukti TF</th>
-                            <th scope="col">Status</th>
+                            <!-- <th scope="col">Status</th> -->
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -54,11 +64,18 @@
                                 <td><?= $lprn['harga'] ?></td>
                                 <td><?= $lprn['bayar'] ?></td>
                                 <td><?= $lprn['tggl_transaksi'] ?></td>
-                                <td><?= $lprn['foto_bukti_bayar'] ?></td>
-                                <td><?= $lprn['status'] ?></td>
                                 <td>
-                                    <a class="btn_terima btn btn-success" href="<?php echo BASEURL; ?>Laporan/terima/<?php echo $lprn['id_transaksi']; ?>">
-                                        <i class="ri-check-line"></i>
+                                    <img src="bukti_transfer/<?= $lprn['foto_bukti_bayar']; ?>" style="width: 100px;">
+                                </td>
+                                <!-- <td><?= $lprn['status'] ?></td> -->
+                                <td>
+                                    <?php if ($lprn['status'] !== 'Lunas') : ?>
+                                        <a class="btn_terima btn btn-success" href="<?php echo BASEURL; ?>Laporan/terima/<?php echo $lprn['id_transaksi']; ?>">
+                                            <i class="ri-check-line"></i>
+                                        </a>
+                                    <?php else : ?>
+                                        <p class="lunas-text">Lunas</p>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
