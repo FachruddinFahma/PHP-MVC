@@ -34,7 +34,6 @@
     <div class="halaman">
         <p><i class="ri-home-8-fill"></i>Home > Kost Marno > Kamar 3</p>
     </div>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     <section id="pemesanan">
         <form action="<?php echo BASEURL; ?>pemesanan_kost/addPemesanan" method="post" id="form-pemesanan" enctype="multipart/form-data">
             <div class="left-pemesanan">

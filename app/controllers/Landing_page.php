@@ -4,6 +4,7 @@ class Landing_page extends Controller
     public function index()
     {
         $data['judul'] = 'Home';
+        $data['testimoni'] = $this->model('landingPage_model')->getRecentTesti(3);
         $data['data_kost'] = $this->model('landingPage_model')->getAllKost();
         // Ambil data foto pertama saja
         foreach ($data['data_kost'] as &$kost) {

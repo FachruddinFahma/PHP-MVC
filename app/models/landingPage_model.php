@@ -8,6 +8,14 @@ class landingPage_model
         $this->db = new Database;
     }
 
+    public function getRecentTesti($limit)
+    {
+        $this->db->query('SELECT tb_user.nama_lengkap, tb_testimoni.deskripsi_testi, tb_testimoni.tggl_testi FROM tb_testimoni 
+        JOIN tb_user ON tb_user.id_user = tb_testimoni.id_user ORDER BY tggl_testi DESC LIMIT :limit');
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        return $this->db->resultSet();
+    }
+
     public function getAllKost()
     {
         $this->db->query('SELECT * FROM tb_kost');

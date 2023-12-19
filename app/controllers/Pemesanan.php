@@ -5,11 +5,12 @@ class Pemesanan extends Controller
 {
     public function index()
     {
+        $id_user = $_SESSION['id_user'];
         $data['judul'] = 'Pemesanan';
         $model = $this->model('Pemesanan_Model');
 
-        $data['pemesananMasuk'] = $model->getPemesananMasuk();
-        $data['pemesananTerkonfirmasi'] = $model->getPemesananTerkonfirmasi();
+        $data['pemesananMasuk'] = $model->getPemesananMasuk($id_user);
+        $data['pemesananTerkonfirmasi'] = $model->getPemesananTerkonfirmasi($id_user);
 
         $this->view('templates/header', $data);
         $this->view('pemilik_kost/pemesanan/index', $data);
