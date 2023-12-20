@@ -20,10 +20,11 @@
                 <a href="<?php echo BASEURL; ?>landing_page#order">Order</a>
                 <a href="<?php echo BASEURL; ?>landing_page#testimoni">Testimoni</a>
                 <a href="<?php echo BASEURL; ?>landing_page#kost">Kost</a>
-                <a href="<?php echo BASEURL . 'login1' ?>" class="link-login" <?php echo isset($_SESSION['id_user']) ? 'style="display: none;"' : ''; ?>>Masuk</a>
+                <a href="<?php echo BASEURL . 'login1' ?>" class="link-login"
+                    <?php echo isset($_SESSION['id_user']) ? 'style="display: none;"' : ''; ?>>Masuk</a>
 
                 <?php if (isset($_SESSION['id_user'])) : ?>
-                    <img src="<?php echo BASEURL . 'foto/' . $_SESSION['foto_user'] ?>" alt="" style="width: 45px; border-radius:50px">
+                <img src="<?php echo BASEURL . 'foto/' . $_SESSION['foto_user'] ?>" alt="" id="foto-nav-user">
                 <?php endif; ?>
 
             </ul>
@@ -32,13 +33,16 @@
 
     <section id="hero">
         <div class="hero-left">
-            <p class="tagline animate__animated animate__fadeInLeft">Cari Kost Tanpa Ribet,<span> Semua Ada Disini</span></p>
-            <p class="deskripsi-hero animate__animated animate__fadeInLeft">Tingkatkan kenyamanan hidupmu dengan sentuhan ajaib di ujung jari, <span>temukan
+            <p class="tagline animate__animated animate__fadeInLeft">Cari Kost Tanpa Ribet,<span> Semua Ada
+                    Disini</span></p>
+            <p class="deskripsi-hero animate__animated animate__fadeInLeft">Tingkatkan kenyamanan hidupmu dengan
+                sentuhan ajaib di ujung jari, <span>temukan
                     kost impianmu di J-Kost!</span></p>
             <a href="#kost" class="smooth-scroll animate__animated animate__bounceInLeft">Cari Kost Sekarang</a>
         </div>
         <div class="hero-right">
-            <img class="gambar1 animate__animated animate__fadeInRight" src="<?php echo BASEURL; ?>image/landing_img.png" alt="">
+            <img class="gambar1 animate__animated animate__fadeInRight"
+                src="<?php echo BASEURL; ?>image/landing_img.png" alt="">
         </div>
     </section>
 
@@ -139,8 +143,8 @@
         </div>
         <div class="content-testimoni">
             <div id="kumpulan-card-testimoni">
-                <<?php foreach ($data['testimoni'] as $testi): ?>
-                <div class="card-testimoni" data-aos="zoom-in-down" data-aos-duration="1000">
+                <<?php foreach ($data['testimoni'] as $testi): ?> <div class="card-testimoni" data-aos="zoom-in-down"
+                    data-aos-duration="1000">
                     <div class="profile-testimoni">
                         <div class="gambar-testimoni">
                             <img src=" <?php echo BASEURL; ?>image/kumpulan-card.png" alt="kumpulan card">
@@ -160,15 +164,16 @@
                         <i class="ri-star-fill ic-testimoni"></i>
                         <i class="ri-star-fill ic-testimoni"></i> -->
                     </div>
-                </div>
-                <?php endforeach; ?>
             </div>
+            <?php endforeach; ?>
+        </div>
         </div>
     </section>
     <section id="kost">
         <div class="title-section-kost">
             <h2 data-aos="fade-right" data-aos-duration="1000">Terafiliasi dengan kost di Jember</h2>
-            <p class="sub-deskripsi" data-aos="fade-left" data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <p class="sub-deskripsi" data-aos="fade-left" data-aos-duration="1500">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore e Lorem ipsum dolor sit amet, consectetur adipiscing </p>
             <div id="button-kost" data-aos="fade-up" data-aos-duration="2000">
                 <div id="button-populer">
@@ -186,28 +191,28 @@
                     foreach ($data['data_kost'] as $kost) {
                         if ($kost['status'] === 'AKTIF') {
                 ?>
-                            <a href="<?php echo BASEURL; ?>kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
-                                <div class="foto-kost">
-                                    <?php
+                <a href="<?php echo BASEURL; ?>kamar_user/kamar/<?php echo $kost['id_kost'] ?>" class="card-kost">
+                    <div class="foto-kost">
+                        <?php
                                     $data['data_kost']
                                     ?>
-                                    <img class="gambar-kost" src="<?php echo BASEURL . 'foto/' . $kost['main_foto']; ?>" alt="">
-                                </div>
-                                <div class="content-card-kost">
-                                    <div class="top-content-kost">
-                                        <p class="kategori-kost"><?php echo $kost['jenis_kost']; ?></p>
-                                        <p><i class="ri-star-fill"></i> 4.5</p>
-                                    </div>
-                                    <p class="nama-kost"><?php echo $kost['nama_kost']; ?></p>
-                                    <div class="location-kost">
-                                        <i class="ri-map-pin-2-fill"></i>
-                                        <p><?php echo $kost['alamat']; ?></p>
-                                    </div>
-                                    <div class="harga">
-                                        <p>Rp 300,000<span>/ Bulan</span></p>
-                                    </div>
-                                </div>
-                            </a>
+                        <img class="gambar-kost" src="<?php echo BASEURL . 'foto/' . $kost['main_foto']; ?>" alt="">
+                    </div>
+                    <div class="content-card-kost">
+                        <div class="top-content-kost">
+                            <p class="kategori-kost"><?php echo $kost['jenis_kost']; ?></p>
+                            <p><i class="ri-star-fill"></i> 4.5</p>
+                        </div>
+                        <p class="nama-kost"><?php echo $kost['nama_kost']; ?></p>
+                        <div class="location-kost">
+                            <i class="ri-map-pin-2-fill"></i>
+                            <p><?php echo $kost['alamat']; ?></p>
+                        </div>
+                        <div class="harga">
+                            <p>Rp 300,000<span>/ Bulan</span></p>
+                        </div>
+                    </div>
+                </a>
                 <?php
                         }
                     }
@@ -269,51 +274,51 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $(".smooth-scroll").on("click", function(event) {
-            event.preventDefault();
-            var targetId = $(this).attr("href");
-            if ($(targetId).length) {
-                $("html, body").animate({
-                    scrollTop: $(targetId).offset().top
-                }, 800);
-            }
-        });
-
-        //button kost terbaru dan terlaris
-        $("#button-populer").click(function() {
-            $(this).css({
-                "background-color": "var(--blue)",
-                "color": "white",
-                "border-radius": "8px"
-            });
-
-            $("#button-terbaru").css({
-                "background-color": "",
-                "color": "var(--blue)",
-                "border-radius": ""
-            });
-        });
-
-        $("#button-terbaru").click(function() {
-            $(this).css({
-                "background-color": "var(--blue)",
-                "color": "white",
-                "border-radius": "8px"
-            });
-
-            $("#button-populer").css({
-                "background-color": "var(--lightblue)",
-                "color": "var(--blue)",
-                "border-radius": ""
-            });
-        });
-
+$(document).ready(function() {
+    $(".smooth-scroll").on("click", function(event) {
+        event.preventDefault();
+        var targetId = $(this).attr("href");
+        if ($(targetId).length) {
+            $("html, body").animate({
+                scrollTop: $(targetId).offset().top
+            }, 800);
+        }
     });
+
+    //button kost terbaru dan terlaris
+    $("#button-populer").click(function() {
+        $(this).css({
+            "background-color": "var(--blue)",
+            "color": "white",
+            "border-radius": "8px"
+        });
+
+        $("#button-terbaru").css({
+            "background-color": "",
+            "color": "var(--blue)",
+            "border-radius": ""
+        });
+    });
+
+    $("#button-terbaru").click(function() {
+        $(this).css({
+            "background-color": "var(--blue)",
+            "color": "white",
+            "border-radius": "8px"
+        });
+
+        $("#button-populer").css({
+            "background-color": "var(--lightblue)",
+            "color": "var(--blue)",
+            "border-radius": ""
+        });
+    });
+
+});
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init();
+AOS.init();
 </script>
 
 </html>
