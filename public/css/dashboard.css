@@ -46,6 +46,14 @@
   background-color: #80d7b6;
 }
 
+#foto-penghuni {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 100%;
+}
+
 @media (max-width: 767px) {
   .stats-icon {
     float: left;
