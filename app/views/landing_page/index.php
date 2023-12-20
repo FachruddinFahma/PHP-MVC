@@ -147,7 +147,7 @@
                     data-aos-duration="1000">
                     <div class="profile-testimoni">
                         <div class="gambar-testimoni">
-                            <img src=" <?php echo BASEURL; ?>image/kumpulan-card.png" alt="kumpulan card">
+                            <img src="<?php echo BASEURL . 'foto/' . $testi['foto_user']; ?>" alt="">
                         </div>
                         <div class="nama-testimoni">
                             <p><b><?php echo $testi['nama_lengkap'];  ?></b></p>
