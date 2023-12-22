@@ -30,7 +30,7 @@ class Pemesanan_Model
         JOIN tb_user ON tb_user.id_user = tb_pemesanan.id_user
         JOIN tb_kamar ON tb_kamar.id_kamar = tb_pemesanan.id_kamar
         JOIN tb_kost on tb_kamar.id_kost = tb_kost.id_kost
-        WHERE tb_user.id_role = '3' AND tb_kost.id_user = :id_user AND tb_pemesanan.status = 'konfirmasi'");
+        WHERE tb_user.id_role = '3' AND tb_kost.id_user = :id_user AND tb_pemesanan.status = 'terkonfirmasi'");
 
         $this->db->bind(':id_user', $id_user);
         return $this->db->resultSet();
